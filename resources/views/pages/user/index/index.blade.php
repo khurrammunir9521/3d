@@ -353,45 +353,27 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             </div>
-                          
-                            <div class="carousel-item">
+                            @foreach($profile as $profiles)
+                            <div class="carousel-item active">
                                 <div class="row justify-content-end">
-                                    @foreach($profile as $profile)
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
-                                            @if (@$profile->sub_heading4 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading4 }}
+                                          
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profiles->sub_heading }}
                                             </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
+                                            
 
-                                            @if (@$profile->heading4 != null)
+                                           
                                             <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                {{ $profile->heading4 }}
+                                                {{ $profiles->heading }}
                                                 !
                                             </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text4 != null)
+                                          
+                                            
                                             <p class="description">
-                                                {!!$profile->body_text4 !!}
+                                                {!!$profiles->body_text !!}
                                             </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
+                                          
 
                                             <button class="btn btn-sky">المزيد</button>
                                             <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
@@ -400,16 +382,16 @@
                                     <div class="col-sm-5 col-md-8 col-lg-5">
                                         <div class="top boxContainer">
                                             <div class="blue-box move"></div>
-                                            @if (@$profile->images4 != null)
-                                            <img src="{{ asset('storage/' . $profile->images4) }}" class="img-fluid img-behind" alt="medical">
+                                            @if (@$profiles->images != null)
+                                            <img src="{{ asset($profiles->images) }}" class="img-fluid img-behind" alt="medical">
                                             @else
                                             <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
                                             @endif
                                         </div>
                                     </div>
-                                    @endforeach
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
