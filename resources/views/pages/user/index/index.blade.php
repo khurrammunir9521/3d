@@ -353,170 +353,10 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             </div>
-                            <div class="carousel-item active">
-                                <div class="row justify-content-end">
-                                    <div class="col-sm-7 col-md-4 col-lg-7">
-                                        <div class="static-text">
-                                            @if (@$profile->sub_heading != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading }}
-                                            </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
-
-                                            @if (@$profile->heading != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                {{ $profile->heading }}
-                                                !
-                                            </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text != null)
-                                            <p class="description">
-                                                {!!$profile->body_text !!}
-                                            </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
-
-                                            <button class="btn btn-sky">المزيد</button>
-                                            <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 col-md-8 col-lg-5">
-                                        <div class="top boxContainer">
-                                            <div class="blue-box move"></div>
-                                            @if (@$profile->images != null)
-                                            <img src="{{ asset('storage/' . $profile->images) }}" class="img-fluid img-behind" alt="medical">
-                                            @else
-                                            <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          
                             <div class="carousel-item">
                                 <div class="row justify-content-end">
-                                    <div class="col-sm-7 col-md-4 col-lg-7">
-                                        <div class="static-text">
-                                            @if (@$profile->sub_heading2 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading2 }}
-                                            </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
-
-                                            @if (@$profile->heading2 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                {{ $profile->heading2 }}
-                                                !
-                                            </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text2 != null)
-                                            <p class="description">
-                                                {!!$profile->body_text2 !!}
-                                            </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
-
-                                            <button class="btn btn-sky">المزيد</button>
-                                            <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 col-md-8 col-lg-5">
-                                        <div class="top boxContainer">
-                                            <div class="blue-box move"></div>
-                                            @if (@$profile->images2 != null)
-                                            <img src="{{ asset('storage/' . $profile->images2) }}" class="img-fluid img-behind" alt="medical">
-                                            @else
-                                            <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-end">
-                                    <div class="col-sm-7 col-md-4 col-lg-7">
-                                        <div class="static-text">
-                                            @if (@$profile->sub_heading3 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading3 }}
-                                            </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
-
-                                            @if (@$profile->heading3 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                {{ $profile->heading3 }}
-                                                !
-                                            </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text3 != null)
-                                            <p class="description">
-                                                {!!$profile->body_text3 !!}
-                                            </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
-
-                                            <button class="btn btn-sky">المزيد</button>
-                                            <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 col-md-8 col-lg-5">
-                                        <div class="top boxContainer">
-                                            <div class="blue-box move"></div>
-                                            @if (@$profile->images3 != null)
-                                            <img src="{{ asset('storage/' . $profile->images3) }}" class="img-fluid img-behind" alt="medical">
-                                            @else
-                                            <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-end">
+                                    @foreach($profile as $profile)
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
                                             @if (@$profile->sub_heading4 != null)
@@ -567,6 +407,7 @@
                                             @endif
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

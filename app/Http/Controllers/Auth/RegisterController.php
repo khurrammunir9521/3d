@@ -58,7 +58,7 @@ class RegisterController extends Controller
             $about = AboutUs::first();
             $con = ContactUs::first();
             $tech = Tech::first();
-            $profile = ImageSlider::first();
+            $profile = ImageSlider::all();
             $order = Medical::orderBy('id', 'DESC')->first();
             $public = PublicService::orderBy('id', 'DESC')->first();
             $side = SideLogo::first();
@@ -72,7 +72,7 @@ class RegisterController extends Controller
             $about = AboutUs::first();
             $con = ContactUs::first();
             $tech = Tech::first();
-            $profile = ImageSlider::first();
+            $profile = ImageSlider::all();
             $order = Medical::orderBy('id', 'DESC')->first();
             $public = PublicService::orderBy('id', 'DESC')->first();
             $side = SideLogo::first();

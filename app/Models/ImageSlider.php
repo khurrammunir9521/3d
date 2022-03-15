@@ -11,10 +11,11 @@ class ImageSlider extends Model
     use HasFactory;
     use SoftDeletes;
     protected $fillable = [
-        'speed', 'number', 'heading', 'sub_heading',
-        'body_text', 'images', 'images2', 'images3', 'images4',
-        'heading2', 'heading3', 'heading4',
-        'sub_heading2', 'sub_heading3', 'sub_heading4',
-        'body_text2','body_text3','body_text4'
+        'speed',
+        'number',
+        'images',
+        'heading',
+        'sub_heading',
+        'body_text',
     ];
 }
