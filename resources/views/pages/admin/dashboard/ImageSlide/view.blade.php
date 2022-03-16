@@ -54,7 +54,8 @@
             </div>
         </div>
         <br>
-
+{{--
+    
         <div class="row">
             <div class="col-6">
                 <label>Heading2:</label>
@@ -135,7 +136,7 @@
             </div>
         </div>
         <br>
-
+        --}}
             <form action="{{ route('image.destroy', $image->id) }}" method="POST">
                 <a class="btn btn-primary" href="{{ route('image.edit', $image->id) }}">Edit</a>
 
