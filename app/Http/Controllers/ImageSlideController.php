@@ -53,7 +53,7 @@ class ImageSlideController extends Controller
             'heading'     => $request->heading,
             'sub_heading' => $request->sub_heading,
             'body_text'   => $request->body_text,
-            'images'      => $filePath,
+            'images2'      => $filePath,
         ]);
        if($sliders){
             return redirect()->route('image.index');
