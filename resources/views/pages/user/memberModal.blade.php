@@ -1,0 +1,57 @@
+<div class="modal fade page register" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div>
+                                <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                <h1 class="modal-title right">معلومة العضوية</h1>
+                            </div>
+                            {{-- @if($var != ) --}}
+                            <div class="profile">
+                                <button class="btn btn-sky edit-profile">تعديل</button>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+
+                            @auth
+                            <img src="{{asset('storage/' .auth()->user()->profile)}}" class="mx-auto d-block mb-5" width="100" alt="avatar">
+                             <form class="gy-4 gx-5" method="post" action="{{route('edituser_profile',auth()->user()->id)}}">
+                                @csrf
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <label class="form-label dot">الاسم</label>
+                                        <input type="text" name="name" class="form-control " placeholder=".. الاسم هنا" value="{{auth()->user()->name}}">
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <label class="form-label dot">الجهه</label>
+                                        <input type="text" name="field" class="form-control " placeholder=".. التخصص هنا" value="{{auth()->user()->field}}">
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <label class="form-label dot">الايميل</label>
+                                        <input type="email" name="email" class="form-control " placeholder=".. الايميل هنا" value="{{auth()->user()->email}}">
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                        <label class="form-label dot">كلمة المرور</label>
+                                        <input type="password" name="password" class="form-control " placeholder=".. كلمة المرور" value="{{auth()->user()->password}}">
+                                    </div>
+                                </div>
+                                <div class="form-action">
+                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">حفظ</button>
+                                    <p>تعديل بيانات التسجيل</p>
+                                </div>
+                            </form>
+                            @endauth
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

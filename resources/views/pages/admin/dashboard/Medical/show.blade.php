@@ -1,0 +1,134 @@
+@extends('layouts.admin.app')
+@section('content')
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            @if($order->status == 8)
+                            <h3>Approved</h3>
+                            @else
+                            <form action="{{route('updated.status')}}" method="POST">
+                                @csrf
+                                <input type="text" name="id" value="{{$order->id}}" hidden>
+                                @if($order->status == 1)
+                                <input type="checkbox" id="vehicle1" name="checkbox1" value="1">
+                                <label class="form-label" for="vehicle1"> اجتماع الخطة العلاجية</label>
+                                @endif
+                                @if($order->status == 2)
+                                <input type="checkbox" id="vehicle2" name="checkbox2" value="2">
+                                <label class="form-label" for="vehicle2"> اجتماع النموذج الأول</label>
+                                @endif
+                                @if($order->status == 3)
+                                <input type="checkbox" id="vehicle3" name="checkbox3" value="3">
+                                <label class="form-label" for="vehicle3"> اجتماع النموذج النهائي</label>
+                                @endif
+                                @if($order->status == 4)
+                                <input type="checkbox" id="vehicle3" name="checkbox4" value="4">
+                                <label class="form-label" for="vehicle3"> الدفع</label>
+                                @endif
+                                @if($order->status == 5)
+                                <input type="checkbox" id="vehicle3" name="checkbox5" value="5">
+                                <label class="form-label" for="vehicle3"> الطباعة ثلاثية الأبعاد</label>
+                                @endif
+                                @if($order->status == 6)
+                                <input type="checkbox" id="vehicle3" name="checkbox6" value="6">
+                                <label class="form-label" for="vehicle3"> اختبار الجودة</label>
+                                @endif
+                                @if($order->status == 7)
+                                <input type="checkbox" id="vehicle3" name="checkbox7" value="7">
+                                <label class="form-label" for="vehicle3"> التوصيل واتمام الطلب</label>
+                                @endif
+
+                                <br>
+                                <button class="btn btn-primary" type="submit"> save</button>
+                            </form>
+                            @endif
+                        </div>
+                        <h1 class="title text-center mb-5 no-border">
+                            <div class="form-top">
+                                <span>رقم الطلب:</span>
+                                <span class="id">{{@$order->id}}</span>
+                                <div class="dateTime">{{@$order->created_at}}</div>
+                            </div>
+                        </h1>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">اسم الطبيب</label>
+                                        <input type="text" class="form-control" placeholder=".. الاسم هنا" value="{{@$order->dr_name}}" readonly>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">تخصص الطبيب</label>
+                                        <input type="text" class="form-control" placeholder=".. التخصص هنا" value="{{@$order->dr_spec}}" readonly>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">ايميل الطبيب</label>
+                                        <input type="text" class="form-control" placeholder=".. الايميل هنا" value="{{@$order->dr_email}}" readonly>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">رقم هاتف الطبيب</label>
+                                        <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" value="{{@$order->dr_phone}}" readonly>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">المستشفى أو الشركة</label>
+                                        <input type="text" class="form-control" placeholder=".. الجهه هنا" value="{{@$order->hospital}}" readonly>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">اسم المريض</label>
+                                        <input type="text" class="form-control" placeholder=".. الاسم هنا" value="{{@$order->pa_name}}" readonly>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">رقم معرف المريض</label>
+                                        <input type="text" class="form-control" placeholder=".. المعرف هنا" value="{{@$order->pa_id}}" readonly>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                        <label class="form-label">عمر المريض</label>
+                                        <input type="text" class="form-control" placeholder=".. المعرف هنا" value="{{@$order->pa_age}}" readonly>
+                                    </div>
+                                </div>
+                                <div class="row mt-5">
+                                    <div class="col-md-12">
+                                        <label class="form-label">عموم الحاله الصحية</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$order->discription}}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center pt-5">
+                            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                <img src="{{asset('user/assets/images/patient-front.png')}}" class="img-fluid" alt="patient-front">
+                            </div>
+                            <div class="col-md-4 col-lg-3 pt-4 pt-md-0 mt-5">
+                                <label class="form-label">القسم</label>
+                                <input type="text" class="form-control" placeholder="الجمجمة، العامود الفقري" value="{{@$order->parts}}" readonly>
+                                <label class="form-label mt-4">نوع الاجراء الطبي</label>
+                                <input type="text" class="form-control mb-4" placeholder=" .. اختيار من هنا" value="{{@$order->procedure}}" readonly>
+                                <label class="form-label">الصور الطبية</label>
+                                <div class="upload-btn-wrapper">
+
+
+                                    <a class="btn btn-upload" href="{{ asset('storage/' . @$order->myfile) }}" download=" {{ @$order->myfile }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                <img src="{{asset('user/assets/images/patient-back.png')}}" class="img-fluid" alt="patient-back">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
