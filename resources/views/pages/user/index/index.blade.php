@@ -12,7 +12,7 @@
     @endif
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
-	<meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
+    <meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
     @if(@$title->discription != null)
     <meta name="description" content="{{$title->discription}}" />
     @else
@@ -127,28 +127,28 @@
 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
-                    <a href="{{route('logout')}}"  class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                    <a href="{{route('logout')}}" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>
                     {{--
                     <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                        تسجيل خروج
-                    </a>
-                    <script type="text/javascript">
-                        function logout(event) {
-                            event.preventDefault();
-                            var check = confirm("هل تريد حقا الخروج؟");
-                            if (check) {
-                                document.getElementById('logout-form').submit();
-                            }
+                    تسجيل خروج
+                </a>
+                <script type="text/javascript">
+                    function logout(event) {
+                        event.preventDefault();
+                        var check = confirm("هل تريد حقا الخروج؟");
+                        if (check) {
+                            document.getElementById('logout-form').submit();
                         }
-                    </script>
-    --}}
-                    <span>
+                    }
+                </script>
+                --}}
+                <span>
 
-                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                    </span>
+                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                </span>
             </div>
             @else
             <div class="left-side">
@@ -368,6 +368,7 @@
 
                 <div class="col-md-12">
                     <div class="carousel-inner">
+                        @foreach($profile as $profiles)
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -375,27 +376,26 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             </div>
-                            @foreach($profile as $profiles)
                             <div class="carousel-item active">
                                 <div class="row justify-content-end">
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
-                                        
+
 
                                             <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profiles->sub_heading }}
                                             </span>
-                                            
-                                           
+
+
                                             <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s">
                                                 {{ $profiles->heading }}
                                                 !
                                             </h2>
-                                          
-                                            
+
+
                                             <p class="description">
                                                 {!!$profiles->body_text !!}
                                             </p>
-                                          
+
 
                                             <button class="btn btn-sky">المزيد</button>
                                             <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
@@ -413,8 +413,8 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
                         </div>
+                        @endforeach
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
