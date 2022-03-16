@@ -12,6 +12,39 @@
     bottom: 169px !important;
 }
 /* asim code end here */
+/* zahid */
+    .male-back .back {
+    right: 139px;
+    top: 78px;
+    }
+    .male-back .leftHand {
+        right: 175px;
+        top: 165px;
+    }
+    .male-back .rightHand {
+        right: 109px;
+        top: 164px;
+    }
+    .male-back .leftFoot {
+        bottom: 55px;
+        right: 162px;
+    }
+    .male-back .rightFoot {
+        bottom: 57px;
+        right: 119px;
+    }
+    .male-back .rightLeg {
+        right: 155px;
+        top: 272px;
+    }
+    .male-back .leftLeg {
+        right: 119px;
+        top: 271px;
+    }
+    .description{
+        text-align: justify !important;
+
+    }
     /* Navbar */
     .navbar {
         padding: 1rem 0;
@@ -19,6 +52,10 @@
         z-index: 1000;
         background: white;
         width: 100%;
+    }
+    .counter{
+        text-align: center;
+
     }
 
     .navbar-nav {
@@ -89,7 +126,7 @@
 
     .submitted-data div p {
         padding-right: 0;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .flying-man {
@@ -141,23 +178,24 @@
 
     .banner .carousel-indicators {
         margin-right: 15%;
-        margin-top: 10%;
+        margin-top: 100% !important;
         top: 325px;
         justify-content: center;
+
     }
     
     .banner .carousel-control-next {
         right: 60%;
         z-index: 9999;
         padding-bottom: 30px;
-        margin-top: -7rem;
+        margin-top: 14rem !important;
     }
     
     .banner .carousel-control-prev {
         right: 40%;
         z-index: 9999;
         padding-bottom: 30px;
-        margin-top: -7rem;
+        margin-top: 14rem !important;
     }
 
     .banner-bg {
@@ -1412,6 +1450,9 @@
 
 /* Extra Large Devices */
 @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+    .banner.sample .carousel-inner {
+        padding-bottom: 291px !important;
+    }
     .request .description {
         padding-right: 5rem;
         padding-left: 5rem;
@@ -1532,7 +1573,6 @@
         width: 150px !important;
         height: 40px !important;
         right: 601px !important;
-        display: none;
     }
     #publicServiesModal #carouselIndicators .carousel-control-next{
         right: 634px !important;

@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Organs</title>
-	<link rel="icon" href="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png" type="image/x-icon">
-	<link rel="shortcut icon" href="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png" type="image/x-icon"/>
+    @if(@$title->title != null)
+    <title>{{$title->title}}</title>
+    @else
+    <title>أجهزة ثلاثية الأبعاد</title>
+    @endif
+    <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
 	<meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
-    <meta name="description" content="شركة إدراك للإستشارات الإدارية والتدريب الإستشاري"/>
-		<!-- Bootstrap css -->
+    @if(@$title->discription != null)
+    <meta name="description" content="{{$title->discription}}" />
+    @else
+    <meta name="description" content="شركة إدراك للإستشارات الإدارية والتدريب الإستشاري" />
+    @endif
+
+    <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}">
 
     <!-- Slick -->
@@ -88,58 +97,67 @@
 
                     </ul>
                 </div>
-                    @auth
-                    <div class="left-side desktop-menu">
+                @auth
+                <div class="left-side desktop-menu">
 
-                        <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                            {{-- @if (auth()->user()->profile != null)
+                    <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                        {{-- @if (auth()->user()->profile != null)
                                 @if (auth()->user()->profile == null)
                                     <div class="profile-img">
                                         <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                    </div>
-                    @else
-                    <div class="profile-img">
-                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px;">
-
-                    </div>
-                    @endif
-                    <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-                    --}}
-                    <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                        {{-- @if (auth()->user()->profile != null) --}}
-                        @if (auth()->user()->profile == null)
-                        <div class="profile profile-icon">
-                            <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                        </div>
-                        @else
-                        <img class="" style="width:30px;height:30px;" alt="" src="{{ asset('storage/' . auth()->user()->profile) }}">
-                        @endif
-                        <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-
-                        <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
-
-                        <a href="{{ route('logout') }}" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                            تسجيل خروج
-                        </a>
-                        <span>
-
-                            <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                            <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                        </span>
                 </div>
                 @else
-                <div class="left-side">
-                    <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
-                    <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                <div class="profile-img">
+                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px;">
+
+                </div>
+                @endif
+                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+                --}}
+                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                    {{-- @if (auth()->user()->profile != null) --}}
+                    @if (auth()->user()->profile == null)
+                    <div class="profile profile-icon">
+                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                    </div>
+                    @else
+                    <img class="" style="width:30px;height:30px;" alt="" src="{{ asset('storage/' . auth()->user()->profile) }}">
+                    @endif
+                    <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+
+                    <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+
+                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                        تسجيل خروج
+                    </a>
+                    <script type="text/javascript">
+                        function logout(event) {
+                            event.preventDefault();
+                            var check = confirm("هل تريد حقا الخروج؟");
+                            if (check) {
+                                document.getElementById('logout-form').submit();
+                            }
+                        }
+                    </script>
                     <span>
+
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                         <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
                     </span>
-                </div>
-                @endauth
             </div>
-        </nav>  
-    
+            @else
+            <div class="left-side">
+                <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
+                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                <span>
+                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                </span>
+            </div>
+            @endauth
+    </div>
+    </nav>
+
     <!-- <section class="banner">
       <div class="container">
         <div class="row">
@@ -352,43 +370,27 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             </div>
+                            @foreach($profile as $profiles)
                             <div class="carousel-item active">
                                 <div class="row justify-content-end">
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
-                                            @if (@$profile->sub_heading != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading }}
-                                            </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
+                                        
 
-                                            @if (@$profile->heading != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                {{ $profile->heading }}
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profiles->sub_heading }}
+                                            </span>
+                                            
+                                           
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s">
+                                                {{ $profiles->heading }}
                                                 !
                                             </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text != null)
+                                          
+                                            
                                             <p class="description">
-                                                {!!$profile->body_text !!}
+                                                {!!$profiles->body_text !!}
                                             </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
+                                          
 
                                             <button class="btn btn-sky">المزيد</button>
                                             <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
@@ -397,8 +399,8 @@
                                     <div class="col-sm-5 col-md-8 col-lg-5">
                                         <div class="top boxContainer">
                                             <div class="blue-box move"></div>
-                                            @if (@$profile->images != null)
-                                            <img src="{{ asset('storage/' . $profile->images) }}" class="img-fluid img-behind" alt="medical">
+                                            @if (@$profiles->images != null)
+                                            <img src="{{ asset($profiles->images) }}" class="img-fluid img-behind" alt="medical">
                                             @else
                                             <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
                                             @endif
@@ -406,168 +408,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-end">
-                                    <div class="col-sm-7 col-md-4 col-lg-7">
-                                        <div class="static-text">
-                                            @if (@$profile->sub_heading2 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading2 }}
-                                            </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
-
-                                            @if (@$profile->heading2 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                {{ $profile->heading2 }}
-                                                !
-                                            </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text2 != null)
-                                            <p class="description">
-                                                {!!$profile->body_text2 !!}
-                                            </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
-
-                                            <button class="btn btn-sky">المزيد</button>
-                                            <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 col-md-8 col-lg-5">
-                                        <div class="top boxContainer">
-                                            <div class="blue-box move"></div>
-                                            @if (@$profile->images2 != null)
-                                            <img src="{{ asset('storage/' . $profile->images2) }}" class="img-fluid img-behind" alt="medical">
-                                            @else
-                                            <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-end">
-                                    <div class="col-sm-7 col-md-4 col-lg-7">
-                                        <div class="static-text">
-                                            @if (@$profile->sub_heading3 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading3 }}
-                                            </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
-
-                                            @if (@$profile->heading3 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                {{ $profile->heading3 }}
-                                                !
-                                            </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text3 != null)
-                                            <p class="description">
-                                                {!!$profile->body_text3 !!}
-                                            </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
-
-                                            <button class="btn btn-sky">المزيد</button>
-                                            <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 col-md-8 col-lg-5">
-                                        <div class="top boxContainer">
-                                            <div class="blue-box move"></div>
-                                            @if (@$profile->images3 != null)
-                                            <img src="{{ asset('storage/' . $profile->images3) }}" class="img-fluid img-behind" alt="medical">
-                                            @else
-                                            <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-end">
-                                    <div class="col-sm-7 col-md-4 col-lg-7">
-                                        <div class="static-text">
-                                            @if (@$profile->sub_heading4 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading4 }}
-                                            </span>
-                                            @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
-                                                وسهلاً</span>
-                                            @endif
-
-                                            @if (@$profile->heading4 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                {{ $profile->heading4 }}
-                                                !
-                                            </h2>
-                                            @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
-                                                لنبتكر لمستقبل
-                                                أفضل !</h2>
-                                            @endif
-
-                                            @if (@$profile->body_text4 != null)
-                                            <p class="description">
-                                                {!!$profile->body_text4 !!}
-                                            </p>
-                                            @else
-                                            <p class="description">
-                                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                                                هذا النص من مولد النص العربى،
-                                                حيث
-                                                يمكنك
-                                                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                                عدد الحروف التى يولدها التطبيق.
-                                            </p>
-                                            @endif
-
-                                            <button class="btn btn-sky">المزيد</button>
-                                            <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 col-md-8 col-lg-5">
-                                        <div class="top boxContainer">
-                                            <div class="blue-box move"></div>
-                                            @if (@$profile->images4 != null)
-                                            <img src="{{ asset('storage/' . $profile->images4) }}" class="img-fluid img-behind" alt="medical">
-                                            @else
-                                            <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -583,18 +424,18 @@
                     <div class="col-md-4" dir="rtl">
                         <div class="text-start">
                             <figcaption class="map-cap side sample">
-								 @if (@$side->subheading != null)
-                             <h6> {{$side->subheading}}</h6>
+                                @if (@$side->subheading != null)
+                                <h6> {{$side->subheading}}</h6>
                                 @else
-                             <h6>اثناء العمل</h6>
+                                <h6>اثناء العمل</h6>
                                 @endif
-								 @if (@$side->heading != null)
-                                  <p> {{$side->heading}}</p>
+                                @if (@$side->heading != null)
+                                <p> {{$side->heading}}</p>
                                 @else
                                 <p>خارج الصندوق</p>
                                 @endif
-                                
-                               
+
+
                             </figcaption>
                             <div class="bottom boxContainer sample heart-img">
                                 <div class="blue-box move"></div>
@@ -815,29 +656,29 @@
                                 التطبيق.</p>
                         </div>
                         <div class="actions">
-                           @auth
-							 <button class="btn btn-grey" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @auth
+                            <button class="btn btn-grey" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							@else
-							 <button class="btn btn-grey authmasg" ><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @else
+                            <button class="btn btn-grey authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							
-							<a class='koib d-none'>الرجاء تسجيل الدخول أولا </a>
-							@endauth
-							
+
+                            <spa class='koib d-none'>الرجاء تسجيل الدخول أولا </spa>
+                            @endauth
+
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
                         </div>
-						@auth
-						@if(@$orders->count() > 0 )
+                        @auth
+                        @if(@$orders->count() > 0 )
                         <div class="notification-box">
                             <p><span class="notification">{{count($orders)}}
-								</span>طلبات قائمة</p>
+                                </span>طلبات قائمة</p>
                         </div>
-						@endif
-						@endauth
+                        @endif
+                        @endauth
                     </div>
                 </div>
                 <div class="col-md-6 dot-txt-main-left">
@@ -867,27 +708,27 @@
                         <div class="actions">
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#publicVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-							@auth
-							        <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#publicServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @auth
+                            <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#publicServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							@else
-							   <button class="btn btn-grey invert " ><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @else
+                            <button class="btn btn-grey invert "><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							
-							<a class='koib d-none'>الرجاء تسجيل الدخول أولا </a>
-							@endauth
-                         
+
+                            <a class='koib d-none'>الرجاء تسجيل الدخول أولا </a>
+                            @endauth
+
                         </div>
-						@auth
-						@if(@$publics->count() >0 )
+                        @auth
+                        @if(@$publics->count() >0 )
                         <div class="notification-box mobile">
                             <p><span class="notification">{{count($publics)}}
-								</span>طلبات قائمة</p>
+                                </span>طلبات قائمة</p>
                         </div>
-						@endif
-						@endauth
+                        @endif
+                        @endauth
                     </div>
                 </div>
             </div>
