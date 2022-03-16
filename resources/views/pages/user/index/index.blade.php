@@ -6,18 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Organs</title>
-	<link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
-	<link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon"/>
+	<link rel="icon" href="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png" type="image/x-icon">
+	<link rel="shortcut icon" href="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png" type="image/x-icon"/>
+	<meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
     <meta name="description" content="شركة إدراك للإستشارات الإدارية والتدريب الإستشاري"/>
-
-    <!-- Bootstrap css -->
+		<!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}">
-
 
     <!-- Slick -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick-theme.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="{{ asset('user/assets/js/jquery.min.js') }}"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- StyleSheet -->
@@ -48,7 +47,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="80" class="d-inline-block align-text-top">
+                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="120" class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -338,8 +337,8 @@
     </section> -->
 
     <section class="banner sample">
-        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move" alt="banner-bg">
-        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move" alt="black-bg">
+        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move animate__animated animate__slideInLeft animate__slower animate__delay-2s" alt="banner-bg">
+        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move animate__animated animate__slideInRight animate__slower animate__delay-2s" alt="black-bg">
         <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move" alt="hands">
         <div class="container">
             <div class="row">
@@ -358,20 +357,20 @@
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
                                             @if (@$profile->sub_heading != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading }}
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading }}
                                             </span>
                                             @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
                                                 وسهلاً</span>
                                             @endif
 
                                             @if (@$profile->heading != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 {{ $profile->heading }}
                                                 !
                                             </h2>
                                             @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 لنبتكر لمستقبل
                                                 أفضل !</h2>
                                             @endif
@@ -412,20 +411,20 @@
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
                                             @if (@$profile->sub_heading2 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading2 }}
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading2 }}
                                             </span>
                                             @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
                                                 وسهلاً</span>
                                             @endif
 
                                             @if (@$profile->heading2 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 {{ $profile->heading2 }}
                                                 !
                                             </h2>
                                             @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 لنبتكر لمستقبل
                                                 أفضل !</h2>
                                             @endif
@@ -466,20 +465,20 @@
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
                                             @if (@$profile->sub_heading3 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading3 }}
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading3 }}
                                             </span>
                                             @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
                                                 وسهلاً</span>
                                             @endif
 
                                             @if (@$profile->heading3 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 {{ $profile->heading3 }}
                                                 !
                                             </h2>
                                             @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 لنبتكر لمستقبل
                                                 أفضل !</h2>
                                             @endif
@@ -520,20 +519,20 @@
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
                                             @if (@$profile->sub_heading4 != null)
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profile->sub_heading4 }}
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profile->sub_heading4 }}
                                             </span>
                                             @else
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">اهلاً
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">اهلاً
                                                 وسهلاً</span>
                                             @endif
 
                                             @if (@$profile->heading4 != null)
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 {{ $profile->heading4 }}
                                                 !
                                             </h2>
                                             @else
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s ">
                                                 لنبتكر لمستقبل
                                                 أفضل !</h2>
                                             @endif
@@ -613,13 +612,13 @@
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <div class="counter">
-                                    <span class="client-counter">130+</span>
+                                    <span class="client-counter">130</span><span class="symbol">+</span>
                                     <h5>عميل</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="counter">
-                                    <span class="client-counter">250+</span>
+                                    <span class="client-counter">250</span><span class="symbol">+</span>
                                     <h5>مشروع</h5>
                                 </div>
                             </div>
@@ -817,11 +816,11 @@
                         </div>
                         <div class="actions">
                            @auth
-							 <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+							 <button class="btn btn-grey" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
 							@else
-							 <button class="btn btn-grey invert authmasg" ><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+							 <button class="btn btn-grey authmasg" ><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
 							
