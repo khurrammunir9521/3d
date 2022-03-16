@@ -19,22 +19,9 @@ class CreateImageSlidersTable extends Migration
             $table->integer('speed')->nullable();
             $table->integer('number')->nullable();
             $table->string('images');
-            $table->string('images2');
-            $table->string('images3');
-            $table->string('images4');
             $table->string('heading');
-            $table->string('heading2');
-            $table->string('heading3');
-            $table->string('heading4');
-
             $table->string('sub_heading');
-            $table->string('sub_heading2');
-            $table->string('sub_heading3');
-            $table->string('sub_heading4');
             $table->longText('body_text');
-            $table->string('body_text2');
-            $table->string('body_text3');
-            $table->string('body_text4');
             $table->timestamps();
             $table->SoftDeletes();
         });

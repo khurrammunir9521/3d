@@ -112,7 +112,7 @@
             CKEDITOR.replace( 'ckeditor' );
         });
     </script>
-
+    @stack('scripts')
 </body>
 
 </html>

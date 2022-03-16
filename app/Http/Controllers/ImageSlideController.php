@@ -15,8 +15,8 @@ class ImageSlideController extends Controller
      */
     public function index()
     {
-        $imagess = ImageSlider::all();
-        return view('pages.admin.dashboard.ImageSlide.index', compact('imagess'));
+        $sliders = ImageSlider::all();
+        return view('pages.admin.dashboard.ImageSlide.index', compact('sliders'));
     }
 
     /**
@@ -26,7 +26,6 @@ class ImageSlideController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.dashboard.ImageSlide.create');
         return view('pages.admin.dashboard.ImageSlide.create');
     }
 
@@ -38,77 +37,29 @@ class ImageSlideController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-        $request->validate([
-            'speed' => 'required',
-            'number' => 'required',
-            'heading' => 'required',
-            'heading2' => 'required',
-            'heading3' => 'required',
-            'heading4' => 'required',
+        $this->validate($request,[
+            'speed'       => 'required',
+            'number'      => 'required',
+            'heading'     => 'required',
             'sub_heading' => 'required',
-            'sub_heading2' => 'required',
-
-            'sub_heading3' => 'required',
-
-            'sub_heading4' => 'required',
-
-            'body_text' => 'required',
-            'body_text2' => 'required',
-
-            'body_text3' => 'required',
-
-            'body_text4' => 'required',
-
-            'images' => 'required',
-
-            'images2' => 'required',
-            'images3' => 'required',
-            'images4' => 'required',
+            'images'      => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
-
-        if (isset($request->images) && !empty($request->images)) {
-            $image = Storage::disk('public')->put('upload/', $request->images);
-        } else {
-            $image = null;
-        }
-        if (isset($request->images2) && !empty($request->images2)) {
-            $image1 = Storage::disk('public')->put('upload/', $request->images2);
-        } else {
-            $image1 = null;
-        }
-        if (isset($request->images3) && !empty($request->images3)) {
-            $image2 = Storage::disk('public')->put('upload/', $request->images3);
-        } else {
-            $image2 = null;
-        }
-        if (isset($request->images4) && !empty($request->images4)) {
-            $image3 = Storage::disk('public')->put('upload/', $request->images4);
-        } else {
-            $image3 = null;
-        }
-        ImageSlider::create([
-            'speed' => $request->speed,
-            'number' => $request->number,
-            'heading' => $request->heading,
-            'heading2' => $request->heading2,
-            'heading3' => $request->heading3,
-            'heading4' => $request->heading4,
+        $imageName        = time().'.'.$request->images->extension();  
+        $image            = $request->images->move(public_path('upload/'), $imageName);
+        $filePath         =  'upload/'.$imageName;
+        $sliders          =  ImageSlider::create([
+            'speed'       => $request->speed,
+            'number'      => $request->number,
+            'heading'     => $request->heading,
             'sub_heading' => $request->sub_heading,
-            'sub_heading2' => $request->sub_heading2,
-            'sub_heading3' => $request->sub_heading3,
-            'sub_heading4' => $request->sub_heading4,
-            'body_text' => $request->body_text,
-            'body_text2' => $request->body_text2,
-            'body_text3' => $request->body_text3,
-            'body_text4' => $request->body_text4,
-            'images' => $image,
-            'images2' => $image1,
-            'images3' => $image2,
-            'images4' => $image3,
-
+            'body_text'   => $request->body_text,
+            'images'      => $filePath,
         ]);
-        return redirect()->route('image.index');
+       if($sliders){
+            return redirect()->route('image.index');
+       }
+
+        
     }
 
     /**
