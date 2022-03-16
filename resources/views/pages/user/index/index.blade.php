@@ -127,6 +127,10 @@
 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
+                    <a href="{{route('logout')}}"  class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                        تسجيل خروج
+                    </a>
+                    {{--
                     <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>
@@ -139,6 +143,7 @@
                             }
                         }
                     </script>
+    --}}
                     <span>
 
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
