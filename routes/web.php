@@ -15,7 +15,7 @@ use App\Http\Controllers\ImageSlideController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PublicServiceController;
-
+use App\Http\Controllers\TitleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,6 +95,7 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::resource('social', SocialMediaController::class);
     Route::resource('tech', TechController::class);
     Route::resource('medical', MedicalController::class);
+    Route::resource('title', TitleController::class);
     Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
     Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');
     Route::get('editpassword', [HomeController::class, 'passView'])->name('editpassword');

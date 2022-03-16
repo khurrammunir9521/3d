@@ -12,6 +12,7 @@ use App\Models\ContactUs;
 use App\Models\ImageSlider;
 use App\Models\PublicService;
 use App\Http\Controllers\Controller;
+use App\Models\Title;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
@@ -63,11 +64,13 @@ class RegisterController extends Controller
             $public = PublicService::orderBy('id', 'DESC')->first();
             $side = SideLogo::first();
             $logos = Logo::first();
+            $title = Title::first();
             $orders = [];
             $publics = [];
-            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics'));
+            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics' , 'title'));
         } elseif (auth()->user()->role == 'admin') {
-            return view('pages.admin.dashboard.dashboard');
+            $title = Title::first();
+            return view('pages.admin.dashboard.dashboard', compact('title'));
         } else {
             $about = AboutUs::first();
             $con = ContactUs::first();
@@ -76,10 +79,11 @@ class RegisterController extends Controller
             $order = Medical::orderBy('id', 'DESC')->first();
             $public = PublicService::orderBy('id', 'DESC')->first();
             $side = SideLogo::first();
-            $logos = Logo::first();
+            $title = Title::first();
             $orders = Medical::where('user_id', Auth::id())->get();
             $publics = PublicService::where('user_id', Auth::id())->get();
-            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics'));
+            $logos = Logo::first();
+            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics' , 'title'));
         }
     }
     /**

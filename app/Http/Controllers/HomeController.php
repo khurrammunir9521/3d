@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Logo;
 use App\Models\Tech;
 use App\Models\User;
+use App\Models\Title;
 use App\Models\AboutUs;
+use App\Models\Medical;
+use App\Models\SideLogo;
 use App\Models\ContactUs;
 use App\Models\ImageSlider;
-use App\Models\Logo;
-use App\Models\Medical;
-use App\Models\PublicService;
-use App\Models\SideLogo;
 use Illuminate\Http\Request;
+use App\Models\PublicService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -36,7 +37,9 @@ class HomeController extends Controller
     public function index()
     {
         if (auth()->user()->role == 'admin') {
-            return view('pages.admin.dashboard.dashboard');
+            $title = Title::first();
+          
+            return view('pages.admin.dashboard.dashboard', compact('title'));
         } else {
             $about = AboutUs::first();
             $con = ContactUs::first();
@@ -48,7 +51,8 @@ class HomeController extends Controller
             $logos = Logo::first();
             $orders = Medical::where('user_id', Auth::id())->get();
             $publics = PublicService::where('user_id', Auth::id())->get();
-            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics'));
+            $title = Title::first();
+            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics' , 'title'));
         }
     }
     public function vieworder($id)

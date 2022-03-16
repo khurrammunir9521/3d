@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Organs</title>
-	<link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
-	<link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon"/>
-    <meta name="description" content="شركة إدراك للإستشارات الإدارية والتدريب الإستشاري"/>
+    @if(@$title->title != null)
+    <title>{{$title->title}}</title>
+    @else
+    <title>أجهزة ثلاثية الأبعاد</title>
+    @endif
+    <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
+    @if(@$title->discription != null)
+    <meta name="description" content="{{$title->discription}}" />
+    @else
+    <meta name="description" content="شركة إدراك للإستشارات الإدارية والتدريب الإستشاري" />
+    @endif
 
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}">
@@ -89,58 +97,67 @@
 
                     </ul>
                 </div>
-                    @auth
-                    <div class="left-side desktop-menu">
+                @auth
+                <div class="left-side desktop-menu">
 
-                        <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                            {{-- @if (auth()->user()->profile != null)
+                    <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                        {{-- @if (auth()->user()->profile != null)
                                 @if (auth()->user()->profile == null)
                                     <div class="profile-img">
                                         <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                    </div>
-                    @else
-                    <div class="profile-img">
-                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px;">
-
-                    </div>
-                    @endif
-                    <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-                    --}}
-                    <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
-                        {{-- @if (auth()->user()->profile != null) --}}
-                        @if (auth()->user()->profile == null)
-                        <div class="profile profile-icon">
-                            <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
-                        </div>
-                        @else
-                        <img class="" style="width:30px;height:30px;" alt="" src="{{ asset('storage/' . auth()->user()->profile) }}">
-                        @endif
-                        <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-
-                        <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
-
-                        <a href="{{ route('logout') }}" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                            تسجيل خروج
-                        </a>
-                        <span>
-
-                            <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                            <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                        </span>
                 </div>
                 @else
-                <div class="left-side">
-                    <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
-                    <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                <div class="profile-img">
+                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px;">
+
+                </div>
+                @endif
+                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+                --}}
+                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                    {{-- @if (auth()->user()->profile != null) --}}
+                    @if (auth()->user()->profile == null)
+                    <div class="profile profile-icon">
+                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                    </div>
+                    @else
+                    <img class="" style="width:30px;height:30px;" alt="" src="{{ asset('storage/' . auth()->user()->profile) }}">
+                    @endif
+                    <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+
+                    <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+
+                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                        تسجيل خروج
+                    </a>
+                    <script type="text/javascript">
+                        function logout(event) {
+                            event.preventDefault();
+                            var check = confirm("هل تريد حقا الخروج؟");
+                            if (check) {
+                                document.getElementById('logout-form').submit();
+                            }
+                        }
+                    </script>
                     <span>
+
                         <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
                         <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
                     </span>
-                </div>
-                @endauth
             </div>
-        </nav>  
-    
+            @else
+            <div class="left-side">
+                <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
+                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                <span>
+                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                </span>
+            </div>
+            @endauth
+    </div>
+    </nav>
+
     <!-- <section class="banner">
       <div class="container">
         <div class="row">
@@ -584,18 +601,18 @@
                     <div class="col-md-4" dir="rtl">
                         <div class="text-start">
                             <figcaption class="map-cap side sample">
-								 @if (@$side->subheading != null)
-                             <h6> {{$side->subheading}}</h6>
+                                @if (@$side->subheading != null)
+                                <h6> {{$side->subheading}}</h6>
                                 @else
-                             <h6>اثناء العمل</h6>
+                                <h6>اثناء العمل</h6>
                                 @endif
-								 @if (@$side->heading != null)
-                                  <p> {{$side->heading}}</p>
+                                @if (@$side->heading != null)
+                                <p> {{$side->heading}}</p>
                                 @else
                                 <p>خارج الصندوق</p>
                                 @endif
-                                
-                               
+
+
                             </figcaption>
                             <div class="bottom boxContainer sample heart-img">
                                 <div class="blue-box move"></div>
@@ -816,29 +833,29 @@
                                 التطبيق.</p>
                         </div>
                         <div class="actions">
-                           @auth
-							 <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @auth
+                            <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							@else
-							 <button class="btn btn-grey invert authmasg" ><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @else
+                            <button class="btn btn-grey invert authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							
-							<a class='koib d-none'>الرجاء تسجيل الدخول أولا </a>
-							@endauth
-							
+
+                            <spa class='koib d-none'>الرجاء تسجيل الدخول أولا </spa>
+                            @endauth
+
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
                         </div>
-						@auth
-						@if(@$orders->count() > 0 )
+                        @auth
+                        @if(@$orders->count() > 0 )
                         <div class="notification-box">
                             <p><span class="notification">{{count($orders)}}
-								</span>طلبات قائمة</p>
+                                </span>طلبات قائمة</p>
                         </div>
-						@endif
-						@endauth
+                        @endif
+                        @endauth
                     </div>
                 </div>
                 <div class="col-md-6 dot-txt-main-left">
@@ -868,27 +885,27 @@
                         <div class="actions">
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#publicVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-							@auth
-							        <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#publicServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @auth
+                            <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#publicServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							@else
-							   <button class="btn btn-grey invert " ><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            @else
+                            <button class="btn btn-grey invert "><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-							
-							<a class='koib d-none'>الرجاء تسجيل الدخول أولا </a>
-							@endauth
-                         
+
+                            <a class='koib d-none'>الرجاء تسجيل الدخول أولا </a>
+                            @endauth
+
                         </div>
-						@auth
-						@if(@$publics->count() >0 )
+                        @auth
+                        @if(@$publics->count() >0 )
                         <div class="notification-box mobile">
                             <p><span class="notification">{{count($publics)}}
-								</span>طلبات قائمة</p>
+                                </span>طلبات قائمة</p>
                         </div>
-						@endif
-						@endauth
+                        @endif
+                        @endauth
                     </div>
                 </div>
             </div>
