@@ -127,28 +127,31 @@
 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
-                    <a href="{{route('logout')}}" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+
+                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>
-                    {{--
-                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
-                    تسجيل خروج
-                </a>
-                <script type="text/javascript">
-                    function logout(event) {
-                        event.preventDefault();
-                        var check = confirm("هل تريد حقا الخروج؟");
-                        if (check) {
-                            document.getElementById('logout-form').submit();
+                    <script type="text/javascript">
+                        function logout(event) {
+                            event.preventDefault();
+                            var check = confirm("هل تريد حقا الخروج؟");
+                            if (check) {
+                                document.getElementById('logout-form').submit();
+                            }
                         }
-                    }
-                </script>
-                --}}
-                <span>
+                    </script>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
 
-                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                </span>
+                        <button hidden type="submit" class=" sub-slide-item" style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
+                            Out</button>
+
+                    </form>
+                    <span>
+
+                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                    </span>
             </div>
             @else
             <div class="left-side">
@@ -600,7 +603,13 @@
                                 </figcaption>
                                 <div class="map-place boxContainer">
                                     <div class="blue-box move"></div>
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3988.7912337679813!2d103.77780549213008!3d1.3000914839605147!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1645634527875!5m2!1sen!2s" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    @if (@$map->map_image != null)
+
+                                    <img src="{{ asset('storage/' . $map->map_image) }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+
+                                    @else
+                                    <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -670,11 +679,12 @@
                                 طلب
                                 الخدمة</button>
 
-                            <spa class='koib d-none'>الرجاء تسجيل الدخول أولا </spa>
                             @endauth
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
+
+                            <p class='koib d-none'>الرجاء تسجيل الدخول أولا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -718,11 +728,11 @@
                                 طلب
                                 الخدمة</button>
                             @else
-                            <button class="btn btn-grey invert "><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            <button class="btn btn-grey invert authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
 
-                            <a class='koib d-none'>الرجاء تسجيل الدخول أولا </a>
+                            <p class='koib d-none'>الرجاء تسجيل الدخول أولا </p>
                             @endauth
 
                         </div>

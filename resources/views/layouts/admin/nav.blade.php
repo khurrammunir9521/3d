@@ -56,6 +56,12 @@
                       <li class="nav-item">
                           <a class="nav-link " href="{{ route('title.index') }}" tabindex="-1" aria-disabled="true"> إعدادات العنوان</a>
                       </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="{{ route('map.index') }}" tabindex="-1" aria-disabled="true"> صورة الخريطة</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="{{ route('youtubeurl.index') }}" tabindex="-1" aria-disabled="true"> يوتيوب رابط </a>
+                      </li>
                   </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

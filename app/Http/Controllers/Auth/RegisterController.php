@@ -5,14 +5,16 @@ namespace App\Http\Controllers\Auth;
 use App\Models\Logo;
 use App\Models\Tech;
 use App\Models\User;
+use App\Models\Title;
 use App\Models\AboutUs;
 use App\Models\Medical;
+use App\Models\Mapimage;
 use App\Models\SideLogo;
 use App\Models\ContactUs;
+use App\Models\Youtubeurl;
 use App\Models\ImageSlider;
 use App\Models\PublicService;
 use App\Http\Controllers\Controller;
-use App\Models\Title;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
@@ -64,10 +66,12 @@ class RegisterController extends Controller
             $public = PublicService::orderBy('id', 'DESC')->first();
             $side = SideLogo::first();
             $logos = Logo::first();
+            $map = Mapimage::first();
             $title = Title::first();
+            $links = Youtubeurl::first();
             $orders = [];
             $publics = [];
-            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics' , 'title'));
+            return view('pages.user.index.index', compact('links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         } elseif (auth()->user()->role == 'admin') {
             $title = Title::first();
             return view('pages.admin.dashboard.dashboard', compact('title'));
@@ -83,7 +87,9 @@ class RegisterController extends Controller
             $orders = Medical::where('user_id', Auth::id())->get();
             $publics = PublicService::where('user_id', Auth::id())->get();
             $logos = Logo::first();
-            return view('pages.user.index.index', compact('about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics' , 'title'));
+            $map = Mapimage::first();
+            $links = Youtubeurl::first();
+            return view('pages.user.index.index', compact('links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         }
     }
     /**
