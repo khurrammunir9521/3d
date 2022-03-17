@@ -476,8 +476,8 @@ $(function () {
   $('#publicServiesModal .email').keyup(function () {
     var email = $(this).val();
     if ($('#publicServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue')
-    && $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .gender').hasClass('field-blue') &&
-    $('#publicServiesModal .carousel-item.one .spec').hasClass('field-blue')) {
+      && $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .gender').hasClass('field-blue') &&
+      $('#publicServiesModal .carousel-item.one .spec').hasClass('field-blue')) {
       $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
     }
     else {
@@ -584,7 +584,7 @@ $(function () {
 
   // asim
   $(".authmasg").click(function () {
-      $(".koib").toggleClass("d-none");
+    $(".koib").toggleClass("d-none");
   });
 
   setTimeout(() => {
@@ -611,22 +611,22 @@ $(function () {
   $(".imageupload").click(function () {
       $(".chose").click();
   });
-  imgInp.onchange = (evt) => {
-      const [file] = imgInp.files;
-      if (file) {
-          blah.src = URL.createObjectURL(file);
-      }
-  };
+  // imgInp.onchange = (evt) => {
+  //     const [file] = imgInp.files;
+  //     if (file) {
+  //         blah.src = URL.createObjectURL(file);
+  //     }
+  // };
 
-  $(".imageupload1").click(function () {
-      $(".chose1").click();
-  });
-  imgInp1.onchange = (evt) => {
-      const [file] = imgInp1.files;
-      if (file) {
-          blah1.src = URL.createObjectURL(file);
-      }
-  };
+  // $(".imageupload1").click(function () {
+  //     $(".chose1").click();
+  // });
+  // imgInp1.onchange = (evt) => {
+  //     const [file] = imgInp1.files;
+  //     if (file) {
+  //         blah1.src = URL.createObjectURL(file);
+  //     }
+  // };
 
 
   $('body').click(function() {
@@ -638,5 +638,13 @@ $(function () {
   })
   
 
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > 800 && $(this).scrollTop() < 1500 ) {
+  //     $('.effect-machine').css({'transform' : 'translate(-50%, 0px)'});
+  //   }
+  //    else {
+  //     $('.effect-machine').css({'transform' : 'translate(0%, 0px)'});
+  //   }
+  // });
 
 })
