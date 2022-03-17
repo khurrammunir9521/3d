@@ -1931,6 +1931,7 @@ right: 185px;
     z-index: 1 !important;
     opacity: 1 !important;
     border-radius: 25px;
+    display: none;
 }
 #healthServiesModal .carousel-control-next-icon, #healthServiesModal  .carousel-control-prev-icon{
     opacity: 0 !important;
@@ -1949,6 +1950,7 @@ right: 185px;
     z-index: 1 !important;
     opacity: 1 !important;
     border-radius: 25px;
+    display: none;
 }
 #publicServiesModal .carousel-control-next-icon, #publicServiesModal  .carousel-control-prev-icon{
     opacity: 0 !important;

@@ -168,6 +168,7 @@ $(function () {
   $('.male-back .pointer').click(function () {
     $('.male-front').find('.pointer').css({ 'opacity': '0', 'transition': 'none' });
     $('.male-front').addClass('blur');
+    $('#healthServiesModal .carousel-item.two .btn-form').removeClass('disabled');
     if ($(this).hasClass('back')) {
       parts.val("backbones").trigger("change");
       $('.male-back .back p').css('opacity', 1);
@@ -195,6 +196,7 @@ $(function () {
   $('.male-front .pointer').click(function () {
     $('.male-back').find('.pointer').css({ 'opacity': '0', 'transition': 'none' });
     $('.male-back').addClass('blur');
+    $('#healthServiesModal .carousel-item.two .btn-form').removeClass('disabled');
     if ($(this).hasClass('head')) {
       parts.val("skull").trigger("change");
       $('.male-front .head p').css('opacity', 1);
@@ -206,7 +208,7 @@ $(function () {
 
   $('.body-parts').change(function () {
     $('.select2-container--default .select2-selection--multiple').addClass('active-select');
-
+    $('#healthServiesModal .carousel-item.two .btn-form').removeClass('disabled');
     var data = $('.body-parts').select2('data');
     data.forEach(function (item, index) {
       if (item.id === 'skull') {
@@ -413,6 +415,8 @@ $(function () {
     else {
       $('#publicServiesModal .carousel-item.one .btn-form').addClass('disabled');
     }
+  })
+
 
     $('#publicServiesModal .form-select.gender').change(function() {
       if ($('#publicServiesModal .carousel-item.one .name').val().length >1 && $('#publicServiesModal .carousel-item.one .email').val().length >1
@@ -433,11 +437,29 @@ $(function () {
         $('#publicServiesModal .carousel-item.one .btn-form').addClass('disabled');
       }
     })
+  $('#publicServiesModal .carousel-item.two .form-control').keyup(function () {
+    if ($('#publicServiesModal .carousel-item.two .type').val().length >1 && $('#publicServiesModal .carousel-item.two .email').val().length >1
+    && $('#publicServiesModal .carousel-item.two .spec').val().length >1 && $('#publicServiesModal .carousel-item.two .btn-upload.public').hasClass('field-blue')) {
+      $('#publicServiesModal .carousel-item.two .btn-form').removeClass('disabled');
+    }
+    else {
+      $('#publicServiesModal .carousel-item.two .btn-form').addClass('disabled');
+    }
   })
 
+  $('#public-file').change(function() {
+    var fileName = $(this).val();
+    $('.btn-upload.public').addClass('field-blue');
+    if(fileName && $('#publicServiesModal .carousel-item.two .type').val().length > 1 && $('#publicServiesModal .carousel-item.two .email').val().length > 1 && 
+    $('#publicServiesModal .carousel-item.two .spec').val().length > 1) { // returns true if the string is not empty
+      $('#publicServiesModal .carousel-item.two .btn-form').removeClass('disabled');
+    } else { // no file was selected
+      $('#publicServiesModal .carousel-item.two .btn-form').addClass('disabled');
+    }
+  })
   $('#healthServiesModal .carousel-item.three .procedure').change(function() {
     if($('.btn-upload.health').hasClass('field-blue')) {
-      $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled')
+      $('#healthServiesModal .carousel-item.three .btn-form').removeClass('disabled');
     }
   })
 
@@ -452,26 +474,54 @@ $(function () {
   })
 
   $('.email').keyup(function(){
-    if($(this).val().length == 0) {
-       
-    }
     var email = $(this).val();
+    if($(this).val().length == 0) {
+      $(this).removeClass('field-blue')
+      $(this).removeClass('field-red')
+    }
+    else {
+      validateEmail(email)
+    }
     
-    validateEmail(email)
  })
 
  function validateEmail(email) {
      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-     if( !emailReg.test( email ) || $('.email').val().length == 0 && $('form input').val().length === 0) {
+     if( !emailReg.test( email ) || $('.email').val().length == 0) {
          $('.email-error').removeClass('d-none');
-         $(this).addClass('field-red')
-         $(this).removeClass('field-blue')
+         $('#loginModal .email').addClass('field-red');
+         $('#loginModal .email').removeClass('field-blue');
+         $('#loginModal .email').removeClass('field-red');
+         $('#loginModal .btn-form').addClass('disabled');
      } else {
-         $('.email-error').addClass('d-none')
-         $(this).addClass('field-blue')
-         $(this).removeClass('field-red')
+         $('.email-error').addClass('d-none');
+         $('#loginModal .email').addClass('field-blue');
+         $('#loginModal .email').removeClass('field-red');
+         $('#loginModal .btn-form').removeClass('disabled');
      }
  }
+
+//  Login Form Validation
+$('#loginModal .email').keyup(function(){
+ var email = $(this).val();
+ if($('#loginModal .pass').val().length > 0) {
+  $('#loginModal .btn-form').removeClass('disabled');
+ }
+ else {
+  $('#loginModal .btn-form').addClass('disabled');
+ }
+  validateEmail(email)
+})
+
+$('#loginModal .pass').keyup(function() {
+  if($(this).val().length > 0 && $('#loginModal .email').val().length > 0) {
+    $('#loginModal .btn-form').removeClass('disabled');
+  }
+  else {
+    $('#loginModal .btn-form').addClass('disabled');
+
+  }
+})
 
   // asim
   $('.authmasg').click(function () {
