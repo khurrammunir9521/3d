@@ -569,7 +569,7 @@
                             @endif
                         </div>
                         <div class="row pt-5 mt-5 align-items-end" dir="rtl">
-                            <div class="col-md-6">
+                            <div class="col-md-9">
                                 <div class="about-content" id="about-us">
                                     <span class="outline dot right-center">3D+</span>
                                     @if ($about != null)
@@ -604,7 +604,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <figcaption class="map-cap">
                                     <h6>مقر العمل</h6>
                                     <p>الرياض، المونسية، شارع احمد بن حنبل</p>
