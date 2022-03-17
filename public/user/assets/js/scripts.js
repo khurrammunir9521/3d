@@ -685,7 +685,7 @@ $(function () {
   })
 
   $(window).scroll(function () {
-    if ($(window).width > 767) {
+    if ($(window).width > 767) pph{
       if ($(this).scrollTop() > 900 && $(this).scrollTop() < 2000) {
         $('.effect-machine').css({ 'transform': 'translate(0%, 0px)' });
         $('.dot-effect').css({ 'transform': 'translate(0%, 0px)' });
