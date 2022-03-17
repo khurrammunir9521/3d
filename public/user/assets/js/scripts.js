@@ -587,6 +587,10 @@ $(function () {
     $(".koib").toggleClass("d-none");
   });
 
+   $(".authmasg-health").click(function () {
+       $(".koib-health").toggleClass("d-none");
+   });
+
   setTimeout(() => {
     $('.client-counter').each(function () {
       console.log($(this).toString().length)

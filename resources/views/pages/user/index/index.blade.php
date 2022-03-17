@@ -679,7 +679,7 @@
                                 طلب
                                 الخدمة</button>
                             @else
-                            <button class="btn btn-grey authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            <button class="btn btn-grey authmasg-health"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
 
@@ -687,8 +687,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-
-                            <p class='koib d-none'><span style="color:red">يتطلب التسجيل</span> </p>
+                            <p class='koib-health d-none mt-2'><span style="color:red">يتطلب التسجيل</span>للتسجيل اضغط هنا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -736,7 +735,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none'>الرجاء تسجيل الدخول أولا </p>
+                            <p class='koib d-none mt-2'><span style="color:red">يتطلب التسجيل</span>للتسجيل اضغط هنا </p>
                             @endauth
 
                         </div>
