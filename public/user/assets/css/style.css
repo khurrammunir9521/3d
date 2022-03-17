@@ -1579,7 +1579,6 @@ textarea {
 
 .about-content {
     position: relative;
-    z-index: 9999;
     top: 30px;
 }
 
@@ -1600,7 +1599,8 @@ textarea {
 }
 
 .top.boxContainer .blue-box {
-    left: -30px;
+    /* left: -30px; */
+    left: 0;
     top: -25px;
 }
 
