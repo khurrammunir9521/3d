@@ -126,7 +126,7 @@ nav .left-side a:last-child {
     margin: -15px auto;
     position: absolute;
     left: 0;
-    right: -125px;
+    right: -155px;
 }
 .register-icon {
 	    position: relative;
@@ -146,7 +146,7 @@ nav .left-side a:last-child {
 
 .dot.right::before {
     position: absolute;
-    right: -168px;
+    right: -195px;
     margin: -15px auto;
     left: 0;
 }
@@ -1685,6 +1685,7 @@ textarea {
 
 .image-place.effect-machine {
     position: relative;
+    transition: 5s ease-in-out;
 }
 
 .pointer.top {
@@ -2025,11 +2026,11 @@ right: 185px;
 }
 
 .footer-white-heading .dot.center{
-    left: 40px;
+    left: 20px;
 }
 .footer-white-heading .dot.center::before{
     top: 0px;
-    right: -55px;
+    right: -100px;
 }
 .footer-white-heading .title.white::after{
     left: 50px;
@@ -2170,4 +2171,9 @@ input[type=number] {
 
 .map-place.boxContainer img {
     width: 330px;
+}
+
+.animate {
+    transition: .5s ease-in-out;
+    transform: translate(-50%, 0px);
 }

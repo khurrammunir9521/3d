@@ -611,22 +611,22 @@ $(function () {
   $(".imageupload").click(function () {
       $(".chose").click();
   });
-  imgInp.onchange = (evt) => {
-      const [file] = imgInp.files;
-      if (file) {
-          blah.src = URL.createObjectURL(file);
-      }
-  };
+  // imgInp.onchange = (evt) => {
+  //     const [file] = imgInp.files;
+  //     if (file) {
+  //         blah.src = URL.createObjectURL(file);
+  //     }
+  // };
 
-  $(".imageupload1").click(function () {
-      $(".chose1").click();
-  });
-  imgInp1.onchange = (evt) => {
-      const [file] = imgInp1.files;
-      if (file) {
-          blah1.src = URL.createObjectURL(file);
-      }
-  };
+  // $(".imageupload1").click(function () {
+  //     $(".chose1").click();
+  // });
+  // imgInp1.onchange = (evt) => {
+  //     const [file] = imgInp1.files;
+  //     if (file) {
+  //         blah1.src = URL.createObjectURL(file);
+  //     }
+  // };
 
 
   $('body').click(function() {
@@ -638,13 +638,13 @@ $(function () {
   })
   
 
-  $(window).scroll(function () {
-    if ($(this).scrollTop() === 1000) {
-      $('.effect-machine').fadeOut();
-    }
-     else {
-      $('.effect-machine').fadeIn();
-    }
-  });
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > 800 && $(this).scrollTop() < 1500 ) {
+  //     $('.effect-machine').css({'transform' : 'translate(-50%, 0px)'});
+  //   }
+  //    else {
+  //     $('.effect-machine').css({'transform' : 'translate(0%, 0px)'});
+  //   }
+  // });
 
 })

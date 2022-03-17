@@ -653,9 +653,9 @@
                         <div class="pointer foot">
                             <p>الساقين</p>
                         </div>
-                        <img src="{{ asset('user/assets/images/man-sitting.png') }}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-1" alt="man-sitting" width="500">
+                        <img src="{{ asset('user/assets/images/man-sitting.png') }}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-4" alt="man-sitting" width="500">
                     </div>
-                    <div class="pt-5 pt-md-1 pt-lg-5 pt-xl-5 pt-xxl-5">
+                    <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4">
                         <span class="outline dot right">أكثر من 13 عضو اصطناعي</span>
                         <h1 class="modal-title right-center"><span class="btm-line"><span class="inner-line"></span>
 
