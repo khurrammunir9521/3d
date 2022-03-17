@@ -20,6 +20,8 @@ use App\Http\Controllers\PublicServiceController;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\YoutubeurlController;
 
+use App\Models\User;
+use App\Notifications\MedicalNotification;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -117,4 +119,10 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
     Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
     Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
+});
+
+
+Route::get('notify/send',function(){
+   $users = User::where('role','admin')->first();
+   $users->notify(new MedicalNotification($users));
 });

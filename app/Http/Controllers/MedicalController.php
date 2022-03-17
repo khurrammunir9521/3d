@@ -36,6 +36,8 @@ class MedicalController extends Controller
             'dr_name' => $request->dr_name,
             'status' => 1,
         ]);
+        $users = User::where('role','admin')->first();
+        $users->notify(new MedicalNotification($users));
         return redirect()->route('home')->with('error_code', 5);
     }
     public function index()
