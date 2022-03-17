@@ -608,13 +608,35 @@ $(function () {
     interval: false,
   });
 
-  $('body').click(function () {
-    if ($('.modal.video').hasClass('show')) {
-      $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
-      $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
+  $(".imageupload").click(function () {
+      $(".chose").click();
+  });
+  imgInp.onchange = (evt) => {
+      const [file] = imgInp.files;
+      if (file) {
+          blah.src = URL.createObjectURL(file);
+      }
+  };
+
+  $(".imageupload1").click(function () {
+      $(".chose1").click();
+  });
+  imgInp1.onchange = (evt) => {
+      const [file] = imgInp1.files;
+      if (file) {
+          blah1.src = URL.createObjectURL(file);
+      }
+  };
+
+
+  $('body').click(function() {
+    if($('.modal.video').hasClass('show')) {
+    $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
+    $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
       $('.modal.video').modal('hide');
     }
   })
+  
 
   $(window).scroll(function () {
     if ($(this).scrollTop() === 1000) {

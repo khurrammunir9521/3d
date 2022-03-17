@@ -9,10 +9,10 @@
                             <div>
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
                                 <h1 class="modal-title right">
-									<span class="btm-line"><span class="inner-line"></span>
-									تسجيل عضوية جديدة
-									</span>
-										</h1>
+                                    <span class="btm-line"><span class="inner-line"></span>
+                                        تسجيل عضوية جديدة
+                                    </span>
+                                </h1>
                             </div>
                             <div class="profile">
                                 <!-- <a href="#profile">
@@ -38,10 +38,16 @@
 
                                 <div class="row justify-content-center">
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
-                                        <img src="{{asset('user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block" width="100" alt="avatar">
-                                        <label class="form-label dot">صورة</label>
-                                        <input type="file" class="form-control" name="profile" id="" accept="image/*" type="file" id="download-cv-file-name" name="profile" id="profile" aria-describedby="">
+                                        <img id="blah" src="{{asset('user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;" alt="dashboard_logo" />
 
+                                        @auth
+                                        @if (Auth::user()->profile == null)
+                                        <img id="blah" src="{{asset('user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;" alt="dashboard_logo" />
+                                        @else
+                                        <img id="blah" src="{{ asset('storage/' . Auth::user()->profile) }}" alt="dashboard_logo" class="mx-auto d-block imageupload" style="clip-path: circle() !important ;height: 100% !important;" width="100" />
+                                        @endif
+                                        @endauth
+                                        <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                     </div>
                                 </div>
 
