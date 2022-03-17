@@ -12,7 +12,7 @@
     @endif
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
-	<meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
+    <meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
     @if(@$title->discription != null)
     <meta name="description" content="{{$title->discription}}" />
     @else
@@ -378,244 +378,248 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             </div>
-                            @foreach($profile as $profiles)
-                            <div class="carousel-item active">
-                                <div class="row justify-content-end">
-                                    <div class="col-sm-7 col-md-4 col-lg-7">
-                                        <div class="static-text">
-                                        
+                            @foreach($profile as $key=>$profiles)
+                            @if($key == 0)
+                            <div class="carousel-item active" id="{{$key}}">
+                                @else
+                                <div class="carousel-item" id="{{$key}}">
+                                    @endif
+                                    <div class="row justify-content-end">
+                                        <div class="col-sm-7 col-md-4 col-lg-7">
+                                            <div class="static-text">
 
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profiles->sub_heading }}
-                                            </span>
-                                            
-                                           
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s">
-                                                {{ $profiles->heading }}
-                                                !
-                                            </h2>
-                                          
-                                            
-                                            <p class="description">
-                                                {!!$profiles->body_text !!}
-                                            </p>
-                                          
 
-                                            <button class="btn btn-sky">المزيد</button>
-                                            <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
+                                                <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profiles->sub_heading }}
+                                                </span>
+
+
+                                                <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s">
+                                                    {{ $profiles->heading }}
+                                                    !
+                                                </h2>
+
+
+                                                <p class="description">
+                                                    {!!$profiles->body_text !!}
+                                                </p>
+
+
+                                                <button class="btn btn-sky">المزيد</button>
+                                                <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 col-md-8 col-lg-5">
+                                            <div class="top boxContainer">
+                                                <div class="blue-box move"></div>
+                                                @if (@$profiles->images != null)
+                                                <img src="{{ asset($profiles->images) }}" class="img-fluid img-behind" alt="medical">
+                                                @else
+                                                <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-5 col-md-8 col-lg-5">
-                                        <div class="top boxContainer">
-                                            <div class="blue-box move"></div>
-                                            @if (@$profiles->images != null)
-                                            <img src="{{ asset($profiles->images) }}" class="img-fluid img-behind" alt="medical">
-                                            @else
-                                            <img src="{{ asset('user/assets/images/medical.jpg') }}" class="img-fluid img-behind" alt="medical">
-                                            @endif
-                                        </div>
+                                </div>
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row align-items-center" dir="ltr">
+                        <div class="col-md-4" dir="rtl">
+                            <div class="text-start">
+                                <figcaption class="map-cap side sample">
+                                    @if (@$side->subheading != null)
+                                    <h6> {{$side->subheading}}</h6>
+                                    @else
+                                    <h6>اثناء العمل</h6>
+                                    @endif
+                                    @if (@$side->heading != null)
+                                    <p> {{$side->heading}}</p>
+                                    @else
+                                    <p>خارج الصندوق</p>
+                                    @endif
+
+
+                                </figcaption>
+                                <div class="bottom boxContainer sample heart-img">
+                                    <div class="blue-box move"></div>
+                                    @if (@$side->side_image != null)
+                                    <img src="{{ asset('storage/' . $side->side_image) }}" alt="side-img">
+                                    @else
+                                    <img src="{{ asset('user/assets/images/side-img.jpg') }}" alt="side-img">
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 padi-top">
+                            <!-- counter -->
+                            <div class="row">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-2">
+                                    <div class="counter">
+                                        <span class="client-counter">130</span><span class="symbol">+</span>
+                                        <h5>عميل</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="counter">
+                                        <span class="client-counter">250</span><span class="symbol">+</span>
+                                        <h5>مشروع</h5>
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row align-items-center" dir="ltr">
-                    <div class="col-md-4" dir="rtl">
-                        <div class="text-start">
-                            <figcaption class="map-cap side sample">
-                                @if (@$side->subheading != null)
-                                <h6> {{$side->subheading}}</h6>
-                                @else
-                                <h6>اثناء العمل</h6>
-                                @endif
-                                @if (@$side->heading != null)
-                                <p> {{$side->heading}}</p>
-                                @else
-                                <p>خارج الصندوق</p>
-                                @endif
-
-
-                            </figcaption>
-                            <div class="bottom boxContainer sample heart-img">
-                                <div class="blue-box move"></div>
-                                @if (@$side->side_image != null)
-                                <img src="{{ asset('storage/' . $side->side_image) }}" alt="side-img">
-                                @else
-                                <img src="{{ asset('user/assets/images/side-img.jpg') }}" alt="side-img">
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 padi-top">
-                        <!-- counter -->
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col-md-2">
-                                <div class="counter">
-                                    <span class="client-counter">130</span><span class="symbol">+</span>
-                                    <h5>عميل</h5>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="counter">
-                                    <span class="client-counter">250</span><span class="symbol">+</span>
-                                    <h5>مشروع</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="counter">
+                            <!-- <div class="counter">
                             <div class="counter-innder">
                                 <span class="client-counter">30+</span>
                                 <h5>counter</h5>
                             </div>
 
                         </div> -->
-                        <div class="main-slide sample">
-                            @if (@$logos->logo1 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo1) }}">
-                            </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/gas.png') }}">
-                            </div>
-                            @endif
+                            <div class="main-slide sample">
+                                @if (@$logos->logo1 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo1) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/gas.png') }}">
+                                </div>
+                                @endif
 
-                            @if (@$logos->logo2 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo2) }}">
-                            </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/gas.png') }}">
-                            </div>
-                            @endif
+                                @if (@$logos->logo2 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo2) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/gas.png') }}">
+                                </div>
+                                @endif
 
-                            @if (@$logos->logo3 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo3) }}">
-                            </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/gas.png') }}">
-                            </div>
-                            @endif
+                                @if (@$logos->logo3 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo3) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/gas.png') }}">
+                                </div>
+                                @endif
 
-                            @if (@$logos->logo4 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo4) }}">
-                            </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/gas.png') }}">
-                            </div>
-                            @endif
+                                @if (@$logos->logo4 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo4) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/gas.png') }}">
+                                </div>
+                                @endif
 
-                            @if (@$logos->logo5 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo5) }}">
-                            </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/mci.png') }}">
-                            </div>
-                            @endif
+                                @if (@$logos->logo5 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo5) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/mci.png') }}">
+                                </div>
+                                @endif
 
-                            @if (@$logos->logo6 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo6) }}">
-                            </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/gas.png') }}">
-                            </div>
-                            @endif
+                                @if (@$logos->logo6 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo6) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/gas.png') }}">
+                                </div>
+                                @endif
 
-                            @if (@$logos->logo7 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo7) }}">
-                            </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/gas.png') }}">
-                            </div>
-                            @endif
+                                @if (@$logos->logo7 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo7) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/gas.png') }}">
+                                </div>
+                                @endif
 
-                            @if (@$logos->logo8 != null)
-                            <div class="slide-logos">
-                                <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo8) }}">
+                                @if (@$logos->logo8 != null)
+                                <div class="slide-logos">
+                                    <img style="width: 120px;" src="{{ asset('storage/' . $logos->logo8) }}">
+                                </div>
+                                @else
+                                <div class="slide-logos">
+                                    <img src="{{ asset('user/assets/images/gas.png') }}">
+                                </div>
+                                @endif
                             </div>
-                            @else
-                            <div class="slide-logos">
-                                <img src="{{ asset('user/assets/images/gas.png') }}">
-                            </div>
-                            @endif
-                        </div>
-                        <div class="row pt-5 mt-5 align-items-end" dir="rtl">
-                            <div class="col-md-9">
-                                <div class="about-content" id="about-us">
-                                    <span class="outline dot right-center">3D+</span>
-                                    @if ($about != null)
+                            <div class="row pt-5 mt-5 align-items-end" dir="rtl">
+                                <div class="col-md-9">
+                                    <div class="about-content" id="about-us">
+                                        <span class="outline dot right-center">3D+</span>
+                                        @if ($about != null)
 
-                                    <h1 class="modal-title color-blue text-center line-heading">
-                                        <span class="btm-line"><span class="inner-line"></span>{{ @$about->heading }}</span>
-                                    </h1>
-                                    @else
-                                    <h1 class="modal-title color-blue text-center line-heading">
-                                        <span class="btm-line"><span class="inner-line"></span> من نحن
-                                        </span>
-                                    </h1>
-                                    @endif
-                                    @if ($about != null)
-                                    <p class="description">
-                                        {!! @$about->bodytext !!}
+                                        <h1 class="modal-title color-blue text-center line-heading">
+                                            <span class="btm-line"><span class="inner-line"></span>{{ @$about->heading }}</span>
+                                        </h1>
                                         @else
-                                    <div class="description text-center">
-                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
-                                        مولد النص العربى، حيث
-                                        يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                                        الحروف
-                                        التى يولدها
-                                        التطبيق.
-                                    </div>
-                                    @endif
-                                    <div class="actions">
-                                        <button class="btn btn-sky invert" data-bs-toggle="modal" data-bs-target="#aboutModal">
-                                            المزيد
-                                            <img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
-                                        </button>
+                                        <h1 class="modal-title color-blue text-center line-heading">
+                                            <span class="btm-line"><span class="inner-line"></span> من نحن
+                                            </span>
+                                        </h1>
+                                        @endif
+                                        @if ($about != null)
+                                        <p class="description">
+                                            {!! @$about->bodytext !!}
+                                            @else
+                                        <div class="description text-center">
+                                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
+                                            مولد النص العربى، حيث
+                                            يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                                            الحروف
+                                            التى يولدها
+                                            التطبيق.
+                                        </div>
+                                        @endif
+                                        <div class="actions">
+                                            <button class="btn btn-sky invert" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                                                المزيد
+                                                <img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <figcaption class="map-cap">
-                                    <h6>مقر العمل</h6>
-                                    <p>الرياض، المونسية، شارع احمد بن حنبل</p>
-                                </figcaption>
-                                <div class="map-place boxContainer">
-                                    <div class="blue-box move"></div>
-                                    @if (@$map->map_image != null)
+                                <div class="col-md-3">
+                                    <figcaption class="map-cap">
+                                        <h6>مقر العمل</h6>
+                                        <p>الرياض، المونسية، شارع احمد بن حنبل</p>
+                                    </figcaption>
+                                    <div class="map-place boxContainer">
+                                        <div class="blue-box move"></div>
+                                        @if (@$map->map_image != null)
 
-                                    <img src="{{ asset('storage/' . $map->map_image) }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                        <img src="{{ asset('storage/' . $map->map_image) }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
 
-                                    @else
-                                    <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
-                                    @endif
+                                        @else
+                                        <img src="{{ asset('user/assets/images/world-map.jpg') }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
     </section>
 
     <section class="request section" id="services-section">

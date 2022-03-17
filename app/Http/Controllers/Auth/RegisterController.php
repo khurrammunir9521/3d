@@ -121,7 +121,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // dd($data);
+        dd($data);
 
         if (isset($data['profile']) && !empty($data['profile'])) {
             $datas = Storage::disk('public')->put('upload/', $data['profile']);
