@@ -15,6 +15,7 @@ use App\Models\Youtubeurl;
 use App\Models\ImageSlider;
 use App\Models\PublicService;
 use App\Http\Controllers\Controller;
+use App\Models\Counter;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
@@ -71,7 +72,8 @@ class RegisterController extends Controller
             $links = Youtubeurl::first();
             $orders = [];
             $publics = [];
-            return view('pages.user.index.index', compact('links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            $counter = Counter::first();
+            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         } elseif (auth()->user()->role == 'admin') {
             $title = Title::first();
             return view('pages.admin.dashboard.dashboard', compact('title'));
@@ -89,7 +91,8 @@ class RegisterController extends Controller
             $logos = Logo::first();
             $map = Mapimage::first();
             $links = Youtubeurl::first();
-            return view('pages.user.index.index', compact('links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            $counter = Counter::first();
+            return view('pages.user.index.index', compact('counter','links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         }
     }
     /**
@@ -121,7 +124,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        dd($data);
+        
 
         if (isset($data['profile']) && !empty($data['profile'])) {
             $datas = Storage::disk('public')->put('upload/', $data['profile']);
