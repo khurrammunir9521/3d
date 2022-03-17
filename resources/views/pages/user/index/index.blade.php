@@ -12,7 +12,7 @@
     @endif
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
-	<meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
+    <meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
     @if(@$title->discription != null)
     <meta name="description" content="{{$title->discription}}" />
     @else
@@ -383,22 +383,22 @@
                                 <div class="row justify-content-end">
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
-                                        
+
 
                                             <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profiles->sub_heading }}
                                             </span>
-                                            
-                                           
+
+
                                             <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s">
                                                 {{ $profiles->heading }}
                                                 !
                                             </h2>
-                                          
-                                            
+
+
                                             <p class="description">
                                                 {!!$profiles->body_text !!}
                                             </p>
-                                          
+
 
                                             <button class="btn btn-sky">المزيد</button>
                                             <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
@@ -461,13 +461,21 @@
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <div class="counter">
+                                    @if(@$counter->start != null )
+                                    <span class="client-counter">{{$counter->start}}</span><span class="symbol">+</span>
+                                    @else
                                     <span class="client-counter">130</span><span class="symbol">+</span>
+                                    @endif
                                     <h5>عميل</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="counter">
+                                    @if(@$counter->end != null )
+                                    <span class="client-counter">{{$counter->end}}</span><span class="symbol">+</span>
+                                    @else
                                     <span class="client-counter">250</span><span class="symbol">+</span>
+                                    @endif
                                     <h5>مشروع</h5>
                                 </div>
                             </div>
@@ -684,7 +692,8 @@
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
 
-                            <p class='koib d-none'>الرجاء تسجيل الدخول أولا </p>
+                            <p class='koib d-none'><span style="color:red
+                            ">يتطلب التسجيل للتسجيل اضغط هنا </span></p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -731,9 +740,8 @@
                             <button class="btn btn-grey invert authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
-
-                            <p class='koib d-none'>الرجاء تسجيل الدخول أولا </p>
-                            @endauth
+                            <p class='koib d-none'><span style="color:red
+                            ">يتطلب التسجيل للتسجيل اضغط هنا </span></p> @endauth
 
                         </div>
                         @auth

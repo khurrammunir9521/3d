@@ -7,6 +7,7 @@ use App\Models\Tech;
 use App\Models\User;
 use App\Models\Title;
 use App\Models\AboutUs;
+use App\Models\Counter;
 use App\Models\Medical;
 use App\Models\Mapimage;
 use App\Models\SideLogo;
@@ -69,9 +70,10 @@ class RegisterController extends Controller
             $map = Mapimage::first();
             $title = Title::first();
             $links = Youtubeurl::first();
+            $counter = Counter::first();
             $orders = [];
             $publics = [];
-            return view('pages.user.index.index', compact('links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         } elseif (auth()->user()->role == 'admin') {
             $title = Title::first();
             return view('pages.admin.dashboard.dashboard', compact('title'));
@@ -89,7 +91,8 @@ class RegisterController extends Controller
             $logos = Logo::first();
             $map = Mapimage::first();
             $links = Youtubeurl::first();
-            return view('pages.user.index.index', compact('links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            $counter = Counter::first();
+            return view('pages.user.index.index', compact('counter','links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
         }
     }
     /**

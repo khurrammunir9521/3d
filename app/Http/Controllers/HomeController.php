@@ -7,14 +7,15 @@ use App\Models\Tech;
 use App\Models\User;
 use App\Models\Title;
 use App\Models\AboutUs;
+use App\Models\Counter;
 use App\Models\Medical;
 use App\Models\Mapimage;
 use App\Models\SideLogo;
 use App\Models\ContactUs;
+use App\Models\Youtubeurl;
 use App\Models\ImageSlider;
 use Illuminate\Http\Request;
 use App\Models\PublicService;
-use App\Models\Youtubeurl;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -56,7 +57,9 @@ class HomeController extends Controller
             $title = Title::first();
             $map = Mapimage::first();
             $links = Youtubeurl::first();
-            return view('pages.user.index.index', compact('links','about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+            $counter = Counter::first();
+            return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
+       
         }
     }
     public function vieworder($id)
