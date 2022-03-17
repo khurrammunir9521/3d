@@ -16,15 +16,9 @@
                         <div class="modal-body">
                             <div class="container">
                                 <div class="row">
-                                    @if(@$links->youtubeurl != null)
-                                    <div class="col-md-12 text-center">
-                                        <iframe width="560" height="315" src="{{ $links->youtubeurl}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                    @else
                                     <div class="col-md-12 text-center">
                                         <iframe width="560" height="315" src="https://www.youtube.com/embed/rF1aUUU14rA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
-                                    @endif
                                 </div>
                             </div>
                         </div>

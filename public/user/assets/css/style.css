@@ -1579,7 +1579,12 @@ textarea {
 
 .about-content {
     position: relative;
+    z-index: 9999;
     top: 30px;
+}
+
+.about-content p {
+    text-align: center;
 }
 
 .boxContainer {
@@ -2161,4 +2166,8 @@ input[type=number] {
 .animate__animated {
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
+}
+
+.map-place.boxContainer img {
+    width: 330px;
 }

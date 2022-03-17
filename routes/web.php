@@ -14,7 +14,6 @@ use App\Http\Controllers\SideImageController;
 use App\Http\Controllers\ImageSlideController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\CounterController;
 use App\Http\Controllers\MapimageController;
 use App\Http\Controllers\PublicServiceController;
 use App\Http\Controllers\TitleController;
@@ -101,7 +100,6 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::resource('title', TitleController::class);
     Route::resource('map', MapimageController::class);
     Route::resource('youtubeurl', YoutubeurlController::class);
-    Route::resource('counter', CounterController::class);
     Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
     Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');
     Route::get('editpassword', [HomeController::class, 'passView'])->name('editpassword');

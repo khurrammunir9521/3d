@@ -62,9 +62,6 @@
                       <li class="nav-item">
                           <a class="nav-link " href="{{ route('youtubeurl.index') }}" tabindex="-1" aria-disabled="true"> يوتيوب رابط </a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link " href="{{ route('counter.index') }}" tabindex="-1" aria-disabled="true"> عدادات </a>
-                      </li>
                   </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
