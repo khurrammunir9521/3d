@@ -24,14 +24,14 @@
                                    @csrf
                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                        <label class="form-label dot">الايميل</label>
-                                       <input type="email" name="email" class="form-control" placeholder=".. الايميل هنا" value="" required>
+                                       <input type="email" name="email" class="form-control email" placeholder=".. الايميل هنا" value="" required>
                                    </div>
                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                        <label class="form-label dot">كلمة المرور</label>
-                                       <input type="password" name="password" class="form-control" placeholder=".. كلمة المرور" value="" required>
+                                       <input type="password" name="password" class="form-control pass" placeholder=".. كلمة المرور" value="" required>
                                    </div>
                                    <div class="form-action">
-                                       <button class="btn btn-form mx-3 with-arrow" type="submit">دخول</button>
+                                       <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
                                        <p>بيانات الدخول</p>
                                    </div>
                                </form>

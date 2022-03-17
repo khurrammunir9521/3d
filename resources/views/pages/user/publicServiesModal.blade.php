@@ -60,7 +60,7 @@
                                                           </div>
                                                       </div>
                                                       <div class="form-action">
-                                                          <button class="btn btn-grey invert btn-form disabled mx-3 with-arrow"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
+                                                          <button class="btn btn-grey invert btn-form disabled mx-3 with-arrow"  data-bs-target="#carouselIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
                                                           <p>المعلومات العامة</p>
                                                       </div>
 
@@ -74,29 +74,29 @@
                                                       <div class="row mb-2">
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">نوع الطباعة</label>
-                                                              <input type="text" class="form-control" placeholder=".. الاسم هنا" value="" required name="pr_type">
+                                                              <input type="text" class="form-control type" placeholder=".. الاسم هنا" value="" required name="pr_type">
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">لون الطباعة</label>
-                                                              <input type="text" class="form-control" placeholder=".. التخصص هنا" value="" required name="pr_clr">
+                                                              <input type="text" class="form-control spec" placeholder=".. التخصص هنا" value="" required name="pr_clr">
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">دقة الطباعة (صورة كمثال)</label>
-                                                              <input type="text" class="form-control" placeholder=".. الايميل هنا" value="" required name="pr_res">
+                                                              <input type="text" class="form-control email" placeholder=".. الايميل هنا" value="" required name="pr_res">
                                                           </div>
                                                           <div class="row m-0 p-0 pt-4">
                                                               <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                                                   <label class="form-label dot">رفع ملف المجسم</label>
                                                                   <div class="upload-btn-wrapper">
-                                                                      <button class="btn btn-upload"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
-                                                                      <input type="file" required name="myfile" />
+                                                                      <button class="btn btn-upload public"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
+                                                                      <input type="file" id="public-file" required name="myfile" />
                                                                   </div>
                                                                   <span class="form-detail">صور بصيغة STL,PNG,JPG </span>
                                                               </div>
                                                           </div>
                                                       </div>
                                                       <div class="form-action">
-                                                          <button class="btn btn-grey invert btn-form mx-3 with-arrow disabled"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
+                                                          <button class="btn btn-grey invert btn-form mx-3 with-arrow disabled" data-bs-target="#carouselIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
                                                           <p>تفاصيل الطباعة</p>
                                                       </div>
 

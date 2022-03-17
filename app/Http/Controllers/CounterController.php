@@ -14,7 +14,8 @@ class CounterController extends Controller
      */
     public function index()
     {
-        //
+        $counter = Counter::all();
+        return view('pages.admin.dashboard.counter.index', compact('counter'));
     }
 
     /**
@@ -24,7 +25,8 @@ class CounterController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('pages.admin.dashboard.counter.create');
     }
 
     /**
@@ -35,7 +37,16 @@ class CounterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'start' => 'required',
+            'end' => 'required',
+        ]);
+        Counter::create([
+            'start' => $request->start,
+            'end' => $request->end,
+            
+        ]);
+        return redirect()->route('counter.index');
     }
 
     /**
@@ -55,10 +66,12 @@ class CounterController extends Controller
      * @param  \App\Models\Counter  $counter
      * @return \Illuminate\Http\Response
      */
-    public function edit(Counter $counter)
+    public function edit($id)
     {
-        //
+        $counter = Counter::find($id);
+        return view('pages.admin.dashboard.counter.edit', compact('counter'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -67,9 +80,22 @@ class CounterController extends Controller
      * @param  \App\Models\Counter  $counter
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Counter $counter)
+    public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'heading' => 'required',
+            'subheading' => 'required',
+            'bodytext' => 'required',
+        ]);
+
+        Counter::find($id)->update([
+            'heading' => $request->heading,
+            'subheading' => $request->subheading,
+            'bodytext' => $request->bodytext,
+        ]);
+
+        return redirect()->route('counter.index');
     }
 
     /**
@@ -78,8 +104,9 @@ class CounterController extends Controller
      * @param  \App\Models\Counter  $counter
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Counter $counter)
+    public function destroy($id)
     {
-        //
+        Counter::find($id)->delete();
+        return redirect()->route('counter.index');
     }
 }
