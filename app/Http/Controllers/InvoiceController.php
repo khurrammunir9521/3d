@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Invoice;
+use App\Models\Medical;
 use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
@@ -14,8 +16,10 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        //
+        $invoices = Invoice::all();
+        return view('pages.admin.dashboard.invoice.index', compact('invoices'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +28,8 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        //
+        $orders = Medical::all();
+        return view('pages.admin.dashboard.invoice.create', compact('orders'));
     }
 
     /**
@@ -35,7 +40,19 @@ class InvoiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $med = Medical::find($request->order_id);
+        $user = User::find($med->user_id);
+        Invoice::create([
+            'tax' => $request->tax,
+            'price_model' => $request->price_model,
+            'price_design' => $request->price_design,
+            'qty_model' => $request->qty_model,
+            'user_id' => $user->id,
+            'qty_design' => $request->qty_design,
+            'validtill' => $request->validtill,
+            'date' => $request->date,
+        ]);
+        return redirect()->route('invoicess.index');
     }
 
     /**
@@ -44,9 +61,12 @@ class InvoiceController extends Controller
      * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function show(Invoice $invoice)
+    public function show($id)
     {
-        //
+        $invoice = Invoice::find($id);
+        $user = User::find($invoice->user_id);
+        // dd($invoice);
+        return view('pages.admin.invoice', compact('invoice', 'user'));
     }
 
     /**
@@ -55,9 +75,10 @@ class InvoiceController extends Controller
      * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function edit(Invoice $invoice)
+    public function edit($id)
     {
-        //
+        $invoice = Invoice::find($id);
+        return view('pages.admin.dashboard.invoice.edit', compact('invoice'));
     }
 
     /**
@@ -67,9 +88,18 @@ class InvoiceController extends Controller
      * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Invoice $invoice)
+    public function update(Request $request, $id)
     {
-        //
+        Invoice::find($id)->update([
+            'tax' => $request->tax,
+            'price_model' => $request->price_model,
+            'price_design' => $request->price_design,
+            'qty_model' => $request->qty_model,
+            'qty_design' => $request->qty_design,
+            'validtill' => $request->validtill,
+            'date' => $request->date,
+        ]);
+        return redirect()->route('invoicess.index');
     }
 
     /**
@@ -78,8 +108,9 @@ class InvoiceController extends Controller
      * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Invoice $invoice)
+    public function destroy($id)
     {
-        //
+        Invoice::find($id)->delete();
+        return redirect()->route('invoicess.index');
     }
 }

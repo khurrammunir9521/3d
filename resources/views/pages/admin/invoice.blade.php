@@ -62,7 +62,7 @@
                         <h4>Ship To</h4>
                     </div>
                     <div class="text">
-                        <p>Mohammed Alhassan <br>
+                        <p>{{$user->name}} <br>
                             Deliver in Person
                         </p>
                     </div>
@@ -72,8 +72,8 @@
                         <h4>Dates</h4>
                     </div>
                     <div class="text">
-                        <p>Quote: 17-11-2021 <br>
-                            Valid for: 15 days</p>
+                        <p>Quote: {{$invoice->date}} <br>
+                            Valid for: {{$invoice->validtill}} days</p>
 
                     </div>
                 </div>
@@ -101,8 +101,8 @@
                                 of the 3D model</p>
                         </td>
                         <td class=>3D Design</td>
-                        <td>1</td>
-                        <td>0.00 SR</td>
+                        <td>{{$invoice->qty_design}}</td>
+                        <td>{{$invoice->price_design}} SR</td>
                     </tr>
                     <tr>
 
@@ -121,8 +121,8 @@
                                 manufactured parts to finalized the model.</p>
                         </td>
                         <td>3D Model</td>
-                        <td>50</td>
-                        <td> <span>70.00 SR</span>
+                        <td>{{$invoice->qty_model}}</td>
+                        <td> <span>{{$invoice->price_model}} SR</span>
                             <div class="">
                                 <img src="{{asset('invoice/assets/logo.svg')}}" alt="">
 
@@ -132,22 +132,30 @@
                     <tr>
                         <td rowspan="4"></td>
                         <td colspan="2">Total</td>
-                        <td>3,500 SR</td>
+                        @php
+                        $total = ($invoice->price_model*$invoice->qty_model)+($invoice->price_design*$invoice->qty_design);
+                        $totaltex = $total*($invoice->tax/100);
+                        $t = $totaltex + $total;
+                        @endphp
+                        <td> {{$total}}SR</td>
 
                     </tr>
                     <tr>
                         <td colspan="2">VAT Rate</td>
-                        <td>15%</td>
+                        <td>{{$invoice->tax}}%</td>
 
                     </tr>
                     <tr>
                         <td colspan="2">VAT Amount</td>
-                        <td>525 SR</td>
+                        @php
+
+                        @endphp
+                        <td>{{$totaltex}} SR</td>
                     </tr>
                     <tr>
 
                         <td colspan="2">Total Quote</td>
-                        <td class="total-amount">4,025 SR</td>
+                        <td class="total-amount"> {{$t}}SR</td>
                     </tr>
                 </tbody>
             </table>
