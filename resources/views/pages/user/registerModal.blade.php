@@ -48,22 +48,22 @@
                                 <div class="row justify-content-center">
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">الاسم</label>
-                                        <input type="text" name="name" class="form-control" placeholder=".. الاسم هنا" value="" required>
+                                        <input type="text" name="name" class="form-control name" placeholder=".. الاسم هنا" value="" required>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">الجهه</label>
-                                        <input type="text" name="field" class="form-control" placeholder=".. التخصص هنا" value="">
+                                        <input type="text" name="field" class="form-control side" placeholder=".. التخصص هنا" value="">
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">الايميل</label>
-                                        <input type="email" name="email" class="form-control" placeholder=".. الايميل هنا" value="" required>
+                                        <input type="email" name="email" class="form-control email" placeholder=".. الايميل هنا" value="" required>
                                     </div>
 
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">كلمة المرور</label>
-                                        <input type="password" name="password" class="form-control" placeholder=".. كلمة المرور" value="">
+                                        <input type="password" name="password" class="form-control pass" placeholder=".. كلمة المرور" value="">
                                     </div>
                                 </div>
                                 <div class="form-action">

@@ -784,6 +784,7 @@ footer .right img {
     border: 1px solid #E3E9EC;
     border-radius: 30px;
     opacity: 1;
+    pointer-events: none;
 }
 
 #healthServiesModal .carousel-indicators .active, #publicServiesModal .carousel-indicators .active {
@@ -881,6 +882,14 @@ footer .right img {
 .modal.result .form-control {
     background-color: #E3E9EC;
     pointer-events: none;
+}
+
+.modal.video, .modal.video .modal-content {
+    background-color: transparent;
+}
+
+.modal.video .modal-body {
+    background: transparent;
 }
 
 /* #memberModal .form-control {
@@ -2147,4 +2156,9 @@ input[type=number] {
 
 .btn-upload.field-blue img {
     filter: invert(100%) sepia(100%) saturate(9060%) hue-rotate(193deg) brightness(90%) contrast(91%);
+}
+
+.animate__animated {
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
 }
