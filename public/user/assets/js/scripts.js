@@ -476,8 +476,8 @@ $(function () {
   $('#publicServiesModal .email').keyup(function () {
     var email = $(this).val();
     if ($('#publicServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue')
-    && $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .gender').hasClass('field-blue') &&
-    $('#publicServiesModal .carousel-item.one .spec').hasClass('field-blue')) {
+      && $('#publicServiesModal .carousel-item.one .phone').val().length > 1 && $('#publicServiesModal .carousel-item.one .gender').hasClass('field-blue') &&
+      $('#publicServiesModal .carousel-item.one .spec').hasClass('field-blue')) {
       $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
     }
     else {
@@ -584,7 +584,7 @@ $(function () {
 
   // asim
   $(".authmasg").click(function () {
-      $(".koib").toggleClass("d-none");
+    $(".koib").toggleClass("d-none");
   });
 
   setTimeout(() => {
@@ -608,13 +608,21 @@ $(function () {
     interval: false,
   });
 
-  $('body').click(function() {
-    if($('.modal.video').hasClass('show')) {
-    $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
-    $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
+  $('body').click(function () {
+    if ($('.modal.video').hasClass('show')) {
+      $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
+      $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
       $('.modal.video').modal('hide');
     }
   })
 
+  $(window).scroll(function () {
+    if ($(this).scrollTop() === 1000) {
+      $('.effect-machine').fadeOut();
+    }
+     else {
+      $('.effect-machine').fadeIn();
+    }
+  });
 
 })
