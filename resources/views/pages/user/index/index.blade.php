@@ -467,9 +467,8 @@
                                     <div class="counter">
                                         @if(@$counter->start != null)
                                         <span class="client-counter">{{$counter->start}}</span><span class="symbol">+</span>
-
                                         @else
-                                        <span class="client-counter">130</span><span class="symbol">+</span>
+                                        <span class="client-counter">12</span><span class="symbol">+</span>
                                         @endif
                                         <h5>عميل</h5>
                                     </div>
@@ -482,7 +481,7 @@
                                         @else
                                         <span class="client-counter">130</span><span class="symbol">+</span>
                                         @endif
-                                       
+
                                         <h5>مشروع</h5>
                                     </div>
                                 </div>
