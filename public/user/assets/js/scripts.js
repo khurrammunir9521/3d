@@ -506,7 +506,7 @@ $(function () {
       $('.email-error').addClass('d-none');
       $('#publicServiesModal .carousel-item.one .email').addClass('field-blue');
       $('#publicServiesModal .carousel-item.one .email').removeClass('field-red');
-      $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
+      // $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
     }
   }
 
