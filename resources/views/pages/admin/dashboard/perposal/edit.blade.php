@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
-<form method="POST" action="{{ route('invoicess.update', $invoice->id) }}">
+<form method="POST" action="{{ route('perposal.update', $invoice->id) }}">
     @csrf
     @method('PUT')
     <div class="form-group">

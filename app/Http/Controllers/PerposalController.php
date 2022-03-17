@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Invoice;
 use App\Models\Medical;
+use App\Models\Perposal;
 use Illuminate\Http\Request;
 
-class InvoiceController extends Controller
+class PerposalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        $invoices = Invoice::all();
-        return view('pages.admin.dashboard.invoice.index', compact('invoices'));
+        $invoices = Perposal::all();
+        return view('pages.admin.dashboard.perposal.index', compact('invoices'));
     }
 
 
@@ -29,7 +29,7 @@ class InvoiceController extends Controller
     public function create()
     {
         $orders = Medical::all();
-        return view('pages.admin.dashboard.invoice.create', compact('orders'));
+        return view('pages.admin.dashboard.perposal.create', compact('orders'));
     }
 
     /**
@@ -42,7 +42,7 @@ class InvoiceController extends Controller
     {
         $med = Medical::find($request->order_id);
         $user = User::find($med->user_id);
-        Invoice::create([
+        Perposal::create([
             'tax' => $request->tax,
             'price_model' => $request->price_model,
             'price_design' => $request->price_design,
@@ -52,7 +52,7 @@ class InvoiceController extends Controller
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
-        return redirect()->route('invoicess.index');
+        return redirect()->route('perposal.index');
     }
 
     /**
@@ -63,7 +63,7 @@ class InvoiceController extends Controller
      */
     public function show($id)
     {
-        $invoice = Invoice::find($id);
+        $invoice = Perposal::find($id);
         $user = User::find($invoice->user_id);
         // dd($invoice);
         return view('pages.admin.invoice', compact('invoice', 'user'));
@@ -77,8 +77,8 @@ class InvoiceController extends Controller
      */
     public function edit($id)
     {
-        $invoice = Invoice::find($id);
-        return view('pages.admin.dashboard.invoice.edit', compact('invoice'));
+        $invoice = Perposal::find($id);
+        return view('pages.admin.dashboard.perposal.edit', compact('invoice'));
     }
 
     /**
@@ -90,7 +90,7 @@ class InvoiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Invoice::find($id)->update([
+        Perposal::find($id)->update([
             'tax' => $request->tax,
             'price_model' => $request->price_model,
             'price_design' => $request->price_design,
@@ -99,7 +99,7 @@ class InvoiceController extends Controller
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
-        return redirect()->route('invoicess.index');
+        return redirect()->route('perposal.index');
     }
 
     /**
@@ -110,7 +110,7 @@ class InvoiceController extends Controller
      */
     public function destroy($id)
     {
-        Invoice::find($id)->delete();
-        return redirect()->route('invoicess.index');
+        Perposal::find($id)->delete();
+        return redirect()->route('perposal.index');
     }
 }

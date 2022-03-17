@@ -15,10 +15,12 @@ use App\Http\Controllers\ImageSlideController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CounterController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\MapimageController;
 use App\Http\Controllers\PublicServiceController;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\YoutubeurlController;
+use App\Models\Invoice;
 
 use App\Models\User;
 use App\Notifications\MedicalNotification;
@@ -104,6 +106,9 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::resource('map', MapimageController::class);
     Route::resource('youtubeurl', YoutubeurlController::class);
     Route::resource('counter', CounterController::class);
+    Route::resource('invoicess', InvoiceController::class);
+
+    Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
     Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
     Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');
     Route::get('editpassword', [HomeController::class, 'passView'])->name('editpassword');

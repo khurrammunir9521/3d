@@ -79,6 +79,9 @@
                             <a href="#services-section" class="nav-link">الخدمات</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#">مجتمع المصممين</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
                         </li>
                         <li class="mobile-menu">
@@ -363,9 +366,9 @@
     </section> -->
 
     <section class="banner sample">
-        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move animate__animated animate__slideInLeft animate__slower animate__delay-2s" alt="banner-bg">
-        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move animate__animated animate__slideInRight animate__slower animate__delay-2s" alt="black-bg">
-        <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move" alt="hands">
+        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-2s" alt="banner-bg">
+        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-2s" alt="black-bg">
+        <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
         <div class="container">
             <div class="row">
 
@@ -389,11 +392,11 @@
                                             <div class="static-text">
 
 
-                                                <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profiles->sub_heading }}
+                                                <span class="outline dot d-block">{{ $profiles->sub_heading }}
                                                 </span>
 
 
-                                                <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s">
+                                                <h2 class="title no-border">
                                                     {{ $profiles->heading }}
                                                     !
                                                 </h2>
@@ -410,7 +413,7 @@
                                         </div>
                                         <div class="col-sm-5 col-md-8 col-lg-5">
                                             <div class="top boxContainer">
-                                                <div class="blue-box move"></div>
+                                                <div class="blue-box move-box"></div>
                                                 @if (@$profiles->images != null)
                                                 <img src="{{ asset($profiles->images) }}" class="img-fluid img-behind" alt="medical">
                                                 @else
@@ -450,7 +453,7 @@
 
                                 </figcaption>
                                 <div class="bottom boxContainer sample heart-img">
-                                    <div class="blue-box move"></div>
+                                    <div class="blue-box move-box"></div>
                                     @if (@$side->side_image != null)
                                     <img src="{{ asset('storage/' . $side->side_image) }}" alt="side-img">
                                     @else
@@ -577,7 +580,7 @@
                             <div class="row pt-5 mt-5 align-items-end" dir="rtl">
                                 <div class="col-md-9">
                                     <div class="about-content" id="about-us">
-                                        <span class="outline dot right-center">3D+</span>
+                                        <span class="outline dot right-center">+3D</span>
                                         @if ($about != null)
 
                                         <h1 class="modal-title color-blue text-center line-heading">
@@ -616,7 +619,7 @@
                                         <p>الرياض، المونسية، شارع احمد بن حنبل</p>
                                     </figcaption>
                                     <div class="map-place boxContainer">
-                                        <div class="blue-box move"></div>
+                                        <div class="blue-box move-box"></div>
                                         @if (@$map->map_image != null)
 
                                         <img src="{{ asset('storage/' . $map->map_image) }}" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></img>
@@ -654,7 +657,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 dot-txt-main">
-                    <div class="image-place dot-effect">
+                    <div class="image-place dot-effect" id="main-effect">
                         <div class="pointer head">
                             <p>الجمجمة</p>
                         </div>
@@ -697,7 +700,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-                            <p class='koib-health d-none mt-2'><span style="color:red">يتطلب التسجيل</span>للتسجيل اضغط هنا </p>
+                            <p class='koib-health d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -710,7 +713,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 dot-txt-main-left">
-                    <div class="image-place effect-machine">
+                    <div class="image-place effect-machine" id="main-macine">
                         <div class="pointer top">
                             <p>مجسمات كبيرة</p>
                         </div>
@@ -745,7 +748,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none mt-2'><span style="color:red">يتطلب التسجيل</span>للتسجيل اضغط هنا </p>
+                            <p class='koib d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
                             @endauth
 
                         </div>
@@ -842,6 +845,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#services-section">الخدمات</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">مجتمع المصممين</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact-us">اتصل بنا</a>
@@ -959,7 +965,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 dot-txt-main-left pb-4">
+                                            <div class="col-md-6 dot-txt-main-left pb-4" id="macine">
                                                 <div class="image-place effect-machine">
                                                     <div class="pointer top">
                                                         <p>مجسمات كبيرة</p>
@@ -1108,6 +1114,13 @@
         });
     </script>
     @endif
+    @if(!empty(Session::get('error_code')) && Session::get('error_code') == 4)
+    <script>
+        $(function() {
+            $('#publicPaymentModal').modal('show');
+        });
+    </script>
+    @endif
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 6)
     <script>
         $(function() {
@@ -1118,18 +1131,82 @@
     <script src="{{asset('user/assets/js/bootstrap.min.js')}}"></script>
     <!-- JQuery -->
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
-    <!-- <script>
-        $('#carouselExampleIndicators').carousel({
-            interval: 3000,
-            cycle: true
+    <script>
+        $(document).on('click', '.editProduct', function(e) {
+            const btn = $(e.currentTarget);
+            rowid = btn.attr('data-id');
+            var url = '{{ route("vieworder", ":id") }}';
+            url = url.replace(':id', rowid);
+            $.ajax({
+                url: url ,
+                type: "GET",
+                success: function(response) {
+                    const modal = $('#edit_new_modal');
+                    modal.find('#employeeName').val(response.Employee_Name);
+                    modal.find('#Employee_Address').val(response.Employee_Address);
+                    modal.find('#phone').val(response.Employee_Phone);
+                    modal.find('#email').val(response.Employee_Email);
+                    modal.find('#salary').val(response.Employee_Salary);
+                    modal.find('#account').val(response.Employee_Account);
+                    modal.find('#editmodal').modal('show');
+                    $('.modal-backdrop').remove();
+                },
+                error: function(errorThrown, errResponse) {
+                    console.log(errorThrown, errResponse);
+                }
+            });
+
         });
-    </script> -->
+    </script>
     <!-- Slick -->
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            function animateCounter() {
+                setTimeout(() => {
+                    $('.client-counter').each(function() {
+                        console.log($(this).toString().length)
+                        $(this).prop('Counter', 0).animate({
+                            Counter: $(this).text()
+                        }, {
+                            duration: 5000,
+                            easing: 'swing',
+                            step: function(now) {
+                                $(this).text(Math.ceil(now));
+                            }
+                        });
+                    });
 
+                }, 2000);
+            }
+            $(window).scroll(function() {
+            var positionTop = $(window).scrollTop();
+                if ((positionTop > 1000)) {
+                    $('#main-macine').addClass('animate-left');
+                    $('#main-effect').addClass('animate-right');
+                }
+
+            });
+            // var scroll = $(window).scrollTop();
+            // $.fn.scrollEvent = function() {
+            //     return this.on("scroll", function() {
+            //         console.log("Scroll");
+            //         // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            //         //     console.log(scroll)
+            //         //     animateCounter();
+            //         // }
+            //         if (scroll > 299) {
+            //         animateCounter();
+            //         }
+            //     });
+            // };
+
+            // $(window).scrollEvent()
+        })
+    </script>
 
 </body>
 

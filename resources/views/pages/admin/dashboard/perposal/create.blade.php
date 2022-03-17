@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
-<form method="POST" action="{{ route('invoicess.store') }}">
+<form method="POST" action="{{ route('perposal.store') }}">
     @csrf
     <select class="form-select" required name="order_id" aria-label="Default select example">
         <option selected disabled>Select Order</option>

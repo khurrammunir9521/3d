@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="card-body">
-    <a class="btn btn-primary mb-2" href="{{ route('invoicess.create') }}"> New +</a>
+    <a class="btn btn-primary mb-2" href="{{ route('perposal.create') }}"> New +</a>
     <div class="table-responsive product-table">
         <table class="display" id="example">
             <tr>

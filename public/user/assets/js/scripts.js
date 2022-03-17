@@ -1,9 +1,11 @@
 $(function () {
+
   window.scrollTo(0, 0);
+
   var i = 0;
   function move() {
-    $('.hide-on-load').css('opacity', 0);
 
+    $('.hide-on-load').css('opacity', 0);
     if (i == 0) {
 
       i = 1;
@@ -151,6 +153,14 @@ $(function () {
       let mW = ((((event.pageX) * 100) / vW).toFixed(2)) - 200;
       // $(".main").css('transform',	'translate(scale(1.2)');
       $(".move").css('transform', 'translateX(' + (mW / 30) + '%)');
+      let mH = ((((event.pageX) * 500) / vW).toFixed(2)) - 200;
+      $(".move-hand").css('transform', 'translateX(' + (mH / 30) + '%)');
+      let mB = ((((event.pageX) * 500) / vW).toFixed(2)) - 200;
+      $(".move-box").css('transform', 'translateX(' + (mB / 30) + '%)');
+      let mBlack = ((((event.pageX) * 50) / vW).toFixed(5)) + 200;
+      $(".move-black").css('transform', 'translateX(' + (mBlack / 30) + '%)');
+      let mBlue = ((((event.pageX) * 100) / vW).toFixed(2)) - 200;
+      $(".move-blue").css('transform', 'translateX(' + (mBlue / 30) + '%)');
     }).on("mouseleave", function () {
       $(".move").css('transform', 'translateX(1)');
     })
@@ -376,6 +386,7 @@ $(function () {
   // Form Validation
   $('.form-select').change(function () {
     $(this).addClass('field-blue')
+    $(this).removeClass('field-red');
   })
   $('.form-control').keyup(function () {
     if ($(this).val().length === 0) {
@@ -386,6 +397,7 @@ $(function () {
 
     else if ($(this).val().length > 1) {
       $(this).addClass('field-blue');
+      $(this).removeClass('field-red');
     }
     else {
       $(this).val($.trim($(this).val()));
@@ -393,12 +405,12 @@ $(function () {
       $(this).addClass('field-red');
     }
   })
-  $('#healthServiesModal .age').keyup(function(){
-    if($(this).val().length > 0) {
+  $('#healthServiesModal .age').keyup(function () {
+    if ($(this).val().length > 0) {
       $(this).addClass('field-blue');
       $(this).removeClass('field-red');
     }
-    if($(this).val().length > 2) {
+    if ($(this).val().length > 2) {
       $('#healthServiesModal .carousel-item.one .btn-form').addClass('disabled');
       $(this).removeClass('field-blue');
       $(this).addClass('field-red');
@@ -424,7 +436,7 @@ $(function () {
     var email = $(this).val();
     if ($('#healthServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue')
       && $('#healthServiesModal .carousel-item.one .spec').val().length > 1 && $('#healthServiesModal .carousel-item.one .phone').val().length > 1 &&
-      $('#healthServiesModal .carousel-item.one .p_name').val().length > 1 && $('#healthServiesModal .carousel-item.one .id').val().length > 1 && 
+      $('#healthServiesModal .carousel-item.one .p_name').val().length > 1 && $('#healthServiesModal .carousel-item.one .id').val().length > 1 &&
       $('#healthServiesModal .carousel-item.one .age').val().length > 0) {
       $('#healthServiesModal .carousel-item.one .btn-form').removeClass('disabled');
     }
@@ -433,7 +445,7 @@ $(function () {
     }
     healthValidateEmail(email);
   })
-  
+
   function healthValidateEmail(email) {
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     if (!emailReg.test(email) || $('#healthServiesModal .email').val().length == 0) {
@@ -630,69 +642,57 @@ $(function () {
     $(".koib").toggleClass("d-none");
   });
 
-   $(".authmasg-health").click(function () {
-       $(".koib-health").toggleClass("d-none");
-   });
+  $(".authmasg-health").click(function () {
+    $(".koib-health").toggleClass("d-none");
+  });
 
-  setTimeout(() => {
-    $('.client-counter').each(function () {
-      console.log($(this).toString().length)
-      $(this).prop('Counter', 0).animate({
-        Counter: $(this).text()
-      }, {
-        duration: 5000,
-        easing: 'swing',
-        step: function (now) {
-          $(this).text(Math.ceil(now));
+  // setTimeout(() => {
+  //   $('.client-counter').each(function () {
+  //     console.log($(this).toString().length)
+  //     $(this).prop('Counter', 0).animate({
+  //       Counter: $(this).text()
+  //     }, {
+  //       duration: 5000,
+  //       easing: 'swing',
+  //       step: function (now) {
+  //         $(this).text(Math.ceil(now));
 
-        }
-      });
-    });
+  //       }
+  //     });
+  //   });
 
-  }, 2000);
+  // }, 2000);
 
   $('#publicServiesModal .carousel, #healthServiesModal .carousel').carousel({
     interval: false,
   });
 
   $(".imageupload").click(function () {
-      $(".chose").click();
+    $(".chose").click();
   });
-  // imgInp.onchange = (evt) => {
-  //     const [file] = imgInp.files;
-  //     if (file) {
-  //         blah.src = URL.createObjectURL(file);
-  //     }
-  // };
+  imgInp.onchange = (evt) => {
+      const [file] = imgInp.files;
+      if (file) {
+          blah.src = URL.createObjectURL(file);
+      }
+  };
 
-  // $(".imageupload1").click(function () {
-  //     $(".chose1").click();
-  // });
-  // imgInp1.onchange = (evt) => {
-  //     const [file] = imgInp1.files;
-  //     if (file) {
-  //         blah1.src = URL.createObjectURL(file);
-  //     }
-  // };
+  $(".imageupload1").click(function () {
+      $(".chose1").click();
+  });
+  imgInp1.onchange = (evt) => {
+      const [file] = imgInp1.files;
+      if (file) {
+          blah1.src = URL.createObjectURL(file);
+      }
+  };
 
 
-  $('body').click(function() {
-    if($('.modal.video').hasClass('show')) {
-    $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
-    $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
+  $('body').click(function () {
+    if ($('.modal.video').hasClass('show')) {
+      $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
+      $('#publicVideoModal iframe').attr('src', $('#publicVideoModal iframe').attr('src'));
       $('.modal.video').modal('hide');
     }
   })
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 900 && $(this).scrollTop() < 2000 ) {
-      $('.effect-machine').css({'transform' : 'translate(0%, 0px)'});
-      $('.dot-effect').css({'transform' : 'translate(0%, 0px)'});
-    }
-     else {
-      $('.effect-machine').css({'transform' : 'translate(-20%, 0px)'});
-      $('.dot-effect').css({'transform' : 'translate(20%, 0px)'});
-    }
-  });
-
 })

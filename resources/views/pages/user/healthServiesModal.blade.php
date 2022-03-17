@@ -41,7 +41,7 @@
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">رقم هاتف الطبيب</label>
-                                                            <input type="number" pattern="\d*" max="13" name="dr_phone" class="form-control phone" placeholder="رقم الهاتف هنا" value="" required>
+                                                            <input type="number" pattern="\d*" name="dr_phone" class="form-control phone" placeholder="رقم الهاتف هنا" value="" required>
                                                         </div>
                                                     </div>
                                                     <div class="row">

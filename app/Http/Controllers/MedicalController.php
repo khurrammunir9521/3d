@@ -40,6 +40,11 @@ class MedicalController extends Controller
         $users->notify(new MedicalNotification($users));
         return redirect()->route('home')->with('error_code', 5);
     }
+
+    public function payment()
+    {
+        return redirect()->route('home')->with('error_code', 4);
+    }
     public function index()
     {
         $medical = Medical::all();
