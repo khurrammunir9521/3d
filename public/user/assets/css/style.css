@@ -1685,7 +1685,11 @@ textarea {
 
 .image-place.effect-machine {
     position: relative;
-    transition: 5s ease-in-out;
+    transition: 2s ease-in-out;
+}
+
+.image-place.dot-effect {
+    transition: 2s ease-in-out;
 }
 
 .pointer.top {
@@ -2174,6 +2178,5 @@ input[type=number] {
 }
 
 .animate {
-    transition: .5s ease-in-out;
     transform: translate(-50%, 0px);
 }

@@ -636,15 +636,16 @@ $(function () {
       $('.modal.video').modal('hide');
     }
   })
-  
 
-  // $(window).scroll(function () {
-  //   if ($(this).scrollTop() > 800 && $(this).scrollTop() < 1500 ) {
-  //     $('.effect-machine').css({'transform' : 'translate(-50%, 0px)'});
-  //   }
-  //    else {
-  //     $('.effect-machine').css({'transform' : 'translate(0%, 0px)'});
-  //   }
-  // });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 900 && $(this).scrollTop() < 2000 ) {
+      $('.effect-machine').css({'transform' : 'translate(0%, 0px)'});
+      $('.dot-effect').css({'transform' : 'translate(0%, 0px)'});
+    }
+     else {
+      $('.effect-machine').css({'transform' : 'translate(-20%, 0px)'});
+      $('.dot-effect').css({'transform' : 'translate(20%, 0px)'});
+    }
+  });
 
 })
