@@ -12,6 +12,7 @@
     @endif
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
+    <meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
     @if(@$title->discription != null)
     <meta name="description" content="{{$title->discription}}" />
     @else
@@ -21,11 +22,10 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}">
 
-
     <!-- Slick -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick-theme.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="{{ asset('user/assets/js/jquery.min.js') }}"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- StyleSheet -->
@@ -56,7 +56,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="80" class="d-inline-block align-text-top">
+                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="120" class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -127,23 +127,28 @@
 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
-                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                    <a href="{{route('logout')}}" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>
-                    <script type="text/javascript">
-                        function logout(event) {
-                            event.preventDefault();
-                            var check = confirm("هل تريد حقا الخروج؟");
-                            if (check) {
-                                document.getElementById('logout-form').submit();
-                            }
+                    {{--
+                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                    تسجيل خروج
+                </a>
+                <script type="text/javascript">
+                    function logout(event) {
+                        event.preventDefault();
+                        var check = confirm("هل تريد حقا الخروج؟");
+                        if (check) {
+                            document.getElementById('logout-form').submit();
                         }
-                    </script>
-                    <span>
+                    }
+                </script>
+                --}}
+                <span>
 
-                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
-                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
-                    </span>
+                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                </span>
             </div>
             @else
             <div class="left-side">
@@ -355,14 +360,15 @@
     </section> -->
 
     <section class="banner sample">
-        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move" alt="banner-bg">
-        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move" alt="black-bg">
+        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move animate__animated animate__slideInLeft animate__slower animate__delay-2s" alt="banner-bg">
+        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move animate__animated animate__slideInRight animate__slower animate__delay-2s" alt="black-bg">
         <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move" alt="hands">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-12">
                     <div class="carousel-inner">
+                        @foreach($profile as $profiles)
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -370,27 +376,26 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                             </div>
-                            @foreach($profile as $profiles)
                             <div class="carousel-item active">
                                 <div class="row justify-content-end">
                                     <div class="col-sm-7 col-md-4 col-lg-7">
                                         <div class="static-text">
-                                          
-                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower d-block">{{ $profiles->sub_heading }}
-                                            </span>
-                                            
 
-                                           
-                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower">
+
+                                            <span class="outline dot animate__animated animate__slideInLeft animate__slower animate__delay-2s d-block">{{ $profiles->sub_heading }}
+                                            </span>
+
+
+                                            <h2 class="title no-border animate__animated animate__slideInRight animate__slower animate__delay-2s">
                                                 {{ $profiles->heading }}
                                                 !
                                             </h2>
-                                          
-                                            
+
+
                                             <p class="description">
                                                 {!!$profiles->body_text !!}
                                             </p>
-                                          
+
 
                                             <button class="btn btn-sky">المزيد</button>
                                             <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
@@ -408,8 +413,8 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
                         </div>
+                        @endforeach
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
@@ -453,13 +458,13 @@
                             <div class="col-md-8"></div>
                             <div class="col-md-2">
                                 <div class="counter">
-                                    <span class="client-counter">130+</span>
+                                    <span class="client-counter">130</span><span class="symbol">+</span>
                                     <h5>عميل</h5>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="counter">
-                                    <span class="client-counter">250+</span>
+                                    <span class="client-counter">250</span><span class="symbol">+</span>
                                     <h5>مشروع</h5>
                                 </div>
                             </div>
@@ -657,11 +662,11 @@
                         </div>
                         <div class="actions">
                             @auth
-                            <button class="btn btn-grey invert" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            <button class="btn btn-grey" data-bs-toggle="modal" data-bs-target="#healthServiesModal"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
                             @else
-                            <button class="btn btn-grey invert authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            <button class="btn btn-grey authmasg"><img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                                 طلب
                                 الخدمة</button>
 

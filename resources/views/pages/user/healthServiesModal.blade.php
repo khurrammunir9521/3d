@@ -1,4 +1,4 @@
-<div class="modal fade page form" id="healthServiesModal" tabindex="-1" aria-labelledby="healthServiesModalLabel" aria-hidden="true">
+<div class="modal fade page form animate__animated animate__fadeInRight animate__fast" id="healthServiesModal" tabindex="-1" aria-labelledby="healthServiesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="container-fluid">
@@ -21,51 +21,51 @@
                         <div class="modal-body">
                             <div id="carouselHealthIndicators" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <form class="gy-4 gx-5" action="{{route('medical.store')}}" method="POST" enctype="multipart/form-data">
+                                    <form class="gy-4 gx-5 p-2 form-1" action="{{route('medical.store')}}" method="POST" enctype="multipart/form-data">
                                         @csrf
-                                        <div class="carousel-item active" data-bs-interval="100000">
+                                        <div class="carousel-item one active" data-bs-interval="100000">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12">
                                                     <div class="row mb-2">
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">اسم الطبيب</label>
-                                                            <input type="text" name="dr_name" class="form-control" placeholder="الاسم هنا .." value="" required>
+                                                            <input type="text" name="dr_name" class="form-control name" placeholder="الاسم هنا .." value="" required>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">تخصص الطبيب</label>
-                                                            <input type="text" name="dr_spec" class="form-control" placeholder="التخصص هنا .." value="" required>
+                                                            <input type="text" name="dr_spec" class="form-control spec" placeholder="التخصص هنا .." value="" required>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">ايميل الطبيب</label>
-                                                            <input type="text" name="dr_email" class="form-control" placeholder="الايميل هنا .." value="" required>
+                                                            <input type="email" name="dr_email" class="form-control email" placeholder="الايميل هنا .." value="" required>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">رقم هاتف الطبيب</label>
-                                                            <input type="text" name="dr_phone" class="form-control" placeholder="رقم الهاتف هنا" value="" required>
+                                                            <input type="number" pattern="\d*" max="13" name="dr_phone" class="form-control phone" placeholder="رقم الهاتف هنا" value="" required>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">المستشفى أو الشركة</label>
-                                                            <input type="text" name="hospital" class="form-control" placeholder="الجهه هنا .." value="" required>
+                                                            <input type="text" name="hospital" class="form-control hospital" placeholder="الجهه هنا .." value="" required>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">اسم المريض</label>
-                                                            <input type="text" name="pa_name" class="form-control" placeholder="الاسم هنا .." value="" required>
+                                                            <input type="text"  name="pa_name" class="form-control p_name" placeholder="الاسم هنا .." value="" required>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">رقم معرف المريض</label>
-                                                            <input type="text" name="pa_id" class="form-control" placeholder="المعرف هنا" value="" required>
+                                                            <input type="number" pattern="\d*" name="pa_id" class="form-control id" placeholder="المعرف هنا" value="" required>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">عمر المريض</label>
-                                                            <input type="text" name="pa_age" class="form-control" placeholder="المعرف هنا" value="" required>
+                                                            <input type="text" name="pa_age" class="form-control age" placeholder="المعرف هنا" value="" required>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 mt-4">
                                                             <label class="form-label dot">عموم الحاله الصحية</label>
-                                                            <textarea name="discription" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" required></textarea>
+                                                            <textarea name="discription" class="form-control desc" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" required></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -73,14 +73,14 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-action first">
-                                                        <button class="btn btn-form mx-3 with-arrow"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
+                                                        <button class="btn btn-form disabled mx-3 with-arrow" data-bs-target="#carouselHealthIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
                                                         <p>تسجيل معلومات الطبيب والمريض</p>
                                                     </div>
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <div class="carousel-item" data-bs-interval="100000">
+                                        <div class="carousel-item two" data-bs-interval="100000">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12">
 
@@ -138,14 +138,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-action">
-                                                        <button class="btn btn-form mx-3 with-arrow"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
+                                                        <button class="btn btn-form disabled mx-3 with-arrow"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
                                                         <p>اختيار نوع الخدمة المطلوبة</p>
                                                     </div>
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="carousel-item carousel-blur" data-bs-interval="100000">
+                                        <div class="carousel-item three carousel-blur" data-bs-interval="100000">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12">
                                                     <div class="row mb-2 align-items-center">
@@ -168,7 +168,7 @@
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 text-end">
                                                             <label class="form-label dot">اختيار نوع الإجراء الطبي</label>
-                                                            <select class="form-select" required name="procedure" aria-label="Default select example">
+                                                            <select class="form-select procedure" required name="procedure" aria-label="Default select example">
                                                                 <option selected>اختيار من هنا ..</option>
                                                                 <option>الجمجمة</option>
                                                                 <option value="1">One</option>
@@ -177,8 +177,8 @@
                                                             </select>
                                                             <label class="form-label dot mt-4">رفع الصور الطبية</label>
                                                             <div class="upload-btn-wrapper">
-                                                                <button class="btn btn-upload"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
-                                                                <input type="file" required name="myfile" />
+                                                                <button class="btn btn-upload health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
+                                                                <input type="file" id="health-file" required name="myfile" />
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
@@ -196,7 +196,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-action">
-                                                        <button class="btn btn-form mx-3 with-arrow "><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
+                                                        <button class="btn btn-form disabled mx-3 with-arrow "><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="">&nbsp; التالي</button>
                                                         <p>اختيار نوع الخدمة المطلوبة</p>
                                                     </div>
 

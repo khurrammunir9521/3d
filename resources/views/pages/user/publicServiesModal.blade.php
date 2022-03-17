@@ -1,4 +1,4 @@
-  <div class="modal fade page form" id="publicServiesModal" tabindex="-1" aria-labelledby="publicServiesModalLabel" aria-hidden="true">
+  <div class="modal fade page form animate__animated animate__fadeInLeft animate__fast" id="publicServiesModal" tabindex="-1" aria-labelledby="publicServiesModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
               <div class="container-fluid">
@@ -23,27 +23,27 @@
                                   <div class="carousel-inner">
                                       <form class="gy-4 gx-5" action="{{route('publics.store')}}" method="post" enctype="multipart/form-data">
                                           @csrf
-                                          <div class="carousel-item active" data-bs-interval="100000">
+                                          <div class="carousel-item one active" data-bs-interval="100000">
                                               <div class="row justify-content-center">
                                                   <div class="col-md-12 col-xl-9 col-xxl-9">
                                                       <div class="row mb-2">
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">الاسم كامل</label>
-                                                              <input type="text" class="form-control" placeholder=".. الاسم هنا" required name="name" value="">
+                                                              <input type="text" class="form-control name" placeholder=".. الاسم هنا" required name="name" value="">
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">رقم الهاتف</label>
-                                                              <input type="number" class="form-control" placeholder=".. التخصص هنا" required name="phone" value="">
+                                                              <input type="number" pattern="\d*" max="13" class="form-control phone" placeholder=".. التخصص هنا" required name="phone" value="">
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">الايميل</label>
-                                                              <input type="text" class="form-control" placeholder=".. الايميل هنا" required name="email" value="">
+                                                              <input type="email" class="form-control email" placeholder=".. الايميل هنا" required name="email" value="">
                                                           </div>
                                                       </div>
                                                       <div class="row">
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">التخصص</label>
-                                                              <select class="form-select" required name="spec" aria-label="Default select example">
+                                                              <select class="form-select spec" required name="spec" aria-label="Default select example">
                                                                   <option selected>رقم الهاتف هنا</option>
                                                                   <option value="1">One</option>
                                                                   <option value="2">Two</option>
@@ -52,7 +52,7 @@
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">الجنس</label>
-                                                              <select class="form-select" required name="gender" aria-label="Default select example">
+                                                              <select class="form-select gender" required name="gender" aria-label="Default select example">
                                                                   <option selected>الجنس</option>
                                                                   <option value="male">الذكر</option>
                                                                   <option value="female">أنثى</option>
@@ -60,14 +60,14 @@
                                                           </div>
                                                       </div>
                                                       <div class="form-action">
-                                                          <button class="btn btn-grey invert btn-form mx-3 with-arrow"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
+                                                          <button class="btn btn-grey invert btn-form disabled mx-3 with-arrow"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
                                                           <p>المعلومات العامة</p>
                                                       </div>
 
                                                   </div>
                                               </div>
                                           </div>
-                                          <div class="carousel-item">
+                                          <div class="carousel-item two">
                                               <div class="row justify-content-center">
                                                   <div class="col-md-12 col-xl-9 col-xxl-9">
 
@@ -104,12 +104,10 @@
                                               </div>
                                           </div>
 
-                                          <div class="carousel-item">
+                                          <div class="carousel-item three">
                                               <div class="row align-items-center">
                                                   <div class="col-md-5">
                                                       <div class="submitted-data">
-
-
                                                           <h6>رقم الطلب</h6>
                                                           @auth
                                                           <h1>{{@$public->id +1}}</h1>
