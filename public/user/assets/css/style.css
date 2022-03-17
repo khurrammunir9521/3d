@@ -1599,7 +1599,8 @@ textarea {
 }
 
 .top.boxContainer .blue-box {
-    left: -30px;
+    /* left: -30px; */
+    left: 0;
     top: -25px;
 }
 

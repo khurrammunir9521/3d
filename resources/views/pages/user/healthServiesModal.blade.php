@@ -59,7 +59,7 @@
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">عمر المريض</label>
-                                                            <input type="text" name="pa_age" class="form-control age" placeholder="المعرف هنا" value="" required>
+                                                            <input type="number" pattern="\d*" max="99" name="pa_age" class="form-control age"  placeholder="المعرف هنا" value="" required>
                                                         </div>
                                                     </div>
                                                     <div class="row">

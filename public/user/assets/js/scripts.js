@@ -386,7 +386,6 @@ $(function () {
 
     else if ($(this).val().length > 1) {
       $(this).addClass('field-blue');
-      $(this).removeClass('field-red');
     }
     else {
       $(this).val($.trim($(this).val()));
@@ -394,10 +393,25 @@ $(function () {
       $(this).addClass('field-red');
     }
   })
+  $('#healthServiesModal .age').keyup(function(){
+    if($(this).val().length > 0) {
+      $(this).addClass('field-blue');
+      $(this).removeClass('field-red');
+    }
+    if($(this).val().length > 2) {
+      $('#healthServiesModal .carousel-item.one .btn-form').addClass('disabled');
+      $(this).removeClass('field-blue');
+      $(this).addClass('field-red');
+    }
+    else {
+      $('#healthServiesModal .carousel-item.one .btn-form').removeClass('disabled');
+
+    }
+  })
   $('#healthServiesModal .carousel-item.one .form-control').keyup(function () {
     if ($('#healthServiesModal .carousel-item.one .name').val().length > 1 && $('#healthServiesModal .carousel-item.one .spec').val().length > 1
       && $('#healthServiesModal .carousel-item.one .email').hasClass('field-blue') && $('#healthServiesModal .carousel-item.one .phone').val().length > 1 && $('#healthServiesModal .carousel-item.one .hospital').val().length > 1 &&
-      $('#healthServiesModal .carousel-item.one .p_name').val().length > 1 && $('#healthServiesModal .carousel-item.one .age').val().length > 1 && $('#healthServiesModal .carousel-item.one .desc').val().length > 1 &&
+      $('#healthServiesModal .carousel-item.one .p_name').val().length > 1 && $('#healthServiesModal .carousel-item.one .age').val().length < 3 && $('#healthServiesModal .carousel-item.one .desc').val().length > 1 &&
       $('#healthServiesModal .carousel-item.one .id').val().length > 1) {
       $('#healthServiesModal .carousel-item.one .btn-form').removeClass('disabled');
     }
@@ -405,6 +419,35 @@ $(function () {
       $('#healthServiesModal .carousel-item.one .btn-form').addClass('disabled');
     }
   })
+
+  $('#healthServiesModal .email').keyup(function () {
+    var email = $(this).val();
+    if ($('#healthServiesModal .carousel-item.one .name').val().length > 1 && $(this).hasClass('field-blue')
+      && $('#healthServiesModal .carousel-item.one .spec').val().length > 1 && $('#healthServiesModal .carousel-item.one .phone').val().length > 1 &&
+      $('#healthServiesModal .carousel-item.one .p_name').val().length > 1 && $('#healthServiesModal .carousel-item.one .id').val().length > 1 && 
+      $('#healthServiesModal .carousel-item.one .age').val().length > 0) {
+      $('#healthServiesModal .carousel-item.one .btn-form').removeClass('disabled');
+    }
+    else {
+      $('#publicServiesModal .carousel-item.one .btn-form').addClass('disabled');
+    }
+    healthValidateEmail(email);
+  })
+  
+  function healthValidateEmail(email) {
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    if (!emailReg.test(email) || $('#healthServiesModal .email').val().length == 0) {
+      $('.email-error').removeClass('d-none');
+      $('#healthServiesModal .carousel-item.one .email').removeClass('field-blue');
+      $('#healthServiesModal .carousel-item.one .email').addClass('field-red');
+      $('#healthServiesModal .carousel-item.one .btn-form').addClass('disabled');
+    } else {
+      $('.email-error').addClass('d-none');
+      $('#healthServiesModal .carousel-item.one .email').addClass('field-blue');
+      $('#healthServiesModal .carousel-item.one .email').removeClass('field-red');
+      // $('#publicServiesModal .carousel-item.one .btn-form').removeClass('disabled');
+    }
+  }
 
   $('#publicServiesModal .carousel-item.one .form-control').keyup(function () {
     if ($('#publicServiesModal .carousel-item.one .name').val().length > 1 && $('#publicServiesModal .carousel-item.one .email').val().length > 1
