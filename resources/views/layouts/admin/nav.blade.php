@@ -30,6 +30,9 @@
                           <a class="nav-link " href="{{ route('publics.index') }}" tabindex="-1" aria-disabled="true">طلبات الخدمات العامة</a>
                       </li>
                       <li class="nav-item">
+                          <a class="nav-link " href="{{ route('invoicess.index') }}" tabindex="-1" aria-disabled="true"> فاتورة</a>
+                      </li>
+                      <li class="nav-item">
                           <a class="nav-link " href="{{ route('about.index') }}" tabindex="-1" aria-disabled="true">صفحة من نحن</a>
                       </li>
                       <li class="nav-item">
