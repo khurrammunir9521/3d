@@ -84,15 +84,13 @@ class CounterController extends Controller
     {
 
         $request->validate([
-            'heading' => 'required',
-            'subheading' => 'required',
-            'bodytext' => 'required',
+            'start' => 'required',
+            'end' => 'required',
         ]);
 
         Counter::find($id)->update([
-            'heading' => $request->heading,
-            'subheading' => $request->subheading,
-            'bodytext' => $request->bodytext,
+            'start' => $request->start,
+            'end' => $request->end,
         ]);
 
         return redirect()->route('counter.index');

@@ -465,13 +465,24 @@
                                 <div class="col-md-8"></div>
                                 <div class="col-md-2">
                                     <div class="counter">
+                                        @if(@$counter->start != null)
+                                        <span class="client-counter">{{$counter->start}}</span><span class="symbol">+</span>
+
+                                        @else
                                         <span class="client-counter">130</span><span class="symbol">+</span>
+                                        @endif
                                         <h5>عميل</h5>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="counter">
-                                        <span class="client-counter">250</span><span class="symbol">+</span>
+                                        @if(@$counter->end != null)
+                                        <span class="client-counter">{{$counter->end}}</span><span class="symbol">+</span>
+
+                                        @else
+                                        <span class="client-counter">130</span><span class="symbol">+</span>
+                                        @endif
+                                       
                                         <h5>مشروع</h5>
                                     </div>
                                 </div>
