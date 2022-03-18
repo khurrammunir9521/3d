@@ -46,7 +46,7 @@
 
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">كلمة المرور</label>
-                                        <input type="password" name="password" class="form-control " placeholder=".. كلمة المرور" value="{{auth()->user()->password}}">
+                                        <input type="password" name="password" class="form-control " placeholder=".. كلمة المرور" >
                                     </div>
                                 </div>
                                 <div class="form-action">
