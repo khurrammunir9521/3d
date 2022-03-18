@@ -376,6 +376,7 @@ $(function () {
   // Form Validation
   $('.form-select').change(function () {
     $(this).addClass('field-blue')
+    $(this).removeClass('field-red');
   })
   $('.form-control').keyup(function () {
     if ($(this).val().length === 0) {
@@ -386,6 +387,7 @@ $(function () {
 
     else if ($(this).val().length > 1) {
       $(this).addClass('field-blue');
+      $(this).removeClass('field-red');
     }
     else {
       $(this).val($.trim($(this).val()));
