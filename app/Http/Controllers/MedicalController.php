@@ -20,7 +20,7 @@ class MedicalController extends Controller
         } else {
             $myfile  = null;
         }
-        Medical::create([
+        $med = Medical::create([
             'user_id' => Auth::id(),
             'myfile' => $myfile,
             'procedure' => $request->procedure,
@@ -35,6 +35,10 @@ class MedicalController extends Controller
             'dr_spec' => $request->dr_spec,
             'dr_name' => $request->dr_name,
             'status' => 1,
+        ]);
+
+        User::find(Auth::id())->update([
+            'order_id' => $med->id,
         ]);
         return redirect()->route('home')->with('error_code', 5);
     }

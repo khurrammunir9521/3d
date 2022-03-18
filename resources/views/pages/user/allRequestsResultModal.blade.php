@@ -20,173 +20,208 @@
 
                        </div>
                        <div class="modal-body">
-                           <div class="payment pay d-none" id="payment">
-                               <div class="form-check">
-                                   <label class="form-check-label" for="flexRadioDefault1">
-                                       <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
-                                       <p>مدى</p>
-                                       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                   </label>
-                                   <label class="form-check-label" for="flexRadioDefault2">
-                                       <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
-                                       <p>فيزا وماستر كارد</p>
-                                       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                   </label>
-                               </div>
-                               <div class="form-check">
-                                   <label class="form-check-label" for="flexRadioDefault3">
-                                       <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
-                                       <p>آبل باي</p>
-                                       <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                   </label>
-                               </div>
-                           </div>
-                           <div class="reject-reason d-none" id="reject-reason">
-                               <div class="row mt-1 justify-content-center">
-                                   <div class="col-md-8">
-                                       <form action="" method="">
-                                           <label class="form-label dot">سبب الرفض</label>
-                                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
-                                           <button class="btn btn-form mx-3 submit" type="submit">ارسال</button>
-                                       </form>
-
-                                   </div>
-                               </div>
-                           </div>
                            <div class="row">
                                <div class="col-md-12">
                                    <div class="form-top">
                                        <span>رقم الطلب:</span>
-                                       <span class="id">244</span>
-                                       <div class="dateTime">11/01/2022 - 03:00PM</div>
+                                       <span id="ids" class="id">{{@$ss->id}}</span>
+                                       <div id="dateTime" class="dateTime">{{@$ss->created_at}}</div>
                                    </div>
+                                   <input type="number" id="status" class="status" name="status" hidden>
                                    <div class="row text-center mb-5 final">
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small">11/01/2022 - 03:00PM</div>
+
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+
                                            <div>
                                                <p>رفع الطلب</p>
                                            </div>
                                        </div>
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small">11/01/2022 - 03:00PM</div>
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           @if( request()->input('name')>= 2 || @$ss->status >= 2)
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                           @else
+                                           <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
+                                           @endif
                                            <div>
                                                <p>اجتماع الخطة العلاجية</p>
                                            </div>
                                        </div>
+                                       @if( request()->input('name')>= 2 ||@$ss->status >= 2)
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
+                                       @else
+                                       <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
+                                       @endif
+
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small">11/01/2022 - 03:00PM</div>
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           @if( @$ss->status >= 3)
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                           @else
+                                           <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
+                                           @endif
                                            <div>
                                                <p>اجتماع النموذج الأول</p>
                                            </div>
                                        </div>
+                                       @if( @$ss->status >= 3)
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
+                                       @else
+                                       <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
+                                       @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small">11/01/2022 - 03:00PM</div>
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           @if( @$ss->status >= 4)
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                           @else
+                                           <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
+                                           @endif
                                            <div>
                                                <p>اجتماع النموذج النهائي</p>
                                            </div>
                                        </div>
+                                       @if( @$ss->status >= 4)
+                                       <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
+                                       @else
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
+                                       @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           @if( @$ss->status >= 5)
+                                           <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                           @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
+                                           @endif
                                            <div>
                                                <p>الدفع</p>
                                            </div>
                                        </div>
+                                       @if( @$ss->status >= 5)
+                                       <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
+                                       @else
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
+                                       @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           @if( @$ss->status >= 6)
+                                           <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                           @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
+                                           @endif
                                            <div>
                                                <p>الطباعة ثلاثية الأبعاد</p>
                                            </div>
                                        </div>
+                                       @if( @$ss->status >= 6)
+                                       <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
+                                       @else
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
+                                       @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
+                                           <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
+                                           @if( @$ss->status >= 7)
+                                           <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                           @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
+                                           @endif
                                            <div>
                                                <p>اختبار الجودة</p>
                                            </div>
                                        </div>
+                                       @if( @$ss->status >= 7)
+                                       <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
+                                       @else
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
+                                       @endif
                                        <div class="col-sm-12 col-lg col-xxl">
-                                           <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
+                                           <div id="dateTime" class="dateTime small">{{@$ss->created_at}}</div>
+                                           @if( @$ss->status >= 8)
+                                           <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                           @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
+                                           @endif
                                            <div>
                                                <p>التوصيل واتمام الطلب</p>
                                            </div>
                                        </div>
                                    </div>
-                                   <h1 class="title text-center mb-5 conditional-blur">معلومات المريض والطبيب</h1>
-                                   <div class="row justify-content-center conditional-blur conditional-hide">
+                                   <h1 class="title text-center mb-5 no-border">معلومات المريض والطبيب</h1>
+                                   <div class="row justify-content-center">
                                        <div class="col-md-12">
-                                           <div class="row mb-2 conditional-hide">
-                                               <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                           <div class="row mb-2">
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">اسم الطبيب</label>
-                                                   <input type="text" class="form-control" placeholder=".. الاسم هنا" value="">
+                                                   <input type="text" class="form-control" placeholder=".. الاسم هنا" id="dr_name" value="{{@$ss->dr_name}}" readonly>
                                                </div>
-                                               <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">تخصص الطبيب</label>
-                                                   <input type="text" class="form-control" placeholder=".. التخصص هنا" value="">
+                                                   <input type="text" class="form-control" placeholder=".. التخصص هنا" id="dr_spec" value="{{@$ss->dr_spec}}" readonly>
                                                </div>
-                                               <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">ايميل الطبيب</label>
-                                                   <input type="text" class="form-control" placeholder=".. الايميل هنا" value="">
+                                                   <input type="text" class="form-control" placeholder=".. الايميل هنا" id="dr_email" value="{{@$ss->dr_email}}" readonly>
                                                </div>
-                                               <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">رقم هاتف الطبيب</label>
-                                                   <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" value="">
+                                                   <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" id="dr_phone" value="{{@$ss->dr_phone}}" readonly>
                                                </div>
                                            </div>
-                                           <div class="row mb-2 mt-5 conditional-hide">
-                                               <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                           <div class="row mb-2">
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">المستشفى أو الشركة</label>
-                                                   <input type="text" class="form-control" placeholder=".. الجهه هنا" value="">
+                                                   <input type="text" class="form-control" placeholder=".. الجهه هنا" id="hospital" value="{{@$ss->hospital}}" readonly>
                                                </div>
-                                               <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                   <label class="form-label">اسم المريض</label>
+                                                   <input type="text" class="form-control" placeholder=".. الاسم هنا" id="pa_name" value="{{@$ss->pa_name}}" readonly>
+                                               </div>
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">رقم معرف المريض</label>
-                                                   <input type="text" class="form-control" placeholder="المعرف هنا" value="">
+                                                   <input type="text" class="form-control" placeholder=".. المعرف هنا" id="pa_id" value="{{@$ss->pa_id}}" readonly>
                                                </div>
-                                               <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                               <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                    <label class="form-label">عمر المريض</label>
-                                                   <input type="text" class="form-control" placeholder=".. المعرف هنا" value="">
+                                                   <input type="text" class="form-control" placeholder=".. المعرف هنا" id="pa_age" value="{{@$ss->pa_age}}" readonly>
                                                </div>
                                            </div>
-                                           <div class="row mt-5 conditional-hide">
+                                           <div class="row mt-5">
                                                <div class="col-md-12">
                                                    <label class="form-label">عموم الحاله الصحية</label>
-                                                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا"></textarea>
+                                                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
                                                </div>
                                            </div>
                                        </div>
                                    </div>
-                                   <h1 class="title text-center mt-5 mb-5 conditional-blur">نوع الخدمة والاجراء الطبي</h1>
-                                   <div class="row justify-content-center pt-5 conditional-blur conditional-hide">
-                                       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
+                                   <h1 class="title text-center mt-5 mb-5 no-border">نوع الخدمة والاجراء الطبي</h1>
+                                   <div class="row justify-content-center pt-5">
+                                       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                            <img src="{{asset('user/assets/images/patient-front.png')}}" class="img-fluid" alt="patient-front">
                                        </div>
-                                       <div class="col-md-3 pt-4 mt-5">
+                                       <div class="col-md-4 col-lg-3 pt-4 pt-md-0 mt-5">
                                            <label class="form-label">القسم</label>
-                                           <input type="text" class="form-control" placeholder="الجمجمة، العامود الفقري" value="">
+                                           <input type="text" class="form-control" placeholder="الجمجمة، العامود الفقري" id="parts" value="{{@$ss->parts}}" readonly>
                                            <label class="form-label mt-4">نوع الاجراء الطبي</label>
-                                           <input type="text" class="form-control mb-4" placeholder=" .. اختيار من هنا" value="">
+                                           <input type="text" class="form-control mb-4" placeholder=" .. اختيار من هنا" id="procedure" value="{{@$ss->procedure}}" readonly>
                                            <label class="form-label">الصور الطبية</label>
                                            <div class="upload-btn-wrapper">
-                                               <button class="btn btn-upload"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></button>
+
+
+                                               <a class="btn btn-upload" href="{{ asset('storage/' . @$ss->myfile) }}" download=" {{ @$ss->myfile }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                            </div>
 
                                        </div>
 
                                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                            <img src="{{asset('user/assets/images/patient-back.png')}}" class="img-fluid" alt="patient-back">
+                                       </div>
+                                       <div class="col-md-12 col-lg-3">
+                                           <div class="form-action">
+                                               <button class="btn btn-form mx-3 with-arrow" type="submit" data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</button>
+                                               <p>سيتم تحديث حالة الطلب من قبل الإدارة</p>
+                                           </div>
                                        </div>
                                    </div>
                                </div>

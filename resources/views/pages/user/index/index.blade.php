@@ -1138,18 +1138,30 @@
             var url = '{{ route("vieworder", ":id") }}';
             url = url.replace(':id', rowid);
             $.ajax({
-                url: url ,
+                url: url,
                 type: "GET",
                 success: function(response) {
-                    const modal = $('#edit_new_modal');
-                    modal.find('#employeeName').val(response.Employee_Name);
-                    modal.find('#Employee_Address').val(response.Employee_Address);
-                    modal.find('#phone').val(response.Employee_Phone);
-                    modal.find('#email').val(response.Employee_Email);
-                    modal.find('#salary').val(response.Employee_Salary);
-                    modal.find('#account').val(response.Employee_Account);
-                    modal.find('#editmodal').modal('show');
-                    $('.modal-backdrop').remove();
+
+                    console.log(response);
+                    const modal = $('#allRequestsResultModal');
+                    modal.find('#procedure').val(response.procedure);
+                    modal.find('#parts').val(response.parts);
+                    modal.find('#pa_age').val(response.pa_age);
+                    modal.find('#pa_id').val(response.pa_id);
+                    modal.find('#pa_name').val(response.pa_name);
+                    modal.find('#hospital').val(response.hospital);
+                    modal.find('#dr_phone').val(response.dr_phone);
+                    modal.find('#dr_email').val(response.dr_email);
+                    modal.find('#dr_name').val(response.dr_name);
+                    modal.find('#dr_spec').val(response.dr_spec);
+                    modal.find('#exampleFormControlTextarea1').val(response.discription);
+                    modal.find('.dateTime').val(response.created_at);
+                    modal.find('#ids').val(response.id);
+                    modal.find('#status').val(response.status);
+                    $('#allRequestsResultModal').modal('show');
+
+                    $('#requestsModal').modal('hide');
+                    // $('.modal-backdrop').remove();
                 },
                 error: function(errorThrown, errResponse) {
                     console.log(errorThrown, errResponse);
@@ -1183,7 +1195,7 @@
                 }, 2000);
             }
             $(window).scroll(function() {
-            var positionTop = $(window).scrollTop();
+                var positionTop = $(window).scrollTop();
                 if ((positionTop > 1000)) {
                     $('#main-macine').addClass('animate-left');
                     $('#main-effect').addClass('animate-right');
