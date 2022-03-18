@@ -700,7 +700,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-                            <p class='koib-health d-none mt-5 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
+                            <p class='koib-health d-none mt-5 nav-link'><a href="#navbarNav" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -748,7 +748,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none mt-5 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
+                            <p class='koib d-none mt-5 nav-link'><a href="#navbarNav" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                             @endauth
 
                         </div>
@@ -1136,11 +1136,12 @@
             var scroll = false;
             console.log(scroll)
             $('#main-macine').removeClass('animate-left');
+
             function animateCounter() {
                 var positionTop = $(window).scrollTop();
                 var flag = true;
                 if (positionTop >= 299) {
-                $('.client-counter').each(function() {
+                    $('.client-counter').each(function() {
                         $(this).prop('Counter', 0).animate({
                             Counter: $(this).text()
                         }, {
@@ -1156,8 +1157,8 @@
             }
 
             $(window).scroll(function() {
-            var positionTop = $(window).scrollTop();
-            animateCounter();
+                var positionTop = $(window).scrollTop();
+                animateCounter();
                 if ((positionTop > 1000)) {
                     $('#main-macine').addClass('animate-left');
                     $('#main-effect').addClass('animate-right');
@@ -1198,7 +1199,7 @@
             // }
             // }
 
-// window.addEventListener("scroll", reveal);
+            // window.addEventListener("scroll", reveal);
         })
     </script>
     <script>

@@ -128,10 +128,11 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
     Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
     Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedback.store');
+    Route::POST('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
 });
 
 
-Route::get('notify/send',function(){
-   $users = User::where('role','admin')->first();
-   $users->notify(new MedicalNotification($users));
-});
+// Route::get('notify/send',function(){
+//    $users = User::where('role','admin')->first();
+//    $users->notify(new MedicalNotification($users));
+// });

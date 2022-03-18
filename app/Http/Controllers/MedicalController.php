@@ -38,11 +38,10 @@ class MedicalController extends Controller
             'dr_name' => $request->dr_name,
             'status' => 1,
         ]);
-
-        User::find(Auth::id())->update([
+        $users = User::find(Auth::id());
+        $users->update([
             'order_id' => $med->id,
         ]);
-        $users = User::where('role','admin')->first();
         $users->notify(new MedicalNotification($users));
         return redirect()->route('home')->with('error_code', 5);
     }
@@ -59,7 +58,8 @@ class MedicalController extends Controller
     public function show($id)
     {
         $order = Medical::find($id);
-        return view('pages.admin.dashboard.Medical.show', compact('order'));
+        $user = User::find($order->user_id);
+        return view('pages.admin.dashboard.Medical.show', compact('order','user'));
     }
 
     public function updated(Request $request)
@@ -126,7 +126,7 @@ class MedicalController extends Controller
             'body' => $request->question
         ];
 
-        \Mail::to($request->email)->send(new \App\Mail\Question($details));
+        \Mail::to('arsalanamir.aa@gmail.com')->send(new \App\Mail\Question($details));
     }
 
     public function feedback(Request $request)
