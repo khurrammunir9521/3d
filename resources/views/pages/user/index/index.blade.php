@@ -673,7 +673,7 @@
                         </div>
                         <img src="{{ asset('user/assets/images/man-sitting.png') }}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-4" alt="man-sitting" width="500">
                     </div>
-                    <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4">
+                    <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4 medical-animate">
                         <span class="outline dot right">أكثر من 13 عضو اصطناعي</span>
                         <h1 class="modal-title right-center"><span class="btm-line"><span class="inner-line"></span>
 
@@ -723,10 +723,9 @@
                         </div>
                         <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" alt="machine">
                     </div>
-                    <div class="pt-5">
+                    <div class="pt-5 public-animate">
                         <span class="outline dot left">أكثر 20 خدمة مختلفة</span>
                         <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
-
                                 الخدمات العامة
                             </span></h1>
                         <div class="description">
@@ -950,7 +949,7 @@
                                                     </div>
                                                     <img src="{{asset('user/assets/images/man-sitting.png')}}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-1" alt="man-sitting" width="500">
                                                 </div>
-                                                <div class="pt-5 pt-md-1 pt-lg-5 pt-xl-5 pt-xxl-5">
+                                                <div class="pt-5 pt-md-1 pt-lg-5 pt-xl-5 pt-xxl-5 medical-animate">
                                                     <span class="outline dot right">أكثر من 13 عضو اصطناعي</span>
                                                     <h1 class="modal-title right-center">الخدمات الطبية
                                                     </h1>
@@ -976,7 +975,7 @@
                                                     </div>
                                                     <img src="{{asset('user/assets/images/machine.png')}}" class="img-fluid" alt="machine">
                                                 </div>
-                                                <div class="pt-5">
+                                                <div class="pt-5 public-animate">
                                                     <span class="outline dot left">أكثر 20 خدمة مختلفة</span>
                                                     <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
                                                             الخدمات العامة
@@ -1169,7 +1168,14 @@
                 if (($(window).scrollTop() > 1000)) {
                     $('#main-macine').addClass('animate-left');
                     $('#main-effect').addClass('animate-right');
+                    $('.medical-animate').addClass('animate__animated animate__fadeIn animate_slowest');
+                    $('.public-animate').addClass('animate__animated animate__fadeIn animate_slowest');
                 }
+
+                if (($(window).scrollTop() > 600)) {
+                    $('.about-content').addClass('animate__animated animate__fadeIn animate_slowest');
+                }
+
                 // else {
                 //     a = 0;
                 // }

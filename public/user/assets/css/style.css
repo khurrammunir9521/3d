@@ -443,6 +443,10 @@ nav .left-side a:last-child {
     margin-right: 80px;
 }
 
+.about-content .actions {
+    margin: auto!important;
+}
+
 .actions .btn:first-child {
     margin-right: 0;
 }
@@ -2250,4 +2254,8 @@ input[type=number] {
     to {
         transform: translate(0%, 0px);
     }
+}
+
+.animate_slowest {
+    animation-duration: 6s!important;
 }
