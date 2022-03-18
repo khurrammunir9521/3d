@@ -408,7 +408,7 @@
 
 
                                                 <button class="btn btn-sky">المزيد</button>
-                                                <button class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></button>
+                                                <a href="#services-section" class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></a href="#services-section">
                                             </div>
                                         </div>
                                         <div class="col-sm-5 col-md-8 col-lg-5">
@@ -1132,6 +1132,73 @@
     <!-- JQuery -->
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
     <script>
+        $(document).ready(function() {
+            var scroll = false;
+            console.log(scroll)
+            $('#main-macine').removeClass('animate-left');
+            function animateCounter() {
+                setTimeout(() => {
+                    $('.client-counter').each(function() {
+                        console.log($(this).toString().length)
+                        $(this).prop('Counter', 0).animate({
+                            Counter: $(this).text()
+                        }, {
+                            duration: 5000,
+                            easing: 'swing',
+                            step: function(now) {
+                                $(this).text(Math.ceil(now));
+                            }
+                        });
+                    });
+
+                }, 2000);
+            }
+            $(window).scroll(function() {
+            var positionTop = $(window).scrollTop();
+                if ((positionTop > 1000)) {
+                    $('#main-macine').addClass('animate-left');
+                    $('#main-effect').addClass('animate-right');
+                }
+
+            });
+            // var scroll = $(window).scrollTop();
+            // $.fn.scrollEvent = function() {
+            //     return this.on("scroll", function() {
+            //         console.log(window.innerHeight);
+            //         // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            //         //     console.log(scroll)
+            //         //     animateCounter();
+            //         // }
+            //         if (scroll > 299) {
+            //         animateCounter();
+            //         }
+            //     });
+            // };
+
+            // $(window).scrollEvent()
+            // function reveal() {
+            //     scroll = true;
+            // console.log(scroll)
+
+            // var reveals = document.querySelectorAll("#main-macine");
+
+            // for (var i = 0; i < reveals.length; i++) {
+            //     var windowHeight = window.innerHeight;
+            //     var elementTop = reveals[i].getBoundingClientRect().top;
+            //     var elementVisible = 150;
+
+            //     if (elementTop < windowHeight - elementVisible) {
+            //     reveals[i].classList.add("animate-left");
+            //     } else {
+            //     reveals[i].classList.remove("animate-right");
+            //     }
+            // }
+            // }
+
+window.addEventListener("scroll", reveal);
+        })
+    </script>
+    <script>
         $(document).on('click', '.editProduct', function(e) {
             const btn = $(e.currentTarget);
             rowid = btn.attr('data-id');
@@ -1163,50 +1230,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            function animateCounter() {
-                setTimeout(() => {
-                    $('.client-counter').each(function() {
-                        console.log($(this).toString().length)
-                        $(this).prop('Counter', 0).animate({
-                            Counter: $(this).text()
-                        }, {
-                            duration: 5000,
-                            easing: 'swing',
-                            step: function(now) {
-                                $(this).text(Math.ceil(now));
-                            }
-                        });
-                    });
 
-                }, 2000);
-            }
-            $(window).scroll(function() {
-            var positionTop = $(window).scrollTop();
-                if ((positionTop > 1000)) {
-                    $('#main-macine').addClass('animate-left');
-                    $('#main-effect').addClass('animate-right');
-                }
-
-            });
-            // var scroll = $(window).scrollTop();
-            // $.fn.scrollEvent = function() {
-            //     return this.on("scroll", function() {
-            //         console.log("Scroll");
-            //         // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-            //         //     console.log(scroll)
-            //         //     animateCounter();
-            //         // }
-            //         if (scroll > 299) {
-            //         animateCounter();
-            //         }
-            //     });
-            // };
-
-            // $(window).scrollEvent()
-        })
-    </script>
 
 </body>
 

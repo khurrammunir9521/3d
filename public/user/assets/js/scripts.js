@@ -1,6 +1,7 @@
 $(function () {
 
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
+  // $(window).scrollTop(0);
 
   var i = 0;
   function move() {
