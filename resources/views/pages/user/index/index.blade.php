@@ -26,12 +26,13 @@
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="{{ asset('user/assets/js/jquery.min.js') }}"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('user/assets/css/jquery.pageLoading.css') }}">
+    
     <style type="text/css">
         @font-face {
             font-family: JannaRegular;
@@ -471,7 +472,7 @@
                                         @if(@$counter->start != null)
                                         <span class="client-counter">{{$counter->start}}</span><span class="symbol">+</span>
                                         @else
-                                        <span class="client-counter">12</span><span class="symbol">+</span>
+                                        <span class="client-counter" data-count="12">0</span><span class="symbol">+</span>
                                         @endif
                                         <h5>عميل</h5>
                                     </div>
@@ -479,10 +480,10 @@
                                 <div class="col-md-2">
                                     <div class="counter">
                                         @if(@$counter->end != null)
-                                        <span class="client-counter">{{$counter->end}}</span><span class="symbol">+</span>
+                                        <span class="client-counter" data-count="{{$counter->end}}">{{$counter->end}}</span><span class="symbol">+</span>
 
                                         @else
-                                        <span class="client-counter">130</span><span class="symbol">+</span>
+                                        <span class="client-counter" data-count="130">0</span><span class="symbol">+</span>
                                         @endif
 
                                         <h5>مشروع</h5>
@@ -1133,38 +1134,62 @@
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
     <script>
         $(document).ready(function() {
-            var scroll = false;
             console.log(scroll)
             $('#main-macine').removeClass('animate-left');
-
-            function animateCounter() {
-                var positionTop = $(window).scrollTop();
-                var flag = true;
-                if (positionTop >= 299) {
+            var a = 0;
+                $(window).scroll(function() {
+                var oTop = $('.counter').offset().top - window.innerHeight;
+                if (a == 0 && $(window).scrollTop() > 300) {
                     $('.client-counter').each(function() {
-                        $(this).prop('Counter', 0).animate({
-                            Counter: $(this).text()
-                        }, {
-                            duration: 5000,
-                            easing: 'swing',
-                            step: function(now) {
-                                $(this).text(Math.ceil(now));
-                            }
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                                countNum: countTo
+                            },
 
-                        });
+                            {
+
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function() {
+                                    $this.text(Math.floor(this.countNum));
+                                },
+                                complete: function() {
+                                    $this.text(this.countNum);
+                                    //alert('finished');
+                                }
+
+                            });
                     });
+                    a = 1;
                 }
-            }
 
-            $(window).scroll(function() {
-                var positionTop = $(window).scrollTop();
-                animateCounter();
-                if ((positionTop > 1000)) {
+                if (($(window).scrollTop() > 1000)) {
                     $('#main-macine').addClass('animate-left');
                     $('#main-effect').addClass('animate-right');
                 }
+                // else {
+                //     a = 0;
+                // }
 
             });
+            // $('.client-counter').counterUp({
+            //     delay: 10,
+            //     time: 2000
+            // });
+
+            // $(window).scroll(function() {
+            //     // animateCounter()
+            //     var positionTop = $(window).scrollTop();
+
+            //     if ((positionTop > 1000)) {
+            //         $('#main-macine').addClass('animate-left');
+            //         $('#main-effect').addClass('animate-right');
+            //     }
+
+            // });
             // $.fn.scrollEvent = function() {
             // var scroll = $(window).scrollTop();
             //     return this.on("scroll", function() {
@@ -1247,7 +1272,6 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
-
 
 </body>
 
