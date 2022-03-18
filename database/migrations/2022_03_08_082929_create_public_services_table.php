@@ -27,6 +27,7 @@ class CreatePublicServicesTable extends Migration
             $table->string('print_resolution')->nullable();
             $table->string('print_img')->nullable();
             $table->integer('status')->default(1);
+            $table->integer('seen')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });

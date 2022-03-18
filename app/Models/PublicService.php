@@ -12,6 +12,6 @@ class PublicService extends Model
     use SoftDeletes;
     protected $fillable = [
         'status', 'user_id', 'full_name', 'phone_num', 'email', 'specialization',
-        'gender', 'print_type', 'print_color', 'print_resolution', 'print_img'
+        'gender', 'print_type', 'print_color', 'print_resolution', 'print_img', 'seen',
     ];
 }

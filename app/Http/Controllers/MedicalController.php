@@ -59,8 +59,11 @@ class MedicalController extends Controller
     public function show($id)
     {
         $order = Medical::find($id);
+        $order->update([
+            'seen' => 1,
+        ]);
         $user = User::find($order->user_id);
-        return view('pages.admin.dashboard.Medical.show', compact('order','user'));
+        return view('pages.admin.dashboard.Medical.show', compact('order', 'user'));
     }
 
     public function updated(Request $request)

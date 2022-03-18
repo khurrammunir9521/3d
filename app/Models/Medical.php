@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Medical extends Model
 {
-    use HasFactory , Notifiable;
+    use HasFactory, Notifiable;
     protected $fillable = [
         'user_id',
         'myfile',
@@ -25,6 +25,7 @@ class Medical extends Model
         'dr_spec',
         'dr_name',
         'status',
+        'seen',
     ];
     public function user()
     {
