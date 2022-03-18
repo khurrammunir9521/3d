@@ -1168,22 +1168,21 @@
             //     // }
 
             // });
-            var scroll = $(window).scrollTop();
-            $.fn.scrollEvent = function() {
-                return this.on("scroll", function() {
-                    console.log("Scroll");
-                    // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                    //     console.log(scroll)
-                    //     animateCounter();
-                    // }
-                    if (scroll > 299 && scroll < 450) {
-                        console.log(scroll)
-                    animateCounter();
-                    }
-                });
-            };
+            // var scroll = $(window).scrollTop();
+            // $.fn.scrollEvent = function() {
+            //     return this.on("scroll", function() {
+            //         console.log("Scroll");
+            //         // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            //         //     console.log(scroll)
+            //         //     animateCounter();
+            //         // }
+            //         if (scroll > 299) {
+            //         animateCounter();
+            //         }
+            //     });
+            // };
 
-            $(window).scrollEvent()
+            // $(window).scrollEvent()
         })
     </script>
 
