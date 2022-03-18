@@ -22,7 +22,9 @@ p {
 /* Navigation */
 .navbar {
     padding: 2rem;
-	    position: relative;
+    padding-right: 5rem;
+    padding-left: 8rem;
+    position: relative;
     z-index: 9;
 }
 
@@ -583,7 +585,7 @@ footer p {
 
 footer .social {
     text-align: left;
-    padding: 0 60px;
+    padding: 0px 130px;
 }
 
 footer .social a {
@@ -595,7 +597,7 @@ footer .social a:last-child {
 }
 
 footer .right {
-    padding: 0 60px;
+    padding: 0 80px;
     display: flex;
     align-items: flex-start;
 }
@@ -1996,7 +1998,9 @@ right: 185px;
     image-rendering: -webkit-optimize-contrast;
 }
 
-
+.navbar-brand img {
+    margin-top: -35px;
+}
 
 .dot-txt-main .dot.center::before{
     right: -109px !important;
@@ -2044,8 +2048,6 @@ right: 185px;
 .footer-white-heading .title.white::after{
     left: 50px;
 }
-
-
 
 .static-text{
     width: 34% !important; 

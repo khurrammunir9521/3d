@@ -1536,6 +1536,25 @@
     .banner-bg.sample {
         width: 960px;
     }
+    
+    footer .social {
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    footer .right {
+        padding: 0 10px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        padding: 2rem;
+        padding-right: 0rem;
+        padding-left: 0rem;
+        position: relative;
+        z-index: 9;
+    }
 }
 
 @media only screen and (min-width: 1400px) {
