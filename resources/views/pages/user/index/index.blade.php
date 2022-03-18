@@ -697,7 +697,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-                            <p class='koib-health d-none mt-2'><span style="color:red">يتطلب التسجيل</span>للتسجيل اضغط هنا </p>
+                            <p class='koib-health d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -745,7 +745,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none mt-2'><span style="color:red">يتطلب التسجيل</span>للتسجيل اضغط هنا </p>
+                            <p class='koib d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
                             @endauth
 
                         </div>
@@ -1108,6 +1108,13 @@
         });
     </script>
     @endif
+    @if(!empty(Session::get('error_code')) && Session::get('error_code') == 4)
+    <script>
+        $(function() {
+            $('#publicPaymentModal').modal('show');
+        });
+    </script>
+    @endif
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 6)
     <script>
         $(function() {
@@ -1118,12 +1125,33 @@
     <script src="{{asset('user/assets/js/bootstrap.min.js')}}"></script>
     <!-- JQuery -->
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
-    <!-- <script>
-        $('#carouselExampleIndicators').carousel({
-            interval: 3000,
-            cycle: true
+    <script>
+        $(document).on('click', '.editProduct', function(e) {
+            const btn = $(e.currentTarget);
+            rowid = btn.attr('data-id');
+            var url = '{{ route("vieworder", ":id") }}';
+            url = url.replace(':id', rowid);
+            $.ajax({
+                url: url ,
+                type: "GET",
+                success: function(response) {
+                    const modal = $('#edit_new_modal');
+                    modal.find('#employeeName').val(response.Employee_Name);
+                    modal.find('#Employee_Address').val(response.Employee_Address);
+                    modal.find('#phone').val(response.Employee_Phone);
+                    modal.find('#email').val(response.Employee_Email);
+                    modal.find('#salary').val(response.Employee_Salary);
+                    modal.find('#account').val(response.Employee_Account);
+                    modal.find('#editmodal').modal('show');
+                    $('.modal-backdrop').remove();
+                },
+                error: function(errorThrown, errResponse) {
+                    console.log(errorThrown, errResponse);
+                }
+            });
+
         });
-    </script> -->
+    </script>
     <!-- Slick -->
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->

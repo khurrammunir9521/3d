@@ -105,6 +105,8 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::resource('youtubeurl', YoutubeurlController::class);
     Route::resource('counter', CounterController::class);
     Route::resource('invoicess', InvoiceController::class);
+
+    Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
     Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
     Route::post('profile/setting', [HomeController::class, 'updateprofile'])->name('profile.setting');
     Route::get('editpassword', [HomeController::class, 'passView'])->name('editpassword');

@@ -168,10 +168,13 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- <div class="form-action">
-                                                        <button class="btn btn-form mx-3 with-arrow public-service" type="button" data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</button>
-                                                        <p>سيتم تحديث حالة الطلب من قبل الإدارة</p>
-                                                    </div> -->
+                                                    <h1 class="title text-center mt-5 no-border conditional-blur">
+
+                                                        <div class="">
+                                                            <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">عرض السعر</a>
+                                                            <p class="mt-3">تمت بنجاح المرحلة الأولى من الطلب</p>
+                                                        </div>
+                                                    </h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -179,11 +182,13 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 

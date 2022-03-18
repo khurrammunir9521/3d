@@ -59,15 +59,15 @@ class HomeController extends Controller
             $links = Youtubeurl::first();
             $counter = Counter::first();
             return view('pages.user.index.index', compact('counter', 'links', 'about', 'con', 'tech', 'profile', 'order', 'side', 'orders', 'logos', 'public', 'publics', 'title', 'map'));
-       
         }
     }
     public function vieworder($id)
     {
-
+       
         $order = Medical::find($id);
         $orders = Medical::where('user_id', Auth::id())->get();
-        return view('pages.user.showorderdata', compact('order',  'orders',));
+        return response()->json($$order, $orders);
+        // return view('pages.user.showorderdata', compact('order',  'orders',));
     }
     public function vieworderpublic($id)
     {

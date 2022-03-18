@@ -33,7 +33,7 @@
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">رقم الهاتف</label>
-                                                              <input type="number" pattern="\d*" max="13" class="form-control phone" placeholder=".. التخصص هنا" required name="phone" value="">
+                                                              <input type="number" pattern="\d*"  class="form-control phone" placeholder=".. التخصص هنا" required name="phone" value="">
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">الايميل</label>
