@@ -9,13 +9,19 @@
                             <div>
                                 <span class="outline dot">أكثر من 13 عضو اصطناعي</span>
                                 <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>
-									الخدمات الطبية
-									</span></h1>
+                                        الخدمات الطبية
+                                    </span></h1>
                             </div>
                             <div class="profile">
+                                @if(@auth()->user()->profile == null)
                                 <a href="#profile">
                                     <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                 </a>
+                                @else
+                                <a href="#profile">
+                                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                </a>
+                                @endif
                             </div>
                         </div>
                         <div class="modal-body">
@@ -51,7 +57,7 @@
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">اسم المريض</label>
-                                                            <input type="text"  name="pa_name" class="form-control p_name" placeholder="الاسم هنا .." value="" required>
+                                                            <input type="text" name="pa_name" class="form-control p_name" placeholder="الاسم هنا .." value="" required>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">رقم معرف المريض</label>
@@ -59,7 +65,7 @@
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                             <label class="form-label dot">عمر المريض</label>
-                                                            <input type="number" pattern="\d*" max="99" name="pa_age" class="form-control age"  placeholder="المعرف هنا" value="" required>
+                                                            <input type="number" pattern="\d*" max="99" name="pa_age" class="form-control age" placeholder="المعرف هنا" value="" required>
                                                         </div>
                                                     </div>
                                                     <div class="row">

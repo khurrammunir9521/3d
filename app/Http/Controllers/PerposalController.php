@@ -64,8 +64,8 @@ class PerposalController extends Controller
     public function show($id)
     {
         $invoice = Perposal::find($id);
+     
         $user = User::find($invoice->user_id);
-        // dd($invoice);
         return view('pages.admin.invoice', compact('invoice', 'user'));
     }
 

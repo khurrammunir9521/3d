@@ -12,9 +12,15 @@
                                </div>
                                </h1>
                                <div class="profile">
+                                   @if(@auth()->user()->profile == null)
                                    <a href="#profile">
                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                    </a>
+                                   @else
+                                   <a href="#profile">
+                                       <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                   </a>
+                                   @endif
                                </div>
                            </div>
 
@@ -39,7 +45,7 @@
                                            </div>
                                        </div>
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
-                                       <input type="text" id = "status" name = "status" hidden>
+                                       <input type="text" id="status" name="status" hidden>
                                        <div class="col-sm-12 col-lg col-xxl">
                                            <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
                                            @if( request()->input('status')>= 2 || @$ss->status >= 2)

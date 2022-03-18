@@ -9,12 +9,18 @@
                               <div>
                                   <span class="outline dot">أكثر 20 خدمة مختلفة</span>
                                   <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
-									  </span></h1>
+                                      </span></h1>
                               </div>
                               <div class="profile">
+                                  @if(@auth()->user()->profile == null)
                                   <a href="#profile">
                                       <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                   </a>
+                                  @else
+                                  <a href="#profile">
+                                      <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                  </a>
+                                  @endif
                               </div>
                           </div>
                           <div class="modal-body">
@@ -33,7 +39,7 @@
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">رقم الهاتف</label>
-                                                              <input type="number" pattern="\d*"  class="form-control phone" placeholder=".. التخصص هنا" required name="phone" value="">
+                                                              <input type="number" pattern="\d*" class="form-control phone" placeholder=".. التخصص هنا" required name="phone" value="">
                                                           </div>
                                                           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
                                                               <label class="form-label dot">الايميل</label>
@@ -60,7 +66,7 @@
                                                           </div>
                                                       </div>
                                                       <div class="form-action">
-                                                          <button class="btn btn-grey invert btn-form disabled mx-3 with-arrow"  data-bs-target="#carouselIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
+                                                          <button class="btn btn-grey invert btn-form disabled mx-3 with-arrow" data-bs-target="#carouselIndicators" data-bs-slide="next"><img src="{{asset('user/assets/icons/arrow-right.svg')}}" alt="arrow-right"> التالي</button>
                                                           <p>المعلومات العامة</p>
                                                       </div>
 

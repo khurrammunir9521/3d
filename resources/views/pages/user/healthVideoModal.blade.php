@@ -8,9 +8,15 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </h1>
                             <div class="profile d-none">
+                                @if(@auth()->user()->profile == null)
                                 <a href="#profile">
                                     <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                 </a>
+                                @else
+                                <a href="#profile">
+                                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                </a>
+                                @endif
                             </div>
                         </div>
                         <div class="modal-body">

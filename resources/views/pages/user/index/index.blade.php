@@ -105,13 +105,13 @@
 
                     <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
                         {{-- @if (auth()->user()->profile != null)
-                                @if (auth()->user()->profile == null)
+                                @if (@auth()->user()->profile == null)
                                     <div class="profile-img">
                                         <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
                 </div>
                 @else
                 <div class="profile-img">
-                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px;">
+                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
 
                 </div>
                 @endif
@@ -119,7 +119,7 @@
                 --}}
                 <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
                     {{-- @if (auth()->user()->profile != null) --}}
-                    @if (auth()->user()->profile == null)
+                    @if (@auth()->user()->profile == null)
                     <div class="profile profile-icon">
                         <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
                     </div>
@@ -864,7 +864,7 @@
                     <div class="col-md-4 col-xl-4">
                         <div class="right">
                             <p>تصميم وتطوير شركة تيلرز</p>
-                            <img src="{{ asset('user/assets/icons/tellers-logo.svg') }}" alt="tellers-logo">
+                            <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}" alt="tellers-logo"></a>
                         </div>
                     </div>
                     <div class="col-md-5 col-xl-4">

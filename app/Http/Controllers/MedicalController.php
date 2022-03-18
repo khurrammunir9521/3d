@@ -42,6 +42,7 @@ class MedicalController extends Controller
         $users->update([
             'order_id' => $med->id,
         ]);
+        $users = User::where('role', 'admin')->first();
         $users->notify(new MedicalNotification($users));
         return redirect()->route('home')->with('error_code', 5);
     }
