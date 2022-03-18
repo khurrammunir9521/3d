@@ -701,7 +701,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-                            <p class='koib-health d-none mt-5 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
+                            <p class='koib-health d-none mt-5 nav-link'><a href="#navbarNav" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -749,7 +749,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none mt-5 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
+                            <p class='koib d-none mt-5 nav-link'><a href="#navbarNav" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                             @endauth
 
                         </div>

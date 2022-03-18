@@ -9,43 +9,46 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row justify-content-center">
-                            @if($order->status == 8)
+                            @if(@$order->status == 8)
                             <h3>Approved</h3>
                             @else
                             <form action="{{route('updated.status')}}" method="POST">
                                 @csrf
-                                <input type="text" name="id" value="{{$order->id}}" hidden>
-                                @if($order->status == 1)
+                                <input type="text" name="id" value="{{@$order->id}}" hidden>
+                                @if(@$order->status == 1)
                                 <input type="checkbox" id="vehicle1" name="checkbox1" value="1">
                                 <label class="form-label" for="vehicle1"> اجتماع الخطة العلاجية</label>
                                 @endif
-                                @if($order->status == 2)
+                                @if(@$order->status == 2)
                                 <input type="checkbox" id="vehicle2" name="checkbox2" value="2">
                                 <label class="form-label" for="vehicle2"> اجتماع النموذج الأول</label>
                                 @endif
-                                @if($order->status == 3)
+                                @if(@$order->status == 3)
                                 <input type="checkbox" id="vehicle3" name="checkbox3" value="3">
                                 <label class="form-label" for="vehicle3"> اجتماع النموذج النهائي</label>
                                 @endif
-                                @if($order->status == 4)
+                                @if(@$order->status == 4)
                                 <input type="checkbox" id="vehicle3" name="checkbox4" value="4">
                                 <label class="form-label" for="vehicle3"> الدفع</label>
                                 @endif
-                                @if($order->status == 5)
+                                @if(@$order->status == 5)
                                 <input type="checkbox" id="vehicle3" name="checkbox5" value="5">
                                 <label class="form-label" for="vehicle3"> الطباعة ثلاثية الأبعاد</label>
                                 @endif
-                                @if($order->status == 6)
+                                @if(@$order->status == 6)
                                 <input type="checkbox" id="vehicle3" name="checkbox6" value="6">
                                 <label class="form-label" for="vehicle3"> اختبار الجودة</label>
                                 @endif
-                                @if($order->status == 7)
+                                @if(@$order->status == 7)
                                 <input type="checkbox" id="vehicle3" name="checkbox7" value="7">
                                 <label class="form-label" for="vehicle3"> التوصيل واتمام الطلب</label>
                                 @endif
 
                                 <br>
                                 <button class="btn btn-primary" type="submit"> save</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Send Query
+                                </button>
                             </form>
                             @endif
                         </div>
@@ -127,6 +130,34 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Send Query</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{route('ask.question')}}" method="POST">
+                    @csrf
+                    <div class="col-12">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" name="email" value="{{$user->email}}" readonly>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Question</label>
+                        <textarea class="form-control" name="question"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Send">Send</button>
             </div>
         </div>
     </div>

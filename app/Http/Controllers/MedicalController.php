@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Notifications\MedicalNotification;
+use Symfony\Component\Console\Question\Question;
 
 class MedicalController extends Controller
 {
@@ -37,11 +38,10 @@ class MedicalController extends Controller
             'dr_name' => $request->dr_name,
             'status' => 1,
         ]);
-
-        User::find(Auth::id())->update([
+        $users = User::find(Auth::id());
+        $users->update([
             'order_id' => $med->id,
         ]);
-        $users = User::where('role','admin')->first();
         $users->notify(new MedicalNotification($users));
         return redirect()->route('home')->with('error_code', 5);
     }
@@ -58,7 +58,8 @@ class MedicalController extends Controller
     public function show($id)
     {
         $order = Medical::find($id);
-        return view('pages.admin.dashboard.Medical.show', compact('order'));
+        $user = User::find($order->user_id);
+        return view('pages.admin.dashboard.Medical.show', compact('order','user'));
     }
 
     public function updated(Request $request)
@@ -117,5 +118,33 @@ class MedicalController extends Controller
 
         \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
+    }
+    public function askQuestion(Request $request)
+    {
+        $details = [
+            'title' => 'FeedBack',
+            'body' => $request->question
+        ];
+
+        \Mail::to('arsalanamir.aa@gmail.com')->send(new \App\Mail\Question($details));
+    }
+
+    public function feedback(Request $request)
+    {
+        return view('pages.admin.dashboard.Medical.feedback');
+    }
+
+    public function feedbackStore(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+        $feedbacks = Feedback::create([
+            'user_id' => $user->id,
+            'message' => $request->question
+        ]);
+        if ($feedbacks) {
+            return redirect()->route('home');
+        } else {
+            return back();
+        }
     }
 }

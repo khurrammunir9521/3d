@@ -17,6 +17,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\MapimageController;
+use App\Http\Controllers\PerposalController;
 use App\Http\Controllers\PublicServiceController;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\YoutubeurlController;
@@ -107,6 +108,7 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::resource('youtubeurl', YoutubeurlController::class);
     Route::resource('counter', CounterController::class);
     Route::resource('invoicess', InvoiceController::class);
+    Route::resource('perposal', PerposalController::class);
 
     Route::get('payment', [MedicalController::class, 'payment'])->name('payment');
     Route::get('ProfileUpdate/view', [HomeController::class, 'viewSetting'])->name('profileupdate.view');
@@ -124,10 +126,13 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::post('edituser_profile/{id}', [HomeController::class, 'edituser'])->name('edituser_profile');
     Route::get('view/{id}', [ImageSlideController::class, 'view'])->name('view');
     Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
+    Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
+    Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedback.store');
+    Route::POST('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
 });
 
 
-Route::get('notify/send',function(){
-   $users = User::where('role','admin')->first();
-   $users->notify(new MedicalNotification($users));
-});
+// Route::get('notify/send',function(){
+//    $users = User::where('role','admin')->first();
+//    $users->notify(new MedicalNotification($users));
+// });
