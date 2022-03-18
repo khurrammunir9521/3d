@@ -700,7 +700,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-                            <p class='koib-health d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
+                            <p class='koib-health d-none mt-2 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -748,7 +748,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
+                            <p class='koib d-none mt-2 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                             @endauth
 
                         </div>
@@ -1205,18 +1205,31 @@ window.addEventListener("scroll", reveal);
             var url = '{{ route("vieworder", ":id") }}';
             url = url.replace(':id', rowid);
             $.ajax({
-                url: url ,
+                url: url,
                 type: "GET",
                 success: function(response) {
-                    const modal = $('#edit_new_modal');
-                    modal.find('#employeeName').val(response.Employee_Name);
-                    modal.find('#Employee_Address').val(response.Employee_Address);
-                    modal.find('#phone').val(response.Employee_Phone);
-                    modal.find('#email').val(response.Employee_Email);
-                    modal.find('#salary').val(response.Employee_Salary);
-                    modal.find('#account').val(response.Employee_Account);
-                    modal.find('#editmodal').modal('show');
-                    $('.modal-backdrop').remove();
+
+                    console.log(response);
+                    const modal = $('#allRequestsResultModal');
+                    modal.find('#procedure').val(response.procedure);
+                    modal.find('#parts').val(response.parts);
+                    modal.find('#pa_age').val(response.pa_age);
+                    modal.find('#pa_id').val(response.pa_id);
+                    modal.find('#pa_name').val(response.pa_name);
+                    modal.find('#hospital').val(response.hospital);
+                    modal.find('#dr_phone').val(response.dr_phone);
+                    modal.find('#dr_email').val(response.dr_email);
+                    modal.find('#dr_name').val(response.dr_name);
+                    modal.find('#dr_spec').val(response.dr_spec);
+                    modal.find('#myfile').attr(response.myfile);
+                    modal.find('#exampleFormControlTextarea1').val(response.discription);
+                    modal.find('.dateTime').text(response.created_at);
+                    modal.find('.id').text(response.id);
+                    modal.find('#status').val(response.status);
+                    $('#allRequestsResultModal').modal('show');
+
+                    $('#requestsModal').modal('hide');
+                    // $('.modal-backdrop').remove();
                 },
                 error: function(errorThrown, errResponse) {
                     console.log(errorThrown, errResponse);

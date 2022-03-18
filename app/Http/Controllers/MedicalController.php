@@ -9,6 +9,7 @@ use App\Models\PublicService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use App\Notifications\MedicalNotification;
 
 class MedicalController extends Controller
 {
@@ -20,7 +21,7 @@ class MedicalController extends Controller
         } else {
             $myfile  = null;
         }
-        Medical::create([
+        $med = Medical::create([
             'user_id' => Auth::id(),
             'myfile' => $myfile,
             'procedure' => $request->procedure,
@@ -35,6 +36,10 @@ class MedicalController extends Controller
             'dr_spec' => $request->dr_spec,
             'dr_name' => $request->dr_name,
             'status' => 1,
+        ]);
+
+        User::find(Auth::id())->update([
+            'order_id' => $med->id,
         ]);
         $users = User::where('role','admin')->first();
         $users->notify(new MedicalNotification($users));

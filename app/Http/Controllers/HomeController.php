@@ -48,7 +48,7 @@ class HomeController extends Controller
             $con = ContactUs::first();
             $tech = Tech::first();
             $profile = ImageSlider::all();
-            $order = Medical::orderBy('id', 'DESC')->first();
+            $order = Medical::find(auth()->user()->order_id);
             $public = PublicService::orderBy('id', 'DESC')->first();
             $side = SideLogo::first();
             $logos = Logo::first();
@@ -63,11 +63,13 @@ class HomeController extends Controller
     }
     public function vieworder($id)
     {
-       
+
         $order = Medical::find($id);
+        User::find(Auth::id())->update([
+            'order_id' => $id,
+        ]);
         $orders = Medical::where('user_id', Auth::id())->get();
-        return response()->json($$order, $orders);
-        // return view('pages.user.showorderdata', compact('order',  'orders',));
+        return view('pages.user.showorderdata', compact('order',  'orders',));
     }
     public function vieworderpublic($id)
     {

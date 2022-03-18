@@ -40,26 +40,26 @@
                                          <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
                                              <div class="row">
                                                  @foreach($orders as $orde)
-
-                                                 <div class="col-md-12">
-                                                     <div data-id='{{$orde->id}}' class="request-box editProduct">
-                                                         <div class="heading">
-                                                             <h5>رقم الطلب:</h5>
-                                                             <span>{{$orde->id}}</span>
-                                                         </div>
-                                                         <div class="data">
-                                                             <p>حالة الطلب:</p>
-                                                             <span> {{$orde->status}}</span>
-                                                             <p>اسم المريض:</p>
-                                                             <span> {{$orde->pa_name}}</span>
-                                                             <p>اسم الطبيب:</p>
-                                                             <span> {{$orde->dr_name}}</span>
-                                                             <p>تاريخ الطلب:</p>
-                                                             <span class="dateTime">{{$orde->created_at}}</span>
+                                                 <a href="{{route('vieworder',$orde->id)}}">
+                                                     <div class="col-md-12">
+                                                         <div data-id='{{$orde->id}}' class="request-box editProduct">
+                                                             <div class="heading">
+                                                                 <h5>رقم الطلب:</h5>
+                                                                 <span>{{$orde->id}}</span>
+                                                             </div>
+                                                             <div class="data">
+                                                                 <p>حالة الطلب:</p>
+                                                                 <span> {{$orde->status}}</span>
+                                                                 <p>اسم المريض:</p>
+                                                                 <span> {{$orde->pa_name}}</span>
+                                                                 <p>اسم الطبيب:</p>
+                                                                 <span> {{$orde->dr_name}}</span>
+                                                                 <p>تاريخ الطلب:</p>
+                                                                 <span class="dateTime">{{$orde->created_at}}</span>
+                                                             </div>
                                                          </div>
                                                      </div>
-                                                 </div>
-
+                                                 </a>
                                                  @endforeach
                                              </div>
 

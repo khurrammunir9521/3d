@@ -82,7 +82,7 @@ class RegisterController extends Controller
             $con = ContactUs::first();
             $tech = Tech::first();
             $profile = ImageSlider::all();
-            $order = Medical::orderBy('id', 'DESC')->first();
+            $order = Medical::find(auth()->user()->order_id);
             $public = PublicService::orderBy('id', 'DESC')->first();
             $side = SideLogo::first();
             $title = Title::first();

@@ -22,14 +22,15 @@
                                 <div class="col-md-12">
                                     <div class="form-top">
                                         <span>رقم الطلب:</span>
-                                        <span class="id">{{@$order->id}}</span>
-                                        <div class="dateTime">{{@$order->created_at}}</div>
+                                        <span id="id" class="id">{{@$order->id}}</span>
+                                        <div id="dateTime" class="dateTime">{{@$order->created_at}}</div>
                                     </div>
+                                    <input type="number" id="status" class="status" name="status" hidden>
                                     <div class="row text-center mb-5 final">
                                         <div class="col-sm-12 col-lg col-xxl">
 
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small">{{@$order->created_at}}</div>
 
                                             <div>
                                                 <p>رفع الطلب</p>
@@ -37,9 +38,9 @@
                                         </div>
                                         <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                         <div class="col-sm-12 col-lg col-xxl">
-                                            @if(@$order->status >= 2)
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
+                                            @if( request()->input('name')>= 2 || @$order->status >= 2)
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                             @else
                                             <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                             @endif
@@ -47,16 +48,16 @@
                                                 <p>اجتماع الخطة العلاجية</p>
                                             </div>
                                         </div>
-                                        @if(@$order->status >= 2)
+                                        @if( request()->input('name')>= 2 ||@$order->status >= 2)
                                         <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                         @else
                                         <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                         @endif
 
                                         <div class="col-sm-12 col-lg col-xxl">
-                                            @if(@$order->status >= 3)
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
+                                            @if( @$order->status >= 3)
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                             @else
                                             <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                             @endif
@@ -64,15 +65,15 @@
                                                 <p>اجتماع النموذج الأول</p>
                                             </div>
                                         </div>
-                                        @if(@$order->status >= 3)
+                                        @if( @$order->status >= 3)
                                         <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                         @else
                                         <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                         @endif
                                         <div class="col-sm-12 col-lg col-xxl">
-                                            @if(@$order->status >= 4)
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
+                                            @if( @$order->status >= 4)
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small">11/01/2022 - 03:00PM</div>
                                             @else
                                             <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                             @endif
@@ -80,15 +81,15 @@
                                                 <p>اجتماع النموذج النهائي</p>
                                             </div>
                                         </div>
-                                        @if(@$order->status >= 4)
+                                        @if( @$order->status >= 4)
                                         <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                         @else
                                         <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                         @endif
                                         <div class="col-sm-12 col-lg col-xxl">
-                                            @if(@$order->status >= 5)
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
+                                            @if( @$order->status >= 5)
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                             @else
                                             <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                             @endif
@@ -96,15 +97,15 @@
                                                 <p>الدفع</p>
                                             </div>
                                         </div>
-                                        @if(@$order->status >= 5)
+                                        @if( @$order->status >= 5)
                                         <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                         @else
                                         <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                         @endif
                                         <div class="col-sm-12 col-lg col-xxl">
-                                            @if(@$order->status >= 6)
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
+                                            @if( @$order->status >= 6)
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                             @else
                                             <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                             @endif
@@ -112,15 +113,15 @@
                                                 <p>الطباعة ثلاثية الأبعاد</p>
                                             </div>
                                         </div>
-                                        @if(@$order->status >= 6)
+                                        @if( @$order->status >= 6)
                                         <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                         @else
                                         <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                         @endif
                                         <div class="col-sm-12 col-lg col-xxl">
-                                            @if(@$order->status >= 7)
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
+                                            @if( @$order->status >= 7)
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                             @else
                                             <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                             @endif
@@ -128,19 +129,19 @@
                                                 <p>اختبار الجودة</p>
                                             </div>
                                         </div>
-                                        @if(@$order->status >= 7)
+                                        @if( @$order->status >= 7)
                                         <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                         @else
                                         <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
                                         @endif
                                         <div class="col-sm-12 col-lg col-xxl">
-                                            @if(@$order->status >= 8)
+                                            <div id="date" class="dateTime small">{{@$order->created_at}}</div>
+                                            @if( @$order->status >= 8)
                                             <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
-                                            <div class="dateTime small text-white">11/01/2022 - 03:00PM</div>
                                             @else
                                             <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
                                             @endif
-                                         <div>
+                                            <div>
                                                 <p>التوصيل واتمام الطلب</p>
                                             </div>
                                         </div>
@@ -151,37 +152,37 @@
                                             <div class="row mb-2">
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">اسم الطبيب</label>
-                                                    <input type="text" class="form-control" placeholder=".. الاسم هنا" value="{{@$order->dr_name}}" readonly>
+                                                    <input type="text" class="form-control" placeholder=".. الاسم هنا" id="dr_name" value="{{@$order->dr_name}}" readonly>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">تخصص الطبيب</label>
-                                                    <input type="text" class="form-control" placeholder=".. التخصص هنا" value="{{@$order->dr_spec}}" readonly>
+                                                    <input type="text" class="form-control" placeholder=".. التخصص هنا" id="dr_spec" value="{{@$order->dr_spec}}" readonly>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
-                                                <label class="form-label">ايميل الطبيب</label>
-                                                    <input type="text" class="form-control" placeholder=".. الايميل هنا" value="{{@$order->dr_email}}" readonly>
+                                                    <label class="form-label">ايميل الطبيب</label>
+                                                    <input type="text" class="form-control" placeholder=".. الايميل هنا" id="dr_email" value="{{@$order->dr_email}}" readonly>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">رقم هاتف الطبيب</label>
-                                                    <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" value="{{@$order->dr_phone}}" readonly>
+                                                    <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" id="dr_phone" value="{{@$order->dr_phone}}" readonly>
                                                 </div>
                                             </div>
                                             <div class="row mb-2">
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">المستشفى أو الشركة</label>
-                                                    <input type="text" class="form-control" placeholder=".. الجهه هنا" value="{{@$order->hospital}}" readonly>
+                                                    <input type="text" class="form-control" placeholder=".. الجهه هنا" id="hospital" value="{{@$order->hospital}}" readonly>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">اسم المريض</label>
-                                                    <input type="text" class="form-control" placeholder=".. الاسم هنا" value="{{@$order->pa_name}}" readonly>
+                                                    <input type="text" class="form-control" placeholder=".. الاسم هنا" id="pa_name" value="{{@$order->pa_name}}" readonly>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">رقم معرف المريض</label>
-                                                    <input type="text" class="form-control" placeholder=".. المعرف هنا" value="{{@$order->pa_id}}" readonly>
+                                                    <input type="text" class="form-control" placeholder=".. المعرف هنا" id="pa_id" value="{{@$order->pa_id}}" readonly>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">عمر المريض</label>
-                                                    <input type="text" class="form-control" placeholder=".. المعرف هنا" value="{{@$order->pa_age}}" readonly>
+                                                    <input type="text" class="form-control" placeholder=".. المعرف هنا" id="pa_age" value="{{@$order->pa_age}}" readonly>
                                                 </div>
                                             </div>
                                             <div class="row mt-5">
@@ -199,9 +200,9 @@
                                         </div>
                                         <div class="col-md-4 col-lg-3 pt-4 pt-md-0 mt-5">
                                             <label class="form-label">القسم</label>
-                                            <input type="text" class="form-control" placeholder="الجمجمة، العامود الفقري" value="{{@$order->parts}}" readonly>
+                                            <input type="text" class="form-control" placeholder="الجمجمة، العامود الفقري" id="parts" value="{{@$order->parts}}" readonly>
                                             <label class="form-label mt-4">نوع الاجراء الطبي</label>
-                                            <input type="text" class="form-control mb-4" placeholder=" .. اختيار من هنا" value="{{@$order->procedure}}" readonly>
+                                            <input type="text" class="form-control mb-4" placeholder=" .. اختيار من هنا" id="procedure" value="{{@$order->procedure}}" readonly>
                                             <label class="form-label">الصور الطبية</label>
                                             <div class="upload-btn-wrapper">
 
