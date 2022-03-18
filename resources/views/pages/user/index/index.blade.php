@@ -1137,9 +1137,10 @@
             console.log(scroll)
             $('#main-macine').removeClass('animate-left');
             function animateCounter() {
-                setTimeout(() => {
-                    $('.client-counter').each(function() {
-                        console.log($(this).toString().length)
+                var positionTop = $(window).scrollTop();
+                var flag = true;
+                if (positionTop >= 299) {
+                $('.client-counter').each(function() {
                         $(this).prop('Counter', 0).animate({
                             Counter: $(this).text()
                         }, {
@@ -1148,21 +1149,23 @@
                             step: function(now) {
                                 $(this).text(Math.ceil(now));
                             }
+
                         });
                     });
-
-                }, 2000);
+                }
             }
+
             $(window).scroll(function() {
             var positionTop = $(window).scrollTop();
+            animateCounter();
                 if ((positionTop > 1000)) {
                     $('#main-macine').addClass('animate-left');
                     $('#main-effect').addClass('animate-right');
                 }
 
             });
-            // var scroll = $(window).scrollTop();
             // $.fn.scrollEvent = function() {
+            // var scroll = $(window).scrollTop();
             //     return this.on("scroll", function() {
             //         console.log(window.innerHeight);
             //         // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
@@ -1195,7 +1198,7 @@
             // }
             // }
 
-window.addEventListener("scroll", reveal);
+// window.addEventListener("scroll", reveal);
         })
     </script>
     <script>
