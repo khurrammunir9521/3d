@@ -54,8 +54,14 @@
         width: 100%;
     }
     .counter{
-        text-align: center;
+        text-align: left;
 
+    }
+    .task-number{
+        width: 56%;
+    }
+    .task-number1{
+        width: 20%;
     }
 
     .navbar-nav {
@@ -217,7 +223,7 @@
     }
 
     .black-bg.sample {
-        top: 100px;
+        top: 200px;
         width: 360px;
         left: 0;
     }
@@ -254,7 +260,7 @@
         left: 0;
         width: 250px;
         bottom: 0;
-        top: 90px;
+        top: 160px;
         right: 80px;
     }
 
@@ -409,7 +415,7 @@
     .banner-bg.sample {
         position: absolute;
         z-index: 1;
-        top: 136px;
+        top: 196px;
         width: 1040px;
         right: 0px;
         max-width: 360px;

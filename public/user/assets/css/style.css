@@ -1586,6 +1586,10 @@ textarea {
     text-align: center;
 }
 
+.about-content .description {
+    padding: 0rem 9rem;
+}
+
 .boxContainer {
     position: relative;
 }
@@ -1600,7 +1604,7 @@ textarea {
 
 .top.boxContainer .blue-box {
     /* left: -30px; */
-    left: 0;
+    left: -10px;
     top: -25px;
 }
 
@@ -1686,6 +1690,7 @@ textarea {
 .image-place.effect-machine {
     position: relative;
     transition: 2s ease-in-out;
+    /* transform: translate(-20%, 0px); */
 }
 
 .image-place.dot-effect {
@@ -2177,6 +2182,28 @@ input[type=number] {
     width: 330px;
 }
 
-.animate {
-    transform: translate(-50%, 0px);
+.animate-left {
+    animation: comeInLeft 2s ease-in-out 0s 1;
+}
+
+.animate-right {
+    animation: comeInRight 2s ease-in-out 0s 1;
+}
+
+@keyframes comeInLeft {
+    from {
+        transform: translate(-20%, 0px);
+    }
+    to {
+        transform: translate(0%, 0px);
+    }
+}
+
+@keyframes comeInRight {
+    from {
+        transform: translate(20%, 0px);
+    }
+    to {
+        transform: translate(0%, 0px);
+    }
 }
