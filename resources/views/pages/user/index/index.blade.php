@@ -467,7 +467,7 @@
                             <!-- counter -->
                             <div class="row">
                                 <div class="col-md-8"></div>
-                                <div class="col-md-2">
+                                <div class="col-md-2 task-number">
                                     <div class="counter">
                                         @if(@$counter->start != null)
                                         <span class="client-counter">{{$counter->start}}</span><span class="symbol">+</span>
@@ -477,7 +477,7 @@
                                         <h5>عميل</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2 task-number1">
                                     <div class="counter">
                                         @if(@$counter->end != null)
                                         <span class="client-counter" data-count="{{$counter->end}}">{{$counter->end}}</span><span class="symbol">+</span>
