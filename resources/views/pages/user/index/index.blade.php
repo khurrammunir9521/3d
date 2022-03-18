@@ -1155,7 +1155,7 @@
                 }, 2000);
             }
             $(window).scroll(function() {
-               
+            var positionTop = $(window).scrollTop();
                 if ((positionTop > 1000)) {
                     $('#main-macine').addClass('animate-left');
                     $('#main-effect').addClass('animate-right');

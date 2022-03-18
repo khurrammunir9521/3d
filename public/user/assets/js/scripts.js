@@ -14,7 +14,6 @@ $(function () {
       var id = setInterval(frame, 10);
       function frame() {
         if (widths >= 100) {
-          $('body').css('overflow', 'auto');
           clearInterval(id);
           i = 0;
           $(".main-progress").fadeTo(1200, 0);
@@ -22,7 +21,6 @@ $(function () {
           $('.hide-on-load').fadeTo(4000, 1);
 
         } else {
-          $('body').css('overflow', 'hidden');
           $(".main-progress").css('display', 'block')
           widths++;
           $('.progress').html(widths + "%")
