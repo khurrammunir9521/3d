@@ -24,10 +24,15 @@
                           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link " href="{{ route('medi.index') }}" tabindex="-1" aria-disabled="true">طلبات الخدمات الطبية</a>
+                          <a class="nav-link " href="{{ route('medi.index') }}" tabindex="-1" aria-disabled="true"> 
+                              <span class="pull-right badge badge-danger badge-pill"> {{ auth()->user()->unreadNotifications->count() }} </span>
+                              طلبات الخدمات الطبية
+                            </a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link " href="{{ route('publics.index') }}" tabindex="-1" aria-disabled="true">طلبات الخدمات العامة</a>
+                          <a class="nav-link " href="{{ route('publics.index') }}" tabindex="-1" aria-disabled="true">
+                          <span class="pull-right badge badge-danger badge-pill"> {{ auth()->user()->unreadNotifications->count() }} </span>
+                          طلبات الخدمات العامة</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link " href="{{ route('invoicess.index') }}" tabindex="-1" aria-disabled="true"> فاتورة</a>
