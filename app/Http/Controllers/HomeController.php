@@ -133,7 +133,7 @@ class HomeController extends Controller
     }
     public function edituser(Request $request, $id)
     {
-        //dd($request->all());
+        // dd($request->all());
         $request->validate([
             'profile' => 'required',
             'name' => 'required',
@@ -141,12 +141,22 @@ class HomeController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-
-        User::find($id)->update([
+        if ($request->hasFile('profile')) {
+            if (isset($request->profile) && !empty($request->profile)) {
+                if (!empty(auth()->user()->profile)) {
+                    Storage::disk('public')->delete(auth()->user()->profile);
+                }
+                $profile  = Storage::disk('public')->put('upload/', $request->profile);
+            }
+        } else {
+            $profile  = (auth()->user()->profile);
+        }
+        User::find(auth()->user()->id)->update([
+            'profile' => $profile,
             'name' => $request->name,
-            'field' => $request->field,
             'email' => $request->email,
-            'password' => $request->password,
+            'field' => $request->field,
+            'password' => Hash::make($request->password),
         ]);
         return redirect()->route('/');
     }

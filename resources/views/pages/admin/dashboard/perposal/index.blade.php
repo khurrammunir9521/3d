@@ -29,15 +29,15 @@
                 <td>{{$invoice->tax}}</td>
 
                 <td>
-                    <form action="{{ route('invoicess.destroy', $invoice->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('invoicess.edit', $invoice->id) }}">Edit</a>
+                    <form action="{{ route('perposal.destroy', $invoice->id) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('perposal.edit', $invoice->id) }}">Edit</a>
 
                         @csrf
                         @method('DELETE')
 
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
-                    <a class="btn btn-primary" href="{{ route('invoicess.show', $invoice->id) }}">Invoice</a>
+                    <a class="btn btn-primary" href="{{ route('perposal.show', $invoice->id) }}">Invoice</a>
                 </td>
             </tr>
             @endforeach

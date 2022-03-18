@@ -27,7 +27,7 @@
                             <div class="row mb-2">
                                 <div class="profile-title">
                                     <div class="media">
-                                       @if(auth()->user()->profile == null)
+                                       @if(@auth()->user()->profile == null)
                                         <img class="img-70 rounded-circle" src="{{asset('assets/images/dashboard/1.png')}}" alt="">
                                         @else
                                         <img class="img-70 rounded-circle" alt="" src="{{ asset('storage/' . auth()->user()->profile) }}">

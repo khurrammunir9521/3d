@@ -9,9 +9,10 @@
                                <div>
                                    <span class="outline dot">اهلاً وسهلاً بكم</span>
                                    <h1 class="modal-title right">
-									   <span class="btm-line"><span class="inner-line"></span>
-									   تسجيل دخول
-									   </span></h1>
+                                       <span class="btm-line"><span class="inner-line"></span>
+                                           تسجيل دخول
+                                       </span>
+                                   </h1>
                                </div>
                                <div class="profile">
                                    <!-- <a href="#profile">
@@ -20,7 +21,17 @@
                                </div>
                            </div>
                            <div class="modal-body">
+
                                <form class="row gy-4 gx-5" action="{{route('login')}}" method="post">
+                                   @if ($errors->any())
+                                   <div class="alert alert-danger">
+                                       <ul>
+                                           @foreach ($errors->all() as $error)
+                                           <li>{{ $error }}</li>
+                                           @endforeach
+                                       </ul>
+                                   </div>
+                                   @endif
                                    @csrf
                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                        <label class="form-label dot">الايميل</label>

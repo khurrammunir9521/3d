@@ -28,9 +28,15 @@
                                </div>
 
                                <div class="profile">
+                                   @if(@auth()->user()->profile == null)
                                    <a href="#profile">
                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
                                    </a>
+                                   @else
+                                   <a href="#profile">
+                                       <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                   </a>
+                                   @endif
                                </div>
                            </div>
                            @if(@$about->bodytext != null)
