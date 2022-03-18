@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Notifications\MedicalNotification;
+use Symfony\Component\Console\Question\Question;
 
 class MedicalController extends Controller
 {
@@ -117,5 +118,33 @@ class MedicalController extends Controller
 
         \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
+    }
+    public function askQuestion(Request $request)
+    {
+        $details = [
+            'title' => 'FeedBack',
+            'body' => $request->question
+        ];
+
+        \Mail::to($request->email)->send(new \App\Mail\Question($details));
+    }
+
+    public function feedback(Request $request)
+    {
+        return view('pages.admin.dashboard.Medical.feedback');
+    }
+
+    public function feedbackStore(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+        $feedbacks = Feedback::create([
+            'user_id' => $user->id,
+            'message' => $request->question
+        ]);
+        if ($feedbacks) {
+            return redirect()->route('home');
+        } else {
+            return back();
+        }
     }
 }

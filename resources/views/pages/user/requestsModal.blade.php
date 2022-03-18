@@ -40,7 +40,7 @@
                                          <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
                                              <div class="row">
                                                  @foreach($orders as $orde)
-                                                 <a href="{{route('vieworder',$orde->id)}}">
+                                                 <a class="nav-link" href="{{route('vieworder',$orde->id)}}">
                                                      <div class="col-md-12">
                                                          <div data-id='{{$orde->id}}' class="request-box editProduct">
                                                              <div class="heading">
@@ -67,7 +67,7 @@
                                          <div class="tab-pane fade" id="public-services" role="tabpanel" aria-labelledby="profile-tab">
                                              <div class="row">
                                                  @foreach($publics as $orde)
-                                                 <a href="{{route('vieworderpublic',$orde->id)}}">
+                                                 <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">
                                                      <div class="col-md-12">
                                                          <div class="request-box" data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal">
                                                              <div class="heading">
