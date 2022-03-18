@@ -13,10 +13,6 @@
 }
 /* asim code end here */
 /* zahid */
- .align-items-center{
-    display: flex;
-    flex-flow: column-reverse;
- }
     .male-back .back {
     right: 139px;
     top: 78px;
