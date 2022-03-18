@@ -259,6 +259,25 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="modal-footer mt-10">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-action price">
+                                        <a href="#payment" class="btn btn-green mx-3 accept">قبول</a>
+                                        <a href="#reject-reason" class="btn btn-red mx-3 reject">رفض</a>
+                                        <button class="btn btn-sky mx-3 offer-price" type="submit" data-bs-toggle="modal" data-bs-target="#healthServicesFinalModal">عرض السعر</button>
+                                        <button class="btn btn-form mx-3 next-one d-none" data-bs-toggle="modal" data-bs-target="#loaderModal">التالي</button>
+
+                                        <p><img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">&emsp;الدفع</p>
+                                    </div>
+                                    <div class="form-action requests d-none">
+                                        <button class="btn btn-form mx-3 with-arrow showRequests">طلباتي</button>
+                                        <button class="btn btn-sky mx-3 p">الفاتورة</button>
+                                        <p>تمت عملية الدفع بنجاح</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

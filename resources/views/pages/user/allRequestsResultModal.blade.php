@@ -39,9 +39,10 @@
                                            </div>
                                        </div>
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
+                                       <input type="text" id = "status" name = "status" hidden>
                                        <div class="col-sm-12 col-lg col-xxl">
                                            <div id="date" class="dateTime small">{{@$ss->created_at}}</div>
-                                           @if( request()->input('name')>= 2 || @$ss->status >= 2)
+                                           @if( request()->input('status')>= 2 || @$ss->status >= 2)
                                            <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                            @else
                                            <img src="{{asset('user/assets/icons/red-circle.svg')}}" class="red-circle" alt="red-circle">
@@ -50,7 +51,7 @@
                                                <p>اجتماع الخطة العلاجية</p>
                                            </div>
                                        </div>
-                                       @if( request()->input('name')>= 2 ||@$ss->status >= 2)
+                                       @if( request()->input('status')>= 2 ||@$ss->status >= 2)
                                        <img src="{{asset('user/assets/icons/green-line.svg')}}" alt="">
                                        @else
                                        <img src="{{asset('user/assets/icons/redline.svg')}}" alt="">
@@ -208,7 +209,7 @@
                                            <label class="form-label">الصور الطبية</label>
                                            <div class="upload-btn-wrapper">
 
-
+                                               <input type="text" name="myfile" id="myfile" hidden>
                                                <a class="btn btn-upload" href="{{ asset('storage/' . @$ss->myfile) }}" download=" {{ @$ss->myfile }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                            </div>
 

@@ -700,7 +700,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-                            <p class='koib-health d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
+                            <p class='koib-health d-none mt-2 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -748,7 +748,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none mt-2'><span style="color:red"> يتطلب التسجيل </span>للتسجيل اضغط هنا </p>
+                            <p class='koib d-none mt-2 nav-link'><a href="#navbar" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
                             @endauth
 
                         </div>
@@ -1154,9 +1154,10 @@
                     modal.find('#dr_email').val(response.dr_email);
                     modal.find('#dr_name').val(response.dr_name);
                     modal.find('#dr_spec').val(response.dr_spec);
+                    modal.find('#myfile').attr(response.myfile);
                     modal.find('#exampleFormControlTextarea1').val(response.discription);
-                    modal.find('.dateTime').val(response.created_at);
-                    modal.find('#ids').val(response.id);
+                    modal.find('.dateTime').text(response.created_at);
+                    modal.find('.id').text(response.id);
                     modal.find('#status').val(response.status);
                     $('#allRequestsResultModal').modal('show');
 

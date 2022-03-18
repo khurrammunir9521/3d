@@ -68,8 +68,8 @@ class HomeController extends Controller
         User::find(Auth::id())->update([
             'order_id' => $id,
         ]);
-        return response()->json($order);
-        // return view('pages.user.showorderdata', compact('order',  'orders',));
+        $orders = Medical::where('user_id', Auth::id())->get();
+        return view('pages.user.showorderdata', compact('order',  'orders',));
     }
     public function vieworderpublic($id)
     {
