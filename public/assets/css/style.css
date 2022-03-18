@@ -103,6 +103,14 @@
 /**=====================
      01. General CSS Start
 ==========================**/
+.notification-box{
+  width:10px;
+}
+.badge-pill{
+  position: absolute;
+  left: -18px;
+  top: 12px;
+}
 html {
   max-width: 100vw;
   overflow-x: hidden; }
@@ -4673,8 +4681,8 @@ table tbody .border-bottom-warning td {
                   animation: fadeIn 2s ease infinite; }
       .page-main-header .main-header-right .nav-right .notification-dropdown {
         top: 52px;
-        width: 300px;
-        right: -20px !important;
+        width: 261px;
+        right: -170px !important;
         left: unset; }
         .page-main-header .main-header-right .nav-right .notification-dropdown li {
           padding: 15px !important; }

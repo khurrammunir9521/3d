@@ -9,6 +9,7 @@ use App\Models\PublicService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use App\Notifications\MedicalNotification;
 
 class MedicalController extends Controller
 {
@@ -40,6 +41,8 @@ class MedicalController extends Controller
         User::find(Auth::id())->update([
             'order_id' => $med->id,
         ]);
+        $users = User::where('role','admin')->first();
+        $users->notify(new MedicalNotification($users));
         return redirect()->route('home')->with('error_code', 5);
     }
 
