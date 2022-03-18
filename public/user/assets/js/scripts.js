@@ -1,9 +1,11 @@
 $(function () {
+
   window.scrollTo(0, 0);
+
   var i = 0;
   function move() {
-    $('.hide-on-load').css('opacity', 0);
 
+    $('.hide-on-load').css('opacity', 0);
     if (i == 0) {
 
       i = 1;
@@ -12,6 +14,7 @@ $(function () {
       var id = setInterval(frame, 10);
       function frame() {
         if (widths >= 100) {
+          $('body').css('overflow', 'auto');
           clearInterval(id);
           i = 0;
           $(".main-progress").fadeTo(1200, 0);
@@ -19,6 +22,7 @@ $(function () {
           $('.hide-on-load').fadeTo(4000, 1);
 
         } else {
+          $('body').css('overflow', 'hidden');
           $(".main-progress").css('display', 'block')
           widths++;
           $('.progress').html(widths + "%")
@@ -151,6 +155,14 @@ $(function () {
       let mW = ((((event.pageX) * 100) / vW).toFixed(2)) - 200;
       // $(".main").css('transform',	'translate(scale(1.2)');
       $(".move").css('transform', 'translateX(' + (mW / 30) + '%)');
+      let mH = ((((event.pageX) * 500) / vW).toFixed(2)) - 200;
+      $(".move-hand").css('transform', 'translateX(' + (mH / 30) + '%)');
+      let mB = ((((event.pageX) * 500) / vW).toFixed(2)) - 200;
+      $(".move-box").css('transform', 'translateX(' + (mB / 30) + '%)');
+      let mBlack = ((((event.pageX) * 50) / vW).toFixed(5)) + 200;
+      $(".move-black").css('transform', 'translateX(' + (mBlack / 30) + '%)');
+      let mBlue = ((((event.pageX) * 100) / vW).toFixed(2)) - 200;
+      $(".move-blue").css('transform', 'translateX(' + (mBlue / 30) + '%)');
     }).on("mouseleave", function () {
       $(".move").css('transform', 'translateX(1)');
     })
@@ -636,22 +648,22 @@ $(function () {
     $(".koib-health").toggleClass("d-none");
   });
 
-  setTimeout(() => {
-    $('.client-counter').each(function () {
-      console.log($(this).toString().length)
-      $(this).prop('Counter', 0).animate({
-        Counter: $(this).text()
-      }, {
-        duration: 5000,
-        easing: 'swing',
-        step: function (now) {
-          $(this).text(Math.ceil(now));
+  // setTimeout(() => {
+  //   $('.client-counter').each(function () {
+  //     console.log($(this).toString().length)
+  //     $(this).prop('Counter', 0).animate({
+  //       Counter: $(this).text()
+  //     }, {
+  //       duration: 5000,
+  //       easing: 'swing',
+  //       step: function (now) {
+  //         $(this).text(Math.ceil(now));
 
-        }
-      });
-    });
+  //       }
+  //     });
+  //   });
 
-  }, 2000);
+  // }, 2000);
 
   $('#publicServiesModal .carousel, #healthServiesModal .carousel').carousel({
     interval: false,
@@ -685,17 +697,4 @@ $(function () {
       $('.modal.video').modal('hide');
     }
   })
-
-  $(window).scroll(function () {
-    if ($(window).width > 767) {
-      if ($(this).scrollTop() > 900 && $(this).scrollTop() < 2000) {
-        $('.effect-machine').css({ 'transform': 'translate(0%, 0px)' });
-        $('.dot-effect').css({ 'transform': 'translate(0%, 0px)' });
-      }
-      else {
-        $('.effect-machine').css({ 'transform': 'translate(-20%, 0px)' });
-        $('.dot-effect').css({ 'transform': 'translate(20%, 0px)' });
-      }
-    }
-  });
 })
