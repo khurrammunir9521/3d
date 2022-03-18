@@ -141,23 +141,26 @@ class HomeController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-        if ($request->hasFile('profile')) {
-            if (isset($request->profile) && !empty($request->profile)) {
-                if (!empty(auth()->user()->profile)) {
-                    Storage::disk('public')->delete(auth()->user()->profile);
+        if (Hash::check($request->password, auth()->user()->password)) {
+            if ($request->hasFile('profile')) {
+                if (isset($request->profile) && !empty($request->profile)) {
+                    if (!empty(auth()->user()->profile)) {
+                        Storage::disk('public')->delete(auth()->user()->profile);
+                    }
+                    $profile  = Storage::disk('public')->put('upload/', $request->profile);
                 }
-                $profile  = Storage::disk('public')->put('upload/', $request->profile);
+            } else {
+                $profile  = (auth()->user()->profile);
             }
-        } else {
-            $profile  = (auth()->user()->profile);
+            User::find(auth()->user()->id)->update([
+                'profile' => $profile,
+                'name' => $request->name,
+                'email' => $request->email,
+                'field' => $request->field,
+                'password' => Hash::make($request->password),
+            ]);
+            return redirect()->route('/');
         }
-        User::find(auth()->user()->id)->update([
-            'profile' => $profile,
-            'name' => $request->name,
-            'email' => $request->email,
-            'field' => $request->field,
-            'password' => Hash::make($request->password),
-        ]);
-        return redirect()->route('/');
+       
     }
 }

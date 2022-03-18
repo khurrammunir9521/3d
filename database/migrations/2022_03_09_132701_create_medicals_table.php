@@ -29,6 +29,7 @@ class CreateMedicalsTable extends Migration
             $table->string('dr_spec')->nullable();
             $table->string('dr_name')->nullable();
             $table->integer('status')->defult(1);
+            $table->integer('seen')->default(0);
             $table->timestamps();
         });
     }

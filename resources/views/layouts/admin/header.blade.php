@@ -16,9 +16,7 @@
         </li>
       </ul>
     </div>
-    <!-- @foreach(auth()->user()->notifications as $notification)
-    <p>{{$notification->data['data']}}</p>
-    @endforeach -->
+   
     <div class="nav-right col pull-right right-menu p-0">
       <ul class="nav-menus">
         <!-- notifications -->

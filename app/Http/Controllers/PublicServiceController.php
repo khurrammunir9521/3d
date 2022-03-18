@@ -72,6 +72,9 @@ class PublicServiceController extends Controller
     public function show($id)
     {
         $order = PublicService::find($id);
+        $order->update([
+            'seen' => 1,
+        ]);
         return view('pages.admin.dashboard.publicservice.show', compact('order'));
     }
 

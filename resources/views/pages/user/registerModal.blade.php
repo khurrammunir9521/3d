@@ -22,15 +22,6 @@
                         </div>
 
                         <div class="modal-body">
-                            @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            @endif
                             {{-- <img src="{{asset('user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block" width="100" alt="avatar"> --}}
                             <form class="gy-4 gx-5" action="{{route('register')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
