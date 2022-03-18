@@ -1,28 +1,50 @@
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @if(@$title->title != null)
+    <title>{{$title->title}}</title>
+    @else
+    <title>أجهزة ثلاثية الأبعاد</title>
+    @endif
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
-    <title>3D Organs</title>
+    <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
+    <meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
+    @if(@$title->discription != null)
+    <meta name="description" content="{{$title->discription}}" />
+    @else
+    <meta name="description" content="شركة إدراك للإستشارات الإدارية والتدريب الإستشاري" />
+    @endif
 
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}">
 
-
     <!-- Slick -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick-theme.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="{{ asset('user/assets/js/jquery.min.js') }}"></script>
-    <link href="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css')}}" rel="stylesheet" />
-    <script src="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js')}}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
+    <style type="text/css">
+        @font-face {
+            font-family: JannaRegular;
+            src: url("{{ asset('assets/fonts/JannaLTRegular.ttf') }}");
+        }
+    </style>
+    <style type="text/css">
+        @font-face {
+            font-family: JannaBold;
+            src: url("{{ asset('assets/fonts/NotoSans-Bold.ttf') }}");
+        }
+
+        body {
+            font-family: 'JannaRegular';
+        }
+    </style>
 </head>
 
 <body>
