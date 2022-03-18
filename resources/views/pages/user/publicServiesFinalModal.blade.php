@@ -8,7 +8,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div>
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                <h1 class="modal-title right">طلباتي</h1>
+                                <h1 class="modal-title right"><span class="btm-line">طلباتي<span class="inner-line"></span></span></h1>
                             </div>
                             <div class="profile">
                                 <a href="#profile">
