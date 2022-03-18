@@ -1154,20 +1154,14 @@
 
                 }, 2000);
             }
-            // $(window).scroll(function() {
-            //     var positionTop = $(window).scrollTop();
-            //     if(positionTop > 299) {
-            //         animateCounter()
-            //     }
-            //     else {
+            $(window).scroll(function() {
+               
+                if ((positionTop > 1000)) {
+                    $('#main-macine').addClass('animate-left');
+                    $('#main-effect').addClass('animate-right');
+                }
 
-            //     }
-            //     // if ((positionTop > 1000)) {
-            //     //     $('#main-macine').addClass('animate-left');
-            //     //     $('#main-effect').addClass('animate-right');
-            //     // }
-
-            // });
+            });
             // var scroll = $(window).scrollTop();
             // $.fn.scrollEvent = function() {
             //     return this.on("scroll", function() {
