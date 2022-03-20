@@ -127,7 +127,7 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::get('register_profile', [HomeController::class, 'register_profile'])->name('register_profile');
     Route::post('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
     Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
-    Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedback.store');
+    Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedbackStore');
 });
 
 

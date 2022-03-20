@@ -151,7 +151,7 @@
                     </div>
                     <div class="col-12">
                         <label class="form-label">Question</label>
-                        <textarea class="form-control" name="question"></textarea>
+                        <textarea class="form-control" id="question" name="question"></textarea>
                     </div>
                 </form>
             </div>
@@ -173,7 +173,7 @@
     });
     $(".btn-submit").click(function(e){
         e.preventDefault();
-        var question = $("input[name=question]").val();
+        var question = $('textarea#question').val();
         var email = $("input[name=email]").val();
         $.ajax({
            type:'POST',
