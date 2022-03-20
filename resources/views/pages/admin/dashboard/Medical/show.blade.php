@@ -14,7 +14,7 @@
                             @else
                             <form action="{{route('updated.status')}}" method="POST">
                                 @csrf
-                                <input type="text" name="id" value="{{@$order->id}}" hidden>
+                                <!-- <input type="text" name="id" value="{{@$order->id}}" hidden>
                                 @if(@$order->status == 1)
                                 <input type="checkbox" id="vehicle1" name="checkbox1" value="1">
                                 <label class="form-label" for="vehicle1"> اجتماع الخطة العلاجية</label>
@@ -42,8 +42,16 @@
                                 @if(@$order->status == 7)
                                 <input type="checkbox" id="vehicle3" name="checkbox7" value="7">
                                 <label class="form-label" for="vehicle3"> التوصيل واتمام الطلب</label>
-                                @endif
-
+                                @endif -->
+                                <select name="" id=""  class="form-control">
+                                    <option value="1"> اجتماع الخطة العلاجية</option>
+                                    <option value="2"> اجتماع النموذج الأول</option>
+                                    <option value="3"> اجتماع النموذج النهائي</option>
+                                    <option value="4">  الدفع</option>
+                                    <option value="5"> الطباعة ثلاثية الأبعاد</option>
+                                    <option value="6"> اختبار الجودة</option>
+                                    <option value="7">  التوصيل واتمام الطلب</option>
+                                </select>
                                 <br>
                                 <button class="btn btn-primary" type="submit"> save</button>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
