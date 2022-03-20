@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="form-action">
-                                    <button class="btn btn-form mx-3 with-arrow register-btn" type="submit" data-bs-toggle="modal" data-bs-target="#registerLoaderModal">تسجيل</button>
+                                    <button class="btn btn-form mx-3 with-arrow register-btn disabled" type="submit" data-bs-toggle="modal" data-bs-target="#registerLoaderModal">تسجيل</button>
                                     <p>بيانات التسجيل</p>
                                 </div>
                             </form>
