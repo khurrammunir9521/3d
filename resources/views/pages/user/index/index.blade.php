@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{ asset('user/assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <!-- Responsive Sheet -->
@@ -54,7 +56,7 @@
 <body>
 
     <div class="content-wrapper hide-on-load">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
@@ -170,6 +172,90 @@
     </div>
     </nav>
 
+    <div id="wrapper" class="mobile-nav">
+        <div id="sidebar-wrapper">
+            <div class="area-brand">
+                <a class="" href="#">
+                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                </a>
+            </div>
+            <div class="mmnue">
+                <ul class="sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ماهي
+                            تقنية الـ 3D</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services-section" class="nav-link">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">مجتمع المصممين</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a href="#login" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#register" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+
+                    </li>
+
+                    <li class="">
+                        <div class="mobile-social-icon">
+
+                            <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                            <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-3 mobile-logo">
+
+                        <div class="area-brand">
+                            <a class="" href="#">
+                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-9 mobile-pro-icon">
+                        <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+
+                        <div class="mobile-profile">
+                            <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                            @auth
+                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
+                            @endauth
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mobile menu start here -->
+
+    
+
+    <!-- mobile menu end here -->
     <!-- <section class="banner">
       <div class="container">
         <div class="row">
@@ -1009,6 +1095,7 @@
 
         <div class="progress-bar bar-load" id="bar"></div>
     </div>
+ 
     <!--///////////////////////////////////// services model end here ////////////////////////////////////-->
     <!-- About US -->
 
@@ -1194,7 +1281,7 @@
                     if ($(window).scrollTop() > 3560) {
                         $('.public-animate').addClass('animate__animated animate__fadeInUpBig animate__slower');
                     }
-                    
+
                     console.log($(window).scrollTop())
                 }
 

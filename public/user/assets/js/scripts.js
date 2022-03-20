@@ -708,3 +708,18 @@ if($(window).width() < 768) {
 
   
 })
+
+
+ // new-nav
+ $(document).ready(function(){
+  $("#menu-toggle").click(function(e){
+    e.preventDefault();
+    $("#wrapper").toggleClass("menuDisplayed");
+    $(".sec-main").toggleClass("sec-main-pos");
+  });
+
+  $('#wrapper .nav-item').click(function() {
+    $("#wrapper").toggleClass("menuDisplayed");
+  })
+  
+});
