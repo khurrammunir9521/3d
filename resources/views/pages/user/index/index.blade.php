@@ -32,7 +32,7 @@
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/jquery.pageLoading.css') }}">
-    
+
     <style type="text/css">
         @font-face {
             font-family: JannaRegular;
@@ -1004,6 +1004,7 @@
         </div>
     </div>
     <div class="main-progress">
+        <img src="{{asset('user/assets/icons/logo.svg')}}" class="animate__animated animate__pulse animate__infinite" alt="logo">
         <p class='progress text-center bg-transparent d-block'>0</p>
 
         <div class="progress-bar bar-load" id="bar"></div>
@@ -1136,7 +1137,7 @@
             console.log(scroll)
             $('#main-macine').removeClass('animate-left');
             var a = 0;
-                $(window).scroll(function() {
+            $(window).scroll(function() {
                 var oTop = $('.counter').offset().top - window.innerHeight;
                 if (a == 0 && $(window).scrollTop() > 300) {
                     $('.client-counter').each(function() {
@@ -1165,12 +1166,38 @@
                     a = 1;
                 }
 
-                if (($(window).scrollTop() > 1000)) {
-                    $('#main-macine').addClass('animate-left');
-                    $('#main-effect').addClass('animate-right');
-                    $('.medical-animate').addClass('animate__animated animate__fadeIn animate_slowest');
-                    $('.public-animate').addClass('animate__animated animate__fadeIn animate_slowest');
+                if ($(window).width() > 768) {
+                    if (($(window).scrollTop() > 1000)) {
+                        $('#main-macine').addClass('animate-left');
+                        $('#main-effect').addClass('animate-right');
+                        $('.medical-animate').addClass('animate__animated animate__fadeIn animate_slowest');
+                        $('.public-animate').addClass('animate__animated animate__fadeIn animate_slowest');
+                    }
                 }
+
+                if ($(window).width() < 768) {
+                    if ($(window).scrollTop() > 2600) {
+                        $('#main-macine').removeClass('animate-left');
+                        $('#main-effect').removeClass('animate-right');
+                        $('.public-animate').removeClass('animate__fadeIn');
+                        $('.medical-animate').removeClass('animate__fadeIn');
+                        $('#main-effect').addClass('animate__animated animate__fadeInUp animate_slowest');
+                    }
+                    if ($(window).scrollTop() > 3300) {
+                        $('#main-macine').addClass('animate__animated animate__fadeInUp animate_slowest');
+                        $('.public-animate').addClass('animate__animated animate__fadeInUp');
+                        $('.medical-animate').addClass('animate__animated animate__fadeInUp');
+                    }
+                    if ($(window).scrollTop() > 2960) {
+                        $('.medical-animate').addClass('animate__animated animate__fadeInUpBig animate__slower');
+                    }
+                    if ($(window).scrollTop() > 3560) {
+                        $('.public-animate').addClass('animate__animated animate__fadeInUpBig animate__slower');
+                    }
+                    
+                    console.log($(window).scrollTop())
+                }
+
 
                 if (($(window).scrollTop() > 600)) {
                     $('.about-content').addClass('animate__animated animate__fadeIn animate_slowest');

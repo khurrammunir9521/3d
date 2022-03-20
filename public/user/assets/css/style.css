@@ -2232,6 +2232,7 @@ input[type=number] {
 
 .animate-left {
     animation: comeInLeft 2s ease-in-out 0s 1;
+    transition: unset !important;
 }
 
 .animate-right {
@@ -2258,4 +2259,13 @@ input[type=number] {
 
 .animate_slowest {
     animation-duration: 6s!important;
+}
+.main-progress img {
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 150px;
+    top: 0;
+    bottom: 250px;
 }

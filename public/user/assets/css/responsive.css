@@ -679,6 +679,18 @@
         width: 100%;
     }
 
+    .animate-left, .animate-right {
+        animation: none;
+    }
+
+    .request .dot-txt-main-left .outline {
+        left: 0;
+    }
+
+    .request .dot-txt-main .outline {
+        left: 0;
+    }
+
     /* Footer */
     footer {
         padding-bottom: 0;
