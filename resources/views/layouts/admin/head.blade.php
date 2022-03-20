@@ -58,7 +58,7 @@
 
     <!-- ckeditor -->
     <link rel="stylesheet" href="{{asset('user/assets/ckeditor/contents.css')}}">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <!-- Slick -->
     <link rel="stylesheet" href="{{asset('user/assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/slick-theme.css')}}">

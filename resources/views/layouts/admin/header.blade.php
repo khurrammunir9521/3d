@@ -23,10 +23,22 @@
         <li class="onhover-dropdown">
           <div class="notification-box"><i data-feather="bell"></i><span class="dot-animated"></span></div>
           <ul class="notification-dropdown onhover-show-div">
-            <li>
+            <li> 
+              @if(auth()->user()->unreadNotifications->count())
               <p class="f-w-700 mb-0">You have {{ auth()->user()->unreadNotifications->count() }} Notifications<span class="pull-right badge badge-danger badge-pill">{{ auth()->user()->unreadNotifications->count() }}</span></p>
+              @endif
             </li>
-            @foreach(auth()->user()->notifications as $notification)
+            <li><a href="{{route('mark.read')}}">Mark as All Read</a></li>
+            @foreach(auth()->user()->unreadNotifications as $notification)
+            <li class="noti-primary">
+              <div class="media"><span class="notification-bg bg-light-primary"><i data-feather="activity"> </i></span>
+                <div class="media-body">
+                  <p>{{$notification->data['data']}} </p><span>{{$notification->created_at->format('H:i:s')}}</span>
+                </div>
+              </div>
+            </li>
+            @endforeach
+            @foreach(auth()->user()->readNotifications as $notification)
             <li class="noti-primary">
               <div class="media"><span class="notification-bg bg-light-primary"><i data-feather="activity"> </i></span>
                 <div class="media-body">

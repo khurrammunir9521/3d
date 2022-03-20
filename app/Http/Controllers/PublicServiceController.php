@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\PublicService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Notifications\PublicNotification;
+use App\Models\User;
 
 class PublicServiceController extends Controller
 {
@@ -16,7 +18,7 @@ class PublicServiceController extends Controller
      */
     public function index()
     {
-        $publics = PublicService::all();
+        $publics = PublicService::orderBy('id', 'DESC')->get();
         return view('pages.admin.dashboard.publicservice.index', compact('publics'));
     }
 
@@ -60,6 +62,8 @@ class PublicServiceController extends Controller
             'print_resolution' => $request->pr_res,
             'print_img' => $images,
         ]);
+        $users = User::where('role','admin')->first();
+        $users->notify(new PublicNotification($users));
         return redirect()->route('home')->with('error_code', 6);
     }
 
@@ -75,6 +79,10 @@ class PublicServiceController extends Controller
         $order->update([
             'seen' => 1,
         ]);
+        $notification = auth()->user()->notifications()->where('type', 'App\Notifications\PublicNotification')->latest()->first();
+        if ($notification) {
+            $notification->markAsRead();
+        }
         return view('pages.admin.dashboard.publicservice.show', compact('order'));
     }
 

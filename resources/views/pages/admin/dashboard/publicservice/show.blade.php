@@ -96,23 +96,23 @@
                                 <div class="row p-xs-0 p-3 conditional-blur">
                                     <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                         <label class="form-label">الاسم الكامل</label>
-                                        <input type="text" class="form-control" placeholder=".. الاسم هنا" readonly value="{{@$public->full_name}}">
+                                        <input type="text" class="form-control" placeholder=".. الاسم هنا" readonly value="{{$order->full_name}}">
                                     </div>
                                     <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                         <label class="form-label">رقم الهاتف</label>
-                                        <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly value="{{@$public->phone_num}}">
+                                        <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly value="{{$order->phone_num}}">
                                     </div>
                                     <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                         <label class="form-label">الايميل</label>
-                                        <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly value="{{@$public->email}}">
+                                        <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly value="{{$order->email}}">
                                     </div>
                                     <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                         <label class="form-label">التخصص</label>
-                                        <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly value="{{@$public->specialization}}">
+                                        <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly value="{{$order->specialization}}">
                                     </div>
                                     <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                         <label class="form-label">الجنس</label>
-                                        <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{@$public->gender}}">
+                                        <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{$order->gender}}">
                                     </div>
                                     <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                     <label class="form-label">صور المجسم</label>
@@ -132,11 +132,11 @@
                                         <div class="row mb-2 justify-content-between conditional-blur">
                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">نوع الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. الاسم هنا" readonly value="{{@$public->print_type}}">
+                                                <input type="text" class="form-control" placeholder=".. الاسم هنا" readonly value="{{$order->print_type}}">
                                             </div>
                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">لون الطباعة</label>
-                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly value="{{@$public->print_color}}">
+                                                <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly value="{{$order->print_color}}">
                                             </div>
                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                                                 <label class="form-label">دقة الطباعة (صورة كمثال)</label>
@@ -148,7 +148,7 @@
                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                                 <label class="form-label">رفع ملف المجسم</label>
                                                 <div class="upload-btn-wrapper">
-                                                    <a class="btn btn-upload" href="{{ asset('storage/' . @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                    <a class="btn btn-upload" href="{{ asset('storage/' . $order->print_img) }}" download=" {{ $order->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
                                                 </div>
                                             </div>
                                         </div>

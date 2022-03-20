@@ -8,7 +8,7 @@
 				  @csrf
 				 <div class="col-12">
 					<label class="form-label">Email</label>
-					<input type="text" class="form-control" name="email" >
+					<input type="email" class="form-control" name="email" >
 				</div>
 				   <div class="col-12">
 					<label class="form-label">Question</label>
