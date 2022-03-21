@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Notifications\MedicalNotification;
 use Symfony\Component\Console\Question\Question;
+use App\Models\Feedback;
+
 
 class MedicalController extends Controller
 {
@@ -130,7 +132,7 @@ class MedicalController extends Controller
     {
         $details = [
             'title' => 'FeedBack',
-            'body' =>$request->question
+            'body' =>$request->input('question')
         ];
         \Mail::to($request->email)->send(new \App\Mail\Question($details));
     }
@@ -142,16 +144,13 @@ class MedicalController extends Controller
 
     public function feedbackStore(Request $request)
     {
-        dd($request->all());
         $user = User::where('email', $request->email)->first();
         $feedbacks = Feedback::create([
             'user_id' => $user->id,
             'message' => $request->input('question')
         ]);
         if ($feedbacks) {
-            return redirect()->route('home');
-        } else {
-            return back();
-        }
+           echo "successful send your feedback";
+        } 
     }
 }

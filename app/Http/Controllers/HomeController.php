@@ -69,14 +69,14 @@ class HomeController extends Controller
             'order_id' => $id,
         ]);
         $orders = Medical::where('user_id', Auth::id())->get();
-        return view('pages.user.showorderdata', compact('order',  'orders',));
+        return view('pages.user.showorderdata', compact('order'));
     }
     public function vieworderpublic($id)
     {
 
         $public = PublicService::find($id);
         $publics = PublicService::where('user_id', Auth::id())->get();
-        return view('pages.user.showorderdatapublic', compact('public',  'publics',));
+        return view('pages.user.showorderdatapublic', compact('public',  'publics'));
     }
     public function viewSetting()
     {

@@ -234,7 +234,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-7">
-                                                    <img src="{{asset('user/assets/images/man-flying.png')}}" class="flying-man" alt="">
+                                                    <img src="{{asset('user/assets/images/man-flying.png')}}" class="flying-man fly-desktop" alt="">
+                                                    <img src="{{asset('user/assets/images/man-flying-mobile.png')}}" class="flying-man fly-mobile" alt="">
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-action">

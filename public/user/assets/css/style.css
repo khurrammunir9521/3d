@@ -1075,6 +1075,14 @@ textarea {
     top: -15px;
 }
 
+.fly-desktop {
+    display: block;
+}
+
+.fly-mobile {
+    display: none;
+}
+
 #healthServiesModal
 .btn-close{
 	margin-bottom: 15px;

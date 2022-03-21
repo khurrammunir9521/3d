@@ -19,10 +19,14 @@
             <div class="modal-body">
                 <form action="{{route('public.updated.status')}}" method="POST">
                     @csrf
-                    <input type="text" name="id" value="{{$order->id}}" hidden>
-                    <input type="checkbox" id="vehicle3" name="checkbox2" value="2">
-                    <label class="form-label" for="vehicle3"> الدفع</label>
                     <br>
+                    <select name="" id=""  class="form-control">
+                        <option value="1">  رفع الطلب</option>
+                        <option value="2">   الدفع</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Send Query
+                                </button>
                     <button class="btn btn-primary" type="submit"> save</button>
                 </form>
                 <div class="payment d-none" id="payment">
@@ -162,6 +166,34 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Send Query</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form >
+                
+                    <div class="col-12">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" name="email" value="" readonly>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Question</label>
+                        <textarea class="form-control" id="question" name="question"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit"  class="btn btn-primary btn-submit" data-bs-dismiss="modal" aria-label="Send">Send</button>
             </div>
         </div>
     </div>
