@@ -22,6 +22,7 @@ if($(window).width() < 768) {
         if (widths >= 100) {
           $('.main-progress').css('z-index', '0');
           $('.main-progress').addClass('d-none');
+          $('body').css('overflow', 'unset');
           clearInterval(id);
           i = 0;
           $(".main-progress").fadeTo(1200, 0);
@@ -29,6 +30,7 @@ if($(window).width() < 768) {
           $('.hide-on-load').fadeTo(4000, 1);
 
         } else {
+          $('body').css('overflow', 'hidden');
           $(".main-progress").css('display', 'block')
           widths++;
           $('.progress').html(widths + "%")
