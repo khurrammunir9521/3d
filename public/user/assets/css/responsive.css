@@ -12,13 +12,31 @@
     display: none !important;
 }
 
+.top.boxContainer img {
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+.map-place.boxContainer img {
+    width: 270px;
+    margin: auto;
+    display: block;
+}
 
 /* Sidebar */
 .mobile-profile{
     padding: 0px;
     position: absolute;
     left: 10px;
-    top: 17px;
+    top: 10px;
+    display: flex;
+    margin: auto;
+    flex-flow: row-reverse;
+    align-items: center;
+}
+.mobile-profile a {
+    margin: 0 5px!important;
+    color: #1ea9d4;
 }
 .mobile-profile .left-side a img {
     margin-top: 3px;
@@ -152,10 +170,10 @@
 .about-content .description {
     padding: 0rem 0rem;
 }
- .align-items-center{
-    display: flex;
+
+ .responsive-reverse {
     flex-flow: column-reverse;
- }
+ } 
     .male-back .back {
     right: 139px;
     top: 78px;
@@ -314,7 +332,7 @@
 
     .map-place .blue-box {
         left: 0;
-        bottom: -10px;
+        bottom: -20px;
     }
 
     .banner {
@@ -357,6 +375,7 @@
         /* overflow: auto; */
         padding-top: 45px;
         padding-left: 0;
+        padding-bottom: 150px !important;
     }
 
     .black-bg {
@@ -454,7 +473,9 @@
     .bottom.boxContainer img {
         margin: auto;
         display: block;
-        width: 100%;
+        max-width: none;
+        max-height: 653px;
+        width: auto;
     }
 
     .map-cap.side {
@@ -559,7 +580,8 @@
         position: absolute;
         z-index: 1;
         top: 196px;
-        width: 1040px;
+        /* width: 1040px; */
+        width: 335px;
         right: 0px;
         max-width: 360px;
     }
@@ -814,6 +836,22 @@
 
     .request .dot-txt-main .outline {
         left: 0;
+    }
+
+    .fly-desktop {
+        display: none!important;
+    }
+
+    .fly-mobile {
+        display: block;
+    }
+
+    #healthServiesModal .flying-man {
+        position: relative;
+        top: 75px;
+        margin: auto;
+        display: block;
+        width: 100%;
     }
 
     /* Footer */

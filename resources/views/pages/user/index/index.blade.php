@@ -457,7 +457,7 @@
         <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-2s" alt="black-bg">
         <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
 
                 <div class="col-md-12">
                     <div class="carousel-inner">
@@ -522,7 +522,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="row align-items-center" dir="ltr">
+                    <div class="row align-items-center responsive-reverse" dir="ltr">
                         <div class="col-md-4" dir="rtl">
                             <div class="text-start">
                                 <figcaption class="map-cap side sample">
@@ -1254,7 +1254,7 @@
                 }
 
                 if ($(window).width() > 768) {
-                    if (($(window).scrollTop() > 1000)) {
+                    if (($(window).scrollTop() > 1300)) {
                         $('#main-macine').addClass('animate-left');
                         $('#main-effect').addClass('animate-right');
                         $('.medical-animate').addClass('animate__animated animate__fadeIn animate_slowest');
