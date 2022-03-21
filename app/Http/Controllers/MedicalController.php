@@ -16,7 +16,6 @@ class MedicalController extends Controller
 {
     public function store(Request $request)
     {
-        // dd($request->all());
         if ($request->hasFile('myfile')) {
             $myfile  = Storage::disk('public')->put('upload/', $request->myfile);
         } else {
@@ -53,7 +52,7 @@ class MedicalController extends Controller
     }
     public function index()
     {
-        $medical = Medical::all();
+        $medical = Medical::orderBy('id', 'DESC')->get();
         return view('pages.admin.dashboard.Medical.index', compact('medical'));
     }
     public function show($id)
@@ -63,6 +62,10 @@ class MedicalController extends Controller
             'seen' => 1,
         ]);
         $user = User::find($order->user_id);
+        $notification = auth()->user()->notifications()->where('type', 'App\Notifications\MedicalNotification')->latest()->first();
+        if ($notification) {
+            $notification->markAsRead();
+        }
         return view('pages.admin.dashboard.Medical.show', compact('order', 'user'));
     }
 
@@ -127,10 +130,9 @@ class MedicalController extends Controller
     {
         $details = [
             'title' => 'FeedBack',
-            'body' => $request->question
+            'body' =>$request->question
         ];
-
-        \Mail::to('arsalanamir.aa@gmail.com')->send(new \App\Mail\Question($details));
+        \Mail::to($request->email)->send(new \App\Mail\Question($details));
     }
 
     public function feedback(Request $request)
@@ -140,10 +142,11 @@ class MedicalController extends Controller
 
     public function feedbackStore(Request $request)
     {
+        dd($request->all());
         $user = User::where('email', $request->email)->first();
         $feedbacks = Feedback::create([
             'user_id' => $user->id,
-            'message' => $request->question
+            'message' => $request->input('question')
         ]);
         if ($feedbacks) {
             return redirect()->route('home');

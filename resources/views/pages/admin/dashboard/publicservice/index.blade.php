@@ -20,7 +20,9 @@
                 <td><b>{{ $medi->email }}</b></td>
                 <td><b>{{ $medi->gender }}</b></td>
                 <td>
+                  
                     <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">View</a>
+                   
                 </td>
             </tr>
             @else
@@ -30,7 +32,7 @@
                 <td>{{ $medi->email }}</td>
                 <td>{{ $medi->gender }}</td>
                 <td>
-                    <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">View</a>
+                    <a class="btn btn-primary" data-artid="<?php echo $medi['id']; ?>" href="{{ route('publics.show', $medi->id) }}">View</a>
                 </td>
             </tr>
             @endif
@@ -41,3 +43,26 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script type="text/javascript">
+        $(function(){
+            $('.link').click(function(){
+                var elem = $(this);
+                $.ajax({
+                    type: "GET",
+                    url: "{{route('mark.read')}}",
+                    data: "id="+elem.attr('data-artid'),
+                    dataType:"json",  
+                    success: function(data) {
+                        if(data.success){
+                               elem.hide();
+                               $('#message').html(data.message);
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+        </script>
+@endpush

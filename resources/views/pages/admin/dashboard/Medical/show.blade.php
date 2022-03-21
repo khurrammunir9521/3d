@@ -143,8 +143,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{route('ask.question')}}" method="POST">
-                    @csrf
+                <form >
+                
                     <div class="col-12">
                         <label class="form-label">Email</label>
                         <input type="text" class="form-control" name="email" value="{{$user->email}}" readonly>
@@ -157,9 +157,33 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Send">Send</button>
+                <button type="submit"  class="btn btn-primary btn-submit" data-bs-dismiss="modal" aria-label="Send">Send</button>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+     $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $(".btn-submit").click(function(e){
+        e.preventDefault();
+        var question = $("input[name=question]").val();
+        var email = $("input[name=email]").val();
+        $.ajax({
+           type:'POST',
+           url:"{{ route('ask.question') }}",
+           data:{ question:question, email:email},
+           success:function(data){
+             console.log("successful send");
+           }
+        });
+  
+    });
+</script>
+@endpush

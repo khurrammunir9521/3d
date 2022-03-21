@@ -33,13 +33,15 @@
 
                       <li class="nav-item req">
                           <a class="nav-link " href="{{ route('medi.index') }}" tabindex="-1" aria-disabled="true">
-                              <span class="pull-right badge badge-danger badge-pill"> {{ auth()->user()->unreadNotifications->count() }} </span><i class="fa fa-envelope-o"></i>
+                              <span class="pull-right badge badge-danger badge-pill"> 
+                                  {{ auth()->user()->unreadNotifications->where('type', 'App\Notifications\MedicalNotification')->count() }} 
+                                 </span><i class="fa fa-envelope-o"></i>
                               طلبات الخدمات الطبية
                           </a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link " href="{{ route('publics.index') }}" tabindex="-1" aria-disabled="true">
-                              <span class="pull-right badge badge-danger badge-pill"> {{ auth()->user()->unreadNotifications->count() }} </span><i class="fa fa-envelope-o"></i>
+                              <span class="pull-right badge badge-danger badge-pill"> {{ auth()->user()->unreadNotifications->where('type', 'App\Notifications\PublicNotification')->count() }} </span><i class="fa fa-envelope-o"></i>
                               طلبات الخدمات العامة</a>
                       </li>
                       <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>صفحات الموقع </span></a>
