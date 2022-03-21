@@ -57,7 +57,7 @@ class MedicalNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'data' => $this->user,
+            'data' => $this->user->name,
         ];
     }
 }
