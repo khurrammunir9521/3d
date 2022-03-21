@@ -171,7 +171,7 @@
             @endauth
     </div>
     </nav>
-
+a
     <div id="wrapper" class="mobile-nav">
         <div id="sidebar-wrapper">
             <div class="area-brand">
@@ -202,6 +202,17 @@
                     <li class="nav-item">
                         <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
                     </li>
+                   @if(Auth::user()) 
+                    <li class="nav-item"><a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a></li>
+
+                    <li class="nav-item"> <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a>
+                        <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                    @else
                     <li class="nav-item">
 
                         <a href="#login" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
@@ -210,7 +221,7 @@
                         <a href="#register" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
 
                     </li>
-
+                    @endif
                     <li class="">
                         <div class="mobile-social-icon">
 
@@ -219,7 +230,6 @@
 
                         </div>
                     </li>
-
                 </ul>
             </div>
         </div>
