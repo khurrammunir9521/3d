@@ -2,6 +2,131 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+
+/* new nav */
+
+.mobile-nav{
+    display: block !important;
+}
+.desktop-nav{
+    display: none !important;
+}
+
+
+/* Sidebar */
+.mobile-profile{
+    padding: 0px;
+    position: absolute;
+    left: 10px;
+    top: 17px;
+}
+.mobile-profile .left-side a img {
+    margin-top: 3px;
+    margin-left: 25px;
+}
+.mobile-pro-icon{
+    width:20%;
+}
+.mobile-logo{
+    width:70%;
+}
+.area-brand {
+    width: 110px;
+}
+.area-brand img{
+    width: 100%;
+    max-width: 80px;
+}
+.mobile-nav .sidebar-nav{
+    padding-top: 30px;
+}
+.mobile-social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.mobile-social-icon a{
+    margin-left: 20px;
+}
+.mob-tog-btn{
+    position: absolute !important;
+    left: 10px !important;
+    top: 15px;
+    box-shadow:none !important;
+}
+#sidebar-wrapper{
+    z-index: 10000;
+    position: absolute;
+    width:0;
+    height:100%;
+    overflow-y:hidden;
+    background: #fff;
+    /* opacity:0.9; */
+    transition:all .5s;
+    /* display:flex; */
+    align-items:center;
+  }
+  
+  /* Main Content */
+  #page-content-wrapper{
+    width: 100%;	
+    position: absolute;
+    padding:15px;
+      transition:all .5s;
+  }
+  
+  #menu-toggle{
+      transition:all .3s;
+      font-size:1em;
+      z-index: 2;
+  }
+  /* Change the width of the sidebar to display it*/
+  #wrapper.menuDisplayed #sidebar-wrapper{
+    width:250px;
+  }
+  
+  #wrapper.menuDisplayed #page-content-wrapper{
+    padding-left:250px;
+  }
+  
+  /* Sidebar styling */
+  .sidebar-nav{
+    padding:0;
+    list-style:none; 
+      transition:all .5s;
+      width:100%;
+      /* text-align:center; */
+  }
+  
+  .sidebar-nav li{
+    line-height:0px;  
+      width:100%;
+      transition:all .3s;
+      padding:10px;
+  }
+  
+  .sidebar-nav li a {
+    display:block;
+    text-decoration:none;
+    color:#1ea9d4;
+    white-space: nowrap;
+  }
+  
+  .mobile-nav  .sidebar-nav li:hover,  .mobile-nav  .sidebar-nav li :focus{
+     color: #fff !important;
+    background: #1ea9d4 !important;
+  }
+  /* .mobile-nav .nav-link:focus,.mobile-nav .nav-link:hover{
+    color: #fff !important;
+  } */
+  .mobile-nav .sidebar-nav li:hover a{
+    color: #fff !important;
+
+  }
+
+/* new nav end */
+
+
 #healthServiesModal .carousel-control-next{
     top: auto !important;
     right: 89px !important;
@@ -873,6 +998,9 @@
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* asim */
+    .mobile-nav{
+        display: none !important;
+    }
     #healthServiesModal .carousel-control-next{
         top: 700px !important;
         right: 293px !important;

@@ -6,7 +6,9 @@ body {
     padding: 0;
     margin: 0;
 }
-
+.mobile-nav{
+    display: none !important;
+}
 .request.section {
     background: linear-gradient(to bottom, #FFFFFF, rgb(228, 228, 226));
 }
