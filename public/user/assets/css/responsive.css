@@ -1,4 +1,5 @@
 /* Mobile Devices */
+
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
 #healthServiesModal .carousel-control-next{
@@ -713,6 +714,96 @@
     }
 }
 
+@media only screen and (min-width: 428px) and (max-width: 767px){
+    .bottom.boxContainer .blue-box {
+        right: 40px !important;
+        top: 5px !important;
+    }
+    .task-number{
+        width: 55% !important;
+        padding-left: 62px !important;
+    }
+    .task-number1 {
+        width: 20%;
+        margin-left: 16px;
+    }
+    .map-place .boxContainer{
+        right: 23px !important;
+    }
+    .map-cap {
+        bottom: 0;
+        text-align: center;
+    }
+    .map-place .blue-box {
+        left: -4px !important;
+        bottom: -20px !important;
+    }
+    .map-place.boxContainer img {
+        width: 330px;
+        margin-right: 33px;
+    }
+    .banner .outline {
+        padding-right: 50px !important;
+    }
+    .request .dot-txt-main .outline {
+        padding-right: 0px !important;
+        left: 10px !important;
+    }
+    .left-right-h{
+        margin-right: 81px !important;
+    }
+    .left-right-h::before {
+       
+        margin: -15px auto !important;
+        left: -30px !important;
+    }
+
+}
+@media only screen and (min-width: 428px) and (max-width: 767px){
+    .bottom.boxContainer .blue-box {
+        right: 40px !important;
+        top: 5px !important;
+    }
+    .task-number{
+        width: 55% !important;
+        padding-left: 62px !important;
+    }
+    .task-number1 {
+        width: 20%;
+        margin-left: 16px;
+    }
+    .map-place .boxContainer{
+        right: 23px !important;
+    }
+    .map-cap {
+        bottom: 0;
+        text-align: center;
+    }
+    .map-place .blue-box {
+        left: -4px !important;
+        bottom: -20px !important;
+    }
+    .map-place.boxContainer img {
+        width: 330px;
+        margin-right: 33px;
+    }
+    .banner .outline {
+        padding-right: 50px !important;
+    }
+    .request .dot-txt-main .outline {
+        padding-right: 0px !important;
+        left: 10px !important;
+    }
+    .left-right-h{
+        margin-right: 81px !important;
+    }
+    .left-right-h::before {
+       
+        margin: -15px auto !important;
+        left: -30px !important;
+    }
+
+}
 /* Extra Small Devices */
 @media only screen and (max-width: 500px) {
     

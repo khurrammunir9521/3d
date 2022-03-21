@@ -674,7 +674,7 @@
                         <img src="{{ asset('user/assets/images/man-sitting.png') }}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-4" alt="man-sitting" width="500">
                     </div>
                     <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4 medical-animate">
-                        <span class="outline dot right">أكثر من 13 عضو اصطناعي</span>
+                        <span class="outline dot right left-right-h">أكثر من 13 عضو اصطناعي</span>
                         <h1 class="modal-title right-center"><span class="btm-line"><span class="inner-line"></span>
 
                                 الخدمات الطبية
@@ -724,7 +724,7 @@
                         <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" alt="machine">
                     </div>
                     <div class="pt-5 public-animate">
-                        <span class="outline dot left">أكثر 20 خدمة مختلفة</span>
+                        <span class="outline dot left left-right-h">أكثر 20 خدمة مختلفة</span>
                         <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
                                 الخدمات العامة
                             </span></h1>
@@ -976,7 +976,7 @@
                                                     <img src="{{asset('user/assets/images/machine.png')}}" class="img-fluid" alt="machine">
                                                 </div>
                                                 <div class="pt-5 public-animate">
-                                                    <span class="outline dot left">أكثر 20 خدمة مختلفة</span>
+                                                    <span class="outline dot left ">أكثر 20 خدمة مختلفة</span>
                                                     <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
                                                             الخدمات العامة
                                                         </span> </h1>
