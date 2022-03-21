@@ -75,31 +75,31 @@ class MedicalController extends Controller
     {
         $order = Medical::find($request->id);
         $user = User::find($order->user_id);
-        if ($request->has('checkbox1')) {
+        if ($request->status = 2) {
             $order->status = 2;
             $order->save();
         }
-        if ($request->has('checkbox2')) {
+        if ($request->status =3) {
             $order->status = 3;
             $order->save();
         }
-        if ($request->has('checkbox3')) {
+        if ($request->status =4 ) {
             $order->status = 4;
             $order->save();
         }
-        if ($request->has('checkbox4')) {
+        if ($request->status =5) {
             $order->status = 5;
             $order->save();
         }
-        if ($request->has('checkbox5')) {
+        if ($request->status=6) {
             $order->status = 6;
             $order->save();
         }
-        if ($request->has('checkbox6')) {
+        if ($request->status =7) {
             $order->status = 7;
             $order->save();
         }
-        if ($request->has('checkbox7')) {
+        if ($request->status =8) {
             $order->status = 8;
             $order->save();
         }
