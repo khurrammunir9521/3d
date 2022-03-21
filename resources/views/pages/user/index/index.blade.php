@@ -132,7 +132,6 @@
 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
-
                     <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>

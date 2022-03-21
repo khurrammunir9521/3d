@@ -11,10 +11,9 @@
     </div>
     <a class="btn btn-primary mb-2" href="{{ route('perposal.create') }}"> New +</a>
     <div class="table-responsive product-table">
-        <table class="display" id="example">
+    <table class="table table-striped" style="width:100%" id="example">
+           <thead>
             <tr>
-
-
                 <th>السعر_نموذج</th>
                 <th>السعر_تصميم</th>
                 <th>نموذج_الكمية</th>
@@ -23,8 +22,9 @@
                 <th>تاريخ</th>
                 <th>ضريبة</th>
                 <th>أجراءات</th>
-
-            </tr>
+             </tr>
+            </thead>
+            <tbody>
             @foreach ($invoices as $invoice)
             <tr>
 
@@ -49,6 +49,7 @@
                 </td>
             </tr>
             @endforeach
+            </tbody>
         </table>
     </div>
 </div>

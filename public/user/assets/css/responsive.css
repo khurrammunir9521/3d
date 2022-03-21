@@ -4,6 +4,9 @@
 /* asim */
 
 /* new nav */
+.download-pdf {
+   margin-top: 20px;
+}
 .mobile-nav .dot::before {
     margin: 3px -15px;
 }

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Notifications\MedicalNotification;
 use Symfony\Component\Console\Question\Question;
 use App\Models\Feedback;
-
+use App\Mail\MedicalMail;
 
 class MedicalController extends Controller
 {
@@ -43,8 +43,13 @@ class MedicalController extends Controller
         $users->update([
             'order_id' => $med->id,
         ]);
-        $users = User::where('role', 'admin')->first();
+        $users = User::where('role', 'admin')->orwhere('id',$users->id)->first();
         $users->notify(new MedicalNotification($users));
+        $details = [
+            'title' =>$users->name,
+            'body' => 'Your medical request have been created',
+        ];
+        \Mail::to($users->email)->send(new \App\Mail\MedicalMail($details));
         return redirect()->route('home')->with('error_code', 5);
     }
 

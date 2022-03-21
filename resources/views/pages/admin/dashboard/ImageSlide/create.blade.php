@@ -33,14 +33,20 @@
 
             </textarea>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="exampleInputEmail1">Images </label>
             <input type="file" class="form-control" name="images" id="" accept="image/*" type="file"
                 id="download-cv-file-name" name="images" id="images" aria-describedby=""
                 placeholder="Enter sub heading">
             <small id="" class="form-text text-muted"> </small>
+        </div> -->
+        <div class="row">
+        <div class="col-md-12">
+            <h2>BBBOOTSTRAP FILE UPLOAD</h2>
+            <div class="file-drop-area"> <span class="choose-file-button">Choose files</span> <span class="file-message">or drag and drop files here</span> <input class="file-input" type="file" multiple>
+            </div>
         </div>
-    
+    </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 @endsection

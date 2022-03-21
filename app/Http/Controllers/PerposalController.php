@@ -6,6 +6,9 @@ use App\Models\User;
 use App\Models\Medical;
 use App\Models\Perposal;
 use Illuminate\Http\Request;
+use App\Notifications\ProposelNotification;
+use PDF;
+use Auth;
 
 class PerposalController extends Controller
 {
@@ -52,6 +55,7 @@ class PerposalController extends Controller
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
+        $user->notify(new ProposelNotification($user));
         return redirect()->route('perposal.index');
     }
 
@@ -112,5 +116,22 @@ class PerposalController extends Controller
     {
         Perposal::find($id)->delete();
         return redirect()->route('perposal.index');
+    }
+
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pdfProposal(Request $request)
+    {
+        $items = Perposal::where('user_id',Auth::user()->id)->get();
+        view()->share('items',$items);
+        if($request->has('download')){
+            $pdf = PDF::loadView('proposel');
+            return $pdf->download('proposel.pdf');
+        }
+        return view('pdfview');
     }
 }
