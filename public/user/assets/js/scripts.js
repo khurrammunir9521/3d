@@ -717,4 +717,9 @@ if($(window).width() < 768) {
     $("#wrapper").toggleClass("menuDisplayed");
     $(".sec-main").toggleClass("sec-main-pos");
   });
+
+  $('#wrapper .nav-item').click(function() {
+    $("#wrapper").toggleClass("menuDisplayed");
+  })
+  
 });
