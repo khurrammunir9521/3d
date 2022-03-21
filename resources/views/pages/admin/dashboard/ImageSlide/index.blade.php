@@ -1,6 +1,14 @@
 @extends('layouts.admin.app')
 @section('content')
     <div class="card-body">
+    <div class="breadcrumb-main">
+        <ol class="breadcrumb">
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+
+            <li><a href="#">إعدادات الموقع</a></li>
+            <li><a href="#">صور البانر المتحرك</a></li>
+        </ol>
+    </div>
         <a class="btn btn-primary mb-2" href="{{ route('image.create') }}">+Add Slider</a>
         <div class="table-responsive product-table">
             <table class="display" id="example">

@@ -41,7 +41,7 @@
                     </div>
                     <div class="form-group btan-login">
                         <button class="btn btn-blue btn-block" type="submit">
-                            Sign in
+                        تسجيل الدخول
                         </button>
                     </div>
                     </div>

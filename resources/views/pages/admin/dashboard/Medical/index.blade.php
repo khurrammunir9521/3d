@@ -2,19 +2,26 @@
 @section('content')
 
 
-<div class="card-body">
-    <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
-    </nav>
-    <div class="table-responsive product-table medical-datatable">
-    <table class="table table-striped" style="width:100%" id="example">
+<div class="content-main">
+    <div class="breadcrumb-main">
+        <ol class="breadcrumb">
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+
+            <li><a href="#">طلبات الخدمات الطبية</a></li>
+            
+        </ol>
+    </div>
+    
+    <div class="container-fluid p-0">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card medical-card">
+                 <div class="card-body p-0">
+                 <div class="table-responsive medical-datatable">
+                    <table class="display" style="width:100%" id="basic-2">
+
             <thead>
             <tr>
-
                 <th> اسم المريض</th>
                 <th>  اسم الطبيب</th>
                 <th>التخصص</th>
@@ -39,7 +46,7 @@
                 <td><b>{{ $medi->id }}</b></td>
                 <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
-                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">عرض</a>
+                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">View</a>
                 </td>
             </tr>
             @else
@@ -53,7 +60,7 @@
                 <td><b>{{ $medi->id }}</b></td>
                 <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
-                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">عرض</a>
+                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">View</a>
                 </td>
 
             </tr>
@@ -62,5 +69,11 @@
             </tbody>
         </table>
     </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+    
 </div>
 @endsection

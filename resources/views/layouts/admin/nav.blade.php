@@ -8,7 +8,7 @@
               <img class="img-90 rounded-circle" src="{{asset('assets/images/dashboard/1.png')}}" alt="">
 
               @endif
-              <div class="badge-bottom"><span class="badge badge-primary">New</span></div>
+              <div class="badge-bottom"><span class="badge badge-primary">جديد</span></div>
               <h6 class="mt-3 f-14 f-w-600">{{auth()->user()->name}}</h6>
           </a>
           <p class="mb-0 font-roboto"></p>
