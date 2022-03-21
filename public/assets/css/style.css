@@ -31128,6 +31128,71 @@ thead tr th:last-child, tbody tr td:last-child{
   padding: 30px;
 }
 
+.medical-datatable{
+  overflow-x: hidden !important;
+}
 .content-main{
   padding-top: 10px;
+}
+
+
+
+
+/* dashboard index */
+.sec-dashboard .dashboard-row{
+  align-items: flex-start !important;
+}
+.apexcharts-legend.center.position-left{
+    left: 0 !important;
+    right: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 52%;
+}
+
+.setting-list{
+  left: 20px;
+  right: auto;
+}
+
+.growth-content{
+  padding-right: 0px;
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
+input,select,textarea,label{
+  background:transparent !important;
+}
+
+
+
+
+/* responsive dashboard */
+
+@media only screen and (min-width: 2100px) {
+
+.growth-content{
+  margin: auto !important;
+}
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .sec-dashboard .header-top{
+     flex-direction: column;
+  }
+  .growth-content, .latest-content{
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 0px;
+    padding-right: 0px !important;
+  }
+
+  .sec-dashboard .header-top.d-sm-flex.align-items-center{
+    align-items: flex-start !important;
+  }
+
 }

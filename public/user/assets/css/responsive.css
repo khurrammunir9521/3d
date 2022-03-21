@@ -33,7 +33,7 @@
     padding: 0px;
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 30px;
     display: flex;
     margin: auto;
     flex-flow: row-reverse;
@@ -79,7 +79,7 @@
 }
 #sidebar-wrapper{
     z-index: 10000;
-    position: absolute;
+    position: fixed;
     width:0;
     height:100%;
     overflow-y:hidden;
@@ -102,6 +102,7 @@
       transition:all .3s;
       font-size:1em;
       z-index: 2;
+      top: 30px ;
   }
   /* Change the width of the sidebar to display it*/
   #wrapper.menuDisplayed #sidebar-wrapper{
@@ -220,8 +221,7 @@
         width: 100%;
     }
     .counter{
-        text-align: left;
-
+        text-align: center;
     }
     .task-number{
         width: 56%;
@@ -243,10 +243,14 @@
         padding-right: 0!important;
     }
 
-    /* Modal */
-    .modal-title {
-        font-size: 18px;
+    .public-animate .outline, .medical-animate .outline {
+        margin: 0!important;
     }
+
+    /* Modal */
+    /* .modal-title {
+        font-size: 18px;
+    } */
     .modal.page .modal-body {
         padding: 1rem 1rem 0 1rem;
     }
@@ -424,11 +428,20 @@
     }
 
     .hands.sample {
-        left: 0;
+        /* left: 0;
         width: 250px;
         bottom: 0;
         top: 160px;
-        right: 80px;
+        right: 80px; */
+        left: 0;
+        width: 200px;
+        bottom: 0;
+        top: 160px;
+        right: 130px;
+    }
+
+    .responsive-order {
+        order: 2;
     }
 
     .about-content .actions {
@@ -467,8 +480,10 @@
     }
 
     .top.boxContainer .blue-box {
-        top: -22px;
+        top: 80px;
         left: 0;
+        right: 280px;
+        margin: auto;
     }
 
     .bottom.boxContainer {
@@ -591,6 +606,10 @@
         max-width: 360px;
     }
 
+    .top.boxContainer {
+        padding-top: 100px;
+    }
+
     .modal.register .modal-header {
         padding: 0.5rem;
         justify-content: space-between;
@@ -671,6 +690,8 @@
     .slick-slide img {
         display: block;
         margin: auto;
+        width: 85px !important;
+        height: 85px;
     }
 
     .map .btn {

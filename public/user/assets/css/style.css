@@ -38,7 +38,7 @@ p {
 }
 
 .navbar .container-fluid {
-    align-items: start;
+    align-items: baseline;
 }
 
 .navbar-collapse {

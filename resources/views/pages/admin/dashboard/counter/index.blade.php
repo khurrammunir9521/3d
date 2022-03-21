@@ -1,41 +1,64 @@
 @extends('layouts.admin.app')
 @section('content')
-<div class="card-body">
-<div class="breadcrumb-main">
+<div class="content-main">
+    <h3>عدادات</h3>
+    <div class="breadcrumb-main">
         <ol class="breadcrumb">
-                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+            <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
             <li><a href="#">إعدادات الموقع</a></li>
-            <li><a href="#"> عدادات</a></li>
+            <li><a href="{{ route('counter.index') }}"> عدادات</a></li>
         </ol>
     </div>
-    <a class="btn btn-primary mb-2" href="{{ route('counter.create') }}"> Create New Product</a>
-    <div class="table-responsive product-table">
-        <table class="display" id="example">
-            <tr>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card medical-card">
+                    <div class="card-body p-0">
+                        <a class="btn btn-primary mb-2" href="{{
+                            route('counter.create') }}">إنشاء منتج جديد</a>
+                        <div class="table-responsive medical-datatable">
+                            <table class="display" style="width:100%"
+                                id="basic-2">
+                                <thead>
+                                    <tr>
 
-                <th>Start</th>
-                <th>End</th>
-                <th>Action</th>
-            </tr>
-            @foreach ($counter as $tec)
-            <tr>
+                                        <th>يبدأ</th>
+                                        <th>نهاية</th>
+                                        <!-- <th>Action</th> -->
+                                    </tr>
+                                </thead>
+                                    @foreach ($counter as $tec)
+                                    <tr>
 
-                <td>{{ $tec->start }}</td>
-                <td>{{ $tec->end }}</td>
-                <td>
-                    <form action="{{ route('counter.destroy', $tec->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('counter.edit', $tec->id) }}">Edit</a>
+                                        <td>{{ $tec->start }}</td>
+                                        <td>{{ $tec->end }}</td>
+                                        <td>
+                                            <form action="{{
+                                                route('counter.destroy', $tec->id)
+                                                }}" method="POST">
+                                                <a class="btn btn-primary"
+                                                    href="{{
+                                                    route('counter.edit', $tec->id)
+                                                    }}">Edit</a>
 
-                        @csrf
-                        @method('DELETE')
+                                                @csrf
+                                                @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </table>
-    </div>
-</div>
-@endsection
+                                                <button type="submit" class="btn
+                                                    btn-danger">حذف</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </table>
+                            </div>
+                        </div>
+                        @endsection
+                    </div>    
+                </div>   
+            </div>   
+            
+        </div>   
+    </div>   
+</div>   

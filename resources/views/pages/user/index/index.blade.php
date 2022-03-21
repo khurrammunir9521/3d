@@ -31,6 +31,7 @@
 
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/jquery.pageLoading.css') }}">
@@ -459,7 +460,7 @@
     </section> -->
 
     <section class="banner sample">
-        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-2s" alt="banner-bg">
+        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-3s" alt="banner-bg">
         <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-2s" alt="black-bg">
         <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
         <div class="container">
@@ -481,7 +482,7 @@
                                 <div class="carousel-item" id="{{$key}}">
                                     @endif
                                     <div class="row justify-content-end">
-                                        <div class="col-sm-7 col-md-4 col-lg-7">
+                                        <div class="col-sm-7 col-md-4 col-lg-7 responsive-order">
                                             <div class="static-text">
 
 
@@ -506,7 +507,7 @@
                                         </div>
                                         <div class="col-sm-5 col-md-8 col-lg-5">
                                             <div class="top boxContainer">
-                                                <div class="blue-box move-box"></div>
+                                                <div class="blue-box"></div>
                                                 @if (@$profiles->images != null)
                                                 <img src="{{ asset($profiles->images) }}" class="img-fluid img-behind" alt="medical">
                                                 @else
@@ -672,7 +673,7 @@
                             </div>
                             <div class="row pt-5 mt-5 align-items-end" dir="rtl">
                                 <div class="col-md-9">
-                                    <div class="about-content" id="about-us">
+                                    <div class="about-content" id="about-us" data-aos="fade-up">
                                         <span class="outline dot right-center">+3D</span>
                                         @if ($about != null)
 
@@ -732,7 +733,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="main dot-txt-main">
+                    <div class="main dot-txt-main" data-aos="fade-up">
                         <span class="outline dot center">إختيار نوع الخدمة</span>
                         <h1 class="title"><span class="btm-line"><span class="inner-line"></span>
                                 قدم طلبك
@@ -750,7 +751,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 dot-txt-main">
-                    <div class="image-place dot-effect" id="main-effect">
+                    <div class="image-place dot-effect" id="main-effect" data-aos="zoom-in" data-aos-offset="500">
                         <div class="pointer head">
                             <p>الجمجمة</p>
                         </div>
@@ -765,7 +766,7 @@
                         </div>
                         <img src="{{ asset('user/assets/images/man-sitting.png') }}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-4" alt="man-sitting" width="500">
                     </div>
-                    <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4 medical-animate">
+                    <div class="pt-5 pt-md-1 pt-lg-4 pt-xl-4 pt-xxl-4 medical-animate" data-aos="fade-up" data-aos-offset="200">
                         <span class="outline dot right left-right-h">أكثر من 13 عضو اصطناعي</span>
                         <h1 class="modal-title right-center"><span class="btm-line"><span class="inner-line"></span>
 
@@ -793,7 +794,7 @@
 
                             <button class="btn btn-video" data-bs-toggle="modal" data-bs-target="#healthVideoModal"><img src="{{ asset('user/assets/icons/video.svg') }}" alt="video"> فيديو
                                 تعريفي</button>
-                            <p class='koib-health d-none mt-5 nav-link'><a href="#navbarNav" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
+                            <p class='koib-health d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل </span><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط هنا</a></p>
                         </div>
                         @auth
                         @if(@$orders->count() > 0 )
@@ -806,16 +807,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 dot-txt-main-left">
-                    <div class="image-place effect-machine" id="main-macine">
+                    <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500" id="main-macine">
                         <div class="pointer top">
                             <p>مجسمات كبيرة</p>
                         </div>
                         <div class="pointer bottom">
                             <p>مجسمات صغيرة</p>
                         </div>
-                        <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" alt="machine">
+                        <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" data-aos="zoom-in" alt="machine">
                     </div>
-                    <div class="pt-5 public-animate">
+                    <div class="pt-5 public-animate" data-aos="fade-up" data-aos-offset="200">
                         <span class="outline dot left left-right-h">أكثر 20 خدمة مختلفة</span>
                         <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
                                 الخدمات العامة
@@ -840,7 +841,7 @@
                                 طلب
                                 الخدمة</button>
 
-                            <p class='koib d-none mt-5 nav-link'><a href="#navbarNav" style="color:red"> يتطلب التسجيل </a>للتسجيل اضغط هنا </p>
+                            <p class='koib d-none mt-5 nav-link'><span style="color:red"> يتطلب التسجيل </span><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"> للتسجيل اضغط هنا</a></p>
                             @endauth
 
                         </div>
@@ -1026,7 +1027,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 dot-txt-main pb-4">
-                                                <div class="image-place dot-effect">
+                                                <div class="image-place dot-effect" data-aos="zoom-in" data-aos-offset="500">
                                                     <div class="pointer head">
                                                         <p>الجمجمة</p>
                                                     </div>
@@ -1041,7 +1042,7 @@
                                                     </div>
                                                     <img src="{{asset('user/assets/images/man-sitting.png')}}" class="img-fluid mx-auto d-block mt-5 mt-md-0 mt-lg-0 mt-xl-1" alt="man-sitting" width="500">
                                                 </div>
-                                                <div class="pt-5 pt-md-1 pt-lg-5 pt-xl-5 pt-xxl-5 medical-animate">
+                                                <div class="pt-5 pt-md-1 pt-lg-5 pt-xl-5 pt-xxl-5 medical-animate" data-aos="fade-up" data-aos-offset="200">
                                                     <span class="outline dot right">أكثر من 13 عضو اصطناعي</span>
                                                     <h1 class="modal-title right-center">الخدمات الطبية
                                                     </h1>
@@ -1058,16 +1059,16 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6 dot-txt-main-left pb-4" id="macine">
-                                                <div class="image-place effect-machine">
+                                                <div class="image-place effect-machine" data-aos="zoom-in" data-aos-offset="500">
                                                     <div class="pointer top">
                                                         <p>مجسمات كبيرة</p>
                                                     </div>
                                                     <div class="pointer bottom">
                                                         <p>مجسمات صغيرة</p>
                                                     </div>
-                                                    <img src="{{asset('user/assets/images/machine.png')}}" class="img-fluid" alt="machine">
+                                                    <img src="{{asset('user/assets/images/machine.png')}}" class="img-fluid" data-aos="zoom-in"  alt="machine">
                                                 </div>
-                                                <div class="pt-5 public-animate">
+                                                <div class="pt-5 public-animate" data-aos="fade-up" data-aos-offset="200">
                                                     <span class="outline dot left ">أكثر 20 خدمة مختلفة</span>
                                                     <h1 class="modal-title left"><span class="btm-line"><span class="inner-line"></span>
                                                             الخدمات العامة
@@ -1096,7 +1097,7 @@
         </div>
     </div>
     <div class="main-progress">
-        <img src="{{asset('user/assets/icons/logo.svg')}}" class="animate__animated animate__pulse animate__infinite" alt="logo">
+        <img src="{{asset('user/assets/icons/logo.svg')}}" alt="logo">
         <p class='progress text-center bg-transparent d-block'>0</p>
 
         <div class="progress-bar bar-load" id="bar"></div>
@@ -1227,8 +1228,6 @@
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
     <script>
         $(document).ready(function() {
-            console.log(scroll)
-            $('#main-macine').removeClass('animate-left');
             var a = 0;
             $(window).scroll(function() {
                 var oTop = $('.counter').offset().top - window.innerHeight;
@@ -1259,98 +1258,10 @@
                     a = 1;
                 }
 
-                if ($(window).width() > 768) {
-                    if (($(window).scrollTop() > 1300)) {
-                        $('#main-macine').addClass('animate-left');
-                        $('#main-effect').addClass('animate-right');
-                        $('.medical-animate').addClass('animate__animated animate__fadeIn animate_slowest');
-                        $('.public-animate').addClass('animate__animated animate__fadeIn animate_slowest');
-                    }
-                }
-
-                if ($(window).width() < 768) {
-                    if ($(window).scrollTop() > 2600) {
-                        $('#main-macine').removeClass('animate-left');
-                        $('#main-effect').removeClass('animate-right');
-                        $('.public-animate').removeClass('animate__fadeIn');
-                        $('.medical-animate').removeClass('animate__fadeIn');
-                        $('#main-effect').addClass('animate__animated animate__fadeInUp animate_slowest');
-                    }
-                    if ($(window).scrollTop() > 3300) {
-                        $('#main-macine').addClass('animate__animated animate__fadeInUp animate_slowest');
-                        $('.public-animate').addClass('animate__animated animate__fadeInUp');
-                        $('.medical-animate').addClass('animate__animated animate__fadeInUp');
-                    }
-                    if ($(window).scrollTop() > 2960) {
-                        $('.medical-animate').addClass('animate__animated animate__fadeInUpBig animate__slower');
-                    }
-                    if ($(window).scrollTop() > 3560) {
-                        $('.public-animate').addClass('animate__animated animate__fadeInUpBig animate__slower');
-                    }
-
-                    console.log($(window).scrollTop())
-                }
-
-
-                if (($(window).scrollTop() > 600)) {
-                    $('.about-content').addClass('animate__animated animate__fadeIn animate_slowest');
-                }
-
-                // else {
-                //     a = 0;
+                // if (($(window).scrollTop() > 600)) {
+                //     $('.about-content').addClass('animate__animated animate__fadeIn animate_slowest');
                 // }
-
             });
-            // $('.client-counter').counterUp({
-            //     delay: 10,
-            //     time: 2000
-            // });
-
-            // $(window).scroll(function() {
-            //     // animateCounter()
-            //     var positionTop = $(window).scrollTop();
-
-            //     if ((positionTop > 1000)) {
-            //         $('#main-macine').addClass('animate-left');
-            //         $('#main-effect').addClass('animate-right');
-            //     }
-
-            // });
-            // $.fn.scrollEvent = function() {
-            // var scroll = $(window).scrollTop();
-            //     return this.on("scroll", function() {
-            //         console.log(window.innerHeight);
-            //         // if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-            //         //     console.log(scroll)
-            //         //     animateCounter();
-            //         // }
-            //         if (scroll > 299) {
-            //         animateCounter();
-            //         }
-            //     });
-            // };
-
-            // $(window).scrollEvent()
-            // function reveal() {
-            //     scroll = true;
-            // console.log(scroll)
-
-            // var reveals = document.querySelectorAll("#main-macine");
-
-            // for (var i = 0; i < reveals.length; i++) {
-            //     var windowHeight = window.innerHeight;
-            //     var elementTop = reveals[i].getBoundingClientRect().top;
-            //     var elementVisible = 150;
-
-            //     if (elementTop < windowHeight - elementVisible) {
-            //     reveals[i].classList.add("animate-left");
-            //     } else {
-            //     reveals[i].classList.remove("animate-right");
-            //     }
-            // }
-            // }
-
-            // window.addEventListener("scroll", reveal);
         })
     </script>
     <script>
@@ -1397,8 +1308,8 @@
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
-
 </body>
 
 </html>
