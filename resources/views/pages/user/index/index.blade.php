@@ -54,7 +54,6 @@
 </head>
 
 <body>
-
     <div class="content-wrapper hide-on-load">
         <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
             <div class="container-fluid">
