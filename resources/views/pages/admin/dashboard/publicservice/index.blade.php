@@ -2,8 +2,17 @@
 @section('content')
 
 <div class="card-body">
-    <div class="table-responsive product-table">
-        <table class="display" id="example">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+
+    <div class="table-responsive product-table public-datatable">
+        <table class="table table-striped" style="width:100%" id="example">
+        <thead>
             <tr>
 
                 <th>Patient Name</th>
@@ -12,6 +21,8 @@
                 <th>Gender</th>
                 <th>Action</th>
             </tr>
+            </thead>
+            <tbody>
             @foreach ($publics as $medi)
             @if($medi->seen == 0)
             <tr>
@@ -39,6 +50,7 @@
 
 
             @endforeach
+            </tbody>
         </table>
     </div>
 </div>

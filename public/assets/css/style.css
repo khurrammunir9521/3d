@@ -31032,3 +31032,23 @@ span.twitter-typeahead .tt-suggestion {
 .badge-primary {
   background-color: #148eeb!important;
 }
+
+/* datatable  */
+div.dataTables_wrapper div.dataTables_length select{
+  width: 76px !important;
+  text-align: left !important;
+}
+/* .medical-datatable .dataTables_filter{
+  display: none;
+} */
+div.dataTables_wrapper div.dataTables_paginate{
+  border: none;
+}
+.table-responsive{
+  padding: 10px !important;
+  padding-right: 0px !important;
+}
+.breadcrumb{
+  margin-bottom: 15px !important;
+}
+
