@@ -31055,22 +31055,6 @@ span.twitter-typeahead .tt-suggestion {
   background-color: #148eeb!important;
 }
 
-/* datatable  */
-/* div.dataTables_wrapper div.dataTables_length select{
-  width: 76px !important;
-  text-align: left !important;
-}
-
-div.dataTables_wrapper div.dataTables_paginate{
-  border: none;
-}
-.table-responsive{
-  padding: 10px !important;
-  padding-right: 0px !important;
-} */
-.medical-datatable .dataTables_filter, .public-datatable .dataTables_filter{
-  display: none;
-}
 .breadcrumb{
   margin-bottom: 15px !important;
 }
@@ -31102,4 +31086,47 @@ ol.breadcrumb li a:hover {
   color: #24695c;
   text-decoration: none;
 }
+.breadcrumb-main .breadcrumb{
+  margin-bottom: 30px !important;
+}
 
+/* datatable  */
+/* div.dataTables_wrapper div.dataTables_length select{
+  width: 76px !important;
+  text-align: left !important;
+}
+
+div.dataTables_wrapper div.dataTables_paginate{
+  border: none;
+}
+.table-responsive{
+  padding: 10px !important;
+  padding-right: 0px !important;
+} */
+
+.medical-datatable .dataTables_wrapper .dataTables_length {
+  float: right;
+}
+.medical-datatable .dataTables_wrapper div.dataTables_paginate {
+  float: left;
+  margin-left: 0 !important;
+}
+.dataTables_wrapper .dataTables_filter {
+  float: left;
+  margin-left: 0px !important;
+}
+.medical-datatable .dataTables_filter{
+  display: none;
+}
+thead tr th:last-child, tbody tr td:last-child{
+  border-left: 3px solid #e6edef !important;
+}
+
+.medical-card{
+  /* border: none !important; */
+  padding: 30px;
+}
+
+.content-main{
+  padding-top: 10px;
+}

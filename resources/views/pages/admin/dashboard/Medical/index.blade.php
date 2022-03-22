@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="card-body">
+<div class="content-main">
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
@@ -12,13 +12,14 @@
         </ol>
     </div>
     
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
             <div class="row">
               <div class="col-sm-12">
-                <div class="card">
-                 
-    <div class="table-responsive product-table medical-datatable">
-    <table class="table table-striped" style="width:100%" id="basic-2">
+                <div class="card medical-card">
+                 <div class="card-body p-0">
+                 <div class="table-responsive medical-datatable">
+                    <table class="display" style="width:100%" id="basic-2">
+
             <thead>
             <tr>
 
@@ -63,5 +64,7 @@
             </tbody>
         </table>
     </div>
+                 </div>
+    
 </div>
 @endsection
