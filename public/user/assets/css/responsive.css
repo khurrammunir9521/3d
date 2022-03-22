@@ -218,8 +218,7 @@
         width: 100%;
     }
     .counter{
-        text-align: left;
-
+        text-align: center;
     }
     .task-number{
         width: 56%;
@@ -673,6 +672,8 @@
     .slick-slide img {
         display: block;
         margin: auto;
+        width: 85px !important;
+        height: 85px;
     }
 
     .map .btn {
