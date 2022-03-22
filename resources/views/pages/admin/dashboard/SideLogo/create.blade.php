@@ -22,11 +22,11 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Heading </label>
+                                        <label for="exampleInputEmail1">عنوان </label>
                                         <input type="text" class="form-control"
                                             name="heading" id=""
                                             aria-describedby="emailHelp"
-                                            placeholder="Enterheading">
+                                            placeholder="أدخل العنوان">
                                         <small id="" class="form-text text-muted"></small>
                                     </div>
                                     
@@ -34,18 +34,18 @@
                                 <div class="col-md-4">
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Sub Heading
+                                        <label for="exampleInputEmail1">العنوان الفرعي
                                         </label>
                                         <input type="text" class="form-control"
                                             name="subheading" id="" aria-describedby=""
-                                            placeholder="Enter sub heading">
+                                            placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
  
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Logo </label>
+                                        <label for="exampleInputEmail1">شعار </label>
                                         <input type="file" class="form-control"
                                             name="side_image" id="" accept="image/*"
                                             type="file"
@@ -60,7 +60,7 @@
                             </div>
                             
                           
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">يقدم</button>
                             @endsection
                         </form>
                     </div>

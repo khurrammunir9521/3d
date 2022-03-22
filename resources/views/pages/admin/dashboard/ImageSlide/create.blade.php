@@ -21,32 +21,32 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Speed </label>
+                                        <label for="exampleInputEmail1">سرعة </label>
                                         <input type="number" class="form-control"
                                             name="speed" id=""
                                             aria-describedby="emailHelp"
-                                            placeholder="Enter speed">
+                                            placeholder="أدخل السرعة">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Number </label>
+                                        <label for="exampleInputEmail1">رقم </label>
                                         <input type="number" class="form-control"
                                             name="number" id="" aria-describedby=""
-                                            placeholder="Enter number">
+                                            placeholder="أدخل رقم">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1"> Heading
+                                        <label for="exampleInputEmail1"> عنوان
                                         </label>
                                         <input type="text" class="form-control"
                                             name="heading" id="" aria-describedby=""
-                                            placeholder="Enter heading">
+                                            placeholder="أدخل العنوان">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
@@ -54,11 +54,11 @@
                                 <div class="col-md-6">
                                     
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Sub Heading
+                                <label for="exampleInputEmail1">العنوان الفرعي
                                 </label>
                                 <input type="text" class="form-control"
                                     name="sub_heading" id="" aria-describedby=""
-                                    placeholder="Enter sub heading">
+                                    placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -71,16 +71,16 @@
 
                            
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Body text
+                                <label for="exampleInputEmail1">نص أساسي
                                 </label>
                                 <textarea id="" name="body_text"
-                                    placeholder="Enter body text" rows="4"
+                                    placeholder="أدخل نصًا أساسيًا" rows="4"
                                     cols="50" class="ckeditor form-control">
                                 </textarea>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Images </label>
+                                    <label for="exampleInputEmail1">الصور </label>
                                     <input type="file" class="form-control"
                                         name="images" id="" accept="image/*"
                                         type="file"
@@ -93,7 +93,7 @@
                             </div>
                            
 
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">يقدم</button>
                         </form>
                         @endsection
                     </div>

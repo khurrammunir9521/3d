@@ -45,6 +45,7 @@
                                        <button class="btn btn-form mx-3 with-arrow disabled" type="submit">دخول</button>
                                        <p>بيانات الدخول</p>
                                    </div>
+                                   <p class="text-center">ليس لديك أي حساب اضغط <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">هنا</a> للتسجيل</p>
                                </form>
                            </div>
                        </div>

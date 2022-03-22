@@ -19,16 +19,7 @@
                         <form method="POST" action="{{ route('about.store') }}">
                             @csrf
                             <div class="row">
-                                <div class="col-md-6">
-                                <div class="form-group">
-                                <label for="exampleInputEmail1">عنوان </label>
-                                <input type="text" class="form-control"
-                                    name="heading" id=""
-                                    aria-describedby="emailHelp"
-                                    placeholder="أدخل العنوان">
-                                <small id="" class="form-text text-muted"></small>
-                            </div>
-                                </div>
+                              
                                 <div class="col-md-6">
                                 <div class="form-group">
                                 <label for="exampleInputEmail1">العنوان الفرعي
@@ -40,6 +31,16 @@
                             </div>
                                 </div>
                                 
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">عنوان </label>
+                                <input type="text" class="form-control"
+                                    name="heading" id=""
+                                    aria-describedby="emailHelp"
+                                    placeholder="أدخل العنوان">
+                                <small id="" class="form-text text-muted"></small>
+                            </div>
+                                </div>
                             </div>
                             
                             
