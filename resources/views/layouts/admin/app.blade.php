@@ -122,6 +122,13 @@
     <script>
         $(document).ready(function() {
             CKEDITOR.replace( 'ckeditor' );
+
+            $('#basic-2').DataTable( {
+    language: {
+        url: '//cdn.datatables.net/plug-ins/1.10.15/i18n/Arabic.json'
+            }
+        });
+
         });
     </script>
     @stack('scripts')
