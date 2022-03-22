@@ -5,10 +5,10 @@
 <div class="content-main">
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pictures</a></li>
-            <li><a href="#">Summer 15</a></li>
-            <li>Italy</li>
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+
+            <li><a href="#">طلبات الخدمات الطبية</a></li>
+            
         </ol>
     </div>
     

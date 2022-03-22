@@ -1,13 +1,14 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="card-body">
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">الفاتورة</li>
-    </ol>
-    </nav>
+<div class="breadcrumb-main">
+        <ol class="breadcrumb">
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+
+            <li><a href="#">فاتورة</a></li>
+           
+        </ol>
+    </div>
     <a class="btn btn-primary mb-2" href="{{ route('invoicess.create') }}"> New +</a>
     <div class="table-responsive product-table">
         <table class="display" id="example">
