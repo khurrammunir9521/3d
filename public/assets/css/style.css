@@ -31128,6 +31128,9 @@ thead tr th:last-child, tbody tr td:last-child{
   padding: 30px;
 }
 
+.table-responsive{
+  overflow-x: hidden !important;
+}
 .content-main{
   padding-top: 10px;
 }

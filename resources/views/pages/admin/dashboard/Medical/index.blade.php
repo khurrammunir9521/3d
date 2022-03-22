@@ -22,13 +22,13 @@
 
             <thead>
             <tr>
+            <th>   رقم الطلب</th>
                 <th> اسم المريض</th>
                 <th>  اسم الطبيب</th>
                 <th>التخصص</th>
                 <th>  ايميل الطبيب</th>
                 <th> المستشفى</th>
                 <th>المطلوب</th>
-                <th>   رقم الطلب</th>
                 <th>التاريخ</th>
                 <!-- <th>Action</th> -->
             </tr>
@@ -37,13 +37,13 @@
             @foreach ($medical as $medi)
             @if($medi->seen == 0)
             <tr>
+            <td><b>{{ $medi->id }}</b></td>
                 <td><b>{{ $medi->pa_name}}</b></td>
                 <td><b>{{ $medi->dr_name }}</b></td>
                 <td><b>{{ $medi->dr_spec}}</b></td>
                 <td><b>{{ $medi->dr_email }}</b></td>
                 <td><b>{{ $medi->hospital }}</b></td>
                 <td><b>{{ $medi->procedure }}</b></td>
-                <td><b>{{ $medi->id }}</b></td>
                 <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
                     <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">View</a>
