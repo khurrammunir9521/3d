@@ -425,11 +425,20 @@
     }
 
     .hands.sample {
-        left: 0;
+        /* left: 0;
         width: 250px;
         bottom: 0;
         top: 160px;
-        right: 80px;
+        right: 80px; */
+        left: 0;
+        width: 200px;
+        bottom: 0;
+        top: 160px;
+        right: 130px;
+    }
+
+    .responsive-order {
+        order: 2;
     }
 
     .about-content .actions {
@@ -468,8 +477,10 @@
     }
 
     .top.boxContainer .blue-box {
-        top: -22px;
+        top: 80px;
         left: 0;
+        right: 280px;
+        margin: auto;
     }
 
     .bottom.boxContainer {
@@ -590,6 +601,10 @@
         width: 335px;
         right: 0px;
         max-width: 360px;
+    }
+
+    .top.boxContainer {
+        padding-top: 100px;
     }
 
     .modal.register .modal-header {
