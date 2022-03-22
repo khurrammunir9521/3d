@@ -482,7 +482,7 @@
                                 <div class="carousel-item" id="{{$key}}">
                                     @endif
                                     <div class="row justify-content-end">
-                                        <div class="col-sm-7 col-md-4 col-lg-7 responsive-order">
+                                        <div class="col-md-4 col-lg-7 responsive-order">
                                             <div class="static-text">
 
 
@@ -505,7 +505,7 @@
                                                 <a href="#services-section" class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></a href="#services-section">
                                             </div>
                                         </div>
-                                        <div class="col-sm-5 col-md-8 col-lg-5">
+                                        <div class="col-md-8 col-lg-5">
                                             <div class="top boxContainer">
                                                 <div class="blue-box"></div>
                                                 @if (@$profiles->images != null)
