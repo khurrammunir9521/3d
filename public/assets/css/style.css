@@ -31080,11 +31080,11 @@ ol.breadcrumb li+li:before {
   content: "/\00a0";
 }
 ol.breadcrumb li a {
-  color: #24695c;
+  color: #0d6efd;
   text-decoration: none;
 }
 ol.breadcrumb li a:hover {
-  color: #24695c;
+  color: #0d6efd;
   text-decoration: none;
 }
 .breadcrumb-main .breadcrumb{

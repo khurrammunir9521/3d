@@ -1,7 +1,15 @@
 @extends('layouts.admin.app')
 @section('content')
     <div class="card-body">
-        <a class="btn btn-primary mb-2" href="{{ route('logo.create') }}"> Create New Product</a>
+    <div class="breadcrumb-main">
+        <ol class="breadcrumb">
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+
+            <li><a href="#">إعدادات الموقع</a></li>
+            <li><a href="#">الشعارات</a></li>
+        </ol>
+    </div>
+        <a class="btn btn-primary mb-2" href="{{ route('logo.create') }}"> إنشاء منتج جديد</a>
         <div class="table-responsive product-table">
             <table class="display" id="example">
                 <tr>
@@ -39,12 +47,12 @@
 
                         <td>
                             <form action="{{ route('logo.destroy', $logo->id) }}" method="POST">
-                                <a class="btn btn-primary" href="{{ route('logo.edit', $logo->id) }}">Edit</a>
+                                <a class="btn btn-primary" href="{{ route('logo.edit', $logo->id) }}">يحرر</a>
 
                                 @csrf
                                 @method('DELETE')
 
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger">حذف</button>
                             </form>
                         </td>
                     </tr>
