@@ -15,11 +15,13 @@
         <thead>
             <tr>
 
-                <th>Patient Name</th>
-                <th>Specialization</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th>Action</th>
+                <th>اسم المريض</th>
+                <th>التخصص</th>
+                <th>  البريد الالكتروني</th>
+                <th>النوع</th>
+                <th>رقم الطلب</th>
+                <th>التاريخ</th>
+                <!-- <th>Action</th> -->
             </tr>
             </thead>
             <tbody>
@@ -31,9 +33,7 @@
                 <td><b>{{ $medi->email }}</b></td>
                 <td><b>{{ $medi->gender }}</b></td>
                 <td>
-                  
-                    <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">View</a>
-                   
+                    <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">عرض</a>
                 </td>
             </tr>
             @else
@@ -43,7 +43,7 @@
                 <td>{{ $medi->email }}</td>
                 <td>{{ $medi->gender }}</td>
                 <td>
-                    <a class="btn btn-primary" data-artid="<?php echo $medi['id']; ?>" href="{{ route('publics.show', $medi->id) }}">View</a>
+                    <a class="btn btn-primary" data-artid="<?php echo $medi['id']; ?>" href="{{ route('publics.show', $medi->id) }}">عرض</a>
                 </td>
             </tr>
             @endif
