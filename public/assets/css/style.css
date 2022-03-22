@@ -26197,7 +26197,8 @@ body.dark-sidebar .main-navbar ul.nav-pills {
           align-items: center; }
   .latest-update-sec .media img, .latest-update-sec .media svg {
     width: auto;
-    height: 20px; }
+    height: 20px;
+  margin-left: 23px }
 
 .latest-update-sec .card-body {
   padding-top: 0; }
