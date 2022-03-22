@@ -17,7 +17,7 @@ if($(window).width() < 768) {
       i = 1;
       var elem = document.getElementById("barw");
       var widths = 1;
-      var id = setInterval(frame, 25);
+      var id = setInterval(frame, 30);
       function frame() {
         if (widths >= 100) {
           $('.main-progress').css('z-index', '0');
@@ -73,14 +73,14 @@ if($(window).width() < 768) {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -169,7 +169,7 @@ if($(window).width() < 768) {
       $(".move-box").css('transform', 'translateX(' + (mB / 30) + '%)');
       let mBlack = ((((event.pageX) * 50) / vW).toFixed(5)) + 200;
       $(".move-black").css('transform', 'translateX(' + (mBlack / 30) + '%)');
-      let mBlue = ((((event.pageX) * 100) / vW).toFixed(2)) - 200;
+      let mBlue = ((((event.pageX) * 100) / vW).toFixed(2)) - 30;
       $(".move-blue").css('transform', 'translateX(' + (mBlue / 30) + '%)');
     }).on("mouseleave", function () {
       $(".move").css('transform', 'translateX(1)');
@@ -705,8 +705,6 @@ if($(window).width() < 768) {
       $('.modal.video').modal('hide');
     }
   })
-
-  
 })
 
 
@@ -723,3 +721,9 @@ if($(window).width() < 768) {
   })
   
 });
+AOS.init({
+  offset: 100,
+  duration: 1000,
+  once: true,
+});
+window.addEventListener('load', AOS.refresh);

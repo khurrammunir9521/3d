@@ -218,8 +218,7 @@
         width: 100%;
     }
     .counter{
-        text-align: left;
-
+        text-align: center;
     }
     .task-number{
         width: 56%;
@@ -241,10 +240,14 @@
         padding-right: 0!important;
     }
 
-    /* Modal */
-    .modal-title {
-        font-size: 18px;
+    .public-animate .outline, .medical-animate .outline {
+        margin: 0!important;
     }
+
+    /* Modal */
+    /* .modal-title {
+        font-size: 18px;
+    } */
     .modal.page .modal-body {
         padding: 1rem 1rem 0 1rem;
     }
@@ -669,6 +672,8 @@
     .slick-slide img {
         display: block;
         margin: auto;
+        width: 85px !important;
+        height: 85px;
     }
 
     .map .btn {
