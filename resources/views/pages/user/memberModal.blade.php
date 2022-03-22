@@ -8,7 +8,11 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div>
                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                <h1 class="modal-title right">معلومة العضوية</h1>
+                                <h1 class="modal-title right">
+                                    <span class="btm-line"><span class="inner-line"></span>
+                                        معلومة العضوية
+                                    </span>
+                                </h1>
                             </div>
                             {{-- @if($var != ) --}}
                             <div class="profile">
@@ -46,7 +50,7 @@
 
                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                         <label class="form-label dot">كلمة المرور</label>
-                                        <input type="password" name="password" class="form-control " placeholder=".. كلمة المرور" >
+                                        <input type="password" name="password" class="form-control " placeholder=".. كلمة المرور">
                                     </div>
                                 </div>
                                 <div class="form-action">

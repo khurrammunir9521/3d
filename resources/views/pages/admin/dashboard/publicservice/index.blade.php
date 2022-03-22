@@ -3,7 +3,6 @@
 
 <div class="content-main">
     <h3>طلبات الخدمات العامة</h3>
-
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
@@ -19,7 +18,6 @@
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%"
                                 id="basic-2">
-
                                 <thead>
                                     <tr>
                                         <th>رقم الطلب</th>
@@ -40,9 +38,6 @@
                                         <td><b>{{ $medi->specialization }}</b></td>
                                         <td><b>{{ $medi->email }}</b></td>
                                         <td><b>{{ $medi->gender }}</b></td>
-                                        <td><b>{{ $medi->id }}</b></td>
-                                        <td><b>{{ $medi->created_at->format('Y-m-d')
-                                                }}</b></td>
                                         <td>
                                             <a class="btn btn-primary" href="{{
                                                 route('publics.show', $medi->id)
@@ -56,9 +51,6 @@
                                         <td>{{ $medi->specialization }}</td>
                                         <td>{{ $medi->email }}</td>
                                         <td>{{ $medi->gender }}</td>
-                                        <td><b>{{ $medi->id }}</b></td>
-                                        <td><b>{{ $medi->created_at->format('Y-m-d')
-                                                }}</b></td>
                                         <td>
                                             <a class="btn btn-primary"
                                                 data-artid="<?php echo
@@ -75,9 +67,16 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
+                   
 
-                    @push('scripts')
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+@push('scripts')
                     <script type="text/javascript">
         $(function(){
             $('.link').click(function(){
@@ -99,8 +98,3 @@
         });
         </script>
                     @endpush
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

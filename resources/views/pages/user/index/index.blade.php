@@ -134,6 +134,7 @@
                  
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
+
                     <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>
@@ -464,8 +465,8 @@
     </section> -->
 
     <section class="banner sample">
-        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-3s" alt="banner-bg">
-        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-3s" alt="black-bg">
+        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-5s" alt="banner-bg">
+        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-5s" alt="black-bg">
         <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
         <div class="container">
             <div class="row justify-content-center">
@@ -486,7 +487,7 @@
                                 <div class="carousel-item" id="{{$key}}">
                                     @endif
                                     <div class="row justify-content-end">
-                                        <div class="col-md-4 col-lg-7 responsive-order">
+                                        <div class="col-md-4 col-lg-7 first-col">
                                             <div class="static-text">
 
 
@@ -563,7 +564,7 @@
                         <div class="col-md-8 padi-top">
                             <!-- counter -->
                             <div class="row">
-                                <div class="col-md-8"></div>
+                                <div class="col-md-8 tab-counter-width"></div>
                                 <div class="col-md-2 task-number">
                                     <div class="counter">
                                         @if(@$counter->start != null)
@@ -676,7 +677,7 @@
                                 @endif
                             </div>
                             <div class="row pt-5 mt-5 align-items-end" dir="rtl">
-                                <div class="col-md-9">
+                                <div class="col-lg-9 col-md-9 res-width-64">
                                     <div class="about-content" id="about-us" data-aos="fade-up">
                                         <span class="outline dot right-center">+3D</span>
                                         @if ($about != null)
@@ -711,7 +712,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3 col-md-12 res-width-36">
                                     <figcaption class="map-cap">
                                         <h6>مقر العمل</h6>
                                         <p>الرياض، المونسية، شارع احمد بن حنبل</p>

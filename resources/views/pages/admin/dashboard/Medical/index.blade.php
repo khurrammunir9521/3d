@@ -3,12 +3,12 @@
 
 
 <div class="content-main">
-    <h3>طلبات الخدمات الطبية</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-            <li><a href="{{ route('medi.index') }}">طلبات الخدمات الطبية</a></li>
+            <li><a href="#">طلبات الخدمات الطبية</a></li>
+
         </ol>
     </div>
 
@@ -71,17 +71,17 @@
                                                 }}">رأي</a>
                                         </td>
 
-                                    </tr>
-                                    @endif
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </tr>
+            @endif
+            @endforeach
+            </tbody>
+        </table>
     </div>
-
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+    
 </div>
 @endsection

@@ -2,11 +2,13 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
-
-/* new nav */
-.download-pdf {
-   margin-top: 20px;
+.first-col {
+    order: 1;
 }
+.top.boxContainer {
+    padding-top: 100px;
+}
+/* new nav */
 .mobile-nav .dot::before {
     margin: 3px -15px;
 }
@@ -384,7 +386,11 @@
         /* overflow: auto; */
         padding-top: 45px;
         padding-left: 0;
-        padding-bottom: 150px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .slide-logos {
+        margin-right: 17px;
     }
 
     .black-bg {
@@ -428,20 +434,11 @@
     }
 
     .hands.sample {
-        /* left: 0;
+        left: 0;
         width: 250px;
         bottom: 0;
         top: 160px;
-        right: 80px; */
-        left: 0;
-        width: 200px;
-        bottom: 0;
-        top: 160px;
-        right: 130px;
-    }
-
-    .responsive-order {
-        order: 2;
+        right: 80px;
     }
 
     .about-content .actions {
@@ -482,8 +479,8 @@
     .top.boxContainer .blue-box {
         top: 80px;
         left: 0;
-        right: 280px;
         margin: auto;
+        right: 270px;
     }
 
     .bottom.boxContainer {
@@ -601,13 +598,9 @@
         z-index: 1;
         top: 196px;
         /* width: 1040px; */
-        width: 335px;
+        width: 350px;
         right: 0px;
-        max-width: 360px;
-    }
-
-    .top.boxContainer {
-        padding-top: 100px;
+        max-width: 350px;
     }
 
     .modal.register .modal-header {
@@ -690,8 +683,8 @@
     .slick-slide img {
         display: block;
         margin: auto;
-        width: 85px !important;
-        height: 85px;
+        width: 90px !important;
+        height: 90px;
     }
 
     .map .btn {
@@ -1032,6 +1025,13 @@
     }
 
     /* asim */
+    .mobile-nav{
+        display: block !important;
+    }
+    .desktop-nav{
+        display: none !important;
+    }
+
     #healthServiesModal .carousel-control-next{
         top: auto !important;
         bottom: 169px;
@@ -1062,9 +1062,167 @@
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* asim */
-    .mobile-nav{
-        display: none !important;
+    .services-section .title .inner-line{
+        bottom: -10px !important;
     }
+    .tab-counter-width{
+        width: 58.33333333%;
+       }
+       
+    /* navbar css start here */
+
+   /* new nav */
+ 
+.mobile-nav .dot::before {
+    margin: 3px -15px;
+}
+.mobile-nav{
+    display: block !important;
+}
+.desktop-nav{
+    display: none !important;
+}
+
+.top.boxContainer img {
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+.map-place.boxContainer img {
+    width: 270px;
+    margin: 0px 10px;
+    display: block;
+}
+
+/* Sidebar */
+.about-content .description {
+    padding: 0px;
+}
+
+.mobile-profile{
+    padding: 0px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    display: flex;
+    margin: auto;
+    flex-flow: row-reverse;
+    align-items: center;
+}
+.mobile-profile a {
+    margin: 0 5px!important;
+    color: #1ea9d4;
+}
+.mobile-profile .left-side a img {
+    margin-top: 3px;
+    margin-left: 25px;
+}
+.mobile-pro-icon{
+    width:20%;
+}
+.mobile-logo{
+    width:70%;
+}
+.area-brand {
+    width: 110px;
+}
+.area-brand img{
+    width: 100%;
+    max-width: 80px;
+}
+.mobile-nav .sidebar-nav{
+    padding-top: 0px;
+}
+.mobile-social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.mobile-social-icon a{
+    margin-left: 20px;
+}
+.mob-tog-btn{
+    position: absolute !important;
+    left: 10px !important;
+    top: 15px;
+    box-shadow:none !important;
+}
+#sidebar-wrapper{
+    z-index: 10000;
+    position: fixed;
+    width:0;
+    height:100%;
+    overflow-y:hidden;
+    background: #fff;
+    /* opacity:0.9; */
+    transition:all .5s;
+    /* display:flex; */
+    align-items:center;
+  }
+  
+  /* Main Content */
+  #page-content-wrapper{
+    width: 100%;	
+    position: absolute;
+    padding:15px;
+      transition:all .5s;
+  }
+  
+  #menu-toggle{
+      transition:all .3s;
+      font-size:1em;
+      z-index: 2;
+      top: 30px ;
+  }
+  /* Change the width of the sidebar to display it*/
+  #wrapper.menuDisplayed #sidebar-wrapper{
+    width:250px;
+  }
+  
+  #wrapper.menuDisplayed #page-content-wrapper{
+    padding-left:250px;
+  }
+  
+  /* Sidebar styling */
+  .sidebar-nav{
+    padding:0;
+    list-style:none; 
+      transition:all .5s;
+      width:100%;
+      /* text-align:center; */
+  }
+  
+  .sidebar-nav li{
+    line-height:0px;  
+      width:100%;
+      transition:all .3s;
+      padding:10px;
+  }
+  
+  .sidebar-nav li a {
+    display:block;
+    text-decoration:none;
+    color:#1ea9d4;
+    white-space: nowrap;
+  }
+  
+  .mobile-nav  .sidebar-nav li:hover,  .mobile-nav  .sidebar-nav li :focus{
+     color: #fff !important;
+    background: #1ea9d4 !important;
+  }
+  /* .mobile-nav .nav-link:focus,.mobile-nav .nav-link:hover{
+    color: #fff !important;
+  } */
+  .mobile-nav .sidebar-nav li:hover a{
+    color: #fff !important;
+
+  }
+
+/* new nav end */
+
+
+    /* navbar css end here */
+
     #healthServiesModal .carousel-control-next{
         top: 700px !important;
         right: 293px !important;
@@ -1093,7 +1251,7 @@
     }
 
     .banner {
-        padding-top: 240px;
+        padding-top: 160px;
     }
 
     .final.two img {
@@ -1144,9 +1302,11 @@
         width: 100%;
         height: 330px;
     }
-
+    .map-place{
+        padding-bottom: 23px;
+       }
     .map-place .blue-box {
-        left: -14px;
+        left: 140px;
         bottom: -10px;
     }
 
@@ -1191,7 +1351,7 @@
         left: 0;
         width: 250px;
         bottom: 0px;
-        top: 210px;
+        top: 95px;
     }
 
     .about-content .actions {
@@ -1208,6 +1368,9 @@
     .map-cap {
         bottom: 0;
         padding-right: 0;
+        text-align: center;
+        margin-left: 154px;
+        padding-bottom: 10px;
     }
 
     .modal-title::after {
@@ -1270,7 +1433,7 @@
         right: -20px;
     } */
     .banner-bg.sample {
-        top: 215px;
+        top: 85px;
         width: 550px;
         right: 0;
         min-width: 630px;
@@ -1282,7 +1445,7 @@
         width: 450px;
     } */
     .black-bg.sample {
-        top: 96px;
+        top: 125px;
         width: 440px;
         left: 0;
     }
@@ -1532,6 +1695,15 @@
 /* Large Devices */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     /* asim */
+    .res-width-64 .about-content .description {
+        padding: 0px;
+    }
+    .res-width-64{
+        width: 44%;
+    }
+    .res-width-36{
+        width: 56%;
+    }
     #healthServiesModal .carousel-control-next{
     right: 422px !important;
     }
@@ -1719,12 +1891,24 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+ 
+    .banner .carousel-indicators{
+        top: 500px;
+    }
+
+    .res-width-64 .about-content .description {
+        padding: 0rem 4rem;
+    }
+    .res-width-64{
+        width: 64%;
+    }
+    .res-width-36{
+        width: 36%;
+    }
     .banner-bg.sample {
         width: 830px!important;
     }
-    .banner.sample .carousel-inner {
-        padding-bottom: 350px;
-    }
+   
     .hands.sample {
         left: 0px;
         width: 350px;
