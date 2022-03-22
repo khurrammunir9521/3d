@@ -21,24 +21,24 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Inactive
+                                        <label for="exampleInputEmail1">غير نشط
                                         </label>
                                         <input type="text" class="form-control"
                                             name="inactive" id=""
                                             aria-describedby="emailHelp"
-                                            placeholder="Enter heading">
+                                            placeholder="أدخل العنوان">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Active
+                                        <label for="exampleInputEmail1">نشيط
                                         </label>
                                         <input type="text" class="form-control"
                                             name="active" id=""
                                             aria-describedby=""
-                                            placeholder="Enter sub heading">
+                                            placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -46,11 +46,11 @@
                                 <div class="col-md-6">
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1"> Log
+                                        <label for="exampleInputEmail1"> سجل
                                         </label>
                                         <input type="text" class="form-control"
                                             name="log" id="" aria-describedby=""
-                                            placeholder="Enter log">
+                                            placeholder="أدخل السجل">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -59,14 +59,13 @@
                                 <div class="col-md-6">
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Team
-                                            member
+                                        <label for="exampleInputEmail1">أعضاء الفريق
                                         </label>
                                         <input type="number"
                                             class="form-control"
                                             name="team_member" id=""
                                             aria-describedby=""
-                                            placeholder="Enter Team member">
+                                            placeholder="أدخل عضو الفريق">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -75,25 +74,25 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Payment
+                                        <label for="exampleInputEmail1">دفع
                                         </label>
                                         <input type="number"
                                             class="form-control"
                                             name="payment" id=""
                                             aria-describedby=""
-                                            placeholder="Enter payments">
+                                            placeholder="أدخل المدفوعات">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Request
+                                        <label for="exampleInputEmail1">طلب
                                         </label>
                                         <input type="text" class="form-control"
                                             name="requests" id=""
                                             aria-describedby=""
-                                            placeholder="Enter request">
+                                            placeholder="أدخل الطلب">
                                         <small id="" class="form-text
                                             text-muted">
                                         </small>
@@ -101,7 +100,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Proposal
+                                        <label for="exampleInputEmail1">عرض
                                         </label>
                                         <input type="file"
                                             accept="application/pdf,
@@ -116,7 +115,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Invoice
+                                        <label for="exampleInputEmail1">فاتورة
                                         </label>
                                         <input type="file"
                                             accept="application/pdf,

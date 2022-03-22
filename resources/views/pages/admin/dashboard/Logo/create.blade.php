@@ -21,7 +21,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Logo </label>
+                                        <label for="exampleInputEmail1">شعار </label>
                                         <input type="file" class="form-control"
                                             name="logo1" id="" accept="image/*"
                                             type="file"
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Logo </label>
+                                        <label for="exampleInputEmail1">شعار </label>
                                         <input type="file" class="form-control"
                                             name="logo2" id="" accept="image/*"
                                             type="file"
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Logo </label>
+                                        <label for="exampleInputEmail1">شعار </label>
                                         <input type="file" class="form-control"
                                             name="logo3" id="" accept="image/*"
                                             type="file"
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">logo </label>
+                                        <label for="exampleInputEmail1">شعار </label>
                                         <input type="file" class="form-control"
                                             name="logo4" id="" accept="image/*"
                                             type="file"
@@ -74,7 +74,7 @@
                                 <div class="col-md-6">
                                      
                             <div class="form-group">
-                                <label for="exampleInputEmail1">logo </label>
+                                <label for="exampleInputEmail1">شعار </label>
                                 <input type="file" class="form-control"
                                     name="logo5" id="" accept="image/*"
                                     type="file"
@@ -88,7 +88,7 @@
                                 <div class="col-md-6">
                                     
                             <div class="form-group">
-                                <label for="exampleInputEmail1">logo </label>
+                                <label for="exampleInputEmail1">شعار </label>
                                 <input type="file" class="form-control"
                                     name="logo6" id="" accept="image/*"
                                     type="file"
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">logo </label>
+                                        <label for="exampleInputEmail1">شعار </label>
                                         <input type="file" class="form-control"
                                             name="logo7" id="" accept="image/*"
                                             type="file"
@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">logo </label>
+                                        <label for="exampleInputEmail1">شعار </label>
                                         <input type="file" class="form-control"
                                             name="logo8" id="" accept="image/*"
                                             type="file"
@@ -135,7 +135,7 @@
                           
 
                            
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">يقدم</button>
                             @endsection
                         </form>
                     </div>

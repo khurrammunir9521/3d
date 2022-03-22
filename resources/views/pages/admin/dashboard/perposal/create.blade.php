@@ -21,14 +21,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Order
+                                        <label for="exampleInputEmail1">ترتيب
                                         </label>
                                         <select class="form-select
                                             invoice-field" required
                                             name="order_id" aria-label="Default
                                             select example">
-                                            <option selected disabled>Select
-                                                Order</option>
+                                            <option selected disabled>اختر طلبا</option>
                                             @foreach($orders as $order)
                                             <option value="{{$order->id}}">{{$order->pa_name}}</option>
                                             @endforeach
@@ -37,95 +36,85 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Dates
+                                        <label for="exampleInputEmail1">تاريخ
                                         </label>
                                         <input type="date" class="form-control
                                             invoice-field" required
                                             name="date" id=""
                                             aria-describedby="emailHelp"
-                                            placeholder="Enter Date">
+                                            placeholder="أدخل التاريخ">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Valid
-                                            Till </label>
+                                        <label for="exampleInputEmail1">صالح لغاية</label>
                                         <input type="number" class="form-control
                                             invoice-field" required
                                             name="validtill" id=""
                                             aria-describedby=""
-                                            placeholder="Enter Valid till">
+                                            placeholder="أدخل صالح حتى">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">3D
-                                            Design Qty </label>
+                                        <label for="exampleInputEmail1">كمية التصميم ثلاثي الأبعاد </label>
                                         <input type="number" class="form-control
                                             invoice-field" required
                                             name="qty_design" id=""
                                             aria-describedby=""
-                                            placeholder="Enter 3D design
-                                            quantity">
+                                            placeholder="أدخل كمية التصميم ثلاثي الأبعاد">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">3D
-                                            Design Price/Unit </label>
+                                        <label for="exampleInputEmail1">سعر / وحدة تصميم ثلاثي الأبعاد </label>
                                         <input type="number" class="form-control
                                             invoice-field" required
                                             name="price_design" id=""
                                             aria-describedby=""
-                                            placeholder="Enter 3D design
-                                            quantity">
+                                            placeholder="أدخل كمية التصميم ثلاثي الأبعاد">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">3D Model
-                                            Qty </label>
+                                        <label for="exampleInputEmail1">كمية النموذج ثلاثي الأبعاد </label>
                                         <input type="number" class="form-control
                                             invoice-field" required
                                             name="qty_model" id=""
                                             aria-describedby=""
-                                            placeholder="Enter 3D model
-                                            quantity">
+                                            placeholder="أدخل كمية النموذج ثلاثي الأبعاد">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">3D Model
-                                            Price/Unit </label>
+                                        <label for="exampleInputEmail1">سعر النموذج ثلاثي الأبعاد / الوحدة </label>
                                         <input type="number" class="form-control
                                             invoice-field" required
                                             name="price_model" id=""
                                             aria-describedby=""
-                                            placeholder="Enter 3D model
-                                            quantity">
+                                            placeholder="أدخل كمية النموذج ثلاثي الأبعاد">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">VAT Rate
+                                        <label for="exampleInputEmail1">قيمة الضريبة
                                         </label>
                                         <input type="number" class="form-control
                                             invoice-field" required
                                             name="tax" id="" aria-describedby=""
-                                            placeholder="Enter VAT
-                                            rate">
+                                            placeholder="أدخل معدل ضريبة القيمة المضافة">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -133,7 +122,7 @@
 
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">يقدم</button>
                         </form>
                         @endsection
                     </div>
