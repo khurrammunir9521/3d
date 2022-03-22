@@ -75,14 +75,18 @@
     <script src="{{ asset('assets/js/datepicker/date-picker/datepicker.en.js') }}"></script>
     <script src="{{ asset('assets/js/datepicker/date-picker/datepicker.custom.js') }}"></script>
     <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
-    <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-    <script src="../assets/js/datatable/datatables/jquery.datatable.custom.js"></script>
+    <!-- <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/datatable/datatables/jquery.datatable.custom.js"></script> -->
     
     <!-- <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.js"></script> -->
 
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
+    
+
     <script src="{{ asset('assets/js/script.js') }}"></script>
+
+    
     <script src="{{ asset('assets/js/theme-customizer/customizer.js') }}"></script>
     <!-- login js-->
     <!-- Plugin used-->
@@ -104,26 +108,27 @@
     <script src="{{asset('user/assets/js/bootstrap.min.js')}}"></script>
     <!-- JQuery -->
     <!-- <script src="{{asset('user/assets/js/jquery.min.js')}}"></script> -->
-    <script>
-
-    </script>
+   
     <!-- Slick -->
     <script src="{{asset('user/assets/js/slick.min.js')}}"></script>
     
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<!-- <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script> -->
     <!-- Scripts -->
+
+    <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/datatable/datatables/datatable.custom.js"></script>
     <script src="{{asset('user/assets/js/scripts.js')}}"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             CKEDITOR.replace( 'ckeditor' );
 
             $('#example').DataTable();
         });
-    </script>
+    </script> -->
     @stack('scripts')
 
 </body>

@@ -3,27 +3,32 @@
 
 
 <div class="card-body">
-    <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
-    </nav>
+    <div class="breadcrumb-main">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pictures</a></li>
+            <li><a href="#">Summer 15</a></li>
+            <li>Italy</li>
+        </ol>
+    </div>
+    
+    <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                 
     <div class="table-responsive product-table medical-datatable">
-    <table class="table table-striped" style="width:100%" id="example">
+    <table class="table table-striped" style="width:100%" id="basic-2">
             <thead>
             <tr>
 
-                <th>   اسم المريض</th>
-                <th>  اسم الطبيب</th>
-                <th>التخصص</th>
-                <th>  ايميل الطبيب</th>
-                <th> المستشفى</th>
-                <th>المطلوب</th>
-                <th>   رقم الطلب</th>
-                <th>التاريخ</th>
-                <!-- <th>Action</th> -->
+                <th>Patient Name</th>
+                <th>Doctor Name</th>
+                <th>Docter Spec</th>
+                <th>Docter Email</th>
+                <th>Hospital</th>
+                <th>procedure</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
@@ -37,7 +42,7 @@
                 <td><b>{{ $medi->hospital }}</b></td>
                 <td><b>{{ $medi->procedure }}</b></td>
                 <td>
-                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">عرض</a>
+                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">View</a>
                 </td>
             </tr>
             @else
@@ -49,7 +54,7 @@
                 <td>{{ $medi->hospital }}</td>
                 <td>{{ $medi->procedure }}</td>
                 <td>
-                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">عرض</a>
+                    <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">View</a>
                 </td>
 
             </tr>

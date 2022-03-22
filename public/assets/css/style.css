@@ -31056,21 +31056,50 @@ span.twitter-typeahead .tt-suggestion {
 }
 
 /* datatable  */
-div.dataTables_wrapper div.dataTables_length select{
+/* div.dataTables_wrapper div.dataTables_length select{
   width: 76px !important;
   text-align: left !important;
 }
-.medical-datatable .dataTables_filter, .public-datatable .dataTables_filter{
-  display: none;
-}
+
 div.dataTables_wrapper div.dataTables_paginate{
   border: none;
 }
 .table-responsive{
   padding: 10px !important;
   padding-right: 0px !important;
+} */
+.medical-datatable .dataTables_filter, .public-datatable .dataTables_filter{
+  display: none;
 }
 .breadcrumb{
   margin-bottom: 15px !important;
+}
+
+ol.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+ol.breadcrumb li {
+   display: inline;
+  color: #717171;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+ol.breadcrumb li+li:before {
+  padding: 8px;
+  color: #6c757d;
+  content: "/\00a0";
+}
+ol.breadcrumb li a {
+  color: #24695c;
+  text-decoration: none;
+}
+ol.breadcrumb li a:hover {
+  color: #24695c;
+  text-decoration: none;
 }
 
