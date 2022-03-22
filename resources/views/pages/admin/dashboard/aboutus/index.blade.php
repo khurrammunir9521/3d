@@ -1,43 +1,65 @@
 @extends('layouts.admin.app')
 @section('content')
-<div class="card-body">
-<div class="breadcrumb-main">
+<div class="content-main">
+    <h3>صفحة من نحن</h3>
+    <div class="breadcrumb-main">
+       
         <ol class="breadcrumb">
             <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
             <li><a href="#">صفحات الموقع</a></li>
-            <li><a href="#">صفحة من نحن</a></li>
-            
+            <li><a href="{{ route('about.index') }}">صفحة من نحن</a></li>
+
         </ol>
     </div>
-    <a class="btn btn-primary mb-2" href="{{ route('about.create') }}"> إنشاء منتج جديد</a>
-    <div class="table-responsive product-table">
-        <table class="display" id="example">
-            <tr>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card medical-card">
+                    <div class="card-body p-0">
+                        <a class="btn btn-primary mb-2" href="{{
+                            route('about.create') }}"> إنشاء منتج جديد</a>
+                        <div class="table-responsive medical-datatable">
+                            <table class="display" style="width:100%"
+                                id="basic-2">
 
-                <th>Heading</th>
-                <th>Subheading</th>
-                <th>Bodytext</th>
-                <th >Action</th>
-            </tr>
-            @foreach ($abouts as $about)
-            <tr>
+                                <thead>
+                                    <tr>
 
-                <td>{{ $about->heading }}</td>
-                <td>{{ $about->subheading }}</td>
-                <td>{!! $about->bodytext !!}</td>
-                <td>
-                    <form action="{{ route('about.destroy', $about->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('about.edit', $about->id) }}">يحرر</a>
+                                        <th>عنوان</th>
+                                        <th>العنوان الفرعي</th>
+                                        <th>نص</th>
+                                        <!-- <th>Action</th> -->
+                                    </tr>
 
-                        @csrf
-                        @method('DELETE')
+                                    @foreach ($abouts as $about)
+                                </thead>
+                                <tr>
 
-                        <button type="submit" class="btn btn-danger">حذف</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </table>
+                                    <td>{{ $about->heading }}</td>
+                                    <td>{{ $about->subheading }}</td>
+                                    <td>{!! $about->bodytext !!}</td>
+                                    <td>
+                                        <form action="{{ route('about.destroy',
+                                            $about->id) }}" method="POST">
+                                            <a class="btn btn-primary" href="{{
+                                                route('about.edit', $about->id)
+                                                }}">يحرر</a>
+
+                                            @csrf
+                                            @method('DELETE')
+
+                                            <button type="submit" class="btn
+                                                btn-danger">حذف</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
+                    @endsection
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-@endsection
