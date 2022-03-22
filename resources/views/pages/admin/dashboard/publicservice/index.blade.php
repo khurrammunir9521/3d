@@ -21,14 +21,42 @@
                                 <thead>
                                     <tr>
 
-                                        <th>اسم المريض</th>
-                                        <th>التخصص</th>
-                                        <th> البريد الالكتروني</th>
-                                        <th>النوع</th>
-                                        <th>رقم الطلب</th>
-                                        <th>التاريخ</th>
-                                        <!-- <th>Action</th> -->
-                                    </tr>
+                <th>اسم المريض</th>
+                <th>التخصص</th>
+                <th>  البريد الالكتروني</th>
+                <th>النوع</th>
+                <th>رقم الطلب</th>
+                <th>التاريخ</th>
+                <!-- <th>Action</th> -->
+            </tr>
+            </thead>
+            <tbody>
+            @foreach ($publics as $medi)
+            @if($medi->seen == 0)
+            <tr>
+                <td><b>{{ $medi->full_name}}</b></td>
+                <td><b>{{ $medi->specialization }}</b></td>
+                <td><b>{{ $medi->email }}</b></td>
+                <td><b>{{ $medi->gender }}</b></td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
+                <td>
+                    <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">عرض</a>
+                </td>
+            </tr>
+            @else
+            <tr>
+                <td>{{ $medi->full_name}}</td>
+                <td>{{ $medi->specialization }}</td>
+                <td>{{ $medi->email }}</td>
+                <td>{{ $medi->gender }}</td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
+                <td>
+                    <a class="btn btn-primary" data-artid="<?php echo $medi['id']; ?>" href="{{ route('publics.show', $medi->id) }}">عرض</a>
+                </td>
+            </tr>
+            @endif
 
                                 </thead>
                                 <tbody>

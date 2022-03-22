@@ -30,7 +30,7 @@ class statuschanged extends Mailable
      */
     public function build()
     {
-        return $this->subject('contact@3dorgans.com')
+        return $this->subject('einnoventiondev2@gmail.com')
             ->view('emails.statusChanged');
     }
 }

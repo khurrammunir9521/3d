@@ -93,31 +93,32 @@
                         <div class="code-box-copy">
                           <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#sell-overview" title="Copy"><i class="icofont icofont-copy-alt"></i></button>
                           <pre><code class="language-html" id="sell-overview">                                     &lt;div class="card"&gt; 
-  &lt;div class="card-header"&gt;
-    &lt;div class="header-top d-sm-flex align-items-center"&gt;
-      &lt;h5&gt; Sell Overview &lt;/h5&gt;
-       &lt;div class="center-content" &gt;
-         &lt;p class="d-flex align-items-center"&gt;                                        
-           &lt;i class="toprightarrow-primary fa fa-arrow-up me-2" &gt; &lt;/i&gt;
-            86% Growth
-         &lt;/p&gt; 
-      &lt;/div&gt;
-      &lt;div class="setting-list"&gt;
-        &lt;ul class="list-unstyled setting-option"&gt;
-          &lt;li&gt;&lt;div class="setting-primary"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;i class="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;i class="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;i class="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;i class="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;i class="icofont icofont-error close-card font-primary"&gt; &lt;/i&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="card-body p-0"&gt;
-    &lt;div id="chart-dashbord"&gt;&lt;/div&gt;                                       
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                              &lt;div class="card-header"&gt;
+                                &lt;div class="header-top d-sm-flex align-items-center"&gt;
+                                  &lt;h5&gt; Sell Overview &lt;/h5&gt;
+                                  &lt;div class="center-content" &gt;
+                                    &lt;p class="d-flex align-items-center"&gt;                                        
+                                      &lt;i class="toprightarrow-primary fa fa-arrow-up me-2" &gt; &lt;/i&gt;
+                                        86% Growth
+                                    &lt;/p&gt; 
+                                  &lt;/div&gt;
+                                  &lt;div class="setting-list"&gt;
+                                    &lt;ul class="list-unstyled setting-option"&gt;
+                                      &lt;li&gt;&lt;div class="setting-primary"&gt;&lt;i class="icon-settings"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;i class="view-html fa fa-code font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;i class="icofont icofont-maximize full-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;i class="icofont icofont-minus minimize-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;i class="icofont icofont-refresh reload-card font-primary"&gt;&lt;/i&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;i class="icofont icofont-error close-card font-primary"&gt; &lt;/i&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="card-body p-0"&gt;
+                                &lt;div id="chart-dashbord"&gt;&lt;/div&gt;                                       
+                              &lt;/div&gt;
+                            &lt;/div&gt;</code>
+                          </pre>
                         </div>
                       </div>
                     </div>
