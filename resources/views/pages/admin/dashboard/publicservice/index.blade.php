@@ -2,14 +2,14 @@
 @section('content')
 
 <div class="card-body">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
-</nav>
+<div class="breadcrumb-main">
+        <ol class="breadcrumb">
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
+            <li><a href="#">طلبات الخدمات العامة</a></li>
+           
+        </ol>
+    </div>
     <div class="table-responsive product-table public-datatable">
         <table class="table table-striped" style="width:100%" id="example">
         <thead>
