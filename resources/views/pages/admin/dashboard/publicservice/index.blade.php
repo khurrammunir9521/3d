@@ -22,12 +22,11 @@
 
                                 <thead>
                                     <tr>
-
+                                        <th>رقم الطلب</th>
                                         <th>اسم المريض</th>
                                         <th>التخصص</th>
                                         <th> البريد الالكتروني</th>
                                         <th>النوع</th>
-                                        <th>رقم الطلب</th>
                                         <th>التاريخ</th>
                                         <!-- <th>Action</th> -->
                                     </tr>
@@ -36,7 +35,8 @@
                                     @foreach ($publics as $medi)
                                     @if($medi->seen == 0)
                                     <tr>
-                                        <td><b>{{ $medi->full_name}}</b></td>
+                                        <td><b><a href="{{route('publics.show', $medi->id)}}">{{ $medi->id}}</a></b></td>
+                                        <td><b><a href="{{route('publics.show', $medi->id)}}">{{ $medi->full_name}}</a></b></td>
                                         <td><b>{{ $medi->specialization }}</b></td>
                                         <td><b>{{ $medi->email }}</b></td>
                                         <td><b>{{ $medi->gender }}</b></td>
@@ -51,7 +51,8 @@
                                     </tr>
                                     @else
                                     <tr>
-                                        <td>{{ $medi->full_name}}</td>
+                                        <td><a href="{{route('publics.show', $medi->id)}}">{{ $medi->id}}</a></td>
+                                        <td><a href="{{route('publics.show', $medi->id)}}">{{ $medi->full_name}}</a></td>
                                         <td>{{ $medi->specialization }}</td>
                                         <td>{{ $medi->email }}</td>
                                         <td>{{ $medi->gender }}</td>

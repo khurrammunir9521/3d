@@ -133,34 +133,29 @@ class HomeController extends Controller
     }
     public function edituser(Request $request, $id)
     {
-        // dd($request->all());
-        $request->validate([
-            'profile' => 'required',
-            'name' => 'required',
-            'field' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+        // if ($request->hasFile('profile')) {
+        //     if (isset($request->profile) && !empty($request->profile)) {
+        //         if (!empty(auth()->user()->profile)) {
+        //             Storage::disk('public')->delete(auth()->user()->profile);
+        //         }
+        //         $profile  = Storage::disk('public')->put('upload/', $request->profile);
+        //         $filePath = 'public/storage/upload/'.$profile;
+        //     }
+        // } else {
+        //     $profile  = (auth()->user()->profile);
+        // }
+        $imageName = time().'.'.$request->profile->extension();  
+        $request->profile->move(public_path('upload/images'), $imageName);
+        $filePath = 'upload/images/'.$imageName;
+        User::find(auth()->user()->id)->update([
+            'profile' => $filePath,
+            'name' => $request->name,
+            'email' => $request->email,
+            'field' => $request->field,
+            'password' => Hash::make($request->password),
         ]);
-        if (Hash::check($request->password, auth()->user()->password)) {
-            if ($request->hasFile('profile')) {
-                if (isset($request->profile) && !empty($request->profile)) {
-                    if (!empty(auth()->user()->profile)) {
-                        Storage::disk('public')->delete(auth()->user()->profile);
-                    }
-                    $profile  = Storage::disk('public')->put('upload/', $request->profile);
-                }
-            } else {
-                $profile  = (auth()->user()->profile);
-            }
-            User::find(auth()->user()->id)->update([
-                'profile' => $profile,
-                'name' => $request->name,
-                'email' => $request->email,
-                'field' => $request->field,
-                'password' => Hash::make($request->password),
-            ]);
-            return redirect()->route('/');
-        }
+        return redirect()->route('/');
+        
        
     }
 }

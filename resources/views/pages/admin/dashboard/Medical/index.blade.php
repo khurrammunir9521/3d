@@ -38,8 +38,8 @@
                                     @foreach ($medical as $medi)
                                     @if($medi->seen == 0)
                                     <tr>
-                                        <td><b>{{ $medi->id }}</b></td>
-                                        <td><b>{{ $medi->pa_name}}</b></td>
+                                        <td><b><a  href="{{ route('medi.show', $medi->id) }}">{{ $medi->id }}</a></b></td>
+                                        <td><b><a  href="{{ route('medi.show', $medi->id) }}">{{ $medi->pa_name}}</a></b></td>
                                         <td><b>{{ $medi->dr_name }}</b></td>
                                         <td><b>{{ $medi->dr_spec}}</b></td>
                                         <td><b>{{ $medi->dr_email }}</b></td>
@@ -55,7 +55,8 @@
                                     </tr>
                                     @else
                                     <tr>
-                                        <td>{{ $medi->pa_name}}</td>
+                                        <td><a  href="{{ route('medi.show', $medi->id) }}">{{ $medi->id }}</a></td>
+                                        <td><a  href="{{ route('medi.show', $medi->id) }}">{{ $medi->pa_name}}</a></td>
                                         <td>{{ $medi->dr_name }}</td>
                                         <td>{{ $medi->dr_spec}}</td>
                                         <td>{{ $medi->dr_email }}</td>

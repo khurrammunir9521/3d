@@ -24,7 +24,7 @@
                                 @if (Auth::user()->profile == null)
                                 <img id="blah1" src="{{asset('user/assets/icons/edit-avatar.svg')}}" class="mx-auto d-block imageupload1" width="150" alt="avatar" style="clip-path: circle() !important ;height: 150% !important;" alt="dashboard_logo" />
                                 @else
-                                <img id="blah1" src="{{ asset('storage/' . Auth::user()->profile) }}" alt="dashboard_logo" class="mx-auto d-block imageupload1" style="clip-path: circle() !important ;height:150% !important;" width="150" />
+                                <img id="blah1" src="{{ asset(Auth::user()->profile) }}" alt="dashboard_logo" class="mx-auto d-block imageupload1" style="clip-path: circle() !important ;height:150% !important;" width="150" />
                                 @endif
                                 @endauth
                                 <input id="imgInp1" type="file" class="chose1" value="{{Auth::user()->profile}}" name="profile" accept="image/*" style="display: none;">
@@ -50,7 +50,7 @@
                                     </div>
                                 </div>
                                 <div class="form-action">
-                                    <button class="btn btn-form mx-3 with-arrow disabled" type="submit">حفظ</button>
+                                    <button class="btn btn-form mx-3 with-arrow " type="submit">حفظ</button>
                                     <p>تعديل بيانات التسجيل</p>
                                 </div>
                             </form>
