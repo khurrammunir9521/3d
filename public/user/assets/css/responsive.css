@@ -4,7 +4,9 @@
 /* asim */
 
 /* new nav */
-
+.mobile-nav .dot::before {
+    margin: 3px -15px;
+}
 .mobile-nav{
     display: block !important;
 }
@@ -28,7 +30,7 @@
     padding: 0px;
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 30px;
     display: flex;
     margin: auto;
     flex-flow: row-reverse;
@@ -74,7 +76,7 @@
 }
 #sidebar-wrapper{
     z-index: 10000;
-    position: absolute;
+    position: fixed;
     width:0;
     height:100%;
     overflow-y:hidden;
@@ -97,6 +99,7 @@
       transition:all .3s;
       font-size:1em;
       z-index: 2;
+      top: 30px ;
   }
   /* Change the width of the sidebar to display it*/
   #wrapper.menuDisplayed #sidebar-wrapper{
@@ -1915,6 +1918,7 @@
     #healthServiesModal .carousel-control-next{
         right: 750px !important;
     }
- 
 
 }
+
+/* zahid */

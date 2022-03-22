@@ -2,6 +2,14 @@
 @section('content')
 
 <div class="card-body">
+<div class="breadcrumb-main">
+        <ol class="breadcrumb">
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+
+            <li><a href="#">حسابات التواصل الاجتماعي</a></li>
+            
+        </ol>
+    </div>
     <a class="btn btn-primary mb-2" href="{{ route('social.create') }}"> Create New Product</a>
     <div class="table-responsive product-table">
         <table class="display" id="example">

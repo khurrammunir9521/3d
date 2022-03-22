@@ -54,7 +54,6 @@
 </head>
 
 <body>
-
     <div class="content-wrapper hide-on-load">
         <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
             <div class="container-fluid">
@@ -202,6 +201,15 @@
                     <li class="nav-item">
                         <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
                     </li>
+                   @if(Auth::user()) 
+                    <li class="nav-item pt-0"> <a href="#requests" class="nav-link ms-auto dot " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
+                    <li class="nav-item pt-0">
+                        <a class="nav-link dot" href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a>
+                        <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                    @else
                     <li class="nav-item">
 
                         <a href="#login" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
@@ -210,7 +218,7 @@
                         <a href="#register" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
 
                     </li>
-
+                    @endif
                     <li class="">
                         <div class="mobile-social-icon">
 
@@ -219,7 +227,6 @@
 
                         </div>
                     </li>
-
                 </ul>
             </div>
         </div>

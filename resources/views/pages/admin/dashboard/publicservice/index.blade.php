@@ -2,24 +2,26 @@
 @section('content')
 
 <div class="card-body">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
-</nav>
+<div class="breadcrumb-main">
+        <ol class="breadcrumb">
+                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
+            <li><a href="#">طلبات الخدمات العامة</a></li>
+           
+        </ol>
+    </div>
     <div class="table-responsive product-table public-datatable">
         <table class="table table-striped" style="width:100%" id="example">
         <thead>
             <tr>
 
-                <th>Patient Name</th>
-                <th>Specialization</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th>Action</th>
+                <th>اسم المريض</th>
+                <th>التخصص</th>
+                <th>  البريد الالكتروني</th>
+                <th>النوع</th>
+                <th>رقم الطلب</th>
+                <th>التاريخ</th>
+                <!-- <th>Action</th> -->
             </tr>
             </thead>
             <tbody>
@@ -30,10 +32,10 @@
                 <td><b>{{ $medi->specialization }}</b></td>
                 <td><b>{{ $medi->email }}</b></td>
                 <td><b>{{ $medi->gender }}</b></td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
-                  
-                    <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">View</a>
-                   
+                    <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">عرض</a>
                 </td>
             </tr>
             @else
@@ -42,8 +44,10 @@
                 <td>{{ $medi->specialization }}</td>
                 <td>{{ $medi->email }}</td>
                 <td>{{ $medi->gender }}</td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
-                    <a class="btn btn-primary" data-artid="<?php echo $medi['id']; ?>" href="{{ route('publics.show', $medi->id) }}">View</a>
+                    <a class="btn btn-primary" data-artid="<?php echo $medi['id']; ?>" href="{{ route('publics.show', $medi->id) }}">عرض</a>
                 </td>
             </tr>
             @endif

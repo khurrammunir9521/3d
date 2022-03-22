@@ -1,7 +1,7 @@
 <div class="page-main-header">
   <div class="main-header-right row m-0">
     <div class="main-header-left">
-      <div class="logo-wrapper"><a href="{{route('home')}}"><img class="img-fluid" src="{{asset('assets/images/logo/logo.svg')}}" alt=""></a></div>
+      <div class="logo-wrapper"><a href="{{route('home')}}"><img class="img-fluid" src="{{asset('assets/images/logo/logo-hd.svg')}}" alt=""></a></div>
       <div class="dark-logo-wrapper"><a href="index.html"><img class="img-fluid" src="{{asset('assets/images/logo/dark-logo.png')}}" alt=""></a></div>
       <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle"></i></div>
     </div>
@@ -10,7 +10,7 @@
         <li>
           <form class="form-inline search-form">
             <div class="search-bg"><i class="fa fa-search"></i>
-              <input class="form-control-plaintext" placeholder="Search here.....">
+              <input class="form-control-plaintext" placeholder="ابحث هنا.....">
             </div>
           </form><span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
         </li>
@@ -72,7 +72,7 @@
         </li>
         <!-- notifications -->
         <li class="onhover-dropdown p-0">
-          <button class="btn btn-primary" type="button"><a href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>Log Out</a></button>
+          <button class="btn btn-primary" type="button"><a href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a></button>
           <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
           </form>
