@@ -1,20 +1,27 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="card-body">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page">الفاتورة</li>
+    </ol>
+    </nav>
     <a class="btn btn-primary mb-2" href="{{ route('invoicess.create') }}"> New +</a>
     <div class="table-responsive product-table">
         <table class="display" id="example">
             <tr>
 
 
-                <th>Price_model</th>
-                <th>Price_design</th>
-                <th>Qty_model</th>
-                <th>Qty_design</th>
-                <th>Validtill</th>
-                <th>Date</th>
-                <th>Tax</th>
-                <th>Actions</th>
+            <th>السعر_نموذج</th>
+                <th>السعر_تصميم</th>
+                <th>نموذج_الكمية</th>
+                <th>الكمية التصميم</th>
+                <th>صالح لغاية</th>
+                <th>تاريخ</th>
+                <th>ضريبة</th>
+                <th>أجراءات</th>
 
             </tr>
             @foreach ($invoices as $invoice)
