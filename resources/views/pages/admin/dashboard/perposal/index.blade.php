@@ -1,55 +1,74 @@
 @extends('layouts.admin.app')
 @section('content')
-<div class="card-body">
-<div class="breadcrumb-main">
+<div class="content-main">
+    <h3>وضع اليد</h3>
+    <div class="breadcrumb-main">
         <ol class="breadcrumb">
-                        <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+            <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-            <li><a href="#">وضع اليد</a></li>
-           
+            <li><a href="{{ route('perposal.index') }}">وضع اليد</a></li>
+
         </ol>
     </div>
-    <a class="btn btn-primary mb-2" href="{{ route('perposal.create') }}"> New +</a>
-    <div class="table-responsive product-table">
-        <table class="display" id="example">
-            <tr>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card medical-card">
+                    <div class="card-body p-0">
+                        <a class="btn btn-primary mb-2" href="{{
+                            route('perposal.create') }}"> جديد +</a>
+                        <div class="table-responsive medical-datatable">
+                            <table class="display" style="width:100%"
+                                id="basic-2">
+                                <thead>
+                                    <tr>
+                                        <th>السعر_نموذج</th>
+                                        <th>السعر_تصميم</th>
+                                        <th>نموذج_الكمية</th>
+                                        <th>الكمية التصميم</th>
+                                        <th>صالح لغاية</th>
+                                        <th>تاريخ</th>
+                                        <th>ضريبة</th>
+                                        <th>أجراءات</th>
+                                    </tr>
+                                </thead>
+                                @foreach ($invoices as $invoice)
+                                <tr>
 
+                                    <td>{{$invoice->price_model}}</td>
+                                    <td>{{$invoice->price_design}}</td>
+                                    <td>{{$invoice->qty_model}}</td>
+                                    <td>{{$invoice->qty_design}}</td>
+                                    <td>{{$invoice->validtill}}</td>
+                                    <td>{{$invoice->date}}</td>
+                                    <td>{{$invoice->tax}}</td>
 
-                <th>السعر_نموذج</th>
-                <th>السعر_تصميم</th>
-                <th>نموذج_الكمية</th>
-                <th>الكمية التصميم</th>
-                <th>صالح لغاية</th>
-                <th>تاريخ</th>
-                <th>ضريبة</th>
-                <th>أجراءات</th>
+                                    <td>
+                                        <form action="{{
+                                            route('perposal.destroy', $invoice->id)
+                                            }}" method="POST">
+                                            <a class="btn btn-primary" href="{{
+                                                route('perposal.edit',
+                                                $invoice->id) }}">يحرر</a>
 
-            </tr>
-            @foreach ($invoices as $invoice)
-            <tr>
+                                            @csrf
+                                            @method('DELETE')
 
-                <td>{{$invoice->price_model}}</td>
-                <td>{{$invoice->price_design}}</td>
-                <td>{{$invoice->qty_model}}</td>
-                <td>{{$invoice->qty_design}}</td>
-                <td>{{$invoice->validtill}}</td>
-                <td>{{$invoice->date}}</td>
-                <td>{{$invoice->tax}}</td>
-
-                <td>
-                    <form action="{{ route('perposal.destroy', $invoice->id) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('perposal.edit', $invoice->id) }}">Edit</a>
-
-                        @csrf
-                        @method('DELETE')
-
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                    <a class="btn btn-primary" href="{{ route('perposal.show', $invoice->id) }}">Invoice</a>
-                </td>
-            </tr>
-            @endforeach
-        </table>
+                                            <button type="submit" class="btn
+                                                btn-danger">حذف</button>
+                                        </form>
+                                        <a class="btn btn-primary" href="{{
+                                            route('perposal.show', $invoice->id)
+                                            }}">فاتورة</a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
+                    @endsection
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-@endsection
