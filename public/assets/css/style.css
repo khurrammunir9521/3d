@@ -31038,9 +31038,9 @@ div.dataTables_wrapper div.dataTables_length select{
   width: 76px !important;
   text-align: left !important;
 }
-/* .medical-datatable .dataTables_filter{
+.medical-datatable .dataTables_filter, .public-datatable .dataTables_filter{
   display: none;
-} */
+}
 div.dataTables_wrapper div.dataTables_paginate{
   border: none;
 }

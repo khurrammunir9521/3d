@@ -11,7 +11,7 @@
     </ol>
     </nav>
     <div class="table-responsive product-table medical-datatable">
-        <table class="table table-striped" style="width:100%">
+    <table class="table table-striped" style="width:100%" id="example">
             <thead>
             <tr>
 
