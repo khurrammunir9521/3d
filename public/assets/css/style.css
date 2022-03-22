@@ -31163,7 +31163,9 @@ thead tr th:last-child, tbody tr td:last-child{
   margin-right: 0px;
 }
 
-
+input,select,textarea,label{
+  background:transparent !important;
+}
 
 
 
