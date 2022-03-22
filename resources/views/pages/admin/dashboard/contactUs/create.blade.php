@@ -15,18 +15,16 @@
       </div>
 
       <div class="form-group">
-        <label for="exampleInputEmail1"> Heading </label>
-        <input type="text" class="form-control" name="heading"id="" aria-describedby="" placeholder="Enter sub heading">
-        <small id="" class="form-text text-muted"></small>
-      </div>
-
-      <div class="form-group">
         <label for="exampleInputEmail1">Sub Heading </label>
         <input type="text" class="form-control" name="subheading"id="" aria-describedby="" placeholder="Enter sub heading">
         <small id="" class="form-text text-muted"></small>
       </div>
-
-
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1"> Heading </label>
+        <input type="text" class="form-control" name="heading"id="" aria-describedby="" placeholder="Enter sub heading">
+        <small id="" class="form-text text-muted"></small>
+      </div>
 
       <div class="form-group">
         <label for="exampleInputEmail1">Body text </label>
