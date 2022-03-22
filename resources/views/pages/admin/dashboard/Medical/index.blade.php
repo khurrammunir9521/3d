@@ -22,14 +22,15 @@
 
             <thead>
             <tr>
-
-                <th>Patient Name</th>
-                <th>Doctor Name</th>
-                <th>Docter Spec</th>
-                <th>Docter Email</th>
-                <th>Hospital</th>
-                <th>procedure</th>
-                <th>Action</th>
+                <th> اسم المريض</th>
+                <th>  اسم الطبيب</th>
+                <th>التخصص</th>
+                <th>  ايميل الطبيب</th>
+                <th> المستشفى</th>
+                <th>المطلوب</th>
+                <th>   رقم الطلب</th>
+                <th>التاريخ</th>
+                <!-- <th>Action</th> -->
             </tr>
             </thead>
             <tbody>
@@ -42,6 +43,8 @@
                 <td><b>{{ $medi->dr_email }}</b></td>
                 <td><b>{{ $medi->hospital }}</b></td>
                 <td><b>{{ $medi->procedure }}</b></td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
                     <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">View</a>
                 </td>
@@ -54,6 +57,8 @@
                 <td>{{ $medi->dr_email }}</td>
                 <td>{{ $medi->hospital }}</td>
                 <td>{{ $medi->procedure }}</td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
                     <a class="btn btn-primary" href="{{ route('medi.show', $medi->id) }}">View</a>
                 </td>

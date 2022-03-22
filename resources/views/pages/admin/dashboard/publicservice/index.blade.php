@@ -32,6 +32,8 @@
                 <td><b>{{ $medi->specialization }}</b></td>
                 <td><b>{{ $medi->email }}</b></td>
                 <td><b>{{ $medi->gender }}</b></td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
                     <a class="btn btn-primary" href="{{ route('publics.show', $medi->id) }}">عرض</a>
                 </td>
@@ -42,6 +44,8 @@
                 <td>{{ $medi->specialization }}</td>
                 <td>{{ $medi->email }}</td>
                 <td>{{ $medi->gender }}</td>
+                <td><b>{{ $medi->id }}</b></td>
+                <td><b>{{ $medi->created_at->format('Y-m-d') }}</b></td>
                 <td>
                     <a class="btn btn-primary" data-artid="<?php echo $medi['id']; ?>" href="{{ route('publics.show', $medi->id) }}">عرض</a>
                 </td>
