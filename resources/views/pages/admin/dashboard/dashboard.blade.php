@@ -63,11 +63,10 @@
     </div>
 
   </div>
+</div>
+<div class="container-fluid">
   <div class="row">
-    
-
-
-  <div class="col-xl-6 col-50 box-col-6 des-xl-50">
+  <div class="col-md-3">
                     <div class="card">
                       <div class="card-header">
                         <div class="header-top d-sm-flex align-items-center">
@@ -125,7 +124,7 @@
                   </div>
 
                   <!-- letest -->
-                  <div class="col-xl-4 col-50 box-col-4 des-xl-50">
+                  <div class="col-md-4">
                     <div class="card latest-update-sec">
                       <div class="card-header">
                         <div class="header-top d-sm-flex align-items-center">
@@ -450,7 +449,7 @@
                   </div>
 
                   <!-- recent order -->
-                  <div class="col-xl-12 recent-order-sec">
+                  <div class="col-md-5 recent-order-sec">
                     <div class="card">
                       <div class="card-body">
                         <div class="table-responsive">

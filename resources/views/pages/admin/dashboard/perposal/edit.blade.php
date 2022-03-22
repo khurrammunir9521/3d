@@ -49,7 +49,7 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="exampleInputEmail1">VAT Rate </label>
+                <label for="exampleInputEmail1">قيمة الضريبة </label>
                 <input type="number" class="form-control invoice-field" value="{{$invoice->tax}}" required name="tax" id="" aria-describedby="" placeholder="Enter VAT rate">
                 <small id="" class="form-text text-muted"></small>
             </div>
@@ -57,6 +57,6 @@
 
 
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">يقدم</button>
 </form>
 @endsection
