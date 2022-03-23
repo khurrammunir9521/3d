@@ -19,6 +19,8 @@
 <form method="POST" action="{{ route('tech.update', $tech->id) }}">
     @csrf
     @method('put')
+    <div class="row">
+
     <div class="col-md-6">
     <div class="form-group">
         <label for="exampleInputEmail1">Heading </label>
@@ -35,13 +37,14 @@
         <small id="" class="form-text text-muted"></small>
     </div>
     </div>
-    <div class="col-md-6">
+
 
     <div class="form-group">
         <label for="exampleInputEmail1">Body text </label>
         <textarea id="" name="bodytext" placeholder="Enter body text"rows="4" cols="50" class="ckeditor form-control">
             {{$tech->bodytext}}
         </textarea>
+    
     </div>
     </div>
 
