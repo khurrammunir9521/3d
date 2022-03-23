@@ -40,7 +40,7 @@
                                                 <a class="btn btn-primary"
                                                     href="{{
                                                     route('counter.edit', $tec->id)
-                                                    }}">Edit</a>
+                                                    }}">يحرر</a>
 
                                                 @csrf
                                                 @method('DELETE')

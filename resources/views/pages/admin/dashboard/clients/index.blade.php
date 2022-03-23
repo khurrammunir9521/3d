@@ -60,7 +60,7 @@
                                             $client->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{
                                                 route('client.edit', $client->id)
-                                                }}">Edit</a>
+                                                }}">يحرر</a>
 
                                             @csrf
                                             @method('DELETE')

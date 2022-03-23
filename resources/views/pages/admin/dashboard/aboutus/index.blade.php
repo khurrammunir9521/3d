@@ -28,6 +28,7 @@
                                         <th>عنوان</th>
                                        
                                         <th>نص</th>
+                                        <th></th>
                                         <!-- <th>Action</th> -->
                                     </tr>
 
