@@ -31163,7 +31163,9 @@ thead tr th:last-child, tbody tr td:last-child{
   margin-right: 0px;
 }
 
-
+.notification-dropdown.onhover-show-div{
+  left: 0 !important;
+}
 
 
 
