@@ -6,7 +6,6 @@ $(document).ready(function() {
         "paging":   true,
         "ordering": false,
         "info":     false,
-        
     });
     $('#basic-3').DataTable({
         "order": [[ 3, "desc" ]]
