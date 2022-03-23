@@ -13,6 +13,9 @@ use App\Notifications\MedicalNotification;
 use Symfony\Component\Console\Question\Question;
 use App\Models\Feedback;
 use App\Mail\MedicalMail;
+use App\Mail\ProposelMail;
+use App\Mail\InvoiceMail;
+use App\Models\Invoice;
 
 class MedicalController extends Controller
 {
@@ -44,12 +47,13 @@ class MedicalController extends Controller
             'order_id' => $med->id,
         ]);
         $users = User::where('role', 'admin')->orwhere('id',$users->id)->first();
+        $user = User::where('id',Auth::id())->first();
         $users->notify(new MedicalNotification($users));
         $details = [
-            'title' =>$users->name,
+            'title' =>$user->name,
             'body' => 'Your medical request have been created',
         ];
-        \Mail::to($users->email)->send(new \App\Mail\MedicalMail($details));
+        \Mail::to($user->email)->send(new \App\Mail\MedicalMail($details));
         return redirect()->route('home')->with('error_code', 5);
     }
 
@@ -78,42 +82,76 @@ class MedicalController extends Controller
 
     public function updated(Request $request)
     {
+      
         $order = Medical::find($request->id);
         $user = User::find($order->user_id);
-        if ($request->status = 2) {
+        if ($request->status = 1) {
+            $order->status = 1;
+            $order->save();
+            $details = [
+                'title' =>  $user->name,
+                'body' => $order->status,
+            ];
+            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
+        }
+        if ($request->status =2) {
             $order->status = 2;
             $order->save();
+            $details = [
+                'title' =>  $user->name,
+                'body' => $order->status,
+            ];
+            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status =3) {
+       if ($request->status =3 ) {
             $order->status = 3;
             $order->save();
+            $details = [
+                'title' =>  $user->name,
+                'body' => $order->status,
+            ];
+            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status =4 ) {
+        if ($request->status =4) {
             $order->status = 4;
             $order->save();
+            $details = [
+                'title' =>  $user->name,
+                'body' => $order->status,
+            ];
+            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status =5) {
+        if ($request->status=5) {
             $order->status = 5;
             $order->save();
+            $details = [
+                'title' =>  $user->name,
+                'body' => $order->status,
+            ];
+            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status=6) {
+       if ($request->status =6) {
             $order->status = 6;
             $order->save();
+            $details = [
+                'title' =>  $user->name,
+                'body' => $order->status,
+            ];
+            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status =7) {
+        if  ($request->status =7)  {
             $order->status = 7;
             $order->save();
+            $details = [
+                'title' =>  $user->name,
+                'body' => $order->status,
+            ];
+            \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         }
-        if ($request->status =8) {
-            $order->status = 8;
-            $order->save();
-        }
-
         $details = [
             'title' =>  $user->name,
             'body' => $order->status,
         ];
-
         \Mail::to($user->email)->send(new \App\Mail\statuschanged($details));
         return redirect()->route('home');
     }

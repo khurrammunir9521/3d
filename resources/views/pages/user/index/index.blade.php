@@ -127,10 +127,11 @@
                         <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
                     </div>
                     @else
-                    <img class="" style="width:30px;height:30px;" alt="" src="{{ asset('storage/' . auth()->user()->profile) }}">
+                    <img class="" style="width:30px;height:30px;" alt="" src="{{ asset(Auth::user()->profile) }}">
                     @endif
+                   
                     <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
-
+                 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
 
@@ -247,10 +248,13 @@
                         <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
 
                         <div class="mobile-profile">
-                            <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
-                            @auth
+                           
+                            @if(Auth::user())
+                            <a  href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
                             <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
-                            @endauth
+                            @else
+                            <a  class="m-0"  ><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                            @endif
                         </div>
 
                     </div>

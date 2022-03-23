@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Notifications\ProposelNotification;
 use PDF;
 use Auth;
+use App\Mail\ProposelMail;
 
 class PerposalController extends Controller
 {
@@ -55,7 +56,11 @@ class PerposalController extends Controller
             'validtill' => $request->validtill,
             'date' => $request->date,
         ]);
-        $user->notify(new ProposelNotification($user));
+        $details = [
+            'title' =>$user->name,
+            'body' => 'Your medical request have been created',
+        ];
+        \Mail::to($user->email)->send(new \App\Mail\ProposelMail($details));
         return redirect()->route('perposal.index');
     }
 
