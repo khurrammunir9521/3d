@@ -1,4 +1,4 @@
-@extends('layouts.admin.app')
+<!-- @extends('layouts.admin.app')
 @section('content')
 
 <div class="content-main">
@@ -50,12 +50,13 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
+                  
                 </div>    
             </div>    
         </div>    
     </div>     
 </div>    
+@endsection -->
 
 
 <!-- @extends('layouts.admin.app')
