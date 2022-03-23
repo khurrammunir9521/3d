@@ -17,7 +17,7 @@ if($(window).width() < 768) {
       i = 1;
       var elem = document.getElementById("barw");
       var widths = 1;
-      var id = setInterval(frame, 30);
+      var id = setInterval(frame, 40);
       function frame() {
         if (widths >= 100) {
           $('.main-progress').css('z-index', '0');
@@ -697,7 +697,6 @@ if($(window).width() < 768) {
       }
   };
 
-
   $('body').click(function () {
     if ($('.modal.video').hasClass('show')) {
       $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
@@ -706,7 +705,6 @@ if($(window).width() < 768) {
     }
   })
 })
-
 
  // new-nav
  $(document).ready(function(){
