@@ -110,7 +110,7 @@
     <!-- <script src="{{asset('user/assets/js/jquery.min.js')}}"></script> -->
    
     <!-- Slick -->
-    <!-- <script src="{{asset('user/assets/js/slick.min.js')}}"></script> -->
+    <script src="{{asset('user/assets/js/slick.min.js')}}"></script>
     
 
 
@@ -118,7 +118,7 @@
     <!-- Scripts -->
     <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
     <script src="../assets/js/datatable/datatables/datatable.custom.js"></script>
-    <!-- <script src="{{asset('user/assets/js/scripts.js')}}"></script> -->
+    <script src="{{asset('user/assets/js/scripts.js')}}"></script>
     <script>
         $(document).ready(function() {
             CKEDITOR.replace( 'ckeditor' );

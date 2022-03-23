@@ -17,7 +17,7 @@ if($(window).width() < 768) {
       i = 1;
       var elem = document.getElementById("barw");
       var widths = 1;
-      var id = setInterval(frame, 30);
+      var id = setInterval(frame, 50);
       function frame() {
         if (widths >= 100) {
           $('.main-progress').css('z-index', '0');
