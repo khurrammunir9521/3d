@@ -31196,3 +31196,36 @@ thead tr th:last-child, tbody tr td:last-child{
   }
 
 }
+
+
+.page-main-header .main-header-right .nav-right.right-menu ul li:hover .media .media-body p {
+  color: #0d6efd !important;
+
+}
+.page-main-header .main-header-right .nav-right .notification-dropdown li:hover .notification-bg.bg-light-primary {
+  background-color: #0d6efd !important;
+  color: #fff;
+}
+.toprightarrow-primary {
+  color: #0d6efd;
+  background-color: rgba(36, 105, 92, 0.1);
+}
+#SvgjsPath1022{
+  stroke:#0d6efd !important;
+}
+#SvgjsPath1026{
+  stroke:#0d6efd !important;
+
+}
+#SvgjsPath1024{
+  stroke:rgb(229 237 239) !important;
+}
+#SvgjsPath1028{
+  stroke:rgb(229 237 239) !important;
+}
+.apexcharts-legend-text{
+  color:#0d6efd !important;
+}
+.latest-update-sec table tbody tr:hover {
+  background-color: rgb(229 237 239) !important;
+}

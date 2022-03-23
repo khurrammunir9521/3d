@@ -21,22 +21,22 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Whatsapp</label>
+                                        <label for="exampleInputEmail1">ال WhatsApp</label>
                                         <input type="url" class="form-control"
                                             name="whatsapp" id=""
                                             aria-describedby="emailHelp"
-                                            placeholder="Enterheading">
+                                            placeholder="أدخل العنوان">
                                         <small id="" class="form-text text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Facebook
+                                <label for="exampleInputEmail1">فيسبوك
                                 </label>
                                 <input type="url" class="form-control"
                                     name="facebook" id="" aria-describedby=""
-                                    placeholder="Enter sub heading">
+                                    placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted"></small>
                             </div>
 
@@ -44,10 +44,10 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Twitter </label>
+                                        <label for="exampleInputEmail1">تويتر </label>
                                         <input type="url" class="form-control"
                                             name="twitter" id="" aria-describedby=""
-                                            placeholder="Enter sub heading">
+                                            placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
@@ -60,7 +60,7 @@
                            
 
 
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">يقدم</button>
                         </form>
                         @endsection
                     </div>

@@ -53,7 +53,7 @@
                                             invoice-field" required
                                             name="أدخل صالح حتى" id=""
                                             aria-describedby=""
-                                            placeholder="Enter Valid till">
+                                            placeholder="أدخل صالح حتى">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>

@@ -1,5 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
+
     <form method="POST" action="{{ route('logo.update', $logos->id) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
