@@ -95,9 +95,16 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
+                   
 
-                    @push('scripts')
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+@push('scripts')
                     <script type="text/javascript">
         $(function(){
             $('.link').click(function(){
@@ -119,9 +126,3 @@
         });
         </script>
                     @endpush
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-

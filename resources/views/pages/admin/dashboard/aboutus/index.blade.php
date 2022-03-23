@@ -24,9 +24,9 @@
 
                                 <thead>
                                     <tr>
-
+                                    <th>العنوان الفرعي</th>
                                         <th>عنوان</th>
-                                        <th>العنوان الفرعي</th>
+                                       
                                         <th>نص</th>
                                         <!-- <th>Action</th> -->
                                     </tr>
@@ -34,9 +34,9 @@
                                     @foreach ($abouts as $about)
                                 </thead>
                                 <tr>
-
+                                <td>{{ $about->subheading }}</td>
                                     <td>{{ $about->heading }}</td>
-                                    <td>{{ $about->subheading }}</td>
+                                   
                                     <td>{!! $about->bodytext !!}</td>
                                     <td>
                                         <form action="{{ route('about.destroy',

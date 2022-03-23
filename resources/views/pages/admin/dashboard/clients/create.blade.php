@@ -131,16 +131,8 @@
                                         </div>
 
                                     </div>
-
-
-
-
-
-
-
-
                                     <button type="submit" class="btn
-                                        btn-primary">Submit</button>
+                                        btn-primary">إرسال</button>
                                 </form>
                                 @endsection
                             </div>

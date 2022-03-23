@@ -23,17 +23,17 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">location_name </label>
+                    <label for="exampleInputEmail1">اسم الموقع </label>
                     <input type="text" class="form-control" name="location_name"
-                      id="" aria-describedby="emailHelp" placeholder="Enterheading">
+                      id="" aria-describedby="emailHelp" placeholder="أدخل العنوان">
                     <small id="" class="form-text text-muted"></small>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">location_map </label>
+                    <label for="exampleInputEmail1">خريطة الموقع </label>
                     <input type="text" class="form-control" name="location_map"
-                      id="" aria-describedby="" placeholder="Enter sub heading">
+                      id="" aria-describedby="" placeholder="أدخل العنوان الفرعي">
                     <small id="" class="form-text text-muted"></small>
                   </div>
     
@@ -41,17 +41,17 @@
                 <div class="col-md-6">
                   
               <div class="form-group">
-                <label for="exampleInputEmail1"> Heading </label>
+                <label for="exampleInputEmail1"> عنوان </label>
                 <input type="text" class="form-control" name="heading" id=""
-                  aria-describedby="" placeholder="Enter sub heading">
+                  aria-describedby="" placeholder="أدخل العنوان الفرعي">
                 <small id="" class="form-text text-muted"></small>
               </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Sub Heading </label>
+                    <label for="exampleInputEmail1">العنوان الفرعي </label>
                     <input type="text" class="form-control" name="subheading" id=""
-                      aria-describedby="" placeholder="Enter sub heading">
+                      aria-describedby="" placeholder="أدخل العنوان الفرعي">
                     <small id="" class="form-text text-muted"></small>
                   </div>
                 </div>
@@ -60,8 +60,8 @@
               
              
               <div class="form-group">
-                <label for="exampleInputEmail1">Body text </label>
-                <textarea id="" name="body_text" placeholder="Enter body text"
+                <label for="exampleInputEmail1">نص أساسي </label>
+                <textarea id="" name="body_text" placeholder="أدخل نصًا أساسيًا"
                   rows="4" cols="50" class="ckeditor form-control">
 
                 </textarea>
@@ -69,25 +69,25 @@
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">phone </label>
+                      <label for="exampleInputEmail1">هاتف </label>
                       <input type="number" class="form-control" name="phone" id=""
-                        aria-describedby="" placeholder="Enter sub heading">
+                        aria-describedby="" placeholder="أدخل العنوان الفرعي">
                       <small id="" class="form-text text-muted"></small>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Address </label>
+                      <label for="exampleInputEmail1">عنوان </label>
                       <input type="text" class="form-control" name="address" id=""
-                        aria-describedby="" placeholder="Enter body text">
+                        aria-describedby="" placeholder="أدخل نصًا أساسيًا">
                       <small id="" class="form-text text-muted"></small>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email </label>
+                      <label for="exampleInputEmail1">بريد الالكتروني </label>
                       <input type="email" class="form-control" name="email" id=""
-                        aria-describedby="" placeholder="Enter body text">
+                        aria-describedby="" placeholder="أدخل نصًا أساسيًا">
                       <small id="" class="form-text text-muted"></small>
                     </div>
       
