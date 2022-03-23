@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
-<div class="card-body">
+<div class="content-main">
     <h3>الصورة الجانبية</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
@@ -20,17 +20,7 @@
                             @csrf
                             <div class="row">
 
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">عنوان </label>
-                                        <input type="text" class="form-control"
-                                            name="heading" id=""
-                                            aria-describedby="emailHelp"
-                                            placeholder="أدخل العنوان">
-                                        <small id="" class="form-text text-muted"></small>
-                                    </div>
-                                    
-                                </div>
+                                
                                 <div class="col-md-4">
 
                                     <div class="form-group">
@@ -41,6 +31,17 @@
                                             placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text text-muted"></small>
                                     </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">عنوان </label>
+                                        <input type="text" class="form-control"
+                                            name="heading" id=""
+                                            aria-describedby="emailHelp"
+                                            placeholder="أدخل العنوان">
+                                        <small id="" class="form-text text-muted"></small>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-4">
  
@@ -61,7 +62,6 @@
                             
                           
                             <button type="submit" class="btn btn-primary">يقدم</button>
-                            @endsection
                         </form>
                     </div>
                 </div>
@@ -69,3 +69,4 @@
         </div>
     </div>
 </div>
+@endsection

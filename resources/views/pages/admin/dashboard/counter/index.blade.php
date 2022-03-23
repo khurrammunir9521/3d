@@ -25,7 +25,7 @@
 
                                         <th>يبدأ</th>
                                         <th>نهاية</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                 </thead>
                                     @foreach ($counter as $tec)
@@ -40,7 +40,7 @@
                                                 <a class="btn btn-primary"
                                                     href="{{
                                                     route('counter.edit', $tec->id)
-                                                    }}">Edit</a>
+                                                    }}">يحرر</a>
 
                                                 @csrf
                                                 @method('DELETE')
@@ -54,7 +54,6 @@
                                 </table>
                             </div>
                         </div>
-                        @endsection
                     </div>    
                 </div>   
             </div>   
@@ -62,3 +61,4 @@
         </div>   
     </div>   
 </div>   
+@endsection

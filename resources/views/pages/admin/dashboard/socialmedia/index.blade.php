@@ -24,11 +24,11 @@
                                     <tr>
                                         <!-- <th>Id</th> -->
                                         <th>الواتس اب حلقة الوصل</th>
-                                        <th>الانستغرام حلقة الوصل</th>
+                                        <!-- <th>الانستغرام حلقة الوصل</th> -->
                                         <th> فيسبوك حلقة الوصل</th>
                                         <th>تويتر حلقة الوصل</th>
+                                        <th></th>
 
-                                        <!-- <th >Action</th> -->
                                     </tr>
                                 </thead>
                                 @foreach ($socials as $social)
@@ -37,19 +37,20 @@
                                     <td>{{ $social->whatsapp }}</td>
                                     <td>{{ $social->facebook }}</td>
                                     <td>{{ $social->twitter }}</td>
+                                    
 
                                     <td>
                                         <form action="{{ route('social.destroy',
                                             $social->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{
                                                 route('social.edit', $social->id)
-                                                }}">Edit</a>
+                                                }}">يحرر</a>
 
                                             @csrf
                                             @method('DELETE')
 
                                             <button type="submit" class="btn
-                                                btn-danger">Delete</button>
+                                                btn-danger">حذف</button>
                                         </form>
                                     </td>
                                 </tr>
@@ -57,9 +58,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

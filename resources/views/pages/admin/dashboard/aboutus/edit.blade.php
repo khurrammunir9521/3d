@@ -54,7 +54,7 @@
 
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Body text
+                                <label for="exampleInputEmail1">نص أساسي
                                 </label>
                                 <textarea id="" name="bodytext"
                                     placeholder="Enter body text" rows="4"

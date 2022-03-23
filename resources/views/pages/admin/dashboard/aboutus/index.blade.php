@@ -28,6 +28,7 @@
                                         <th>عنوان</th>
                                        
                                         <th>نص</th>
+                                        <th></th>
                                         <!-- <th>Action</th> -->
                                     </tr>
 
@@ -57,9 +58,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

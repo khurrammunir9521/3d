@@ -32,6 +32,7 @@
                                         <th>تاريخ</th>
                                         <th>ضريبة</th>
                                         <th>أجراءات</th>
+                                        
 
                                     </tr>
                                 </thead>
@@ -47,12 +48,13 @@
                                     <td>{{$invoice->tax}}</td>
 
                                     <td>
-                                        <form action="{{
+                                        <div class="invoice-btns d-flex">
+                                        <form class="px-3" action="{{
                                             route('invoicess.destroy',
                                             $invoice->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{
                                                 route('invoicess.edit',
-                                                $invoice->id) }}">Edit</a>
+                                                $invoice->id) }}">يحرر</a>
 
                                             @csrf
                                             @method('DELETE')
@@ -63,15 +65,17 @@
                                         <a class="btn btn-primary" href="{{
                                             route('invoicess.show', $invoice->id)
                                             }}">فاتورة</a>
+                                            </div>
                                     </td>
                                 </tr>
                                 @endforeach
                             </table>
                         </div>
                     </div>
-                    @endsection
+                   
                 </div>    
             </div>    
         </div>    
     </div>    
 </div>    
+@endsection

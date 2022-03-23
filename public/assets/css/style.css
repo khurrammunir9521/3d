@@ -31229,3 +31229,37 @@ thead tr th:last-child, tbody tr td:last-child{
 .latest-update-sec table tbody tr:hover {
   background-color: rgb(229 237 239) !important;
 }
+
+
+.medical-datatable .dataTables_wrapper .dataTables_paginate .paginate_button.current,.medical-datatable  .dataTables_wrapper .dataTables_paginate .paginate_button:active{
+  color: #fff !important;
+  background-color:#0d6efd !important;
+  border: 1px solid transparent;
+}
+.medical-datatable .dataTables_wrapper .dataTables_paginate .paginate_button.current,.medical-datatable .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+  color: #fff !important;
+  background-color:#0d6efd !important;
+  border: 1px solid transparent;
+}
+
+.medical-datatable a{
+  text-decoration: none;
+}
+input, select, textarea{
+  background:transparent !important;
+}
+
+.notification-bell{
+margin-left: 20px;
+}
+
+.send-query-cross{
+  position: absolute;
+  left: 7px;
+  top: 20px !important;
+  right: auto !important;
+}
+
+.invoice-btns form{
+  padding-left: 5px;
+}

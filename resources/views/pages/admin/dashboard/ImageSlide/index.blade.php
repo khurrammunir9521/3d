@@ -23,27 +23,31 @@
                                 <thead>
                                     <tr>
                                         <th>صورة</th>
-                                        <th>عنوان</th>
                                         <th>العنوان الفرعي</th>
+                                        <th>عنوان</th>
                                         <th>محتوى</th>
-                                        <!-- <th>Action</th> -->
-                                    </thead>
+                                        <th></th>
+                                    </tr>
+
+                                </thead>
 
                                     @foreach ($sliders as $slider)
                                     <tr>
                                         <td><img src="{{ asset($slider->images)
                                             }}" style="height:60px;width:60px;"></td>
+                                            <td>{{$slider->sub_heading}}</td>
                                         <td>{{$slider->heading}}</td>
-                                        <td>{{$slider->sub_heading}}</td>
+                                       
                                         <td>{{$slider->body_text}}</td>
                                         <td><a href="{{route('view',$slider->id)}}"
-                                                class="btn btn-primary">رأي</a></td>
+                                                class="btn btn-primary">رأي</a>
+                                            </td>
+                                      
+                                    </tr>
                                         @endforeach
-                                        <tr>
                                         </table>
                                     </div>
                                 </div>
-                                @endsection
                             </div>
                         </div>
                     </div>
@@ -53,3 +57,4 @@
     </div>
 </div>
 
+@endsection

@@ -32,7 +32,7 @@
                                     <th>فاتورة</th>
                                     <th>دفع</th>
                                     <th>طلب</th>
-                                    <!-- <th>Action</th> -->
+                                    <th></th>
                                 </tr>
                                     </thead>
                                 @foreach ($clients as $client)
@@ -60,7 +60,7 @@
                                             $client->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{
                                                 route('client.edit', $client->id)
-                                                }}">Edit</a>
+                                                }}">يحرر</a>
 
                                             @csrf
                                             @method('DELETE')
@@ -74,9 +74,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>                    
+@endsection

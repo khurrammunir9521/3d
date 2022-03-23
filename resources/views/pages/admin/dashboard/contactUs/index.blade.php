@@ -33,7 +33,7 @@
                                         <th>عنوان</th>
 
                                         <th>نص</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                     </thead>
 
@@ -68,10 +68,10 @@
                                 </table>
                             </div>
                         </div>
-                        @endsection
                     </div>
                 </div>
             </div>
         </div>
     </div>  
 </div>                                 
+@endsection

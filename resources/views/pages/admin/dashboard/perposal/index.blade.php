@@ -44,6 +44,7 @@
                                     <td>{{$invoice->tax}}</td>
 
                                     <td>
+                                    <div class="invoice-btns d-flex">
                                         <form action="{{
                                             route('perposal.destroy', $invoice->id)
                                             }}" method="POST">
@@ -60,15 +61,16 @@
                                         <a class="btn btn-primary" href="{{
                                             route('perposal.show', $invoice->id)
                                             }}">فاتورة</a>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

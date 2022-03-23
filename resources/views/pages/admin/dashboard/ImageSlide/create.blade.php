@@ -21,22 +21,43 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">سرعة </label>
-                                        <input type="number" class="form-control"
+                                        <label for="exampleInputEmail1">سرعة
+                                        </label>
+                                        <input type="number"
+                                            class="form-control"
                                             name="speed" id=""
                                             aria-describedby="emailHelp"
                                             placeholder="أدخل السرعة">
-                                        <small id="" class="form-text text-muted">
+                                        <small id="" class="form-text
+                                            text-muted">
                                         </small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">رقم </label>
-                                        <input type="number" class="form-control"
-                                            name="number" id="" aria-describedby=""
+                                        <label for="exampleInputEmail1">رقم
+                                        </label>
+                                        <input type="number"
+                                            class="form-control"
+                                            name="number" id=""
+                                            aria-describedby=""
                                             placeholder="أدخل رقم">
-                                        <small id="" class="form-text text-muted">
+                                        <small id="" class="form-text
+                                            text-muted">
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">العنوان الفرعي
+                                        </label>
+                                        <input type="text" class="form-control"
+                                            name="sub_heading" id=""
+                                            aria-describedby=""
+                                            placeholder="أدخل العنوان الفرعي">
+                                        <small id="" class="form-text
+                                            text-muted">
                                         </small>
                                     </div>
                                 </div>
@@ -45,31 +66,22 @@
                                         <label for="exampleInputEmail1"> عنوان
                                         </label>
                                         <input type="text" class="form-control"
-                                            name="heading" id="" aria-describedby=""
+                                            name="heading" id=""
+                                            aria-describedby=""
                                             placeholder="أدخل العنوان">
-                                        <small id="" class="form-text text-muted">
+                                        <small id="" class="form-text
+                                            text-muted">
                                         </small>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">العنوان الفرعي
-                                </label>
-                                <input type="text" class="form-control"
-                                    name="sub_heading" id="" aria-describedby=""
-                                    placeholder="أدخل العنوان الفرعي">
-                                <small id="" class="form-text text-muted">
-                                </small>
-                            </div>
-                                </div>
                                 
-                                
-                            </div>
-                            
-                           
 
-                           
+
+                            </div>
+
+
+
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1">نص أساسي
                                 </label>
@@ -80,7 +92,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">الصور </label>
+                                    <label for="exampleInputEmail1">الصور
+                                    </label>
                                     <input type="file" class="form-control"
                                         name="images" id="" accept="image/*"
                                         type="file"
@@ -91,14 +104,14 @@
                                     </small>
                                 </div>
                             </div>
-                           
 
-                            <button type="submit" class="btn btn-primary">يقدم</button>
+
+                            <button type="submit" class="btn btn-primary">إرسال</button>
                         </form>
-                        @endsection
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

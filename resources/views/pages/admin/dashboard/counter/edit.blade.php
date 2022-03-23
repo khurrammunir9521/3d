@@ -51,7 +51,7 @@
                             </div>
 
 
-                            <button type="submit" class="btn btn-primary">يقدم</button>
+                            <button type="submit" class="btn btn-primary">إرسال</button>
                         </form>
                     </div>
                 </div>
