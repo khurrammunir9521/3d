@@ -483,7 +483,7 @@
                                 <div class="carousel-item" id="{{$key}}">
                                     @endif
                                     <div class="row justify-content-end">
-                                        <div class="col-md-4 col-lg-7">
+                                        <div class="col-md-4 col-lg-7 first-col">
                                             <div class="static-text">
 
 
