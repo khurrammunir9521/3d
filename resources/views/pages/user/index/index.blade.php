@@ -133,6 +133,7 @@
 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
+
                     <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>
@@ -482,7 +483,7 @@
                                 <div class="carousel-item" id="{{$key}}">
                                     @endif
                                     <div class="row justify-content-end">
-                                        <div class="col-md-4 col-lg-7 responsive-order">
+                                        <div class="col-sm-7 col-md-4 col-lg-7">
                                             <div class="static-text">
 
 
@@ -505,7 +506,7 @@
                                                 <a href="#services-section" class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></a href="#services-section">
                                             </div>
                                         </div>
-                                        <div class="col-md-8 col-lg-5">
+                                        <div class="col-sm-5 col-md-8 col-lg-5">
                                             <div class="top boxContainer">
                                                 <div class="blue-box"></div>
                                                 @if (@$profiles->images != null)
@@ -1227,42 +1228,76 @@
     <!-- JQuery -->
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
     <script>
-        $(document).ready(function() {
-            var a = 0;
-            $(window).scroll(function() {
-                var oTop = $('.counter').offset().top - window.innerHeight;
-                if (a == 0 && $(window).scrollTop() > 300) {
-                    $('.client-counter').each(function() {
-                        var $this = $(this),
-                            countTo = $this.attr('data-count');
-                        $({
-                            countNum: $this.text()
-                        }).animate({
-                                countNum: countTo
-                            },
+        // $(document).ready(function() {
+        //     $('#main-macine').removeClass('animate-left');
+        //     var a = 0;
+        //     $(window).scroll(function() {
+        //         var oTop = $('.counter').offset().top - window.innerHeight;
+        //         if (a == 0 && $(window).scrollTop() > 300) {
+        //             $('.client-counter').each(function() {
+        //                 var $this = $(this),
+        //                     countTo = $this.attr('data-count');
+        //                 $({
+        //                     countNum: $this.text()
+        //                 }).animate({
+        //                         countNum: countTo
+        //                     },
 
-                            {
+        //                     {
 
-                                duration: 2000,
-                                easing: 'swing',
-                                step: function() {
-                                    $this.text(Math.floor(this.countNum));
-                                },
-                                complete: function() {
-                                    $this.text(this.countNum);
-                                    //alert('finished');
-                                }
+        //                         duration: 2000,
+        //                         easing: 'swing',
+        //                         step: function() {
+        //                             $this.text(Math.floor(this.countNum));
+        //                         },
+        //                         complete: function() {
+        //                             $this.text(this.countNum);
+        //                             //alert('finished');
+        //                         }
 
-                            });
-                    });
-                    a = 1;
-                }
+        //                     });
+        //             });
+        //             a = 1;
+        //         }
 
-                // if (($(window).scrollTop() > 600)) {
-                //     $('.about-content').addClass('animate__animated animate__fadeIn animate_slowest');
-                // }
-            });
-        })
+        //         if ($(window).width() > 768) {
+        //             if (($(window).scrollTop() > 1300)) {
+        //                 $('#main-macine').addClass('animate-left');
+        //                 $('#main-effect').addClass('animate-right');
+        //                 $('.medical-animate').addClass('animate__animated animate__fadeIn animate_slowest');
+        //                 $('.public-animate').addClass('animate__animated animate__fadeIn animate_slowest');
+        //             }
+        //         }
+
+        //         if ($(window).width() < 768) {
+        //             if ($(window).scrollTop() > 2600) {
+        //                 $('#main-macine').removeClass('animate-left');
+        //                 $('#main-effect').removeClass('animate-right');
+        //                 $('.public-animate').removeClass('animate__fadeIn');
+        //                 $('.medical-animate').removeClass('animate__fadeIn');
+        //                 $('#main-effect').addClass('animate__animated animate__fadeInUp animate_slowest');
+        //             }
+        //             if ($(window).scrollTop() > 3300) {
+        //                 $('#main-macine').addClass('animate__animated animate__fadeInUp animate_slowest');
+        //                 $('.public-animate').addClass('animate__animated animate__fadeInUp');
+        //                 $('.medical-animate').addClass('animate__animated animate__fadeInUp');
+        //             }
+        //             if ($(window).scrollTop() > 2960) {
+        //                 $('.medical-animate').addClass('animate__animated animate__fadeInUpBig animate__slower');
+        //             }
+        //             if ($(window).scrollTop() > 3560) {
+        //                 $('.public-animate').addClass('animate__animated animate__fadeInUpBig animate__slower');
+        //             }
+
+        //             console.log($(window).scrollTop())
+        //         }
+
+
+        //         // if (($(window).scrollTop() > 600)) {
+        //         //     $('.about-content').addClass('animate__animated animate__fadeIn animate_slowest');
+        //         // }
+        //     });
+        // })
     </script>
     <script>
         $(document).on('click', '.editProduct', function(e) {

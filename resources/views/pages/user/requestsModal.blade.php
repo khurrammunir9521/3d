@@ -42,8 +42,6 @@
 
                                          </li>
                                      </ul>
-                                     <a class="btn btn-sky download-pdf" href="{{ route('proposel.pdf',['download'=>'pdf']) }}">Download Proposel PDF</a>
-                                     <a class="btn btn-sky download-pdf" href="{{ route('invoice.pdf',['download'=>'pdf']) }}">Download Invoice PDF</a>
                                      <div class="tab-content" id="myTabContent">
                                          <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
                                              <div class="row">

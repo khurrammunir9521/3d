@@ -73,18 +73,11 @@
     <link rel="stylesheet" href="{{asset('user/assets/css/slick-theme.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}" />
     <script src="{{asset('user/assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('user/assets/js/scripts.js')}}"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
     <link href="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css')}}" rel="stylesheet" />
     <script src="https://cdn.js')}}delivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js')}}"></script>
-
-
     <!-- StyleSheet -->
     <!-- <link rel="stylesheet" href="{{asset('user/assets/css/style.css')}}"> -->
     <!-- Responsive Sheet -->
-  
-
     <style>
         .page-wrapper.compact-wrapper .page-body-wrapper .page-body {
             padding-top: 30px;
@@ -96,51 +89,6 @@
         html {
             direction: rtl !important;
         }
-        .file-drop-area {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 450px;
-    max-width: 100%;
-    padding: 25px;
-    border: 1px dashed rgba(255, 255, 255, 0.4);
-    border-radius: 3px;
-    transition: 0.2s
-}
-
-.choose-file-button {
-    flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    padding: 8px 15px;
-    margin-right: 10px;
-    font-size: 12px;
-    text-transform: uppercase
-}
-
-.file-message {
-    font-size: small;
-    font-weight: 300;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis
-}
-
-.file-input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    opacity: 0
-}
-
-.mt-100 {
-    margin-top: 100px
-}
     </style>
     <link rel="stylesheet" href="{{asset('user/assets/css/responsive.css')}}">
 </head>

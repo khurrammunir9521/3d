@@ -719,15 +719,7 @@ if($(window).width() < 768) {
   $('#wrapper .nav-item').click(function() {
     $("#wrapper").toggleClass("menuDisplayed");
   })
-  const menu = $('#menu-toggle');
-  $('body').click(function(e) {
-    // $("#wrapper").removeClass("menuDisplayed");
-    if (!menu.is(e.target) // if the target of the click isn't the container...
-   && menu.has(e.target).length === 0) // ... nor a descendant of the container
-   {
-    $("#wrapper").removeClass("menuDisplayed");
-  }
-  })
+  
 });
 AOS.init({
   offset: 100,
