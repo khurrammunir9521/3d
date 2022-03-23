@@ -697,7 +697,6 @@ if($(window).width() < 768) {
       }
   };
 
-
   $('body').click(function () {
     if ($('.modal.video').hasClass('show')) {
       $('#healthVideoModal iframe').attr('src', $('#healthVideoModal iframe').attr('src'));
@@ -706,7 +705,6 @@ if($(window).width() < 768) {
     }
   })
 })
-
 
  // new-nav
  $(document).ready(function(){
