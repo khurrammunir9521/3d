@@ -1,5 +1,21 @@
 @extends('layouts.admin.app')
 @section('content')
+
+<div class="content-main">
+    <h3>وضع اليد</h3>
+    <div class="breadcrumb-main">
+        <ol class="breadcrumb">
+            <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
+
+            <li><a href="{{ route('perposal.index') }}">وضع اليد</a></li>
+
+        </ol>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card medical-card">
+                    <div class="card-body p-0">
 <form method="POST" action="{{ route('perposal.update', $invoice->id) }}">
     @csrf
     @method('PUT')
@@ -59,4 +75,10 @@
     </div>
     <button type="submit" class="btn btn-primary">يقدم</button>
 </form>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
