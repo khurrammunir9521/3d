@@ -1880,6 +1880,11 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+ 
+    .banner .carousel-indicators{
+        top: 500px;
+    }
+
     .res-width-64 .about-content .description {
         padding: 0rem 4rem;
     }
@@ -1892,9 +1897,7 @@
     .banner-bg.sample {
         width: 830px!important;
     }
-    .banner.sample .carousel-inner {
-        padding-bottom: 350px;
-    }
+   
     .hands.sample {
         left: 0px;
         width: 350px;
