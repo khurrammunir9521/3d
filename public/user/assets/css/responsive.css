@@ -4,9 +4,6 @@
 /* asim */
 
 /* new nav */
-.download-pdf {
-   margin-top: 20px;
-}
 .mobile-nav .dot::before {
     margin: 3px -15px;
 }
@@ -428,20 +425,11 @@
     }
 
     .hands.sample {
-        /* left: 0;
+        left: 0;
         width: 250px;
         bottom: 0;
         top: 160px;
-        right: 80px; */
-        left: 0;
-        width: 200px;
-        bottom: 0;
-        top: 160px;
-        right: 130px;
-    }
-
-    .responsive-order {
-        order: 2;
+        right: 80px;
     }
 
     .about-content .actions {
@@ -480,10 +468,8 @@
     }
 
     .top.boxContainer .blue-box {
-        top: 80px;
+        top: -22px;
         left: 0;
-        right: 280px;
-        margin: auto;
     }
 
     .bottom.boxContainer {
@@ -604,10 +590,6 @@
         width: 335px;
         right: 0px;
         max-width: 360px;
-    }
-
-    .top.boxContainer {
-        padding-top: 100px;
     }
 
     .modal.register .modal-header {

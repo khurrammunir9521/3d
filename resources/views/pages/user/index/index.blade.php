@@ -133,6 +133,7 @@
 
                     <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
 
+
                     <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
                         تسجيل خروج
                     </a>
@@ -460,8 +461,8 @@
     </section> -->
 
     <section class="banner sample">
-        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-3s" alt="banner-bg">
-        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-3s" alt="black-bg">
+        <img src="{{ asset('user/assets/images/banner-bg.png') }}" class="img-fluid banner-bg sample move-blue animate__animated animate__slideInRight animate__slower animate__delay-5s" alt="banner-bg">
+        <img src="{{ asset('user/assets/images/black-bg.png') }}" class="black-bg sample move-black animate__animated animate__slideInLeft animate__slower animate__delay-5s" alt="black-bg">
         <img src="{{ asset('user/assets/images/hands.png') }}" class="img-fluid hands sample move-hand" alt="hands">
         <div class="container">
             <div class="row justify-content-center">
@@ -482,7 +483,7 @@
                                 <div class="carousel-item" id="{{$key}}">
                                     @endif
                                     <div class="row justify-content-end">
-                                        <div class="col-sm-7 col-md-4 col-lg-7 responsive-order">
+                                        <div class="col-md-4 col-lg-7">
                                             <div class="static-text">
 
 
@@ -505,7 +506,7 @@
                                                 <a href="#services-section" class="btn btn-grey">قدم طلبك <img src="{{ asset('user/assets/icons/arrow-down.svg') }}" alt="arrow-down"></a href="#services-section">
                                             </div>
                                         </div>
-                                        <div class="col-sm-5 col-md-8 col-lg-5">
+                                        <div class="col-md-8 col-lg-5">
                                             <div class="top boxContainer">
                                                 <div class="blue-box"></div>
                                                 @if (@$profiles->images != null)

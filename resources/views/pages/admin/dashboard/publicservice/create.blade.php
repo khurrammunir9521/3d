@@ -1,6 +1,5 @@
 @extends('layouts.admin.app')
 @section('content')
-
     <form method="POST" action="{{ route('public.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">

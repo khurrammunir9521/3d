@@ -6,26 +6,6 @@ $(document).ready(function() {
         "paging":   true,
         "ordering": false,
         "info":     false,
-        "language": {
-            "loadingRecords": "جارٍ التحميل...",
-            "lengthMenu": "أظهر _MENU_ مدخلات",
-            "zeroRecords": "لم يعثر على أية سجلات",
-            "info": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
-            "infoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
-            "search": "ابحث:",
-            "paginate": {
-                "first": "الأول",
-                "previous": "السابق",
-                "next": "التالي",
-                "last": "الأخير"
-            },
-            "aria": {
-                "sortAscending": ": تفعيل لترتيب العمود تصاعدياً",
-                "sortDescending": ": تفعيل لترتيب العمود تنازلياً"
-            }
-           
-        } 
-        
     });
     $('#basic-3').DataTable({
         "order": [[ 3, "desc" ]]

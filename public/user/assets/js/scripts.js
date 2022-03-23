@@ -17,7 +17,7 @@ if($(window).width() < 768) {
       i = 1;
       var elem = document.getElementById("barw");
       var widths = 1;
-      var id = setInterval(frame, 50);
+      var id = setInterval(frame, 40);
       function frame() {
         if (widths >= 100) {
           $('.main-progress').css('z-index', '0');
@@ -717,15 +717,7 @@ if($(window).width() < 768) {
   $('#wrapper .nav-item').click(function() {
     $("#wrapper").toggleClass("menuDisplayed");
   })
-  const menu = $('#menu-toggle');
-  $('body').click(function(e) {
-    // $("#wrapper").removeClass("menuDisplayed");
-    if (!menu.is(e.target) // if the target of the click isn't the container...
-   && menu.has(e.target).length === 0) // ... nor a descendant of the container
-   {
-    $("#wrapper").removeClass("menuDisplayed");
-  }
-  })
+  
 });
 AOS.init({
   offset: 100,
