@@ -54,7 +54,6 @@
                                         <td>
                                             <a class="btn btn-primary" href="{{
                                                 route('medi.show', $medi->id)
-                                                }}">View</a>
                                                 }}">رأي</a>
 
                                         </td>
@@ -76,7 +75,7 @@
                                             <a class="btn btn-primary" href="{{
                                                 route('medi.show', $medi->id)
 
-                                                }}">View</a>
+                                                
 
                                                 }}">رأي</a>
                                         </td>
