@@ -1,3 +1,4 @@
+
 <template>
    <div class="row">
 
@@ -12,7 +13,7 @@
                        </li>
                    </ul>
                </div>
-              
+
                <input
                     @keydown="sendTypingEvent"
                     @keyup.enter="sendMessage"
@@ -21,18 +22,17 @@
                     name="message"
                     placeholder="Enter your message..."
                     class="form-control">
-                <file-upload 
-                    post-action="sendMessage"
-                    ref="upload"
-                    @input-file="$refs.upload.active=true"
-                > 
-                  <v-icon>attach_file</v-icon>
-                </file-upload>
+                    <file-upload
+                        post-action="/sendMessage"
+                        ref ='upload'
+                        @input-file="$refs.upload.active=true"
+
+                    >
+                     </file-upload>
+                     <v-icon>attachfile</v-icon>
            </div>
             <span class="text-muted" v-if="activeUser" >{{ activeUser.name }} is typing...</span>
        </div>
-
-        
 
    </div>
 </template>
