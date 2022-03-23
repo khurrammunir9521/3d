@@ -49,4 +49,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Medical::class);
     }
+
+    public function messages(){
+
+        return $this->hasMany(Chat::class);
+        
+    }
 }
