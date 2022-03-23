@@ -1,20 +1,51 @@
 @extends('layouts.admin.app')
 @section('content')
+<div class="content-main">
+  <h3>عدادات</h3>
+  <div class="breadcrumb-main">
+    <ol class="breadcrumb">
+      <li><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
 
-<form method="POST" action="{{route('counter.store')}}">
-  @csrf
-  <div class="form-group">
-    <label for="exampleInputEmail1">Start </label>
-    <input type="text" class="form-control" name="start" id="" aria-describedby="emailHelp" placeholder="Enter Number">
-    <small id="" class="form-text text-muted"></small>
+      <li><a href="#">إعدادات الموقع</a></li>
+      <li><a href="{{ route('counter.index') }}"> عدادات</a></li>
+    </ol>
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">End </label>
-    <input type="text" class="form-control" name="end" id="" aria-describedby="" placeholder="Enter Number">
-    <small id="" class="form-text text-muted"></small>
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card medical-card">
+          <div class="card-body p-0">
+            <form method="POST" action="{{route('counter.store')}}">
+              @csrf
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">يبدأ </label>
+                    <input type="text" class="form-control" name="start" id=""
+                      aria-describedby="emailHelp" placeholder="أدخل رقم">
+                    <small id="" class="form-text text-muted"></small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">نهاية </label>
+                    <input type="text" class="form-control" name="end" id=""
+                      aria-describedby="" placeholder="أدخل رقم">
+                    <small id="" class="form-text text-muted"></small>
+                  </div>
+                </div>
+                
+              </div>
+             
+              
+
+              <button type="submit" class="btn btn-primary">يقدم</button>
+            </form>
+
+            @endsection
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-@endsection
+</div>

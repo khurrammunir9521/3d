@@ -128,6 +128,11 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     Route::post('send/question', [MedicalController::class, 'askQuestion'])->name('ask.question');
     Route::get('feedback', [MedicalController::class, 'feedback'])->name('feedback');
     Route::post('feedback/store', [MedicalController::class, 'feedbackStore'])->name('feedbackStore');
+
+    Route::get('pdf/proposal', [PerposalController::class,'pdfProposal'])->name('proposel.pdf');
+    Route::get('pdf/invoice', [ InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
+
+    
 });
 
 

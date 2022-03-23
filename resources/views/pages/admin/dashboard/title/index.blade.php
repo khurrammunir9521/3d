@@ -15,7 +15,7 @@
                 <div class="card medical-card">
                     <div class="card-body p-0">
                         <a class="btn btn-primary mb-2" href="{{
-                            route('title.create') }}"> Create New Product</a>
+                            route('title.create') }}"> إنشاء منتج جديد</a>
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%"
                                 id="basic-2">
