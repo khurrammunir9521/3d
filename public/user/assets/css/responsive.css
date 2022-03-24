@@ -12,6 +12,9 @@
 .mob-profile-heading-hide{
     display: none;
 }
+.mob-profile-heading .banner .outline {
+    padding-right: 10px !important;
+}
 .first-col {
     order: 1;
 }
@@ -947,7 +950,7 @@
         margin-right: 33px;
     }
     .banner .outline {
-        padding-right: 50px !important;
+        padding-right: 10px !important;
     }
     .request .dot-txt-main .outline {
         padding-right: 0px !important;
@@ -963,7 +966,8 @@
     }
 
 }
-@media only screen and (min-width: 428px) and (max-width: 767px){
+
+/* @media only screen and (min-width: 428px) and (max-width: 767px){
     .bottom.boxContainer .blue-box {
         right: 40px !important;
         top: 5px !important;
@@ -991,6 +995,9 @@
         width: 330px;
         margin-right: 33px;
     }
+    .mob-profile-heading .banner .outline {
+        padding-right: 10px !important;
+    }
     .banner .outline {
         padding-right: 50px !important;
     }
@@ -1007,7 +1014,7 @@
         left: -30px !important;
     }
 
-}
+} */
 /* Extra Small Devices */
 @media only screen and (max-width: 500px) {
     
@@ -1072,6 +1079,12 @@
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* asim */
+    .banner .carousel-item p {
+        padding-left: 375px !important;
+    }
+    .banner .carousel-control-prev, .banner .carousel-control-next{
+        display: none;
+    }
     .services-section .title .inner-line{
         bottom: -10px !important;
     }
@@ -1325,7 +1338,8 @@
     }
 
     .banner .carousel-indicators {
-        top: 500px;
+        /* top: 500px; */
+        display: none;
     }
 
     .black-bg {
@@ -1334,7 +1348,7 @@
     }
 
     .banner.sample .carousel-inner {
-        padding-bottom: 300px;
+        padding-bottom: 310px !important;
     }
 
     .carousel-item .btn {
@@ -1404,7 +1418,7 @@
     }
 
     .top.boxContainer .blue-box {
-        left: -10px;
+        left: 53px;
         top: -15px;
     }
 
@@ -1598,7 +1612,7 @@
 
     .static-text {
         position: absolute;
-        width: 40%;
+        width: auto !important;
     }
 
     .notification-box {

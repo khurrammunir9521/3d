@@ -31170,6 +31170,7 @@ thead tr th:last-child, tbody tr td:last-child{
 
 
 
+
 /* responsive dashboard */
 
 @media only screen and (min-width: 2100px) {
@@ -31281,3 +31282,11 @@ margin-left: 20px;
   text-decoration: none;
   padding-right: 10px;
 }
+
+
+.modal-footer button:first-child{
+  background-color: gray !important;
+  color: #fff !important;
+  border-color: gray !important;
+}
+
