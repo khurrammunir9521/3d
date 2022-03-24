@@ -27,7 +27,9 @@
                                         <th>عنوان</th>
                                         <th>محتوى</th>
                                         <th></th>
-                                    </thead>
+                                    </tr>
+
+                                </thead>
 
                                     @foreach ($sliders as $slider)
                                     <tr>
@@ -38,9 +40,10 @@
                                        
                                         <td>{{$slider->body_text}}</td>
                                         <td><a href="{{route('view',$slider->id)}}"
-                                                class="btn btn-primary">رأي</a></td>
+                                                class="btn btn-primary">رأي</a>
+                                            </td>
                                       
-                                        <tr>
+                                    </tr>
                                         @endforeach
                                         </table>
                                     </div>
