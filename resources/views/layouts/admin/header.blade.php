@@ -22,7 +22,7 @@
         <!-- notifications -->
         <li class="onhover-dropdown notification-bell">
           <div class="notification-box"><i data-feather="bell"></i><span class="dot-animated"></span></div>
-          <ul class="notification-dropdown onhover-show-div">
+          <ul class="notification-dropdown notification-left-side onhover-show-div">
             <li> 
               @if(auth()->user()->unreadNotifications->count())
               <p class="f-w-700 mb-0">You have {{ auth()->user()->unreadNotifications->count() }} Notifications<span class="pull-right badge badge-danger badge-pill">{{ auth()->user()->unreadNotifications->count() }}</span></p>

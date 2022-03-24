@@ -31301,3 +31301,17 @@ margin-left: 20px;
 .img-view-table .table-bordered>:not(caption)>* {
   border-width: 2px 0;
 }
+
+.admin-profile{
+  text-decoration: none;
+}
+
+.notification-left-side{
+  overflow-y: scroll;
+  height: 340px;
+  direction: ltr;
+}
+
+.notification-left-side li{
+  direction: rtl;
+}
