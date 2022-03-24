@@ -24,7 +24,7 @@
 
                                         <th>لقب</th>
                                         <th>وصف</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 @foreach ($titles as $tec)
@@ -51,9 +51,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

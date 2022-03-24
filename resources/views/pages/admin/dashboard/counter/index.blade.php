@@ -25,7 +25,7 @@
 
                                         <th>يبدأ</th>
                                         <th>نهاية</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                 </thead>
                                     @foreach ($counter as $tec)

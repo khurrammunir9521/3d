@@ -23,14 +23,14 @@
     <div class="col-md-6">
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Map Image </label>
+        <label for="exampleInputEmail1">صورة الخريطة </label>
         <input type="file" class="form-control" name="map_image" id="" accept="image/*" type="file" id="download-cv-file-name" name="map_image" id="map_image" aria-describedby="" placeholder="Enter sub heading">
         <small id="" class="form-text text-muted"> </small>
         <img src="/Storage/{{ $maps->map_image }}" width="100px">
     </div>
     </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">إرسال</button>
 </form>
 </div>
 </div>

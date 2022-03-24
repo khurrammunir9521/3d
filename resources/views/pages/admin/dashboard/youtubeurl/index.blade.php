@@ -30,7 +30,7 @@
                                         <!-- <th>Id</th> -->
                                         <th>رابط الفيديو</th>
                                         <th>رابط فيديو عام</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 @foreach ($youtubeurls as $youtubeurl)
@@ -57,9 +57,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
