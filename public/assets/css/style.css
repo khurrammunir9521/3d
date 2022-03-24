@@ -31244,7 +31244,6 @@ thead tr th:last-child, tbody tr td:last-child{
 
 .medical-datatable a{
   text-decoration: none;
-  color: #0d6efd !important;
 }
 input, select, textarea{
   background:transparent !important;
@@ -31252,4 +31251,11 @@ input, select, textarea{
 
 .notification-bell{
 margin-left: 20px;
+}
+
+.send-query-cross{
+  position: absolute;
+  left: 7px;
+  top: 20px !important;
+  right: auto !important;
 }

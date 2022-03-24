@@ -87,16 +87,17 @@
                                                                 الطلب</option>
                                                         </select>
                                                         <br>
-                                                        <button class="btn
-                                                            btn-primary"
-                                                            type="submit"> save</button>
+                                                      
                                                         <button type="button"
                                                             class="btn
                                                             btn-primary"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#exampleModal">
-                                                            Send Query
+                                                            إرسال الاستعلام
                                                         </button>
+                                                        <button class="btn
+                                                            btn-primary"
+                                                            type="submit"> حفظ</button>
                                                     </form>
                                                     @endif
                                                 </div>
@@ -346,7 +347,7 @@
                                     <div class="modal-header">
                                         <h5 class="modal-title"
                                             id="exampleModalLabel">إرسال الاستعلام</h5>
-                                        <button type="button" class="btn-close"
+                                        <button type="button" class="btn-close send-query-cross"
                                             data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
