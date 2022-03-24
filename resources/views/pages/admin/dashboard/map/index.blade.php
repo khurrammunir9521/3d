@@ -24,7 +24,7 @@
                                 <thead>
                                     <tr>
                                         <th>صورة</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 @foreach ($maps as $map)
