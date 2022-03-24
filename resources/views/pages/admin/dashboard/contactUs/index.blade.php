@@ -33,7 +33,7 @@
                                         <th>عنوان</th>
 
                                         <th>نص</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                     </thead>
 

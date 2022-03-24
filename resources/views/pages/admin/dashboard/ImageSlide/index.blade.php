@@ -26,7 +26,7 @@
                                         <th>عنوان</th>
                                         <th>العنوان الفرعي</th>
                                         <th>محتوى</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </thead>
 
                                     @foreach ($sliders as $slider)

@@ -26,7 +26,7 @@
                                         <th>عنوان</th>
                                         <th>العنوان الفرعي</th>
                                         <th>نص</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 @foreach ($tech as $tec)
