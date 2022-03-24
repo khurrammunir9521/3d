@@ -24,12 +24,11 @@
                                 <div class="col-md-6">
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Sub
-                                            Heading </label>
+                                        <label for="exampleInputEmail1">العنوان الفرعي </label>
                                         <input type="text" class="form-control"
                                             name="subheading" value="{{ $tech->subheading
                                         }}" id="" aria-describedby=""
-                                        placeholder="Enter sub heading">
+                                        placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -37,12 +36,12 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Heading
+                                        <label for="exampleInputEmail1">عنوان
                                         </label>
                                         <input type="text" class="form-control"
                                             name="heading" value="{{ $tech->heading
                                         }}" id="" aria-describedby="emailHelp"
-                                        placeholder="Enterheading">
+                                        placeholder="أدخل العنوان">
                                         <small id="" class="form-text
                                             text-muted"></small>
                                     </div>
@@ -52,7 +51,7 @@
 
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Body text
+                                    <label for="exampleInputEmail1">نص أساسي
                                     </label>
                                     <textarea id="" name="bodytext"
                                         placeholder="Enter body text" rows="4"

@@ -36,29 +36,31 @@
                       id="" aria-describedby="" placeholder="أدخل العنوان الفرعي">
                     <small id="" class="form-text text-muted"></small>
                   </div>
-    
-                </div>
-                <div class="col-md-6">
-                  
-              <div class="form-group">
-                <label for="exampleInputEmail1"> عنوان </label>
-                <input type="text" class="form-control" name="heading" id=""
-                  aria-describedby="" placeholder="أدخل العنوان الفرعي">
-                <small id="" class="form-text text-muted"></small>
-              </div>
+
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">العنوان الفرعي </label>
-                    <input type="text" class="form-control" name="subheading" id=""
+                    <input type="text" class="form-control" name="subheading"
+                      id=""
+                      aria-describedby="" placeholder="أدخل العنوان الفرعي">
+                    <small id="" class="form-text text-muted"></small>
+                  </div>
+                </div>
+                <div class="col-md-6">
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"> عنوان </label>
+                    <input type="text" class="form-control" name="heading" id=""
                       aria-describedby="" placeholder="أدخل العنوان الفرعي">
                     <small id="" class="form-text text-muted"></small>
                   </div>
                 </div>
                 
+
               </div>
-              
-             
+
+
               <div class="form-group">
                 <label for="exampleInputEmail1">نص أساسي </label>
                 <textarea id="" name="body_text" placeholder="أدخل نصًا أساسيًا"
@@ -66,33 +68,33 @@
 
                 </textarea>
               </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">هاتف </label>
-                      <input type="number" class="form-control" name="phone" id=""
-                        aria-describedby="" placeholder="أدخل العنوان الفرعي">
-                      <small id="" class="form-text text-muted"></small>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">عنوان </label>
-                      <input type="text" class="form-control" name="address" id=""
-                        aria-describedby="" placeholder="أدخل نصًا أساسيًا">
-                      <small id="" class="form-text text-muted"></small>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">بريد الالكتروني </label>
-                      <input type="email" class="form-control" name="email" id=""
-                        aria-describedby="" placeholder="أدخل نصًا أساسيًا">
-                      <small id="" class="form-text text-muted"></small>
-                    </div>
-      
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">هاتف </label>
+                    <input type="number" class="form-control" name="phone" id=""
+                      aria-describedby="" placeholder="أدخل العنوان الفرعي">
+                    <small id="" class="form-text text-muted"></small>
                   </div>
                 </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">عنوان </label>
+                    <input type="text" class="form-control" name="address" id=""
+                      aria-describedby="" placeholder="أدخل نصًا أساسيًا">
+                    <small id="" class="form-text text-muted"></small>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">بريد الالكتروني </label>
+                    <input type="email" class="form-control" name="email" id=""
+                      aria-describedby="" placeholder="أدخل نصًا أساسيًا">
+                    <small id="" class="form-text text-muted"></small>
+                  </div>
+
+                </div>
+              </div>
               <button type="submit" class="btn btn-primary">إرسال</button>
             </form>
 

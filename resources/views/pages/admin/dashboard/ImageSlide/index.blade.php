@@ -23,8 +23,8 @@
                                 <thead>
                                     <tr>
                                         <th>صورة</th>
-                                        <th>عنوان</th>
                                         <th>العنوان الفرعي</th>
+                                        <th>عنوان</th>
                                         <th>محتوى</th>
                                         <th></th>
                                     </thead>
@@ -33,13 +33,15 @@
                                     <tr>
                                         <td><img src="{{ asset($slider->images)
                                             }}" style="height:60px;width:60px;"></td>
+                                            <td>{{$slider->sub_heading}}</td>
                                         <td>{{$slider->heading}}</td>
-                                        <td>{{$slider->sub_heading}}</td>
+                                       
                                         <td>{{$slider->body_text}}</td>
                                         <td><a href="{{route('view',$slider->id)}}"
                                                 class="btn btn-primary">رأي</a></td>
-                                        @endforeach
+                                      
                                         <tr>
+                                        @endforeach
                                         </table>
                                     </div>
                                 </div>
