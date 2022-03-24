@@ -17,13 +17,13 @@
                     <div class="card-body p-0">
                         <div class="card-body">
                             <a class="btn btn-primary" href="{{
-                                route('image.index') }}"> Back</a><br>
+                                route('image.index') }}"> خلف</a><br>
                             {{-- <div class="table-responsive product-table">
                                 --}}
                                 {{-- <table class="display" id="example"> --}}
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Speed:</label>
+                                            <label>سرعة:</label>
                                         </div>
                                         <div class="col-6">
                                             <p>{{ $image->speed }}</p>
@@ -32,7 +32,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Number:</label>
+                                            <label>رقم:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -42,7 +42,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Heading:</label>
+                                            <label>عنوان:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -52,7 +52,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Subheading:</label>
+                                            <label>العنوان الفرعي:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -63,7 +63,7 @@
 
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Bodytext:</label>
+                                            <label>نص:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -75,7 +75,7 @@
 
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Heading2:</label>
+                                            <label>العنوان 2:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -85,7 +85,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Subheading 2:</label>
+                                            <label>العنوان الفرعي 2:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -95,7 +95,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Bodytext2:</label>
+                                            <label>نص2:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -105,7 +105,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Heading3:</label>
+                                            <label>عنوان3:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -115,7 +115,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-6">
-                                            <label>Subheading3:</label>
+                                            <label>العنوان الفرعي3:</label>
 
                                         </div>
                                         <div class="col-6">
@@ -157,12 +157,12 @@
                                     <form action="{{ route('image.destroy',
                                         $image->id) }}" method="POST">
                                         <a class="btn btn-primary" href="{{
-                                            route('image.edit', $image->id) }}">Edit</a>
+                                            route('image.edit', $image->id) }}">يحرر</a>
                                         @csrf
                                         @method('DELETE')
 
                                         <button type="submit" class="btn
-                                            btn-danger">Delete</button>
+                                            btn-danger">حذف</button>
                                     </form>
 
 
