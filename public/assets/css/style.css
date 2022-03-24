@@ -31290,6 +31290,18 @@ margin-left: 20px;
   border-color: gray !important;
 }
 
+
+.img-view-table table{
+  margin-top: 22px;
+  
+}
+.img-view-table table td{
+  vertical-align: middle;
+}
+.img-view-table .table-bordered>:not(caption)>* {
+  border-width: 2px 0;
+}
+
 .admin-profile{
   text-decoration: none;
 }

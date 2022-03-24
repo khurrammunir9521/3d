@@ -18,10 +18,65 @@
                         <div class="card-body">
                             <a class="btn btn-primary" href="{{
                                 route('image.index') }}"> خلف</a><br>
-                            {{-- <div class="table-responsive product-table">
-                                --}}
-                                {{-- <table class="display" id="example"> --}}
-                                    <div class="row">
+                            <div class="table-responsive img-view-table">
+                               
+                                <table class="table table-bordered " style="width:100%"> 
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <label>سرعة:</label>
+
+                                        </th>
+                                        <th>
+                                            <label>رقم:</label>
+
+
+                                        </th>
+                                        <th>
+                                            <label>عنوان:</label>
+
+
+                                        </th>
+                                        <th>
+                                            <label>سرعة:</label>
+
+                                        </th>
+                                        <th>
+                                            <label>نص:</label>
+
+
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>{{ $image->speed }}</p>
+    
+                                            </td>
+                                            <td>
+                                                <p>{{ $image->number }}</p>
+    
+                                            </td>
+                                            <td>
+                                                <p>{{ $image->heading }}</p>
+
+    
+                                            </td>
+                                            <td>
+                                                <p>{{ $image->sub_heading }}</p>
+
+    
+                                            </td>
+                                            <td>
+                                                <p>{!! $image->body_text !!}</p>
+
+    
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                    <!-- <div class="row">
                                         <div class="col-6">
                                             <label>سرعة:</label>
                                         </div>
@@ -70,10 +125,10 @@
                                             <p>{!! $image->body_text !!}</p>
                                         </div>
                                     </div>
-                                    <br>
-                                    {{--
+                                    <br> -->
+                                  
 
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-6">
                                             <label>العنوان 2:</label>
 
@@ -152,8 +207,7 @@
                                             <p>{!! $image->body_text4 !!}</p>
                                         </div>
                                     </div>
-                                    <br>
-                                    --}}
+                                    <br> -->
                                     <form action="{{ route('image.destroy',
                                         $image->id) }}" method="POST">
                                         <a class="btn btn-primary" href="{{
