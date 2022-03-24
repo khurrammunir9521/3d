@@ -22,7 +22,6 @@
                         <a class="btn btn-primary mb-2" href="{{route('medical.create')}}"> جديد +</a>
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%" id="basic-2">
-
                                 <thead>
                                     <tr>
                                         <th> رقم الطلب</th>

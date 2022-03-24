@@ -116,8 +116,9 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <!-- Scripts -->
-    <script src="../assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-    <script src="../assets/js/datatable/datatables/datatable.custom.js"></script>
+
+    <script src="{{ asset('assets/js/datatable/datatables/jquery.dataTables.min.js') }}"></script>
+	  <script src="{{ asset('assets/js/datatable/datatables/datatable.custom.js') }}"></script>
     <script src="{{asset('user/assets/js/scripts.js')}}"></script>
     <script>
         $(document).ready(function() {

@@ -20,7 +20,7 @@
     <div class="nav-right col pull-right right-menu p-0">
       <ul class="nav-menus">
         <!-- notifications -->
-        <li class="onhover-dropdown">
+        <li class="onhover-dropdown notification-bell">
           <div class="notification-box"><i data-feather="bell"></i><span class="dot-animated"></span></div>
           <ul class="notification-dropdown onhover-show-div">
             <li> 

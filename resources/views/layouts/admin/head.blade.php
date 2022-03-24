@@ -52,7 +52,7 @@
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
    
    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-   <link rel="stylesheet" type="text/css" href="../assets/css/datatables.css">
+   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/datatables.css') }}">
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}">
     <!-- App css-->
