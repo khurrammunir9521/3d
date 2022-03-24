@@ -50,6 +50,9 @@
     <section>
         @yield('content')
     </section>
+    <div id="app">
+        @yield('chat-content')
+    </div>
     <!-- page-wrapper end-->
     <!-- latest jquery-->
     <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
@@ -69,6 +72,7 @@
     <script src="{{asset('assets/js/script.js')}}"></script>
     <!-- login js-->
     <!-- Plugin used-->
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 
 </html>

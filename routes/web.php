@@ -22,8 +22,8 @@ use App\Http\Controllers\PublicServiceController;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\YoutubeurlController;
 use App\Models\Invoice;
-
-
+use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\ChatController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -131,8 +131,15 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
 
     Route::get('pdf/proposal', [PerposalController::class,'pdfProposal'])->name('proposel.pdf');
     Route::get('pdf/invoice', [ InvoiceController::class,'pdfInvoice'])->name('invoice.pdf');
+    
+    
+    Route::get('/chats', [ChatController::class,'index']);
+    Route::get('/messages', [ChatController::class,'fetchAllMessages']);
+    Route::post('/messages',[ChatController::class,'sendMessage']);
 
     
+// Route::get('/chat',[MessagesController::class,'userChat'])->name('user.chat');
+//     Route::post('/send/chat',[MessagesController::class,'sendMessage'])->name('send.chat');
 });
 
 
@@ -141,3 +148,5 @@ Route::get('mark/read',function(){
   auth()->user()->unreadNotifications->markAsRead();
   return redirect()->back();
 })->name('mark.read');
+
+

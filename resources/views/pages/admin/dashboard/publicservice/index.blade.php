@@ -15,8 +15,8 @@
             <div class="col-sm-12">
                 <div class="card medical-card">
                     <div class="card-body p-0">
-                    <a class="btn btn-primary mb-2" href="#"> جديد +</a>
-                        
+                    <a class="btn btn-primary mb-2" href="{{
+                            route('publics.create') }}"> جديد +</a>
                         <div class="table-responsive medical-datatable">
                             <table class="display" style="width:100%"
                                 id="basic-2">
