@@ -24,11 +24,11 @@
                                     <tr>
                                         <!-- <th>Id</th> -->
                                         <th>الواتس اب حلقة الوصل</th>
-                                        <th>الانستغرام حلقة الوصل</th>
+                                        <!-- <th>الانستغرام حلقة الوصل</th> -->
                                         <th> فيسبوك حلقة الوصل</th>
                                         <th>تويتر حلقة الوصل</th>
+                                        <th></th>
 
-                                        <th ></th>
                                     </tr>
                                 </thead>
                                 @foreach ($socials as $social)
@@ -37,6 +37,7 @@
                                     <td>{{ $social->whatsapp }}</td>
                                     <td>{{ $social->facebook }}</td>
                                     <td>{{ $social->twitter }}</td>
+                                    
 
                                     <td>
                                         <form action="{{ route('social.destroy',
