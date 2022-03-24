@@ -38,8 +38,7 @@
                                 <input type="number" class="form-control"
                                     name="number" value="{{ $images->speed }}"
                                 id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -51,8 +50,7 @@
                                 <input type="text" class="form-control"
                                     name="heading" value="{{ $images->heading
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -65,8 +63,7 @@
                                 <input type="text" class="form-control"
                                     name="heading2" value="{{ $images->heading2
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -79,8 +76,7 @@
                                 <input type="text" class="form-control"
                                     name="heading3" value="{{ $images->heading3
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -93,8 +89,7 @@
                                 <input type="text" class="form-control"
                                     name="heading4" value="{{ $images->heading4
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -106,8 +101,7 @@
                                 <input type="text" class="form-control"
                                     name="sub_heading" value="{{ $images->sub_heading
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -119,8 +113,7 @@
                                 <input type="text" class="form-control"
                                     name="sub_heading2" value="{{ $images->sub_heading2
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -146,8 +139,7 @@
                                 <input type="text" class="form-control"
                                     name="sub_heading4" value="{{ $images->sub_heading4
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="Enter sub heading">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
