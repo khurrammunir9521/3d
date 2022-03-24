@@ -2279,3 +2279,7 @@ input[type=number] {
     top: 0;
     bottom: 250px;
 }
+
+.mob-profile-heading{
+    display: none;
+}
