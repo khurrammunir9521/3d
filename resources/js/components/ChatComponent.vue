@@ -22,6 +22,11 @@
                     name="message"
                     placeholder="Enter your message..."
                     class="form-control">
+                <div class="custom-file">
+                    <input type="file" name="filename" class="custom-file-input" id="inputFileUpload"
+                    v-on:change="onFileChange">
+                    <label class="custom-file-label" for="inputFileUpload">Choose file</label>
+                    </div>
            </div>
             <span class="text-muted" v-if="activeUser" >{{ activeUser.name }} is typing...</span>
        </div>
@@ -39,6 +44,8 @@
                 users:[],
                 activeUser: false,
                 typingTimer: false,
+                filename: '',
+                file: '',
             }
         },
         created() {
@@ -67,7 +74,13 @@
                 })
         },
         methods: {
-           
+           onFileChange(e) {
+            //console.log(e.target.files[0]);
+            this.filename = "Selected File: " + e.target.files[0].name;
+            this.file = e.target.files[0];
+            },
+            // form data
+
             fetchMessages() {
                 axios.get('/messages').then(response => {
                     this.messages = response.data;
@@ -76,7 +89,8 @@
             sendMessage() {
                 this.messages.push({
                     user: this.user,
-                    message: this.newMessage
+                    message: this.newMessage,
+                    filename:this.filename
                 });
                 axios.post('/medi/messages', {message: this.newMessage});
                 this.newMessage = '';

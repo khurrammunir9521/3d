@@ -5293,6 +5293,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['user'],
   data: function data() {
@@ -5301,7 +5306,9 @@ __webpack_require__.r(__webpack_exports__);
       newMessage: '',
       users: [],
       activeUser: false,
-      typingTimer: false
+      typingTimer: false,
+      filename: '',
+      file: ''
     };
   },
   created: function created() {
@@ -5331,6 +5338,12 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
+    onFileChange: function onFileChange(e) {
+      //console.log(e.target.files[0]);
+      this.filename = "Selected File: " + e.target.files[0].name;
+      this.file = e.target.files[0];
+    },
+    // form data
     fetchMessages: function fetchMessages() {
       var _this2 = this;
 
@@ -5341,7 +5354,8 @@ __webpack_require__.r(__webpack_exports__);
     sendMessage: function sendMessage() {
       this.messages.push({
         user: this.user,
-        message: this.newMessage
+        message: this.newMessage,
+        filename: this.filename
       });
       axios.post('/medi/messages', {
         message: this.newMessage
@@ -34279,6 +34293,23 @@ var render = function () {
             },
           },
         }),
+        _vm._v(" "),
+        _c("div", { staticClass: "custom-file" }, [
+          _c("input", {
+            staticClass: "custom-file-input",
+            attrs: { type: "file", name: "filename", id: "inputFileUpload" },
+            on: { change: _vm.onFileChange },
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass: "custom-file-label",
+              attrs: { for: "inputFileUpload" },
+            },
+            [_vm._v("Choose file")]
+          ),
+        ]),
       ]),
       _vm._v(" "),
       _vm.activeUser
