@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
-<div class="card-body">
+<div class="content-main">
     <h3>الصورة الجانبية</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
@@ -61,7 +61,6 @@
                             
                           
                             <button type="submit" class="btn btn-primary">يقدم</button>
-                            @endsection
                         </form>
                     </div>
                 </div>
@@ -69,3 +68,4 @@
         </div>
     </div>
 </div>
+@endsection

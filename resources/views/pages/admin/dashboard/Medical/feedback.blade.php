@@ -6,7 +6,7 @@
         <div class="col-md-12">
 			  <form >
 				 <div class="col-12">
-					<label class="form-label">Email</label>
+					<label class="form-label">بريد الالكتروني</label>
 					<input type="email" class="form-control" name="email" >
 				</div>
 				   <div class="col-12">
@@ -14,7 +14,7 @@
 					   <textarea class="form-control"  id="question" name="question" name="question"></textarea>
 				</div>
 			  </form>
-			<button type="submit" class="btn btn-primary btn-submit">Submit</button>
+			<button type="submit" class="btn btn-primary btn-submit">إرسال</button>
 		</div>
 	</div>
 </div>

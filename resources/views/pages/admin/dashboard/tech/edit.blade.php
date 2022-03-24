@@ -16,43 +16,58 @@
             <div class="col-sm-12">
                 <div class="card medical-card">
                     <div class="card-body p-0">
-<form method="POST" action="{{ route('tech.update', $tech->id) }}">
-    @csrf
-    @method('put')
-    <div class="row">
+                        <form method="POST" action="{{ route('tech.update',
+                            $tech->id) }}">
+                            @csrf
+                            @method('put')
+                            <div class="row">
+                                <div class="col-md-6">
 
-    <div class="col-md-6">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Heading </label>
-        <input type="text" class="form-control" name="heading" value="{{ $tech->heading }}" id="" aria-describedby="emailHelp" placeholder="Enterheading">
-        <small id="" class="form-text text-muted"></small>
-    </div>
-    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Sub
+                                            Heading </label>
+                                        <input type="text" class="form-control"
+                                            name="subheading" value="{{ $tech->subheading
+                                        }}" id="" aria-describedby=""
+                                        placeholder="Enter sub heading">
+                                        <small id="" class="form-text
+                                            text-muted"></small>
+                                    </div>
+                                </div>
 
-    <div class="col-md-6">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Heading
+                                        </label>
+                                        <input type="text" class="form-control"
+                                            name="heading" value="{{ $tech->heading
+                                        }}" id="" aria-describedby="emailHelp"
+                                        placeholder="Enterheading">
+                                        <small id="" class="form-text
+                                            text-muted"></small>
+                                    </div>
+                                </div>
 
-    <div class="form-group">
-        <label for="exampleInputEmail1">Sub Heading </label>
-        <input type="text" class="form-control" name="subheading" value="{{ $tech->subheading }}" id="" aria-describedby="" placeholder="Enter sub heading">
-        <small id="" class="form-text text-muted"></small>
-    </div>
-    </div>
+                                
 
 
-    <div class="form-group">
-        <label for="exampleInputEmail1">Body text </label>
-        <textarea id="" name="bodytext" placeholder="Enter body text"rows="4" cols="50" class="ckeditor form-control">
-            {{$tech->bodytext}}
-        </textarea>
-    
-    </div>
-    </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Body text
+                                    </label>
+                                    <textarea id="" name="bodytext"
+                                        placeholder="Enter body text" rows="4"
+                                        cols="50" class="ckeditor form-control">
+                                        {{$tech->bodytext}}
+                                    </textarea>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
+                                </div>
+                            </div>
 
-</div>
+                            <button type="submit" class="btn btn-primary">يقدم</button>
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

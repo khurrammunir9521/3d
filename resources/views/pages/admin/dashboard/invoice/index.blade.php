@@ -52,7 +52,7 @@
                                             $invoice->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{
                                                 route('invoicess.edit',
-                                                $invoice->id) }}">Edit</a>
+                                                $invoice->id) }}">يحرر</a>
 
                                             @csrf
                                             @method('DELETE')
@@ -69,9 +69,10 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
+                   
                 </div>    
             </div>    
         </div>    
     </div>    
 </div>    
+@endsection

@@ -54,18 +54,12 @@
                                 </div>
                                 
                             </div>
-                            
-
-
-                           
-
-
                             <button type="submit" class="btn btn-primary">يقدم</button>
                         </form>
-                        @endsection
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
