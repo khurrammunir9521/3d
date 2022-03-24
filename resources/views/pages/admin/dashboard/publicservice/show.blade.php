@@ -34,10 +34,10 @@
                                                 btn-primary"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal">
-                                                Send Query
+                                                إرسال الاستعلام
                                             </button>
                                             <button class="btn btn-primary"
-                                                type="submit"> save</button>
+                                                type="submit"> حفظ</button>
                                         </form>
                                         <div class="payment d-none"
                                             id="payment">
@@ -360,8 +360,8 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title"
-                                            id="exampleModalLabel">Send Query</h5>
-                                        <button type="button" class="btn-close"
+                                            id="exampleModalLabel">إرسال الاستعلام</h5>
+                                        <button type="button" class="btn-close send-query-cross"
                                             data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -369,7 +369,7 @@
                                         <form>
 
                                             <div class="col-12">
-                                                <label class="form-label">Email</label>
+                                                <label class="form-label">بريد الالكتروني</label>
                                                 <input type="text"
                                                     class="form-control"
                                                     name="email" value=""
@@ -384,11 +384,9 @@
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn
-                                            btn-secondary"
+                                        <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn
-                                            btn-primary btn-submit"
+                                        <button type="submit" class="btn btn-primary btn-submit"
                                             data-bs-dismiss="modal"
                                             aria-label="Send">Send</button>
                                     </div>
