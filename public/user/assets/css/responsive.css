@@ -1079,6 +1079,10 @@
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* asim */
+
+    .banner .carousel-control-prev, .banner .carousel-control-next{
+        display: none;
+    }
     .services-section .title .inner-line{
         bottom: -10px !important;
     }
@@ -1605,7 +1609,7 @@
 
     .static-text {
         position: absolute;
-        width: 40%;
+        width: auto !important;
     }
 
     .notification-box {
