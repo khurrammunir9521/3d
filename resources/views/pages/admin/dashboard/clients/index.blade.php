@@ -32,7 +32,7 @@
                                     <th>فاتورة</th>
                                     <th>دفع</th>
                                     <th>طلب</th>
-                                    <!-- <th>Action</th> -->
+                                    <th></th>
                                 </tr>
                                     </thead>
                                 @foreach ($clients as $client)
@@ -74,9 +74,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>                    
+@endsection

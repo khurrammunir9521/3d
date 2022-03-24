@@ -345,7 +345,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title"
-                                            id="exampleModalLabel">Send Query</h5>
+                                            id="exampleModalLabel">إرسال الاستعلام</h5>
                                         <button type="button" class="btn-close"
                                             data-bs-dismiss="modal"
                                             aria-label="Close"></button>
@@ -354,7 +354,7 @@
                                         <form>
 
                                             <div class="col-12">
-                                                <label class="form-label">Email</label>
+                                                <label class="form-label">بريد الالكتروني</label>
                                                 <input type="text"
                                                     class="form-control"
                                                     name="email"
@@ -362,7 +362,7 @@
                                                 readonly>
                                             </div>
                                             <div class="col-12">
-                                                <label class="form-label">Question</label>
+                                                <label class="form-label">سؤال</label>
                                                 <textarea class="form-control"
                                                     id="question"
                                                     name="question"></textarea>
@@ -372,11 +372,11 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn
                                             btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                            data-bs-dismiss="modal">يغلق</button>
                                         <button type="submit" class="btn
                                             btn-primary btn-submit"
                                             data-bs-dismiss="modal"
-                                            aria-label="Send">Send</button>
+                                            aria-label="Send">إرسال</button>
                                     </div>
                                 </div>
                             </div>

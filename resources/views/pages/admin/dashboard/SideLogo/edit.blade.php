@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="card-body">
+<div class="content-main">
     <h3>الصورة الجانبية</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">

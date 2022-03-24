@@ -128,7 +128,6 @@
                             </div>
                             
                             <button type="submit" class="btn btn-primary">يقدم</button>
-                            @endsection
                         </form>
                     </div>
                 </div>
@@ -136,3 +135,4 @@
         </div>
     </div>
 </div>
+@endsection

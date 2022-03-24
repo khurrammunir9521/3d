@@ -22,7 +22,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1">Speed </label>
+                                <label for="exampleInputEmail1">سرعة </label>
                                 <input type="number" class="form-control"
                                     name="speed" id="" value="{{ $images->speed
                                 }}"
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1">Number </label>
+                                <label for="exampleInputEmail1">رقم </label>
                                 <input type="number" class="form-control"
                                     name="number" value="{{ $images->speed }}"
                                 id=""
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1"> Heading
+                                <label for="exampleInputEmail1"> عنوان
                                 </label>
                                 <input type="text" class="form-control"
                                     name="heading" value="{{ $images->heading
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1"> Heading
+                                <label for="exampleInputEmail1"> عنوان
                                 </label>
                                 <input type="text" class="form-control"
                                     name="heading2" value="{{ $images->heading2
@@ -74,7 +74,7 @@
                                 <div class="col-md-6">
                                 
                             <div class="form-group">
-                                <label for="exampleInputEmail1"> Heading
+                                <label for="exampleInputEmail1"> عنوان
                                 </label>
                                 <input type="text" class="form-control"
                                     name="heading3" value="{{ $images->heading3
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1"> Heading
+                                <label for="exampleInputEmail1"> عنوان
                                 </label>
                                 <input type="text" class="form-control"
                                     name="heading4" value="{{ $images->heading4
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1">Sub Heading
+                                <label for="exampleInputEmail1">العنوان الفرعي
                                 </label>
                                 <input type="text" class="form-control"
                                     name="sub_heading" value="{{ $images->sub_heading
@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1">Sub Heading
+                                <label for="exampleInputEmail1">العنوان الفرعي
                                 </label>
                                 <input type="text" class="form-control"
                                     name="sub_heading2" value="{{ $images->sub_heading2
@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="col-md-6">
                                 <div class="form-group">
-                                <label for="exampleInputEmail1">Sub Heading
+                                <label for="exampleInputEmail1">العنوان الفرعي
                                 </label>
                                 <input type="text" class="form-control"
                                     name="sub_heading3" value="{{ $images->sub_heading3
@@ -141,7 +141,7 @@
                                 <div class="col-md-6">
                                 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Sub Heading
+                                <label for="exampleInputEmail1">العنوان الفرعي
                                 </label>
                                 <input type="text" class="form-control"
                                     name="sub_heading4" value="{{ $images->sub_heading4
@@ -155,7 +155,7 @@
                                 <div class="col-md-6">
                                 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Body text
+                                <label for="exampleInputEmail1">نص أساسي
                                 </label>
                                 <textarea id="" name="body_text"
                                     placeholder="Enter body text" rows="4"
@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Body text 2</label>
+                                        <label for="exampleInputEmail1">نص أساسي 2</label>
                                         <textarea id="" name="body_text2"
                                             placeholder="Enter body text" rows="4"
                                             cols="50" class="ckeditor form-control">
@@ -177,7 +177,7 @@
                                 <div class="col-md-6">
                                 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Body text 3</label>
+                                <label for="exampleInputEmail1">النص الأساسي 3</label>
                                 <textarea id="" name="body_text3"
                                     placeholder="Enter body text" rows="4"
                                     cols="50" class="ckeditor form-control">
@@ -188,7 +188,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Body text 4</label>
+                                        <label for="exampleInputEmail1">نص أساسي 4</label>
                                         <textarea id="" name="body_text4"
                                             placeholder="Enter body text" rows="4"
                                             cols="50" class="ckeditor form-control">
@@ -198,7 +198,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Images </label>
+                                        <label for="exampleInputEmail1">الصور </label>
                                         <input type="file" class="form-control"
                                             name="images" id="" accept="image/*"
                                             type="file"
@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Images2 </label>
+                                        <label for="exampleInputEmail1">الصور2 </label>
                                         <input type="file" class="form-control"
                                             name="images2" id="" accept="image/*"
                                             type="file"
@@ -226,7 +226,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Images3 </label>
+                                        <label for="exampleInputEmail1">الصور3 </label>
                                         <input type="file" class="form-control"
                                             name="images3" id="" accept="image/*"
                                             type="file"
@@ -241,7 +241,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Images4 </label>
+                                        <label for="exampleInputEmail1">الصور4 </label>
                                         <input type="file" class="form-control"
                                             name="images4" id="" accept="image/*"
                                             type="file"
@@ -257,7 +257,7 @@
                                 </div>
                                 
                             </div>
-                           <button type="submit" class="btn btn-primary">Submit</button>
+                           <button type="submit" class="btn btn-primary">إرسال</button>
                         </form>
                     </div>
                 </div>

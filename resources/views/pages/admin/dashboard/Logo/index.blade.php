@@ -30,7 +30,7 @@
                                         <th>صورة5</th>
                                         <th>صورة6</th>
                                         <th>صورة7</th>
-                                        <!-- <th>Action</th> -->
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 @foreach ($logos as $logo)
@@ -82,9 +82,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>            
     </div>
 </div>        
+@endsection

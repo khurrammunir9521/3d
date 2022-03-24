@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 @section('content')
 
-<div class="card-body">
+<div class="content-main">
     <h3>الصورة الجانبية</h3>
     <div class="breadcrumb-main">
         <ol class="breadcrumb">
@@ -26,7 +26,7 @@
                                         <th>صورة</th>
                                         <th>عنوان</th>
                                         <th>العنوان الفرعي</th>
-                                        <!-- <th >Action</th> -->
+                                        <th ></th>
                                     </tr>
                                 </thead>
                                 @foreach ($sides as $side)
@@ -58,9 +58,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

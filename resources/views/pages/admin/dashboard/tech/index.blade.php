@@ -23,8 +23,9 @@
                                 <thead>
                                     <tr>
 
-                                        <th>عنوان</th>
-                                        <th>العنوان الفرعي</th>
+                                    <th>العنوان الفرعي</th>    
+                                    <th>عنوان</th>
+                                       
                                         <th>نص</th>
                                         <th></th>
                                     </tr>
@@ -32,8 +33,9 @@
                                 @foreach ($tech as $tec)
                                 <tr>
 
-                                    <td>{{ $tec->heading }}</td>
-                                    <td>{{ $tec->subheading }}</td>
+                                <td>{{ $tec->subheading }}</td>    
+                                <td>{{ $tec->heading }}</td>
+                                    
                                     <td>{!! $tec->bodytext !!}</td>
                                     <td>
                                         <form action="{{ route('tech.destroy',

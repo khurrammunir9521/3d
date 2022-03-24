@@ -28,7 +28,7 @@
                                         <th> فيسبوك حلقة الوصل</th>
                                         <th>تويتر حلقة الوصل</th>
 
-                                        <!-- <th >Action</th> -->
+                                        <th ></th>
                                     </tr>
                                 </thead>
                                 @foreach ($socials as $social)
@@ -43,13 +43,13 @@
                                             $social->id) }}" method="POST">
                                             <a class="btn btn-primary" href="{{
                                                 route('social.edit', $social->id)
-                                                }}">Edit</a>
+                                                }}">يحرر</a>
 
                                             @csrf
                                             @method('DELETE')
 
                                             <button type="submit" class="btn
-                                                btn-danger">Delete</button>
+                                                btn-danger">حذف</button>
                                         </form>
                                     </td>
                                 </tr>
@@ -57,9 +57,9 @@
                             </table>
                         </div>
                     </div>
-                    @endsection
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
