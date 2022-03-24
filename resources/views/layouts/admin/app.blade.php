@@ -99,7 +99,7 @@
 	  <script src="{{ asset('assets/js/datatable/datatables/datatable.custom.js') }}"></script>
 
     @stack('scripts')
-
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

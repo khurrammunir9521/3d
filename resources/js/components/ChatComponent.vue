@@ -22,14 +22,6 @@
                     name="message"
                     placeholder="Enter your message..."
                     class="form-control">
-                    <file-upload
-                        post-action="/sendMessage"
-                        ref ='upload'
-                        @input-file="$refs.upload.active=true"
-
-                    >
-                     </file-upload>
-                     <v-icon>attachfile</v-icon>
            </div>
             <span class="text-muted" v-if="activeUser" >{{ activeUser.name }} is typing...</span>
        </div>
@@ -75,8 +67,9 @@
                 })
         },
         methods: {
+           
             fetchMessages() {
-                axios.get('messages').then(response => {
+                axios.get('/messages').then(response => {
                     this.messages = response.data;
                 })
             },
@@ -85,7 +78,7 @@
                     user: this.user,
                     message: this.newMessage
                 });
-                axios.post('messages', {message: this.newMessage});
+                axios.post('/medi/messages', {message: this.newMessage});
                 this.newMessage = '';
             },
             sendTypingEvent() {
