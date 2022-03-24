@@ -27,7 +27,7 @@
                                     name="speed" id="" value="{{ $images->speed
                                 }}"
                                 aria-describedby="emailHelp"
-                                placeholder="Enterheading">
+                                placeholder="أدخل العنوان">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -38,7 +38,7 @@
                                 <input type="number" class="form-control"
                                     name="number" value="{{ $images->speed }}"
                                 id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -50,7 +50,7 @@
                                 <input type="text" class="form-control"
                                     name="heading" value="{{ $images->heading
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -63,7 +63,7 @@
                                 <input type="text" class="form-control"
                                     name="heading2" value="{{ $images->heading2
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -76,7 +76,7 @@
                                 <input type="text" class="form-control"
                                     name="heading3" value="{{ $images->heading3
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -89,7 +89,7 @@
                                 <input type="text" class="form-control"
                                     name="heading4" value="{{ $images->heading4
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -101,7 +101,7 @@
                                 <input type="text" class="form-control"
                                     name="sub_heading" value="{{ $images->sub_heading
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -113,7 +113,7 @@
                                 <input type="text" class="form-control"
                                     name="sub_heading2" value="{{ $images->sub_heading2
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -125,8 +125,7 @@
                                 <input type="text" class="form-control"
                                     name="sub_heading3" value="{{ $images->sub_heading3
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub
-                                heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -139,7 +138,7 @@
                                 <input type="text" class="form-control"
                                     name="sub_heading4" value="{{ $images->sub_heading4
                                 }}" id=""
-                                aria-describedby="" placeholder="Enter sub heading">
+                                aria-describedby="" placeholder="أدخل العنوان الفرعي">
                                 <small id="" class="form-text text-muted">
                                 </small>
                             </div>
@@ -150,7 +149,7 @@
                                 <label for="exampleInputEmail1">نص أساسي
                                 </label>
                                 <textarea id="" name="body_text"
-                                    placeholder="Enter body text" rows="4"
+                                    placeholder="أدخل نصًا أساسيًا" rows="4"
                                     cols="50" class="ckeditor form-control">
                                     {{ $images->body_text }}
                                 </textarea>
@@ -160,7 +159,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">نص أساسي 2</label>
                                         <textarea id="" name="body_text2"
-                                            placeholder="Enter body text" rows="4"
+                                            placeholder="أدخل نصًا أساسيًا" rows="4"
                                             cols="50" class="ckeditor form-control">
                                             {{ $images->body_text2 }}
                                         </textarea>
@@ -171,7 +170,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">النص الأساسي 3</label>
                                 <textarea id="" name="body_text3"
-                                    placeholder="Enter body text" rows="4"
+                                    placeholder="أدخل نصًا أساسيًا" rows="4"
                                     cols="50" class="ckeditor form-control">
                                     {{ $images->body_text3 }}
                                 </textarea>
@@ -182,7 +181,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">نص أساسي 4</label>
                                         <textarea id="" name="body_text4"
-                                            placeholder="Enter body text" rows="4"
+                                            placeholder="أدخل نصًا أساسيًا" rows="4"
                                             cols="50" class="ckeditor form-control">
                                             {{ $images->body_text4 }}
                                         </textarea>
@@ -197,7 +196,7 @@
                                             id="download-cv-file-name" name="images"
                                             id="images" value="{{ $images->images }}"
                                         aria-describedby=""
-                                        placeholder="Enter sub heading">
+                                        placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
@@ -211,7 +210,7 @@
                                             id="download-cv-file-name" name="images2"
                                             id="images2" value="{{ $images->images2 }}"
                                         aria-describedby=""
-                                        placeholder="Enter sub heading">
+                                        placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
@@ -225,7 +224,7 @@
                                             id="download-cv-file-name" name="images3"
                                             id="images3" value="{{ $images->images3 }}"
                                         aria-describedby=""
-                                        placeholder="Enter sub heading">
+                                        placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
@@ -240,7 +239,7 @@
                                             id="download-cv-file-name" name="images4"
                                             id="images4" value="{{ $images->images4 }}"
                                         aria-describedby=""
-                                        placeholder="Enter sub heading">
+                                        placeholder="أدخل العنوان الفرعي">
                                         <small id="" class="form-text text-muted">
                                         </small>
                                     </div>
