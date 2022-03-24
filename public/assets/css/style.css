@@ -31294,3 +31294,12 @@ margin-left: 20px;
   text-decoration: none;
 }
 
+.notification-left-side{
+  overflow-y: scroll;
+  height: 340px;
+  direction: ltr;
+}
+
+.notification-left-side li{
+  direction: rtl;
+}
