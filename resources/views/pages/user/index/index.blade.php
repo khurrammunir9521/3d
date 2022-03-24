@@ -488,9 +488,8 @@
                                     @endif
                                     <div class="row justify-content-end">
                                         <div class="col-md-4 col-lg-7 first-col">
-                                            <div class="static-text">
-
-
+                                            
+                                        <div class="mob-profile-heading">
                                                 <span class="outline dot d-block">{{ $profiles->sub_heading }}
                                                 </span>
 
@@ -499,8 +498,19 @@
                                                     {{ $profiles->heading }}
                                                     !
                                                 </h2>
+                                        </div>
+                                            <div class="static-text">
+                                                <div class="mob-profile-heading-hide">
+                                                
+                                                <span class="outline dot d-block">{{ $profiles->sub_heading }}
+                                                </span>
 
 
+                                                <h2 class="title no-border">
+                                                    {{ $profiles->heading }}
+                                                    !
+                                                </h2>
+                                                </div>
                                                 <p class="description">
                                                     {!!$profiles->body_text !!}
                                                 </p>

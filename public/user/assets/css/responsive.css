@@ -2,6 +2,16 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+
+.mob-profile-heading{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.mob-profile-heading-hide{
+    display: none;
+}
 .first-col {
     order: 1;
 }

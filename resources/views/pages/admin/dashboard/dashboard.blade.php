@@ -73,7 +73,7 @@
             <div class="header-top d-sm-flex align-items-center">
               <h5>Growth Overview</h5>
               <div class="center-content growth-content">
-                <p class="d-flex align-items-center"><i class="toprightarrow-primary fa fa-arrow-up me-2"></i>80% Growth
+                <p class="d-flex align-items-center"><i class="toprightarrow-primary fa fa-arrow-up mx-2"></i>80% Growth
                 </p>
               </div>
               <div class="setting-list">
@@ -531,7 +531,7 @@
                   <tr>
                     <td>
                       <div class="media"><img class="img-fluid rounded-circle"
-                          src="../assets/images/dashboard/product-1.png" alt="" data-original-title="" title="">
+                          src="./assets/images/dashboard/product-1.png" alt="" data-original-title="" title="">
                         <div class="media-body"><a href="product-page.html"><span>Yellow New Nike shoes</span></a></div>
                       </div>
                     </td>
@@ -553,7 +553,7 @@
                   <tr>
                     <td>
                       <div class="media"><img class="img-fluid rounded-circle"
-                          src="../assets/images/dashboard/product-2.png" alt="" data-original-title="" title="">
+                          src="./assets/images/dashboard/product-2.png" alt="" data-original-title="" title="">
                         <div class="media-body"><a href="product-page.html"><span>Sony Brand New Headphone</span></a>
                         </div>
                       </div>
@@ -576,7 +576,7 @@
                   <tr>
                     <td>
                       <div class="media"><img class="img-fluid rounded-circle"
-                          src="../assets/images/dashboard/product-3.png" alt="" data-original-title="" title="">
+                          src="./assets/images/dashboard/product-3.png" alt="" data-original-title="" title="">
                         <div class="media-body"><a href="product-page.html"><span>Beautiful Golden Tree plant</span></a>
                         </div>
                       </div>
@@ -599,7 +599,7 @@
                   <tr>
                     <td>
                       <div class="media"><img class="img-fluid rounded-circle"
-                          src="../assets/images/dashboard/product-4.png" alt="" data-original-title="" title="">
+                          src="./assets/images/dashboard/product-4.png" alt="" data-original-title="" title="">
                         <div class="media-body"><a href="product-page.html"><span>Marco M Kely Handbeg</span></a></div>
                       </div>
                     </td>
@@ -621,7 +621,7 @@
                   <tr>
                     <td>
                       <div class="media"><img class="img-fluid rounded-circle"
-                          src="../assets/images/dashboard/product-5.png" alt="" data-original-title="" title="">
+                          src="./assets/images/dashboard/product-5.png" alt="" data-original-title="" title="">
                         <div class="media-body"><a href="product-page.html"><span>Being Human Branded T-Shirt </span></a>
                         </div>
                       </div>
