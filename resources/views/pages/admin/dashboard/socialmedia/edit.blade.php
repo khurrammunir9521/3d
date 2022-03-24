@@ -19,7 +19,7 @@
         @csrf
         @method('PUT')
 <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
         <div class="form-group">
             <label for="exampleInputEmail1">Whatsapp</label>
             <input type="url" class="form-control" name="whatsapp" value="{{$socials->whatsapp}}"id="" aria-describedby="emailHelp"
@@ -27,7 +27,7 @@
             <small id="" class="form-text text-muted"></small>
         </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
 
 
         <div class="form-group">
@@ -37,7 +37,7 @@
             <small id="" class="form-text text-muted"></small>
         </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
 
         <div class="form-group">
             <label for="exampleInputEmail1">تويتر </label>
