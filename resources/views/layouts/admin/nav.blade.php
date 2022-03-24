@@ -1,7 +1,7 @@
   <header class="main-nav">
       <div class="sidebar-user text-center"><a class="setting-primary" href="{{route('editpassword')}}"><i data-feather="settings"></i></a>
 
-          <a href="{{ route('profileupdate.view') }}">
+          <a href="{{ route('profileupdate.view') }}" class="admin-profile">
               @if(auth()->user()->profile != null)
               <img class="img-90 rounded-circle" src="{{ asset('storage/' . auth()->user()->profile) }}" alt="">
               @else
