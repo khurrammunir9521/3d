@@ -139,7 +139,8 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
 
     
 // Route::get('/chat',[MessagesController::class,'userChat'])->name('user.chat');
-//     Route::post('/send/chat',[MessagesController::class,'sendMessage'])->name('send.chat');
+// Route::post('/send/chat',[MessagesController::class,'sendMessage'])->name('send.chat');
+
 });
 
 
