@@ -2,6 +2,9 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+.profile-img {
+    margin-left: 50px !important;
+}
 .toggle-overlay{
     display: block !important;
 }
@@ -165,12 +168,19 @@
     color:#1ea9d4;
     white-space: nowrap;
   } */
+
   .mobile-nav .nav-item.active a {
     color: #215099!important;
     font-weight: bold;
     text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
     border-bottom-color: #215099;
     border-bottom: 2px solid #215099;
+}
+.mobile-nav .nav-item a {
+    color: #1EA9D4!important;
+  }
+.mobile-nav .nav-link:focus, .nav-link:hover {
+    color: #1EA9D4!important;
 }
 .mobile-nav .nav-item{
     margin-bottom: 10px;
@@ -1111,6 +1121,9 @@
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* asim */
+    .profile-img {
+        margin-left: 50px !important;
+    }
     .toggle-overlay{
         display: block !important;
     }
@@ -1136,6 +1149,12 @@
         text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
         border-bottom-color: #215099;
         border-bottom: 2px solid #215099;
+    }
+    .mobile-nav .nav-item a {
+        color: #1EA9D4!important;
+      }
+    .mobile-nav .nav-link:focus, .nav-link:hover {
+        color: #1EA9D4!important;
     }
     .mobile-nav .nav-item{
         margin-bottom: 15px;
