@@ -249,9 +249,9 @@
                         <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
 
                         <div class="mobile-profile">
-                           
+
                             @if(Auth::user())
-                            <a  href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{asset(Auth::user()->profile)}}? {{asset(Auth::user()->profile)}}:{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                            <a  href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
                             <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
 
 
