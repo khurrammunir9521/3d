@@ -13,7 +13,7 @@
 
                             @if($user->id !== auth()->id())
                             @php
-                                $not_seen= App\Models\Message::where('user_id',$user->id)->where('receiver_id',auth()->id())->where('is_seen',false)->get() ?? null
+                                $not_seen= App\Models\Chat::where('user_id',$user->id)->where('reciever_id',auth()->id())->get() ?? null
 
                             @endphp
                                     <a wire:click="getUser({{$user->id}})"  class="text-dark link">

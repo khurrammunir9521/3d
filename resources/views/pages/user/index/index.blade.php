@@ -121,7 +121,7 @@
                 @endif
                 <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
                 --}}
-                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
                     {{-- @if (auth()->user()->profile != null) --}}
                     @if (@auth()->user()->profile == null)
                     <div class="profile profile-icon">
@@ -251,7 +251,7 @@
                         <div class="mobile-profile">
                             
                    
-                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{(Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
+                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
                             @if(Auth::user())
                             <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ Auth::user()->name }}!</a>
                             @endif

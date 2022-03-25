@@ -15,15 +15,15 @@ class Chats extends Component
     	$sender=$this->sender;
     	$this->allmessages;
         
-        return view('livewire.messages',compact('users','sender'));
+        return view('livewire.chats',compact('users','sender'));
     }
     public function mountdata()
     {
         if(isset($this->sender->id))
         {
-              $this->allmessages=Chat::where('user_id',auth()->id())->where('receiver_id',$this->sender->id)->orWhere('user_id',$this->sender->id)->where('receiver_id',auth()->id())->orderBy('id','desc')->get();
+              $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$this->sender->id)->orWhere('user_id',$this->sender->id)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
 
-               $not_seen= Chat::where('user_id',$this->sender->id)->where('receiver_id',auth()->id());
+               $not_seen= Chat::where('user_id',$this->sender->id)->where('reciever_id',auth()->id());
                $not_seen->update(['is_seen'=> true]);
         }
 
@@ -40,7 +40,7 @@ class Chats extends Component
         $data->message=$msg;
 
     	$data->user_id=auth()->id();
-    	$data->receiver_id=$this->sender->id;
+    	$data->reciever_id=$this->sender->id;
     	$data->save();
 
     	$this->resetForm();
@@ -51,7 +51,7 @@ class Chats extends Component
     {
        $user=User::find($userId);
        $this->sender=$user;
-       $this->allmessages=Chat::where('user_id',auth()->id())->where('receiver_id',$userId)->orWhere('user_id',$userId)->where('receiver_id',auth()->id())->orderBy('id','desc')->get();
+       $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
     }
 
 }

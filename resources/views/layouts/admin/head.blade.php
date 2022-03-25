@@ -43,8 +43,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/date-picker.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/prism.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vector-map.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <!-- Plugins css Ends-->
-   
+    @livewireStyles
+ 
 
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
    
@@ -70,7 +72,7 @@
     <style>
         .page-wrapper.compact-wrapper .page-body-wrapper .page-body {
             padding-top: 30px;
-            margin-right: 290px !important;
+            margin-right: 290px ;
             margin-left: 0px !important
         }
 

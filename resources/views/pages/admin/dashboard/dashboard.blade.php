@@ -13,7 +13,7 @@
 </div>
 <div class="container-fluid general-widget">
   <div class="row">
-    <div class="col-sm-6 col-xl-4 col-lg-6">
+    <div class="col-md-4">
       <div class="card o-hidden border-0">
         <div class="bg-primary b-r-4 card-body">
           <div class="media static-top-widget">
@@ -37,7 +37,7 @@
                   </div>
                 </div>
               </div> -->
-    <div class="col-sm-4 col-xl-4 col-lg-4">
+    <div class="col-md-4">
       <div class="card o-hidden border-0">
         <div class="bg-primary b-r-4 card-body">
           <div class="media static-top-widget">
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-xl-4 col-lg-6">
+    <div class="col-md-4">
       <div class="card o-hidden border-0">
         <div class="bg-primary b-r-4 card-body">
           <div class="media static-top-widget">
