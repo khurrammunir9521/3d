@@ -55,6 +55,7 @@
 </head>
 
 <body>
+    <div class="toggle-overlay"></div>
     <div class="content-wrapper hide-on-load">
         <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
             <div class="container-fluid">
@@ -66,8 +67,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">
@@ -183,7 +184,7 @@
             <div class="mmnue">
                 <ul class="sidebar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about-us">
@@ -214,10 +215,10 @@
                     @else
                     <li class="nav-item">
 
-                        <a href="#login" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
+                        <a href="#login" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#register" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                        <a href="#register" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
 
                     </li>
                     @endif

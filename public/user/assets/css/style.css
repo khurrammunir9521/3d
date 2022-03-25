@@ -52,7 +52,7 @@ nav .nav-link {
     border-bottom: 2px solid transparent;
 }
 
-nav .nav-link.active {
+nav .nav-item.active a {
     color: #215099!important;
     font-weight: bold;
     text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
@@ -2282,4 +2282,7 @@ input[type=number] {
 
 .mob-profile-heading{
     display: none;
+}
+.toggle-overlay{
+    display: none !important;
 }

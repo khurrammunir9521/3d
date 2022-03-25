@@ -712,6 +712,8 @@ if($(window).width() < 768) {
     e.preventDefault();
     $("#wrapper").toggleClass("menuDisplayed");
     $(".sec-main").toggleClass("sec-main-pos");
+  $(".toggle-overlay").toggleClass("overlay");
+
   });
 
   $('#wrapper .nav-item').click(function() {
@@ -724,8 +726,27 @@ if($(window).width() < 768) {
    && menu.has(e.target).length === 0) // ... nor a descendant of the container
    {
     $("#wrapper").removeClass("menuDisplayed");
+    
+  $(".toggle-overlay").removeClass("overlay");
   }
+
   })
+
+  // navbar active class
+
+  $("#navbarNav .nav-item").click(function() {
+  $(this).addClass("active");
+  $(this).nextAll().removeClass("active");
+  $(this).prevAll().removeClass("active");
+})
+  $(".mobile-nav .nav-item").click(function() {
+    $(this).addClass("active");
+    $(this).nextAll().removeClass("active");
+    $(this).prevAll().removeClass("active");
+
+})
+
+
 });
 AOS.init({
   offset: 100,
