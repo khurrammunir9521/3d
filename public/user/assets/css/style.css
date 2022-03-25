@@ -2374,13 +2374,13 @@ position: relative;
 .star-profile a{
     margin-left: 15px;
 }
-.star-profile-icon{
+.star-profile-icon img{
     border-radius: 50%;
     border: 2px solid #1EA9D4;
 }
 
 .design-card-body{
-    background-image: url(/assets/images/design-1.png);
+    background-image: url(../images/design-1.png);
 }
 
 /* designer section end here*/
