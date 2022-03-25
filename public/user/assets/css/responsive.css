@@ -165,12 +165,19 @@
     color:#1ea9d4;
     white-space: nowrap;
   } */
+
   .mobile-nav .nav-item.active a {
     color: #215099!important;
     font-weight: bold;
     text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
     border-bottom-color: #215099;
     border-bottom: 2px solid #215099;
+}
+.mobile-nav .nav-item a {
+    color: #1EA9D4!important;
+  }
+.mobile-nav .nav-link:focus, .nav-link:hover {
+    color: #1EA9D4!important;
 }
 .mobile-nav .nav-item{
     margin-bottom: 10px;
@@ -1136,6 +1143,12 @@
         text-shadow: 0 6px 6px rgb(0 0 0 / 16%);
         border-bottom-color: #215099;
         border-bottom: 2px solid #215099;
+    }
+    .mobile-nav .nav-item a {
+        color: #1EA9D4!important;
+      }
+    .mobile-nav .nav-link:focus, .nav-link:hover {
+        color: #1EA9D4!important;
     }
     .mobile-nav .nav-item{
         margin-bottom: 15px;

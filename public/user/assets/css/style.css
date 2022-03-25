@@ -2286,3 +2286,94 @@ input[type=number] {
 .toggle-overlay{
     display: none !important;
 }
+
+
+
+
+#contact-us{
+position: relative;
+}
+/* designer section start here*/
+
+
+
+.designer-sec{
+    position: relative;
+    background-color: #205098;
+}
+.design-txt{
+    color: #fff;
+    text-align: center;
+}
+.designer-title{
+    font-size: 43px;
+    font-weight: 700;
+}
+.design-txt p{
+    color: #fff;
+}
+.design-bg{
+    position: absolute;
+    top: 0;
+    width: 61rem;
+}
+.search-form{
+    padding: 30px 50px;
+}
+.designer-sec .sort-btn .btn{
+    box-shadow: none;
+    background-color: transparent;
+    color: #fff;
+}
+.sort-btn{
+    position: relative;
+}
+.sort-btn i{
+    margin-right: 60px;
+}
+.search-input{
+    position: relative;
+}
+.search-input i{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: #fff;
+}
+.designer-sec input{
+    border-color: #fff!important;
+    box-shadow: unset!important;
+    color: #fff!important;
+    background-color: transparent;
+    border-width: 4px;
+    border-radius: 30px;
+}
+.designer-sec ::placeholder{
+    color: #fff;
+}
+.designer-sec .btn-white {
+    background-color: #fff;
+    border: 3px solid #fff;
+    color: rgb(23, 23, 73);
+}
+.designer-sec .btn-white:hover{
+    background-color: #fff;
+    color: rgb(23, 23, 73);
+}
+.btn-trans{
+    margin-left: 30px;
+    border-radius: 20px;
+    background-color: transparent !important;
+    color: #fff !important;
+    padding: 8px 40px!important;
+    font-size: 15px;
+
+}
+
+.star-profile a{
+    margin-left: 15px;
+}
+
+/* designer section end here*/
+
+

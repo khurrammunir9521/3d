@@ -874,7 +874,7 @@
             </div>
         </div>
     </section>
-
+  
     <section class="contact section" id="contact-us">
         <div class="container">
             <div class="row">
@@ -1112,12 +1112,12 @@
             </div>
         </div>
     </div>
-    <div class="main-progress">
+    <!-- <div class="main-progress">
         <img src="{{asset('user/assets/icons/logo.svg')}}" alt="logo">
         <p class='progress text-center bg-transparent d-block'>0</p>
 
         <div class="progress-bar bar-load" id="bar"></div>
-    </div>
+    </div> -->
  
     <!--///////////////////////////////////// services model end here ////////////////////////////////////-->
     <!-- About US -->
