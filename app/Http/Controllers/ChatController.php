@@ -25,6 +25,14 @@ class ChatController extends Controller
 
     public function sendMessage(Request $request)
     {
+        if($request->has('file')) {
+            $filenanme = $request('file')->store('chat');
+            $message   = Message::create([
+                'user_id' => auth()->user()->id,
+                'message' => $request->message,
+                'media'   => $filenanme,
+            ]);
+        }
     	$chat = auth()->user()->messages()->create([
             'message' => $request->message
         ]);

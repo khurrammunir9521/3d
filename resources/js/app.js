@@ -2,6 +2,10 @@ require('./bootstrap');
 
 import Vue from 'vue/dist/vue'
 window.Vue = require('vue');
+import axios from 'axios'
+axios.create({
+    baseURL: process.env.appUrl
+});
 
 Vue.component('chat-component', require('./components/ChatComponent.vue').default);
 

@@ -135,7 +135,7 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
     
     Route::get('/chats', [ChatController::class,'index']);
     Route::get('/messages', [ChatController::class,'fetchAllMessages']);
-    Route::post('/messages',[ChatController::class,'sendMessage']);
+    Route::post('/medi/messages',[ChatController::class,'sendMessage']);
 
     
 // Route::get('/chat',[MessagesController::class,'userChat'])->name('user.chat');

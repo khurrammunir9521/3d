@@ -98,6 +98,14 @@
 
                                  </div>
                              </div>
+                             <!-- chat  -->
+                            
+                                <div id="app">
+                                    <div class="container">
+                                        <chat-component :user="{{ auth()->user() }}"></chat-component>
+                                    </div>
+                                </div>
+                             
                          </div>
                          <div class="modal-footer">
                              <div class="footer">
@@ -110,3 +118,4 @@
          </div>
      </div>
  </div>
+

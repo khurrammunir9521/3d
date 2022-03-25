@@ -68,14 +68,11 @@
                                         <td>{{ $medi->dr_email }}</td>
                                         <td>{{ $medi->hospital }}</td>
                                         <td>{{ $medi->procedure }}</td>
-                                        <td><b>{{ $medi->created_at->format('Y-m-d')
-                                                }}</b></td>
+                                        <td>{{ $medi->created_at->format('Y-m-d')
+                                                }}</td>
                                         <td>
                                             <a class="btn btn-primary" href="{{
                                                 route('medi.show', $medi->id)
-
-                                                
-
                                                 }}">رأي</a>
                                         </td>
 
@@ -92,7 +89,15 @@
     </div>
 
 </div>
+<div id="app">
+<div class="container">
+    <chat-component :user="{{ auth()->user() }}"></chat-component>
+</div>
+</div>
 @endsection
+@push('scripts')
+<script src="{{ asset('js/app.js') }}"></script>
+@endpush
 
 
 

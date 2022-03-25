@@ -55,8 +55,8 @@
                                         <td>{{ $medi->specialization }}</td>
                                         <td>{{ $medi->email }}</td>
                                         <td>{{ $medi->gender }}</td>
-                                        <td><b>{{ $medi->created_at->format('Y-m-d')
-                                                }}</b></td>
+                                        <td>{{ $medi->created_at->format('Y-m-d')
+                                                }}</td>
                                         <td>
                                             <a class="btn btn-primary"
                                                 data-artid="<?php echo
