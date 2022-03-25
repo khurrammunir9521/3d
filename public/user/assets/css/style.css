@@ -85,7 +85,8 @@ nav .left-side a:last-child {
 }
 
 .profile-img {
-    margin-left: 40px;
+    margin-top:0px !important;
+    margin-left: 0px !important;
     width: 30px;
 }
 
