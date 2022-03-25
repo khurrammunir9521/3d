@@ -163,7 +163,7 @@
             </div>
             @else
             <div class="left-side">
-            <a href="#membership" class="m-0"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+            <!-- <a href="#membership" class="m-0"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a> -->
                 <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
                 <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
                 <span>
@@ -252,7 +252,7 @@
                         <div class="mobile-profile">
                            
                             @if(Auth::user())
-                            <a  href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{asset(Auth::user()->profile)}}? {{asset(Auth::user()->profile)}}:{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                            <a  href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
                             <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
 
 
@@ -876,7 +876,7 @@
         </div>
     </section>
 
-    
+
   
     <section class="contact section" id="contact-us">
         <div class="container">

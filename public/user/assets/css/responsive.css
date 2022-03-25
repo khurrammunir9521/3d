@@ -2,6 +2,9 @@
 
 @media only screen and (min-width: 360px) and (max-width: 767px) {
 /* asim */
+.profile-img {
+    margin-left: 50px !important;
+}
 .toggle-overlay{
     display: block !important;
 }
@@ -1118,6 +1121,9 @@
 /* Tabs */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* asim */
+    .profile-img {
+        margin-left: 50px !important;
+    }
     .toggle-overlay{
         display: block !important;
     }
