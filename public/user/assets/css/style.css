@@ -2305,6 +2305,7 @@ position: relative;
     padding-top: 237px;
     padding-bottom: 20px;
     background-color: #205098;
+    z-index: 1000;
     /* background:#205098 url(../images/design.png) no-repeat;
     background-position: top;
     background-size: 620px;
@@ -2316,14 +2317,15 @@ position: relative;
     position: absolute;
     background: url(../images/design.png) no-repeat;
     background-position: top;
-    background-size: 620px;
+    background-size: 900px;
     background-repeat: no-repeat;
     opacity: 0.6;
-    top: 0;
+    top: 200px;
     bottom: 0;
+    z-index: -1;
     left: 0;
     right: 0;
-    height: 420px;
+    height: 200px;
 }
 /* .designer-sec::after{
     content: "";
