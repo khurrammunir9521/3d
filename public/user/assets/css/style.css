@@ -2297,7 +2297,9 @@ position: relative;
 
 /* designer section start here*/
 
-
+#designModal .modal-body{
+    padding: 0px !important;
+}
 
 .designer-sec{
     position: relative;
@@ -2639,3 +2641,5 @@ position: relative;
     background : #1F5098;
     box-shadow : none !important;
 }
+
+
