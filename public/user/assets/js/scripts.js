@@ -747,6 +747,13 @@ if($(window).width() < 768) {
 })
 
 
+// star rating
+$(".star-reating i").click(function() {
+  $(this).addClass("star-active");
+  $(this).prevAll().removeClass("star-active");
+  $(this).nextAll().addClass("star-active");
+})
+
 });
 AOS.init({
   offset: 100,
