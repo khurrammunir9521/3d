@@ -1201,7 +1201,6 @@
     
 
     <!-- ///////////////////////////////////// cleanshot Modal  start here ////////////////////////////////-->
-
    
     <div class="modal fade page" id="cleanshotModal" tabindex="-1" aria-labelledby="cleanshotLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
@@ -1425,7 +1424,6 @@
 
 <!-- zahid page modal start here -->
 
-sdfa
 
 <!-- zahid page modal end here -->
     
@@ -2248,10 +2246,245 @@ sdfa
 <div class="design-bottom-btn">
 <button class="btn">المزيد</button>
 </div>
+
+</section>
+<!-- ///////////////////////////////////////////////////////// design-view-inner modal start here /////////////////////////////////////////////// -->
+
+
+<section class="designer-sec designer-sec-1" id="">
+   
+   <!-- <img src="./user/assets/images/design.png" class="design-bg" class="img-fluid" alt=""> -->
+
+<div class="container">
+<div class="row">
+   <div class="col-md-12">
+
+    <div class="designer-profile">
+                <img id="blah" src="http://127.0.0.1:8000/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload"
+                    width="100" alt="avatar" style="clip-path: circle() !important;">
+                <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
+                <button class="btn btn-blue">ads</button>
+                    <div class="star-reating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="design-txt">
+                        <h1 class="designer-title">
+                            مجتمع المصممين
+                        </h1>
+                    </div>
+      
+    </div>
+      
+
+   </div>
+   <div class="col-md-12">
+       <div class="designer-search-form">
+
+       </div>
+   </div>
+</div>
+<div class="row">
+   <div class="col-md-12">
+       <div class="search-form">
+           <form action="#" method="">
+               <div class="row">
+                   <div class="col-md-2">
+                       <div class="sort-btn">
+                           <button class="btn"> الترتيب حسب <i class="fa-solid fa-arrow-down"></i></button>
+                       </div>
+                   </div>
+                   <div class="col-md-2">
+
+                       <div class="sort-btn">
+                           <button class="btn"> تقنية الطباعة <i class="fa-solid fa-arrow-down"></i></button>
+
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+
+                       <div class="search-input">
+                           <input type="text" class="form-control" id="search" placeholder="البحث">
+                           <i class="fa-solid fa-magnifying-glass"></i>
+                       </div>
+                   </div>
+
+               </div>
+           </form>
+
+       </div>
+
+       <div class="btn-list">
+           <button class="btn btn-blue">الكل</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+       </div>
+   </div>
+</div>
+
+<div class="design-card-main">
+   
+   <div class="row padd-30">
+       <div class="col-md-4">
+           <div class="design-card-inner">
+      
+           <div class="design-card-body design-4">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+        
+           <div class="design-card-body design-5">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+          
+           <div class="design-card-body design-6">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+   </div>
+
+   <div class="row padd-30">
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           
+           <div class="design-card-body design-7">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+         
+           <a href="javascript:void(0);" class="" data-bs-toggle="modal" data-bs-target="#cleanshotModal">
+
+                <div class="design-card-body design-8">
+
+                    <div class="design-card-left-top">
+                        <p>تقنية الطباعة</p>
+                    </div>
+                    <div class="design-card-left-bottom">
+                        <div class="card-icons">
+                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                    </a>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+         
+           <div class="design-card-body design-9">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+   </div>
+
+</div>
+
+<div class="design-bottom-btn">
+<!-- <button class="btn">المزيد</button> -->
+</div>
+
 </section>
 
+<!-- ///////////////////////////////////////////////////////// design-view modal end here /////////////////////////////////////////////// -->
+
+
 <!-- design footer start here -->
-<section class="contact design-footer">
+<section class="contact design-footer design-1-footer">
 <div class="container">
 <div class="row">
    <div class="col-md-12">
