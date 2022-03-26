@@ -10,7 +10,11 @@
                                  <span class="outline dot">اهلاً وسهلاً بكم</span>
                                  <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
                              </div>
+                          
                              <div class="profile">
+                                    <button class="btn btn-sky profile-btn invert">
+                             المصمم
+                  </button>
                                  @if(@auth()->user()->profile == null)
                                  <a href="#profile">
                                      <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
@@ -41,6 +45,16 @@
                                              @endauth
 
                                          </li>
+                                         <!-- designer -->
+                                         <li class="nav-item" role="presentation">
+                                             @auth
+                                             <button class="nav-link" id="public-tab" data-bs-toggle="tab" data-bs-target="#public-services" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="notification">{{$publics->count()}}</span>مجتمع المصممين</button>
+                                             @else
+                                             <button class="nav-link active" id="medical-tab" data-bs-toggle="tab" data-bs-target="#medical-services" type="button" role="tab" aria-selected="true"><span class="notification">0</span>  مجتمع المصممين</button>
+                                             @endauth
+
+                                         </li>
+                                         <!-- designer-end -->
                                      </ul>
                                      <div class="tab-content" id="myTabContent">
                                          <div class="tab-pane fade show active" id="medical-services" role="tabpanel">
@@ -86,6 +100,30 @@
                                                                  <p>الاسم كامل:</p>
                                                                  <span> {{$orde->full_name}}</span>
                                                                  <p>التخصص:</p>
+                                                                 <span> {{$orde->specialization}}</span>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </a>
+                                                 @endforeach
+                                             </div>
+                                         </div>
+                                         <div class="tab-pane fade" id="designer-service" role="tabpanel" aria-labelledby="profile-tab">
+                                             <div class="row">
+                                                 @foreach($publics as $orde)
+                                                 <a class="nav-link" href="{{route('vieworderpublic',$orde->id)}}">
+                                                     <div class="col-md-12">
+                                                         <div class="request-box" data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal">
+                                                             <div class="heading">
+                                                                 <h5>رقم الطلب:</h5>
+                                                                 <span>{{$orde->id}}</span>
+                                                             </div>
+                                                             <div class="data">
+                                                                 <p>حالة الطلب:</p>
+                                                                 <span> عرض السعر</span>
+                                                                 <p>اسم العميل:</p>
+                                                                 <span> {{$orde->full_name}}</span>
+                                                                <p>المنتج المطلوب:</p>
                                                                  <span> {{$orde->specialization}}</span>
                                                              </div>
                                                          </div>
