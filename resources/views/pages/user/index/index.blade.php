@@ -87,7 +87,7 @@
                             <a href="#services-section" class="nav-link">الخدمات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">مجتمع المصممين</a>
+                            <a class="nav-link" href="#design">مجتمع المصممين</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
@@ -880,7 +880,7 @@
 
 
 <!-- ahsan html start here -->
-<section class="mujtmah-almusmamen">
+<section class="mujtmah-almusmamen" id="design">
             <div class="container-m">
                 <div class="mujtmah-almusmamen-heading-wrapper">
                     <div class="sub-heading-box">
