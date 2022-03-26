@@ -1424,6 +1424,137 @@
 
 <!-- zahid page modal start here -->
 
+ 
+<section class=" cleanshot">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="small-card"> <img src="/assets/images/emptybox.png" alt="">
+                    <img src="/assets/images/cleancard.png" alt="">
+                    <img src="/assets/images/cleancard2.png" alt="">
+                    <img src="/assets/images/cleancard3.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="adobe-icon">
+                    <h6>البرمج المستخدمة</h6>
+                    <img src="/assets/images/ai.png" alt="">
+                    <img src="/assets/images/dn.png" alt="">
+                    <img src="/assets/images/in.png" alt="">
+                </div>
+            </div>
+            
+           
+            
+        </div>
+
+    </section>
+    <section class="container head-clean">
+        <div class="row">
+            <div class="col-md-6">
+                
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-sky invert">
+                    الملف الشخصي
+                   
+                  </button>
+            </div>
+            
+            
+        </div>
+        <div class="row clean-headings">
+            <div class="col-md-12">
+                <h3>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h3>
+                <h6>27 ديسمبر 2021</h6>
+            
+            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+        </div>
+        </div>
+        
+            <div class="form form-clean">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                        <label class="form-label dot">اختيار اللون</label>
+                        <div class="color-circle-main">
+                            
+                        
+                        <div  class="color-circle">
+                           
+                        </div>
+                        <div  class="color-circle orange">
+                           
+                        </div>
+                        <div  class="color-circle yellow">
+                           
+                        </div>
+                        <div  class="color-circle">
+                           
+                        </div>
+                    </div>
+                       
+                    </div>
+
+                 
+                        
+                    
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                    <label class="form-label dot">الكمية</label>
+                    <select class="form-select gender" required name="gender" aria-label="Default select example">
+                        <option selected>الجنس</option>
+                        <option value="male">الذكر</option>
+                        <option value="female">أنثى</option>
+                    </select>                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                    <label class="form-label dot">المقاسات</label>
+                    <select class="form-select gender" required name="gender" aria-label="Default select example">
+                        <option selected>الجنس</option>
+                        <option value="male">الذكر</option>
+                        <option value="female">أنثى</option>
+                    </select>                </div>
+            
+                    <div class="row circle-bottom">                <div class="col-md-6">
+                    <label class="form-label dot">شكل الطباعة</label>
+                                                                                <select class="form-select gender" required name="gender" aria-label="Default select example">
+                                                                  <option selected>الجنس</option>
+                                                                  <option value="male">الذكر</option>
+                                                                  <option value="female">أنثى</option>
+                                                              </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label dot">تقنية الطباعة</label>
+                                                                                <select class="form-select gender" required name="gender" aria-label="Default select example">
+                                                                  <option selected>الجنس</option>
+                                                                  <option value="male">الذكر</option>
+                                                                  <option value="female">أنثى</option>
+                                                              </select>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12">
+                    <label class="form-label dot">الملاحظات</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+
+                </div>  
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-action requests">
+                            <button class="btn btn-sky mx-3 p">تقديم طلب</button>
+                            <p>يتطلب تسجيل للتسجيل اضغط هنا </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            
+        </div>
+
+    </section>
 
 <!-- zahid page modal end here -->
     
