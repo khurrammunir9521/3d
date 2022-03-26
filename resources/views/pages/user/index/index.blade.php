@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
     <!-- StyleSheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+    
+   <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/fonts.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/ahsan.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Responsive Sheet -->
@@ -83,7 +87,7 @@
                             <a href="#services-section" class="nav-link">الخدمات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">مجتمع المصممين</a>
+                            <a class="nav-link" href="#design">مجتمع المصممين</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
@@ -874,582 +878,78 @@
         </div>
     </section>
 
-  
-  <!-- design section start here -->
 
-
-  <section class="designer-sec" id="">
-   
-            <!-- <img src="./user/assets/images/design.png" class="design-bg" class="img-fluid" alt=""> -->
-      
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <div class="design-txt">
-                    <h1 class="designer-title">
-                        مجتمع المصممين
-                    </h1>
-                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                        حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                        التطبيق.</p>
+<!-- ahsan html start here -->
+<section class="mujtmah-almusmamen" id="design">
+            <div class="container-m">
+                <div class="mujtmah-almusmamen-heading-wrapper">
+                    <div class="sub-heading-box">
+                        <div class="red-dot"></div>
+                        <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
+                    </div>
+                    <div class="heading-box">
+                        <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
+                        <div class="heading-box__underline"></div>
+                    </div>
+                    <p class="mujtmah-almusmamen__para">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                    </p>
+                    <!-- <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a> -->
+                    <button type="button" class="m-btn mujtmah-almusmamen-btn" data-bs-toggle="modal" data-bs-target="#designModal">
+                        تعرف أكثر
+                    </button>
                 </div>
-
-            </div>
-            <div class="col-md-12">
-                <div class="designer-search-form">
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="search-form">
-                    <form action="#" method="">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="sort-btn">
-                                    <button class="btn"> الترتيب حسب <i class="fa-solid fa-arrow-down"></i></button>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-
-                                <div class="sort-btn">
-                                    <button class="btn"> تقنية الطباعة <i class="fa-solid fa-arrow-down"></i></button>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-
-                                <div class="search-input">
-                                    <input type="text" class="form-control" id="search" placeholder="البحث">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
-                            </div>
-
-                        </div>
-                    </form>
-
-                </div>
-
-                <div class="btn-list">
-                    <button class="btn btn-white ">الكل</button>
-                    <button class="btn btn-trans">نوع البرنامج</button>
-                    <button class="btn btn-trans">نوع البرنامج</button>
-                    <button class="btn btn-trans">نوع البرنامج</button>
-                    <button class="btn btn-trans">نوع البرنامج</button>
-                    <button class="btn btn-trans">نوع البرنامج</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="design-card-main">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
+                <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
+                    <div class="mujtmah-box">
+                        <div class="mujtmah-box__content">
+                            <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
+                            <p class="mujtmah-box__para">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                            </p>
+                            <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                                <a href="#" class="m-btn mujtmah-box-btn btn-white">
+                                    <img src="assets/images/arrow-8.png" class="mujtmah-box-btn__img"> سجل الان
                                 </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-body">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
+                                <a href="#" class="m-btn mujtmah-box-btn">
+                                    <img src="assets/images/video.png" class="mujtmah-box-btn__img2"> سجل الان
                                 </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
                             </div>
-
                         </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                        <div class="mujtmah-box__media">
+                            <img src="assets/images/mujtmah-box__image.png" class="mujtmah-box__image">
+                            <div class="mujtmah-box__count">
+                                <h1 class="mujtmah-box__count-heading">+50</h1>
+                                <p class="mujtmah-box__count-sub-heading">مصمم</p>
                             </div>
                         </div>
                     </div>
-                    <div class="design-card-body design-2">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
+                    <div class="mujtmah-box2">
+                        <div class="mujtmah-box__media">
+                            <div class="mujtmah-box__count2">
+                                <h1 class="mujtmah-box__count-heading">+40</h1>
+                                <p class="mujtmah-box__count-sub-heading">مصمم</p>
                             </div>
+                            <img src="assets/images/mujtmah-box__image3.png" class="mujtmah-box__image">
                         </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
+                        <div class="mujtmah-box__content">
+                            <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
+                            <p class="mujtmah-box__para">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                            </p>
+                            <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                                <a href="#" class="m-btn mujtmah-box-btn btn-white">
+                                    <img src="assets/images/arrow-8.png" class="mujtmah-box-btn__img"> سجل الان
                                 </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-body design-3">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-            </div>
-            
-            <div class="row padd-30">
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
+                                <a href="#" class="m-btn mujtmah-box-btn">
+                                    <img src="assets/images/video.png" class="mujtmah-box-btn__img2"> سجل الان
                                 </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="design-card-body design-4">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-body design-5">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-body design-6">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-            </div>
-
-            <div class="row padd-30">
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-body design-7">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-body design-8">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-                <div class="col-md-4">
-                    <div class="design-card-inner">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="star-profile">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#">
-                                    <div class="star-profile-icon">
-                                        <img src="./assets/images/dashboard/1.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="star-profile-txt">
-                                    <span>مصمم</span>
-                                    <h3>أسم المصمم</h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 m-auto">
-                            <div class="star-reating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-body design-9">
-                        <div class="design-card-left-top">
-                            <p>تقنية الطباعة</p>
-                        </div>
-                        <div class="design-card-left-bottom">
-                            <div class="card-icons">
-                                <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="design-card-footer">
-                        <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
-                    </div>
-                    </div>
-                  
-                </div>
-            </div>
-       
-    </div>
-
-    <div class="design-bottom-btn">
-        <button class="btn">المزيد</button>
-    </div>
-</section>
-<!-- design footer start here -->
-<section class="contact design-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="footer-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about-us">
-                                    من نحن
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#services-section">الخدمات</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">مجتمع المصممين</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact-us">اتصل بنا</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <footer>
-            <div class="row">
-                <div class="col-md-4 col-xl-4">
-                    <div class="right">
-                        <p>تصميم وتطوير شركة تيلرز</p>
-                        <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}"
-                                alt="tellers-logo"></a>
-                    </div>
-                </div>
-                <div class="col-md-5 col-xl-4">
-                    <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
-                </div>
-                <div class="col-md-3 col-xl-4">
-                    <div class="social">
-                        <a href="#"><img src="{{ asset('user/assets/icons/twitter-white.svg') }}" alt="twitter"></a>
-                        <a href="#"><img src="{{ asset('user/assets/icons/instagram-white.svg') }}" alt="instagram"></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    </div>
-    </footer>
-    </div>
-</section>
-            
-<!-- design footer end here -->
-            
-
-     
-
-
-  <!-- disign section end here -->  
-
-
-
+        </section>
+<!-- ahsan html end here -->
 
     <section class="contact section" id="contact-us">
         <div class="container">
@@ -1696,6 +1196,818 @@
     </div>
  
     <!--///////////////////////////////////// services model end here ////////////////////////////////////-->
+
+
+    <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
+
+   
+    <div class="modal fade page" id="designModal" tabindex="-1" aria-labelledby="designLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                          
+                            <div class="modal-body">
+                             
+
+
+
+  <!-- design section start here -->
+
+  <!-- header designer start here -->
+  <div class="toggle-overlay"></div>
+    <div class="content-wrapper hide-on-load">
+        <nav class="navbar navbar-expand-lg navbar-light desktop-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">
+                                من نحن
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">ماهي
+                                تقنية الـ 3D</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services-section" class="nav-link">الخدمات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">مجتمع المصممين</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                        </li>
+                        <li class="mobile-menu">
+                            <div class="left-side">
+                                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
+                                @auth
+                                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
+                                @endauth
+                                <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+                                <span>
+                                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                                </span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                @auth
+                <div class="left-side desktop-menu">
+
+                    <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                        {{-- @if (auth()->user()->profile != null)
+                                @if (@auth()->user()->profile == null)
+                                    <div class="profile-img">
+                                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                </div>
+                @else
+                <div class="profile-img">
+                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+
+                </div>
+                @endif
+                <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+                --}}
+                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                    {{-- @if (auth()->user()->profile != null) --}}
+                    @if (@auth()->user()->profile == null)
+                    <div class="profile profile-icon">
+                        <img src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+                    </div>
+                    @else
+                    <img class="" style="width:30px;height:30px;" alt="" src="{{ asset(Auth::user()->profile) }}">
+                    @endif
+                   
+                    <a href="#membership" class="dot ms-auto border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
+                 
+                    <a href="#requests" class="ms-auto dot border-bottom " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a>
+
+
+                    <a href="{{route('logout')}}" onclick="return logout(event);" class="ms-auto dot border-bottom" class="dot m-0 border-bottom">
+                        تسجيل خروج
+                    </a>
+                    <script type="text/javascript">
+                        function logout(event) {
+                            event.preventDefault();
+                            var check = confirm("هل تريد حقا الخروج؟");
+                            if (check) {
+                                document.getElementById('logout-form').submit();
+                            }
+                        }
+                    </script>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+
+                        <button hidden type="submit" class=" sub-slide-item" style=" color:red; background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Log
+                            Out</button>
+
+                    </form>
+                    <span>
+
+                        <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                        <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                    </span>
+            </div>
+            @else
+            <div class="left-side">
+                <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
+                <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+                <span>
+                    <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                    <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+                </span>
+            </div>
+            @endauth
+    </div>
+    </nav>
+
+    <div id="wrapper" class="mobile-nav">
+        <div id="sidebar-wrapper">
+            <div class="area-brand">
+                <a class="" href="#">
+                    <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                </a>
+            </div>
+            <div class="mmnue">
+                <ul class="sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">ماهي
+                            تقنية الـ 3D</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services-section" class="nav-link">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">مجتمع المصممين</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link close-modal" href="#contact-us">اتصل بنا</a>
+                    </li>
+                   @if(Auth::user()) 
+                    <li class="nav-item pt-0"> <a href="#requests" class="nav-link ms-auto dot " data-bs-toggle="modal" data-bs-target="#requestsModal">طلباتي</a></li>
+                    <li class="nav-item pt-0">
+                        <a class="nav-link dot" href="{{ route('logout') }} " onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i>تسجيل الخروج</a>
+                        <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                    @else
+                    <li class="nav-item">
+
+                        <a href="#login" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#register" class="nav-link dot" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
+
+                    </li>
+                    @endif
+                    <li class="">
+                        <div class="mobile-social-icon">
+
+                            <a href="#"><img src="{{ asset('user/assets/icons/twitter.svg') }}" alt="twitter"></a>
+                            <a href="#"><img src="{{ asset('user/assets/icons/instagram.svg') }}" alt="instagram"></a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-3 mobile-logo">
+
+                        <div class="area-brand">
+                            <a class="" href="#">
+                                <img src="{{ asset('user/assets/icons/logo.svg') }}" alt="3dOrgans-logo" width="150" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-9 mobile-pro-icon">
+                        <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+
+                        <div class="mobile-profile">
+                            
+                   
+                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
+                            @if(Auth::user())
+                            <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ Auth::user()->name }}!</a>
+                            @endif
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mobile menu start here -->
+
+    
+                               <!-- header designer end here -->
+
+
+
+  <section class="designer-sec" id="">
+   
+   <!-- <img src="./user/assets/images/design.png" class="design-bg" class="img-fluid" alt=""> -->
+
+<div class="container">
+<div class="row">
+   <div class="col-md-12">
+
+       <div class="design-txt">
+           <h1 class="designer-title">
+               مجتمع المصممين
+           </h1>
+           <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+               حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+               التطبيق.</p>
+       </div>
+
+   </div>
+   <div class="col-md-12">
+       <div class="designer-search-form">
+
+       </div>
+   </div>
+</div>
+<div class="row">
+   <div class="col-md-12">
+       <div class="search-form">
+           <form action="#" method="">
+               <div class="row">
+                   <div class="col-md-2">
+                       <div class="sort-btn">
+                           <button class="btn"> الترتيب حسب <i class="fa-solid fa-arrow-down"></i></button>
+                       </div>
+                   </div>
+                   <div class="col-md-2">
+
+                       <div class="sort-btn">
+                           <button class="btn"> تقنية الطباعة <i class="fa-solid fa-arrow-down"></i></button>
+
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+
+                       <div class="search-input">
+                           <input type="text" class="form-control" id="search" placeholder="البحث">
+                           <i class="fa-solid fa-magnifying-glass"></i>
+                       </div>
+                   </div>
+
+               </div>
+           </form>
+
+       </div>
+
+       <div class="btn-list">
+           <button class="btn btn-white ">الكل</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+           <button class="btn btn-trans">نوع البرنامج</button>
+       </div>
+   </div>
+</div>
+
+<div class="design-card-main">
+   <div class="row">
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-2">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-3">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+   </div>
+   
+   <div class="row padd-30">
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-4">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-5">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-6">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+   </div>
+
+   <div class="row padd-30">
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-7">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-8">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+       <div class="col-md-4">
+           <div class="design-card-inner">
+           <div class="row">
+               <div class="col-md-6">
+                   <div class="star-profile">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#">
+                           <div class="star-profile-icon">
+                               <img src="./assets/images/dashboard/1.png" alt="">
+                           </div>
+                       </a>
+                       <div class="star-profile-txt">
+                           <span>مصمم</span>
+                           <h3>أسم المصمم</h3>
+                       </div>
+
+                   </div>
+
+               </div>
+               <div class="col-md-6 m-auto">
+                   <div class="star-reating">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-body design-9">
+               <div class="design-card-left-top">
+                   <p>تقنية الطباعة</p>
+               </div>
+               <div class="design-card-left-bottom">
+                   <div class="card-icons">
+                       <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                       <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                   </div>
+               </div>
+           </div>
+           <div class="design-card-footer">
+               <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
+           </div>
+           </div>
+         
+       </div>
+   </div>
+
+</div>
+
+<div class="design-bottom-btn">
+<button class="btn">المزيد</button>
+</div>
+</section>
+<!-- design footer start here -->
+<section class="contact design-footer">
+<div class="container">
+<div class="row">
+   <div class="col-md-12">
+       <div class="row">
+           <div class="col-md-12">
+               <ul class="footer-nav">
+                   <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#about-us">
+                           من نحن
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#services-section">الخدمات</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#">مجتمع المصممين</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#contact-us">اتصل بنا</a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="container-fluid">
+<footer>
+   <div class="row">
+       <div class="col-md-4 col-xl-4">
+           <div class="right">
+               <p>تصميم وتطوير شركة تيلرز</p>
+               <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}"
+                       alt="tellers-logo"></a>
+           </div>
+       </div>
+       <div class="col-md-5 col-xl-4">
+           <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
+       </div>
+       <div class="col-md-3 col-xl-4">
+           <div class="social">
+               <a href="#"><img src="{{ asset('user/assets/icons/twitter-white.svg') }}" alt="twitter"></a>
+               <a href="#"><img src="{{ asset('user/assets/icons/instagram-white.svg') }}" alt="instagram"></a>
+           </div>
+       </div>
+   </div>
+</footer>
+</div>
+</div>
+</footer>
+</div>
+</section>
+   
+<!-- design footer end here -->
+
+
+<!-- disign section end here -->  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ///////////////////////////////////// design modal end here ////////////////////////////////-->
+
+
+
     <!-- About US -->
 
     @include('pages.user.aboutModal')

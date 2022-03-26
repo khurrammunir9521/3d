@@ -2305,8 +2305,12 @@ position: relative;
     padding-top: 237px;
     padding-bottom: 20px;
     background-color: #205098;
-    /* z-index: 1; */
+    /* background:#205098 url(../images/design.png) no-repeat;
+    background-position: top;
+    background-size: 620px;
+    background-repeat: no-repeat; */
 }
+
 .designer-sec::before{
     content: "";
     position: absolute;
@@ -2314,7 +2318,38 @@ position: relative;
     background-position: top;
     background-size: 620px;
     background-repeat: no-repeat;
+    opacity: 0.6;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
+/* .designer-sec::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    background-color: red;
+} */
+/* .container{
+    position: relative;
+} */
+/* .container::after{
+    content: "";
+    position: absolute;
+    top: 380px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 260px;
+    background-image: linear-gradient(45deg, red, transparent);
+    background-image: linear-gradient(45deg, #215099, transparent);
+} */
 .design-txt{
     color: #fff;
     text-align: center;
@@ -2579,6 +2614,7 @@ position: relative;
     background-color: #1EA9D4;
     font-family: Almarai regular;
     font-size: 15px;
+    box-shadow: none;
 }
 .design-footer{
     background-color: #1F5098 !important;
