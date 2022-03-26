@@ -113,7 +113,7 @@
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 py-sm-4 text-end">
                                                             <label class="form-label dot d-xxl-block">تحديد القسم</label>
-                                                            <select class="form-select body-parts" required name="parts" multiple aria-label="Default select example">
+                                                            <select class="form-select body-parts"  name="parts" multiple aria-label="Default select example">
                                                                 <!-- <option selected>اختيار من هنا ..</option> -->
                                                                 <option value="skull">الجمجمة</option>
                                                                 <option value="neck">neck</option>

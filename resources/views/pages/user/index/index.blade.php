@@ -121,7 +121,7 @@
                 @endif
                 <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}</a>
                 --}}
-                <a href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
+                <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal">
                     {{-- @if (auth()->user()->profile != null) --}}
                     @if (@auth()->user()->profile == null)
                     <div class="profile profile-icon">
@@ -163,7 +163,6 @@
             </div>
             @else
             <div class="left-side">
-            <a href="#membership" class="m-0"><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
                 <a href="#login" data-bs-toggle="modal" class="register-icon" data-bs-target="#loginModal">تسجيل دخول</a>
                 <a href="#register" class="ms-auto register-icon" data-bs-toggle="modal" data-bs-target="#registerModal">التسجيل</a>
                 <span>
@@ -250,12 +249,11 @@
                         <button class="btn mob-tog-btn" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
 
                         <div class="mobile-profile">
-                           
+                            
+                   
+                            <a href="#" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{(@Auth::user()->profile == null) ?  asset('user/assets/icons/avatar.svg'): asset(Auth::user()->profile) }}" class="profile-img" alt="avatar"></a>
                             @if(Auth::user())
-                            <a  href="#membership" class="m-0" data-bs-toggle="modal" data-bs-target="#memberModal" ><img src="{{ asset('user/assets/icons/avatar.svg') }}" class="profile-img" alt="avatar"></a>
-                            <a href="#membership" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ auth()->user()->name }}!</a>
-
-
+                            <a href="#" class="dot m-0 border-bottom" data-bs-toggle="modal" data-bs-target="#memberModal">{{ Auth::user()->name }}!</a>
                             @endif
                         </div>
 

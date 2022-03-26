@@ -36,6 +36,7 @@
             @include('layouts.admin.footer')
         </div>
     </div>
+    
     <!-- latest jquery-->
     <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
     <!-- feather icon js-->
@@ -79,7 +80,7 @@
 
     <script src="{{ asset('assets/js/script.js') }}"></script>
 
-    
+    @livewireScripts
     <script src="{{ asset('assets/js/theme-customizer/customizer.js') }}"></script>
 
     @if(!empty(Session::get('error_code')) && Session::get('error_code') == 5)

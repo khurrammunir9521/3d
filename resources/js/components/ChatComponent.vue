@@ -13,7 +13,6 @@
                        </li>
                    </ul>
                </div>
-
                <input
                     @keydown="sendTypingEvent"
                     @keyup.enter="sendMessage"
@@ -92,6 +91,7 @@
                     message: this.newMessage,
                     filename:this.filename
                 });
+                 console.log(this.newMessage +'this.newMessage ')
                 axios.post('/medi/messages', {message: this.newMessage});
                 this.newMessage = '';
             },
