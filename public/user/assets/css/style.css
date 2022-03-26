@@ -1157,7 +1157,7 @@ textarea {
     border-radius: 50px;
     color: #9FA5B2;
     padding: 3px 90px;
-    margin: 0 -25px;
+    margin: 0 2px;
 }
 
 .notification {
@@ -2591,4 +2591,8 @@ position: relative;
 }
 /* designer section end here*/
 
-
+/* zahid */
+.profile-btn {
+    background : #1F5098;
+    box-shadow : none !important;
+}
