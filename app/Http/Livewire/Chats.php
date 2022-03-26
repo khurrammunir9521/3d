@@ -9,6 +9,7 @@ class Chats extends Component
 	public $message;
 	public $allmessages;
 	public $sender;
+    public $user_id;
     public function render()
     {
     	$users=User::all();
@@ -19,6 +20,7 @@ class Chats extends Component
     }
     public function mountdata()
     {
+       $this->getUser();
         if(isset($this->sender->id))
         {
               $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$this->sender->id)->orWhere('user_id',$this->sender->id)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
@@ -47,11 +49,12 @@ class Chats extends Component
 
 
     }
-    public function getUser($userId)
+    public function getUser($userId=1)
     {
        $user=User::find($userId);
        $this->sender=$user;
        $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
+     
     }
 
 }

@@ -2,42 +2,9 @@
 	<div class="container">
         <div class="row justify-content-center">
         
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            Users
-                        </div>
-                        <div class="card-body chatbox p-0">
-                            <ul class="list-group list-group-flush">
-                            @foreach($users as $user)
-
-                            @if($user->id !== auth()->id())
-                            @php
-                                $not_seen= App\Models\Chat::where('user_id',$user->id)->where('reciever_id',auth()->id())->get() ?? null
-
-                            @endphp
-                                    <a wire:click="getUser({{$user->id}})"  class="text-dark link">
-                                        <li class="list-group-item">
-                                            <img class="img-fluid avatar" src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png">
-                                            @if($user->is_online==true)
-
-                                            <i class="fa fa-circle text-success online-icon">
-                                                @endif
-                                                
-                                            </i> {{$user->first_name}}
-                                        @if(filled($not_seen))
-                                                <div class="badge badge-success rounded"> {{ $not_seen->count()}} </div>
-                                                @endif
-                                        </li>
-                                    </a>
-                                    @endif
-                            @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+              
     
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         @if(isset($sender)) {{$sender->name}}   @endif
@@ -70,7 +37,7 @@
                         <form wire:submit.prevent="SendMessage">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input wire:model="message" class="form-control input shadow-none w-100 d-inline-block" id="message" placeholder="Type a message" required>
+                                    <input wire:model="message" style="pointer-events: unset" class="form-control input shadow-none w-100 d-inline-block" id="message" placeholder="Type a message" required>
                                 </div>
 
                                 <div class="col-md-4">
