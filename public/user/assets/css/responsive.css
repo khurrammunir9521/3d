@@ -2028,9 +2028,9 @@
         width: 450px;
     }
 
-    .map-place .blue-box {
+    /* .map-place .blue-box {
         left: -110px!important;
-    }
+    } */
 
     .bottom.boxContainer .blue-box {
         right: 80px;
@@ -2127,9 +2127,9 @@
         align-self: auto;
     }
 
-    .map-place .blue-box {
+    /* .map-place .blue-box {
         left: -155px;
-    }
+    } */
 
     .notification-box {
         width: 510px;

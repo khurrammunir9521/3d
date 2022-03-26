@@ -148,19 +148,24 @@ mujtmah-almusmamen section start
 .mujtmah-almusmamen-heading-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
     margin-bottom: 50px;
+    align-items: center;
 }
 
 .sub-heading-box {
+    margin: 0 auto;
     margin-bottom: 0px;
+    width: 240px;
 }
 
 .red-dot {
     width: 11px;
     height: 11px;
     background-color: #D83554;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+    transform: translateX(10px);
+   
 }
 
 .sub-heading-box__heading {
@@ -170,6 +175,8 @@ mujtmah-almusmamen section start
 }
 
 .heading-box {
+    width: 240px;
+    margin: 0 auto;
     margin-bottom: 45px;
 }
 
@@ -183,7 +190,7 @@ mujtmah-almusmamen section start
 .heading-box__underline {
     background-color: #fff;
     width: 58px;
-    margin-right: 16px;
+    margin-right: 0px;
     height: 2px;
     border-radius: 25%;
 }

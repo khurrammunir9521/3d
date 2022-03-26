@@ -807,7 +807,7 @@ footer .right img {
 .banner .title {
     position: relative;
     z-index: 1;
-    top: 10px;
+    top: 0px;
 }
 
 .black-bg {
@@ -1595,6 +1595,7 @@ textarea {
     text-align: center;
     position: relative;
     left: 40px;
+    top: 12px;
 }
 
 .about-content {
@@ -1636,6 +1637,11 @@ textarea {
 .map-place .blue-box {
     left: -160px;
     bottom: -15px;
+    margin: auto;
+    left: -20px;
+    /* right: 0; */
+    display: block;
+    /* position: absolute; */
 }
 
 .mb-9 {
@@ -2021,17 +2027,23 @@ right: 185px;
 }
 
 .dot-txt-main .dot.center::before{
-    right: -109px !important;
+    right: -125px !important;
 }
 .dot-txt-main .dot.center {
     padding-right: 0px !important;
     left: 7px;
 }
 
+.dot-txt-main .right.left-right-h{
+    left: 17px;
+}
 
 .request .dot-txt-main .outline{
     padding-right: 0px !important;
-    left: 20px;
+    left: 17px;
+}
+.dot-txt-main .right.left-right-h::before{
+    left: 4px;
 }
 .request .dot-txt-main .modal-title{
     padding-right: 0px;
@@ -2045,12 +2057,10 @@ right: 185px;
 }
 .request .dot-txt-main-left .outline{
     padding-right: 0px !important;
+    left: 35px;
 }
 .request .dot-txt-main-left .modal-title{
     padding-right: 0px;
-}
-.request .dot-txt-main-left .outline{
-    left: 32px;
 }
 .request .dot-txt-main-left .modal-title.left::after {
     left: 128px;
@@ -2658,18 +2668,17 @@ position: relative;
 .designer-profile .btn{
     margin-top: 10px;
     color: #fff;
-    width: 30px;
+    width: 100px;
     height: 30px;
     margin-left: 0px;
-
 }
 .designer-profile .star-reating{
     text-align: center;
     margin-top: 10px;
 }
-.designer-profile  .star-reating i {
+.designer-profile .star-reating i {
     margin-right: 4.5px;
-    font-size: 12px;
+    font-size: 30px;
     color: #EEEEF0;
 }
 .designer-sec-1  .designer-profile .star-reating .star-active {
@@ -2679,6 +2688,9 @@ position: relative;
     color: #1F5098;
     text-align: center;
     padding-bottom: 50px;
+}
+.designer-sec-1 .designer-sec .sort-btn .btn{
+    color: #1F5098;
 }
 .designer-sec-1 input{
     border-color: #1F5098 !important;
@@ -2718,7 +2730,7 @@ position: relative;
     background-color: #fff !important;
 }
 .design-1-footer .contact p{
-    color: #58595B;
+    color: #58595B !important;
 }
 /* designer-sec-1  css end here*/
 

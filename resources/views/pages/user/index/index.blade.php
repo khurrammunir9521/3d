@@ -691,7 +691,7 @@
                                 @endif
                             </div>
                             <div class="row pt-5 mt-5 align-items-end" dir="rtl">
-                                <div class="col-lg-9 col-md-9 res-width-64">
+                                <div class="col-md-9 col-lg-7 res-width-64">
                                     <div class="about-content" id="about-us" data-aos="fade-up">
                                         <span class="outline dot right-center">+3D</span>
                                         @if ($about != null)
@@ -726,7 +726,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-12 res-width-36">
+                                <div class="col-md-12 col-lg-5 res-width-36">
                                     <figcaption class="map-cap">
                                         <h6>مقر العمل</h6>
                                         <p>الرياض، المونسية، شارع احمد بن حنبل</p>
@@ -833,7 +833,7 @@
                         <div class="pointer bottom">
                             <p>مجسمات صغيرة</p>
                         </div>
-                        <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" data-aos="zoom-in" alt="machine">
+                        <img src="{{ asset('user/assets/images/machine.png') }}" class="img-fluid" alt="machine">
                     </div>
                     <div class="pt-5 public-animate" data-aos="fade-up" data-aos-offset="200">
                         <span class="outline dot left left-right-h">أكثر 20 خدمة مختلفة</span>
@@ -1159,7 +1159,7 @@
                                                     <div class="pointer bottom">
                                                         <p>مجسمات صغيرة</p>
                                                     </div>
-                                                    <img src="{{asset('user/assets/images/machine.png')}}" class="img-fluid" data-aos="zoom-in"  alt="machine">
+                                                    <img src="{{asset('user/assets/images/machine.png')}}" class="img-fluid"  alt="machine">
                                                 </div>
                                                 <div class="pt-5 public-animate" data-aos="fade-up" data-aos-offset="200">
                                                     <span class="outline dot left ">أكثر 20 خدمة مختلفة</span>
@@ -2381,10 +2381,8 @@
 </section>
 <!-- ///////////////////////////////////////////////////////// design-view-inner modal start here /////////////////////////////////////////////// -->
 
-
+<!-- 
 <section class="designer-sec designer-sec-1" id="">
-   
-   <!-- <img src="./user/assets/images/design.png" class="design-bg" class="img-fluid" alt=""> -->
 
 <div class="container">
 <div class="row">
@@ -2465,7 +2463,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
       
-           <div class="design-card-body design-4">
+           <div class="design-card-body product-1.png">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2487,7 +2485,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
         
-           <div class="design-card-body design-5">
+           <div class="design-card-body product-2.png">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2509,7 +2507,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
           
-           <div class="design-card-body design-6">
+           <div class="design-card-body product-3.png">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2534,7 +2532,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
            
-           <div class="design-card-body design-7">
+           <div class="design-card-body product-4.png">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2558,7 +2556,7 @@
          
            <a href="javascript:void(0);" class="" data-bs-toggle="modal" data-bs-target="#cleanshotModal">
 
-                <div class="design-card-body design-8">
+                <div class="design-card-body product-5.png">
 
                     <div class="design-card-left-top">
                         <p>تقنية الطباعة</p>
@@ -2582,7 +2580,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
          
-           <div class="design-card-body design-9">
+           <div class="design-card-body product-6.png">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2606,16 +2604,70 @@
 </div>
 
 <div class="design-bottom-btn">
-<!-- <button class="btn">المزيد</button> -->
 </div>
 
-</section>
-
+</section> -->
+<!-- <section class="contact design-footer design-1-footer">
+<div class="container">
+<div class="row">
+   <div class="col-md-12">
+       <div class="row">
+           <div class="col-md-12">
+               <ul class="footer-nav">
+                   <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#about-us">
+                           من نحن
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#services-section">الخدمات</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#">مجتمع المصممين</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#contact-us">اتصل بنا</a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="container-fluid">
+<footer>
+   <div class="row">
+       <div class="col-md-4 col-xl-4">
+           <div class="right">
+               <p>تصميم وتطوير شركة تيلرز</p>
+               <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}"
+                       alt="tellers-logo"></a>
+           </div>
+       </div>
+       <div class="col-md-5 col-xl-4">
+           <p>جميع الحقوق محفوظة لـ &nbsp;+3D&nbsp; لعام 2022</p>
+       </div>
+       <div class="col-md-3 col-xl-4">
+           <div class="social">
+               <a href="#"><img src="{{ asset('user/assets/icons/twitter-white.svg') }}" alt="twitter"></a>
+               <a href="#"><img src="{{ asset('user/assets/icons/instagram-white.svg') }}" alt="instagram"></a>
+           </div>
+       </div>
+   </div>
+</footer>
+</div>
+</div>
+</footer>
+</div>
+</section> -->
 <!-- ///////////////////////////////////////////////////////// design-view modal end here /////////////////////////////////////////////// -->
 
 
 <!-- design footer start here -->
-<section class="contact design-footer design-1-footer">
+<section class="contact design-footer">
 <div class="container">
 <div class="row">
    <div class="col-md-12">
