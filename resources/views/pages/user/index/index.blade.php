@@ -2301,8 +2301,9 @@
                    </div>
                </div>
            </div>
+           <a href="javascript:void(0);" class="" data-bs-toggle="modal" data-bs-target="#cleanshotModal">
+
                 <div class="design-card-body design-8">
-           <button type="button" class="" data-bs-toggle="modal" data-bs-target="#cleanshotModal">
 
                     <div class="design-card-left-top">
                         <p>تقنية الطباعة</p>
@@ -2315,9 +2316,8 @@
 
                         </div>
                     </div>
-           </button>
-
                 </div>
+                    </a>
            <div class="design-card-footer">
                <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
            </div>
