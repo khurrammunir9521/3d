@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
     <!-- StyleSheet -->
+    <link rel="stylesheet" href="{{ asset('user/assets/css/ahsan.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Responsive Sheet -->
@@ -874,9 +875,74 @@
         </div>
     </section>
 
-
-
-
+    {{-- mujtmah-almusmamen section start --}}
+    <section class="mujtmah-almusmamen">
+        <div class="container-m">
+            <div class="mujtmah-almusmamen-heading-wrapper">
+                <div class="sub-heading-box">
+                    <div class="red-dot"></div>
+                    <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
+                </div>
+                <div class="heading-box">
+                    <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
+                    <div class="heading-box__underline"></div>
+                </div>
+                <p class="mujtmah-almusmamen__para">
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                </p>
+                <a href="#" class="m-btn mujtmah-almusmamen-btn">تعرف أكثر</a>
+            </div>
+            <div class="mujtmah-almusmamen-wrapper wrapper jst-btw">
+                <div class="mujtmah-box">
+                    <div class="mujtmah-box__content">
+                        <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
+                        <p class="mujtmah-box__para">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        </p>
+                        <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                            <a href="#" class="m-btn mujtmah-box-btn btn-white">
+                                <img src="assets/images/arrow-8.png" class="mujtmah-box-btn__img"> سجل الان
+                            </a>
+                            <a href="#" class="m-btn mujtmah-box-btn">
+                                <img src="assets/images/video.png" class="mujtmah-box-btn__img2"> سجل الان
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mujtmah-box__media">
+                        <img src="assets/images/mujtmah-box__image.png" class="mujtmah-box__image">
+                        <div class="mujtmah-box__count">
+                            <h1 class="mujtmah-box__count-heading">+50</h1>
+                            <p class="mujtmah-box__count-sub-heading">مصمم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mujtmah-box2">
+                    <div class="mujtmah-box__media">
+                        <div class="mujtmah-box__count2">
+                            <h1 class="mujtmah-box__count-heading">+40</h1>
+                            <p class="mujtmah-box__count-sub-heading">مصمم</p>
+                        </div>
+                        <img src="assets/images/mujtmah-box__image3.png" class="mujtmah-box__image">
+                    </div>
+                    <div class="mujtmah-box__content">
+                        <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
+                        <p class="mujtmah-box__para">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        </p>
+                        <div class="mujtmah-box-btn-wrapper wrapper al-center">
+                            <a href="#" class="m-btn mujtmah-box-btn btn-white">
+                                <img src="assets/images/arrow-8.png" class="mujtmah-box-btn__img"> سجل الان
+                            </a>
+                            <a href="#" class="m-btn mujtmah-box-btn">
+                                <img src="assets/images/video.png" class="mujtmah-box-btn__img2"> سجل الان
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- mujtmah-almusmamen section end --}}
 
     <section class="contact section" id="contact-us">
         <div class="container">
