@@ -908,15 +908,15 @@
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
                                 <a href="#" class="m-btn mujtmah-box-btn btn-white">
-                                    <img src="assets/images/arrow-8.png" class="mujtmah-box-btn__img"> سجل الان
+                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img"> سجل الان
                                 </a>
                                 <a href="#" class="m-btn mujtmah-box-btn">
-                                    <img src="assets/images/video.png" class="mujtmah-box-btn__img2"> سجل الان
+                                    <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2"> سجل الان
                                 </a>
                             </div>
                         </div>
                         <div class="mujtmah-box__media">
-                            <img src="assets/images/mujtmah-box__image.png" class="mujtmah-box__image">
+                            <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
                             <div class="mujtmah-box__count">
                                 <h1 class="mujtmah-box__count-heading">+50</h1>
                                 <p class="mujtmah-box__count-sub-heading">مصمم</p>
@@ -929,7 +929,7 @@
                                 <h1 class="mujtmah-box__count-heading">+40</h1>
                                 <p class="mujtmah-box__count-sub-heading">مصمم</p>
                             </div>
-                            <img src="assets/images/mujtmah-box__image3.png" class="mujtmah-box__image">
+                            <img src="{{ asset('user/assets/images/mujtmah-box__image3.png') }}" class="mujtmah-box__image">
                         </div>
                         <div class="mujtmah-box__content">
                             <h1 class="mujtmah-box__heading">هل أنت مصمم 3D ؟</h1>
@@ -938,10 +938,11 @@
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
                                 <a href="#" class="m-btn mujtmah-box-btn btn-white">
-                                    <img src="assets/images/arrow-8.png" class="mujtmah-box-btn__img"> سجل الان
+                                    
+                                    <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img"> سجل الان
                                 </a>
                                 <a href="#" class="m-btn mujtmah-box-btn">
-                                    <img src="assets/images/video.png" class="mujtmah-box-btn__img2"> سجل الان
+                                    <img src="{{ asset('user/assets/images/video.png') }}" class="mujtmah-box-btn__img2"> سجل الان
                                 </a>
                             </div>
                         </div>

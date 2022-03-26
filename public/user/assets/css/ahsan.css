@@ -40,7 +40,6 @@ autor:ahsan Contact Whatsup + skype +923014749625;
     font-display: swap;
 }
 
-
 .dark-yellow {
     color: var(--dark-yellow);
 }
@@ -52,7 +51,6 @@ autor:ahsan Contact Whatsup + skype +923014749625;
 .white {
     color: #fff;
 }
-
 
 img {
     max-width: 100%;
@@ -208,6 +206,7 @@ mujtmah-almusmamen section start
     text-align: center;
     transition: all 0.3s ease-in-out;
     font-family: 'Segoe UI';
+    border: none;
 }
 
 .mujtmah-almusmamen-btn:hover {
@@ -254,6 +253,7 @@ mujtmah-almusmamen section start
 .mujtmah-box-btn:hover {
     text-decoration: underline;
     transition: all 0.5s ease-in-out;
+    color: #fff;
 }
 
 .btn-white {
