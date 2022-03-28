@@ -1778,7 +1778,7 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body designer-bdy">
                                 <div class="payment d-none" id="payment">
                                     <div class="form-check">
                                         <label class="form-check-label" for="flexRadioDefault1">
@@ -1863,7 +1863,7 @@
             </div>
                                         <div class="row justify-content-center">
                                             <div class="col-md-12">
-                                                <div class="row p-xs-0 p-3 conditional-blur">
+                                                <div class="row p-xs-0 p-3 justify-content-between conditional-blur">
                                                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                         <label class="form-label dot">اختيار اللون</label>
                         <div class="color-circle-main">
@@ -1902,8 +1902,10 @@
                                                         <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{@$public->gender}}">
                                                     </div>
                                                     <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                    <label class="form-label"> </label>
+
                                                     <button class="btn btn-sky invert">
-                                                    زيارة المنتج
+                                                    زيارة المنتج <img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
                             </button>
                                                 </div>
                                                     <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
@@ -1918,9 +1920,12 @@
                                         <div class="row">
 
 <div class="col-md-12">
+    <div class="designer-text">
+        
+    
     <label class="form-label dot">الملاحظات</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
-
+    </div>
 </div>  
 </div>
                                         <div class="row">
