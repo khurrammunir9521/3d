@@ -34,6 +34,7 @@
     
    <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/fonts.css') }}">
    <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/ahsan.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/zahid.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Responsive Sheet -->
@@ -1426,36 +1427,53 @@
 
  
 <section class=" cleanshot">
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="small-card"> <img src="/assets/images/emptybox.png" alt="">
-                    <img src="/assets/images/cleancard.png" alt="">
-                    <img src="/assets/images/cleancard2.png" alt="">
-                    <img src="/assets/images/cleancard3.png" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="small-card">
+                         <img src="{{ asset('user/assets/images/emptybox.png') }}" alt="">
+                        <img src="{{ asset('user/assets/images/cleancard.png') }}"alt="">
+                        <img src="{{ asset('user/assets/images/cleancard2.png') }}"alt="">
+                        <img src="{{ asset('user/assets/images/cleancard3.png') }}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="adobe-icon">
+                        <h6>البرمج المستخدمة</h6>
+                        <img src="{{ asset('user/assets/images/ai.png') }}" alt="">
+                        <img src="{{ asset('user/assets/images/dn.png') }}"alt="">
+                        <img src="{{ asset('user/assets/images/in.png') }}" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="adobe-icon">
-                    <h6>البرمج المستخدمة</h6>
-                    <img src="/assets/images/ai.png" alt="">
-                    <img src="/assets/images/dn.png" alt="">
-                    <img src="/assets/images/in.png" alt="">
-                </div>
-            </div>
-            
-           
-            
         </div>
-
     </section>
     <section class="container head-clean">
         <div class="row">
-            <div class="col-md-6">
-                
+            <div class="col-md-6 ">
+                <div class="profile tag-profile">
+                <a href="#profile">
+                    <!-- <img src="{{ asset('user/assets/icon/avatar.svg')}}" alt="avatar"> -->
+                <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                <div class="star-profile-txt">
+                    <span>مصمم</span>
+                    <h4> أسم المصمم</h4>
+                    <div class="star-reating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+               
+                </div>
             </div>
             <div class="col-md-6">
-                <button class="btn btn-sky invert">
+                <button class="btn btn-sky invert personal-pro">
                     الملف الشخصي
                    
                   </button>
@@ -1501,32 +1519,28 @@
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                     <label class="form-label dot">الكمية</label>
                     <select class="form-select gender" required name="gender" aria-label="Default select example">
-                        <option selected>الجنس</option>
-                        <option value="male">الذكر</option>
-                        <option value="female">أنثى</option>
+                        <option selected>1</option>
+                       
                     </select>                </div>
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                     <label class="form-label dot">المقاسات</label>
                     <select class="form-select gender" required name="gender" aria-label="Default select example">
-                        <option selected>الجنس</option>
-                        <option value="male">الذكر</option>
-                        <option value="female">أنثى</option>
+                        <option selected>اختيار المقاس</option>
+                       
                     </select>                </div>
             
                     <div class="row circle-bottom">                <div class="col-md-6">
                     <label class="form-label dot">شكل الطباعة</label>
                                                                                 <select class="form-select gender" required name="gender" aria-label="Default select example">
-                                                                  <option selected>الجنس</option>
-                                                                  <option value="male">الذكر</option>
-                                                                  <option value="female">أنثى</option>
+                                                                  <option selected>الاشكال هنا</option>
+                                                                 
                                                               </select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label dot">تقنية الطباعة</label>
                                                                                 <select class="form-select gender" required name="gender" aria-label="Default select example">
-                                                                  <option selected>الجنس</option>
-                                                                  <option value="male">الذكر</option>
-                                                                  <option value="female">أنثى</option>
+                                                                  <option selected>  التقنية الأولي</option>
+                                                                 
                                                               </select>
                 </div>
             </div>
@@ -1539,11 +1553,12 @@
 
                 </div>  
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer footer-clean">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-action requests">
-                            <button class="btn btn-sky mx-3 p">تقديم طلب</button>
+                            <button class="btn-form designer-btn" data-bs-toggle="modal" data-bs-target="#designerPublicServiesModal">
+                                 تقديم طلب </button>
                             <p>يتطلب تسجيل للتسجيل اضغط هنا </p>
                         </div>
                     </div>
@@ -1619,6 +1634,8 @@
 <!-- design footer end here -->
 
 
+
+
 <!-- disign section end here -->  
                             </div>
                         </div>
@@ -1638,7 +1655,95 @@
 
 
     <!-- ///////////////////////////////////// cleanshot Modal end here ////////////////////////////////-->
+<!-- zahid-page2 start -->
 
+<div class="modal fade page form animate__animated animate__fadeInLeft animate__fast" id="designerPublicServiesModal" tabindex="-1" aria-labelledby="designerPublicServiesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div>
+                                <span class="outline dot">أكثر 20 خدمة مختلفة</span>
+                                <h1 class="modal-title right"><span class="btm-line"><span class="inner-line"></span>الخدمات العامة
+                                    </span></h1>
+                            </div>
+                            <div class="profile">
+                                <button class="btn btn-sky profile-btn invert">
+                                    مستخدم
+                         </button>
+                                @if(@auth()->user()->profile == null)
+                                <a href="#profile">
+                                    <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
+                                </a>
+                                @else
+                                <a href="#profile">
+                                    <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                </a>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="modal-body">
+                            <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                                <div class="carousel-inner">
+                                    
+                                   <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <div class="submitted-data">
+                                            <h6>رقم الطلب</h6>
+                                            @auth
+                                            <h1>{{@$public->id +1}}</h1>
+                                            @else
+                                            <h1>406</h1>
+                                            @endauth
+                                            <p><img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle"> رفع الطلب</p>
+                                            <p><img src="{{asset('user/assets/icons/red-circle.png')}}" alt="red-circle">تقديم عرض سعر من قبل المصمم</p>
+                                            <p><img src="{{asset('user/assets/icons/red-circle.png')}}" alt="red-circle"> الدفع</p>
+                                            <!-- <span>سيتم تحديث حالة الطلب من قبل الإدارة</span> -->
+                                        </div>
+                                    </div>
+                                       <div class="col-md-7">
+                                        <img src="{{ asset('user/assets/images/mujtmah-box__image.png') }}" class="mujtmah-box__image">
+
+                                       </div>
+                                       <div class="col-md-12">
+                                        <div class="form-action designer-btn">
+                                            <!-- data-bs-toggle="modal" data-bs-target="#publicServiesFinalModal"  / carousel-next-icon-show-->
+                                            <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
+                                           <p>تم رفع الطلب بنجاح</p>
+                                        </div>
+                                    </div>
+                                       
+                                   </div>
+                                </div>
+<!-- 
+                                <button class="carousel-control-prev " type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next carousel-next-icon-hide" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button> -->
+                                <!-- <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- zahid-page2  end-->
 
     <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->
 
