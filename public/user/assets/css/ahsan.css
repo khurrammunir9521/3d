@@ -165,7 +165,6 @@ mujtmah-almusmamen section start
     background-color: #D83554;
     margin-bottom: 5px;
     transform: translateX(10px);
-   
 }
 
 .sub-heading-box__heading {
@@ -451,6 +450,10 @@ almuntjat section start
 .almuntjat-form__box {
     width: 31%;
     margin-bottom: 30px;
+}
+
+.nav-tabs .nav-link {
+    margin: 0 -20px !important;
 }
 
 
