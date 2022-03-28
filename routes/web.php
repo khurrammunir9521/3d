@@ -149,12 +149,6 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
 
 });
 
-Route::get('/image/{filename}', function ($filename)
-{
-    dd($filename);
-  
-})->name('chat.image');
-
 
 Route::get('mark/read',function(){
   auth()->user()->unreadNotifications->markAsRead();
