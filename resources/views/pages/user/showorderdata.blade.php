@@ -291,7 +291,7 @@
                                             </div>
                                         </div> -->
                                         </div>
-                                        {{ $order->user_id }}
+                                     
                                         
                                     </div>
                                 </div>
