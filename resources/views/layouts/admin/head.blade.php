@@ -28,8 +28,9 @@
     <!-- ico-font-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/icofont.css') }}">
     <!-- Themify icon-->
-
-
+   
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chat.css') }}">
+    <!-- Chat-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/themify.css') }}">
     <!-- Flag icon-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flag-icon.css') }}">
