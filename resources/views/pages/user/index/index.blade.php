@@ -1466,7 +1466,7 @@
                 <div class="star-profile-txt">
                     <span>مصمم</span>
                     <h4> أسم المصمم</h4>
-                    <div class="star-reating">
+                    <div class="star-reating rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -1766,7 +1766,8 @@
 
                                 <div style="margin-top: 1%;">
                                     <span class="outline dot">اهلاً وسهلاً بكم</span>
-                                    <h1 class="modal-title">طلباتي</h1>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+
                                 </div>
                                 <div class="profile">
                                 <button class="btn btn-sky profile-btn invert">
@@ -1854,7 +1855,7 @@
                 <div class="star-profile-txt">
                     <span>مصمم</span>
                     <h4> أسم المصمم</h4>
-                    <div class="star-reating">
+                    <div class="star-reating rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -2071,7 +2072,7 @@
                                                     @if(@$public->status == 2)
                                                     <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
                                                     @else
-                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="red-circle">
                                                     @endif
                                                     <div>
                                                         <p>الدفع</p>
