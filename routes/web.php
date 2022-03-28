@@ -88,10 +88,12 @@ Route::get('/', [RegisterController::class, 'homepage'])->name('/');
 // });
 Auth::routes();
 
-Route::group(['middleware' => 'auth', 'varify'], function () {
+Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
     Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
     Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic');
+  
     //Resource Route
 
     Route::resource('about', AboutUsController::class);
