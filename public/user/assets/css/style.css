@@ -2328,16 +2328,17 @@ position: relative;
     content: "";
     position: absolute;
     background: url(../images/design.png) no-repeat;
-    background-position: top;
-    background-size: 900px;
+    background-position: top center;
+    background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.6;
-    top: 200px;
+    top: 170px;
     bottom: 0;
     z-index: -1;
     left: 0;
     right: 0;
-    height: 200px;
+    max-height: 300px;
+    height: auto;
 }
 /* .designer-sec::after{
     content: "";
@@ -2418,8 +2419,8 @@ position: relative;
 }
 .search-input{
     position: relative;
-    width: 599px;
-    height: 40px;
+   /* width: 599px;
+     height: 40px; */
 }
 .search-input i{
     position: absolute;
@@ -2491,7 +2492,7 @@ position: relative;
     padding-top: 30px;
 }
 .design-card-main{
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .star-profile{
     display: flex;
@@ -2561,6 +2562,7 @@ position: relative;
 
 .design-card-inner{
     position: relative;
+    padding-top: 30px;
     /* width: 335px;
     height: auto; */
 }
@@ -2668,7 +2670,7 @@ position: relative;
 .designer-profile .btn{
     margin-top: 10px;
     color: #fff;
-    width: 100px;
+    width: 96px;
     height: 30px;
     margin-left: 0px;
 }
@@ -2689,7 +2691,7 @@ position: relative;
     text-align: center;
     padding-bottom: 50px;
 }
-.designer-sec-1 .designer-sec .sort-btn .btn{
+.designer-sec-1 .sort-btn .btn{
     color: #1F5098;
 }
 .designer-sec-1 input{
@@ -2699,7 +2701,7 @@ position: relative;
     background-color: transparent;
     border: 4px solid #1F5098;
 }
-.designer-sec-1 input::placeholder{
+.designer-sec-1 .search-input ::placeholder{
     color: #1F5098;
 }
 .designer-sec-1 .search-input i {
@@ -2729,8 +2731,14 @@ position: relative;
 .design-1-footer{
     background-color: #fff !important;
 }
-.design-1-footer .contact p{
+.design-1-footer footer p{
     color: #58595B !important;
 }
 /* designer-sec-1  css end here*/
 
+#designModal{
+    direction: ltr;
+}
+#designModal .modal-dialog{
+    direction: rtl;
+}
