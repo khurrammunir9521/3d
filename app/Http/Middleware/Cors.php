@@ -19,9 +19,10 @@ class Cors
         return $next($request)
         ->header('Access-Control-Allow-Origin', '*')
         ->header('Header set Access-Control-Allow-Credentials', "true")
-        ->header('Header set Access-Control-Allow-Methods', "GET, POST, PUT, DELETE, OPTIONS")
-        ->header('Header set Access-Control-Allow-Headers', "X-Requested-With,Content-Type,Authorization")
+        ->header('Header set Access-Control-Allow-Methods', "*")
+        ->header('Header set Access-Control-Allow-Headers', "*")
         ->header('Header set Access-Control-Max-Age', "864000");
+
         
         
         
