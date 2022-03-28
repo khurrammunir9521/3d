@@ -886,14 +886,17 @@
 <section class="mujtmah-almusmamen" id="design">
             <div class="container-m">
                 <div class="mujtmah-almusmamen-heading-wrapper">
-                    <div class="sub-heading-box">
-                        <div class="red-dot"></div>
-                        <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
+                    <div class="mujtmah-heading-box">
+                        <div class="sub-heading-box">
+                            <div class="red-dot"></div>
+                            <p class="sub-heading-box__heading">إختيار نوع الخدمة</p>
+                        </div>
+                        <div class="heading-box">
+                            <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
+                            <div class="heading-box__underline"></div>
+                        </div>
                     </div>
-                    <div class="heading-box">
-                        <h1 class="mujtmah-almusmamen__heading">مجتمع المصممين</h1>
-                        <div class="heading-box__underline"></div>
-                    </div>
+                    
                     <p class="mujtmah-almusmamen__para">
                         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
                     </p>

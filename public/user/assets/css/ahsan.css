@@ -144,6 +144,11 @@ mujtmah-almusmamen section start
     margin-bottom: 45px;
 }
 
+.mujtmah-heading-box {
+    margin: 0 auto;
+    width: 242px;
+}
+
 .mujtmah-almusmamen__heading {
     font-size: 43px;
     font-family: 'JannaLT-Bold';
@@ -590,6 +595,7 @@ almuntjat section start
 .ahs-profile-plus-btn.disabled {
     color: #E0E0DE;
 }
+
 
 /* ******************************
 almuntjat section end
