@@ -34,10 +34,12 @@
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade active show" id="userloginModal2" role="tabpanel">
                                             <form class="row gy-4 gx-5" method="post" style="padding-top: 20px;">
-                                                <div class="ahs-img-uploder-cam__holder">
-                                                    <input type="hidden" name="_token" value="p2TteENBnXmCNv1w9tEpQy6RpYxRAWKo1snBkO2f"> <img id="blah1" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/upload/images/1648128609.png"
-                                                        alt="dashboard_logo" class="mx-auto d-block imageupload1" style="clip-path: circle() !important ;height:150% !important;" width="150">
-                                                    <input id="imgInp1" type="file" class="chose1" value="upload/images/1648128609.png" name="profile" accept="image/*" style="display: none;">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                        <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
+                
+                                                                                                <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
+                                                    </div>
                                                 </div>
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
@@ -80,10 +82,12 @@
                                         </div>
                                         <div class="tab-pane fade " id="designerloginModal2" role="tabpanel" aria-labelledby="profile-tab">
                                             <form class="row gy-4 gx-5" method="post" style="padding-top: 20px;">
-                                                <div class="ahs-img-uploder-cam__holder">
-                                                    <input type="hidden" name="_token" value="p2TteENBnXmCNv1w9tEpQy6RpYxRAWKo1snBkO2f"> <img id="blah1" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/upload/images/1648128609.png"
-                                                        alt="dashboard_logo" class="mx-auto d-block imageupload1" style="clip-path: circle() !important ;height:150% !important;" width="150">
-                                                    <input id="imgInp1" type="file" class="chose1" value="upload/images/1648128609.png" name="profile" accept="image/*" style="display: none;">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                                                        <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
+                
+                                                                                                <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
+                                                    </div>
                                                 </div>
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-3 mt-4">
