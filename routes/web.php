@@ -149,6 +149,9 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
 
 });
 
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+});
 
 Route::get('mark/read',function(){
   auth()->user()->unreadNotifications->markAsRead();
