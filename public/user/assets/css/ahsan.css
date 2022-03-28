@@ -131,6 +131,7 @@ mujtmah-almusmamen section start
     height: 11px;
     background-color: #D83554;
     margin-bottom: 3px;
+    margin-right: -10px;
 }
 
 .sub-heading-box__heading {
@@ -141,6 +142,11 @@ mujtmah-almusmamen section start
 
 .heading-box {
     margin-bottom: 45px;
+}
+
+.mujtmah-heading-box {
+    margin: 0 auto;
+    width: 242px;
 }
 
 .mujtmah-almusmamen__heading {
