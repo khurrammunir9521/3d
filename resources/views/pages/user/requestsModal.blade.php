@@ -147,7 +147,7 @@
                          </div>
                          <div class="modal-footer">
                              <div class="footer">
-                                 <!-- قائمة الطلبات -->
+                                 قائمة الطلبات
                              </div>
                          </div>
                      </div>
