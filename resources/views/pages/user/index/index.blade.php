@@ -33,12 +33,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
     
    <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/fonts.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/ahsan.css') }}">
-    <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Responsive Sheet -->
-    <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('user/assets/css/jquery.pageLoading.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/ahsan.css') }}">
+    <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('user/assets/css/asim.css') }}">
+
 
     <style type="text/css">
         @font-face {
@@ -1899,19 +1901,19 @@
        <div class="search-form">
            <form action="#" method="">
                <div class="row">
-                   <div class="col-md-2">
+                   <div class="col-md-3 col-lg-2">
                        <div class="sort-btn">
                            <button class="btn"> الترتيب حسب <i class="fa-solid fa-arrow-down"></i></button>
                        </div>
                    </div>
-                   <div class="col-md-2">
+                   <div class="col-md-3 col-lg-2">
 
                        <div class="sort-btn">
                            <button class="btn"> تقنية الطباعة <i class="fa-solid fa-arrow-down"></i></button>
 
                        </div>
                    </div>
-                   <div class="col-md-6">
+                   <div class="col-md-6 col-lg-7 ps-0">
 
                        <div class="search-input">
                            <input type="text" class="form-control" id="search" placeholder="البحث">
@@ -1937,7 +1939,7 @@
 
 <div class="design-card-main">
    <div class="row">
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -1984,7 +1986,7 @@
            </div>
          
        </div>
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2031,7 +2033,7 @@
            </div>
          
        </div>
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2078,10 +2080,9 @@
            </div>
          
        </div>
-   </div>
+  
    
-   <div class="row padd-30">
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2128,7 +2129,7 @@
            </div>
          
        </div>
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2175,7 +2176,7 @@
            </div>
          
        </div>
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2222,10 +2223,8 @@
            </div>
          
        </div>
-   </div>
 
-   <div class="row padd-30">
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2272,7 +2271,7 @@
            </div>
          
        </div>
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2323,7 +2322,7 @@
            </div>
          
        </div>
-       <div class="col-md-4">
+       <div class="col-md-6 col-lg-4">
            <div class="design-card-inner">
            <div class="row">
                <div class="col-md-6">
@@ -2370,13 +2369,15 @@
            </div>
          
        </div>
-   </div>
-
+    </div>
 </div>
 
-<div class="design-bottom-btn">
+<!-- <div class="design-bottom-btn">
 <button class="btn">المزيد</button>
-</div>
+</div> -->
+<button class="design-bottom-btn" data-bs-toggle="modal" data-bs-target="#designModal">
+  المزيد  
+</button>
 
 </section>
 <!-- ///////////////////////////////////////////////////////// design-view-inner modal start here /////////////////////////////////////////////// -->

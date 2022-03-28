@@ -2328,16 +2328,17 @@ position: relative;
     content: "";
     position: absolute;
     background: url(../images/design.png) no-repeat;
-    background-position: top;
-    background-size: 900px;
+    background-position: top center;
+    background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.6;
-    top: 200px;
+    top: 170px;
     bottom: 0;
     z-index: -1;
     left: 0;
     right: 0;
-    height: 200px;
+    max-height: 300px;
+    height: auto;
 }
 /* .designer-sec::after{
     content: "";
@@ -2418,8 +2419,8 @@ position: relative;
 }
 .search-input{
     position: relative;
-    width: 599px;
-    height: 40px;
+   /* width: 599px;
+     height: 40px; */
 }
 .search-input i{
     position: absolute;
@@ -2491,7 +2492,7 @@ position: relative;
     padding-top: 30px;
 }
 .design-card-main{
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .star-profile{
     display: flex;
@@ -2561,6 +2562,7 @@ position: relative;
 
 .design-card-inner{
     position: relative;
+    padding-top: 30px;
     /* width: 335px;
     height: auto; */
 }
@@ -2734,3 +2736,9 @@ position: relative;
 }
 /* designer-sec-1  css end here*/
 
+#designModal{
+    direction: ltr;
+}
+#designModal .modal-dialog{
+    direction: rtl;
+}
