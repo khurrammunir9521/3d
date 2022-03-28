@@ -2670,7 +2670,7 @@ position: relative;
 .designer-profile .btn{
     margin-top: 10px;
     color: #fff;
-    width: 100px;
+    width: 96px;
     height: 30px;
     margin-left: 0px;
 }
@@ -2691,7 +2691,7 @@ position: relative;
     text-align: center;
     padding-bottom: 50px;
 }
-.designer-sec-1 .designer-sec .sort-btn .btn{
+.designer-sec-1 .sort-btn .btn{
     color: #1F5098;
 }
 .designer-sec-1 input{
@@ -2701,7 +2701,7 @@ position: relative;
     background-color: transparent;
     border: 4px solid #1F5098;
 }
-.designer-sec-1 input::placeholder{
+.designer-sec-1 .search-input ::placeholder{
     color: #1F5098;
 }
 .designer-sec-1 .search-input i {
@@ -2731,7 +2731,7 @@ position: relative;
 .design-1-footer{
     background-color: #fff !important;
 }
-.design-1-footer .contact p{
+.design-1-footer footer p{
     color: #58595B !important;
 }
 /* designer-sec-1  css end here*/
