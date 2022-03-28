@@ -51,9 +51,18 @@ class Chats extends Component
     }
     public function getUser($userId=1)
     {
-       $user=User::find($userId);
-       $this->sender=$user;
-       $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
+        
+        if(auth()->user()->role=='admin'){
+            $userId=$this->user_id;
+            $user=User::find($userId);
+            $this->sender=$user;
+            $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
+        }else{
+            $user=User::find($userId);
+            $this->sender=$user;
+            $this->allmessages=Chat::where('user_id',auth()->id())->where('reciever_id',$userId)->orWhere('user_id',$userId)->where('reciever_id',auth()->id())->orderBy('id','desc')->get();
+        }
+       
      
     }
 
