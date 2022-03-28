@@ -19,7 +19,8 @@
                                         if($extracted['chatImg']==null)
                                         {
                                             echo $extracted['chatImg'].$extracted['msg'];
-                                        }else{?>
+                                        }else{
+                                            echo url('storage/app/chat/'.$extracted['chatImg']);?>
                                             <img src="{{ asset('chat/'.$extracted['chatImg']) }}" width="150"/>
                                             
                                       <?php  }
