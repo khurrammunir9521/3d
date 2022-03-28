@@ -1559,7 +1559,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-action requests">
-                            <button class="btn-form designer-btn" data-bs-toggle="modal" data-bs-target="#designerPublicServiesModal">
+                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designerPublicServiesModal">
                                  تقديم طلب </button>
                             <p>يتطلب تسجيل للتسجيل اضغط هنا </p>
                         </div>
@@ -1576,7 +1576,7 @@
 <!-- zahid page modal end here -->
     
 <!-- design footer start here -->
-<section class="contact design-footer">
+<section class="contact design-footer design-1-footer">
 <div class="container">
 <div class="row">
    <div class="col-md-12">
@@ -1612,7 +1612,7 @@
        <div class="col-md-4 col-xl-4">
            <div class="right">
                <p>تصميم وتطوير شركة تيلرز</p>
-               <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.svg') }}"
+               <a href="https://tellers.sa/"><img src="{{ asset('user/assets/icons/tellers-logo.png') }}"
                        alt="tellers-logo"></a>
            </div>
        </div>
@@ -1621,8 +1621,8 @@
        </div>
        <div class="col-md-3 col-xl-4">
            <div class="social">
-               <a href="#"><img src="{{ asset('user/assets/icons/twitter-white.svg') }}" alt="twitter"></a>
-               <a href="#"><img src="{{ asset('user/assets/icons/instagram-white.svg') }}" alt="instagram"></a>
+               <a href="#"><img src="{{ asset('user/assets/icons/twitter.png') }}" alt="twitter"></a>
+               <a href="#"><img src="{{ asset('user/assets/icons/instagram.png') }}" alt="instagram"></a>
            </div>
        </div>
    </div>
@@ -1632,6 +1632,7 @@
 </footer>
 </div>
 </section>
+
    
 <!-- design footer end here -->
 
