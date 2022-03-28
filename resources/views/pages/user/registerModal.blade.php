@@ -85,8 +85,7 @@
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
-                
-                                                                                                <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
+                                                        <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
