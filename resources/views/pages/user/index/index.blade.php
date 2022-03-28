@@ -3105,6 +3105,7 @@
                             <div class="modal-body">
                             <div class="container">
                                 <div class="modal-header border-0">
+
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     <div>
                                         <span class="outline dot">اهلاً وسهلاً بكم</span>
@@ -3112,7 +3113,7 @@
                                     </div>
                                 
                                     <div class="add-btn">
-                                        <button type="button" class="btn-add">
+                                        <button type="button" class="btn-add"  data-bs-toggle="modal" data-bs-target="#productaddModal">
                                         <i class="fa-solid fa-plus"></i>
                                         </button>
                                      
@@ -3136,23 +3137,23 @@
                        
                         <div class="col-md-4">
                             <div class="design-card-inner">
-                            
-                            <div class="design-card-body product-1">
-                                <div class="design-card-right-top">
-                                    <p class="txt-green">مفعل</p>
-                                </div>
-                                <div class="design-card-left-top">
-                                    <p>تقنية الطباعة</p>
-                                </div>
-                                <div class="design-card-left-bottom">
-                                    <div class="card-icons">
-                                        <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
-                                        <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
-                                        <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
 
+                                <div class="design-card-body product-1">
+                                    <div class="design-card-right-top">
+                                        <p class="txt-green">مفعل</p>
+                                    </div>
+                                    <div class="design-card-left-top">
+                                        <p>تقنية الطباعة</p>
+                                    </div>
+                                    <div class="design-card-left-bottom">
+                                        <div class="card-icons">
+                                            <img src="{{ asset('user/assets/images/ai.png') }}" class="img-fluid" alt="">
+                                            <img src="{{ asset('user/assets/images/dn.png') }}" class="img-fluid" alt="">
+                                            <img src="{{ asset('user/assets/images/in.png') }}" class="img-fluid" alt="">
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             <div class="design-card-footer">
                                 <h4>عنوان التصميم يكتب هنا ويستوعب سطرين كحد اقصى ..</h4>
                             </div>
@@ -3308,7 +3309,119 @@
 
 
 <!-- ///////////////////////////////////////////////////////// product design productaddModal start here /////////////////////////////////////////////// -->
-                        
+    <div class="wrapper al-center">
+        <div class="modal fade page register" id="productaddModal" tabindex="-1" aria-labelledby="productaddLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="modal-body">
+                                        <div class="modal-header border-0">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <div>
+                                                <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                                <h1 class="modal-title right">المنتجات </h1>
+                                            </div>
+                                            <button class="ahs-profile-plus-btn ">
+                                                <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
+                                                إضافة منتج
+                                            </button>
+                                        </div>
+                                        <form action="" class="almuntjat-form">
+                                            <div class="almuntjat-form__input-wrapper">
+                                                <div class="sub-heading-box">
+                                                    <div class="red-dot"></div>
+                                                    <p class="sub-heading-box__heading b2 sub-heading-box__heading--b">إختيار نوع الخدمة</p>
+                                                </div>
+                                                <!-- <label for="almuntjat-form__img" class="almuntjat-form__img-label">
+                                                    <p class="almuntjat-form__img-label-text">إضافة</p>
+                                                </label> -->
+                                                    <div class="product-add-upload">
+                                                        <p class="">إضافة</p>
+                                                        <span class="camera-icon"><i class="fa fa-camera"></i></span>
+                                                    </div>
+                                                <!-- <input type="file" name="almuntjat-form__img" id="almuntjat-form__img" class="almuntjat-form__img-input"> -->
+                                            </div>
+                                            <!-- img input end -->
+                                            <div class="almuntjat-form__input-wrapper">
+                                                <div class="sub-heading-box">
+                                                    <div class="red-dot"></div>
+                                                    <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان</p>
+                                                </div>
+                                                <input type="text" class="almuntjat-form__input" placeholder="الاسم هنا ..">
+                                            </div>
+                                            <!-- alunwan end -->
+                                            <div class="almuntjat-form__input-wrapper">
+                                                <div class="sub-heading-box">
+                                                    <div class="red-dot"></div>
+                                                    <p class="sub-heading-box__heading sub-heading-box__heading--b">الوصف</p>
+                                                </div>
+                                                <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label>
+                                                <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input">
+                                                </textarea>
+                                            </div>
+                                            <div class="form-inner-wrapper wrapper jst-btw">
+                                                <div class="almuntjat-form__box ">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">تقنية الطباعة</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="كلمة المرور هنا .." class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+                                                <div class="almuntjat-form__box">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">البرامج المستخدم</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="اختيار التقنية" class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+                                                <div class="almuntjat-form__box">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">الألوان</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+                                                <div class="almuntjat-form__box">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">المقاسات</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="almuntjat-form-error">
+                                                <img src="assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                            </div>
+                                            <button type="submit" class="almuntjat-form__btn m-btn">
+                                                إضافة
+                                            </button>
+                                            <p class="almuntjat-form__text">
+                                                إضافة منتج جديد
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
 
 <!-- ///////////////////////////////////////////////////////// product design productaddModal end here /////////////////////////////////////////////// -->
 
