@@ -9,47 +9,14 @@ autor:ahsan Contact Whatsup + skype +923014749625;
     padding: 0;
 }
 
-:root {
-    --dark-yellow: #d1a640;
-    --gold: #e6d066;
-    --light-pink: #fbf2e2;
-    --white: #fff;
-}
-
-@font-face {
-    font-family: 'JannaLT-Bold';
-    src: url(' ../fonts/JannaLT-Bold.woff2') format('woff2'), url('../fonts/JannaLT-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
+body,
+html {
+    background-color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    white-space: 1px;
     font-family: 'JannaLT-Regular';
-    src: url('../fonts/JannaLT-Regular.woff2') format('woff2'), url('../fonts/JannaLT-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('../fonts/SegoeUI.woff2') format('woff2'), url('../fonts/SegoeUI.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-.dark-yellow {
-    color: var(--dark-yellow);
-}
-
-.light-pink {
-    background: #fbf2e2;
-}
-
-.white {
-    color: #fff;
 }
 
 img {
@@ -129,6 +96,9 @@ a {
     font-family: 'Almarai', sans-serif;
     font-weight: 400;
     font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -148,23 +118,19 @@ mujtmah-almusmamen section start
 .mujtmah-almusmamen-heading-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    margin-bottom: 50px;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .sub-heading-box {
-    margin: 0 auto;
     margin-bottom: 0px;
-    width: 240px;
 }
 
 .red-dot {
     width: 11px;
     height: 11px;
     background-color: #D83554;
-    margin-bottom: 5px;
-    transform: translateX(10px);
+    margin-bottom: 3px;
 }
 
 .sub-heading-box__heading {
@@ -174,8 +140,6 @@ mujtmah-almusmamen section start
 }
 
 .heading-box {
-    width: 240px;
-    margin: 0 auto;
     margin-bottom: 45px;
 }
 
@@ -189,7 +153,7 @@ mujtmah-almusmamen section start
 .heading-box__underline {
     background-color: #fff;
     width: 58px;
-    margin-right: 0px;
+    margin-right: 16px;
     height: 2px;
     border-radius: 25%;
 }
@@ -212,7 +176,6 @@ mujtmah-almusmamen section start
     text-align: center;
     transition: all 0.3s ease-in-out;
     font-family: 'Segoe UI';
-    border: none;
 }
 
 .mujtmah-almusmamen-btn:hover {
@@ -259,7 +222,6 @@ mujtmah-almusmamen section start
 .mujtmah-box-btn:hover {
     text-decoration: underline;
     transition: all 0.5s ease-in-out;
-    color: #fff;
 }
 
 .btn-white {
@@ -311,48 +273,6 @@ mujtmah-almusmamen section start
     top: 0;
     width: 80px;
     left: 0;
-}
-
-@media(max-width:1200px) {
-    .container-m {
-        max-width: 1024px;
-    }
-}
-
-@media(max-width:1024px) {
-    .container-m {
-        max-width: 768px;
-    }
-    .mujtmah-box__heading,
-    .mujtmah-box__count-heading {
-        font-size: 36px;
-    }
-    .mujtmah-box__para {
-        font-size: 16px;
-    }
-}
-
-@media(max-width:767px) {
-    .container-m {
-        max-width: 360pxpx;
-    }
-    .mujtmah-almusmamen {
-        padding: 50px 0;
-    }
-    .mujtmah-almusmamen-wrapper {
-        flex-wrap: wrap;
-    }
-    .mujtmah-box2,
-    .mujtmah-box {
-        width: 100%;
-    }
-    .mujtmah-box {
-        margin-bottom: 70px;
-    }
-    .mujtmah-box {
-        display: flex;
-        flex-direction: column-reverse;
-    }
 }
 
 
@@ -445,6 +365,7 @@ almuntjat section start
 
 .form-inner-wrapper {
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .almuntjat-form__box {
@@ -452,11 +373,288 @@ almuntjat section start
     margin-bottom: 30px;
 }
 
+.almuntjat-form__input.failed::placeholder {
+    color: #D83554;
+}
+
+.almuntjat-form__input.failed {
+    border: 4px solid #D83554;
+    color: #D83554;
+}
+
+.almuntjat-form__input.failed:focus {
+    border: 4px solid #D83554;
+    color: #D83554;
+}
+
+.input-holder {
+    position: relative;
+}
+
+.input-holder__img {
+    position: absolute;
+    width: 12px;
+    top: calc(50% - 6px);
+    left: 15px;
+}
+
+.almuntjat-form-error {
+    padding: 10px 20px;
+    height: 60px;
+    background-color: #1F5098;
+    border-radius: 13px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 52px;
+}
+
+.almuntjat-form-error__img {
+    width: 24px;
+    height: auto;
+    margin-left: 45px;
+    margin-bottom: 0 !important;
+}
+
+.almuntjat-form__btn {
+    background-color: #1F5098;
+    box-shadow: 0px 12px 6px rgb(0 0 0 / 16%);
+    margin: 0 auto 30px auto;
+    color: #fff;
+}
+
+.almuntjat-form__text {
+    font-size: 18px;
+    color: #58595B;
+    text-align: center;
+}
+
+.ahs-member-model-box {
+    width: 260px;
+}
+
+.ahs-from-box {
+    position: relative;
+}
+
+.ahs-from-box .input-holder__img {
+    top: calc(50% + 18px);
+    left: 25px;
+    margin: 0 !important;
+}
+
+.ahs-img-uploder-cam__holder {
+    position: relative;
+    width: 150px;
+    margin: auto;
+}
+
+.ahs-img-uploder-cam__holder2 {
+    width: 100px;
+}
+
+.ahs-img-uploder-cam {
+    position: absolute;
+    width: 34px;
+    height: auto;
+    bottom: -40px;
+    right: 0;
+}
+
+.inner-line2 {
+    border: 1px solid #215099;
+    background-color: #215099;
+    position: absolute;
+    width: 60px;
+    box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
+    bottom: -7px;
+}
+
 .nav-tabs .nav-link {
     margin: 0 -20px !important;
+}
+
+.container-x {
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
+
+.terms-wrapper {
+    justify-content: center;
+    text-align: center;
+}
+
+.term-cond {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.terms-link {
+    font-size: 18px;
+    color: #1F5098;
+    text-decoration: underline;
+}
+
+.container-x2 {
+    max-width: 910px !important;
+}
+
+.new-account-box {
+    margin-top: 170px;
+    text-align: center;
+}
+
+.new-account {
+    font-size: 18px;
+    color: #1F5098;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modal.login .ahs-from-action {
+    padding-top: 0 !important;
+}
+
+.modal.page .modal-body {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.forget-password {
+    font-size: 18px;
+    color: #1F5098;
+    margin-top: 10px !important;
+}
+
+.forget-password:hover {
+    color: #1F5098;
+    text-decoration: underline;
+}
+
+.forget-password-box {
+    margin-top: 10px;
+}
+
+.ahs-form-head1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1EA9D4;
+}
+
+.ahs-form-head2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.ahs-form-box1 {
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ahs-form-img1 {
+    width: 12px;
+    margin: 0 !important;
+    margin-right: 50px !important;
+}
+
+.ahs-form-box1-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.edit-profile--ahs {
+    margin-left: 20px;
+}
+
+.ahs-profile-plus-btn {
+    color: #1EA9D4;
+    font-size: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+}
+
+.ahs-profile-plus {
+    font-size: 20px;
+}
+
+.ahs-profile-plus-btn.disabled {
+    color: #E0E0DE;
 }
 
 
 /* ******************************
 almuntjat section end
 ******************************* */
+
+
+/* ********************
+MEDIA QUERIES
+********************* */
+
+@media(max-width:1200px) {
+    .container-m {
+        max-width: 1024px;
+    }
+}
+
+@media(max-width:1024px) {
+    .container-m {
+        max-width: 768px;
+    }
+    .mujtmah-box__heading,
+    .mujtmah-box__count-heading {
+        font-size: 36px;
+    }
+    .mujtmah-box__para {
+        font-size: 16px;
+    }
+    /* mujtmah-almusmamen section end */
+    /* almuntjat-form section start */
+    /* almuntjat-form section end */
+    .almuntjat-form {
+        padding: 50px 0px 150px 0px;
+    }
+}
+
+@media(max-width:767px) {
+    .container-m {
+        max-width: 360pxpx;
+    }
+    .mujtmah-almusmamen {
+        padding: 50px 0;
+    }
+    .mujtmah-almusmamen-wrapper {
+        flex-wrap: wrap;
+    }
+    .mujtmah-box2,
+    .mujtmah-box {
+        width: 100%;
+    }
+    .mujtmah-box {
+        margin-bottom: 70px;
+    }
+    .mujtmah-box {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* mujtmah-almusmamen section end */
+    /* almuntjat-form section start */
+    /* almuntjat-form section end */
+    .almuntjat-form__box {
+        width: 100%;
+    }
+}
+
+
+/* ********************
+MEDIA QUERIES end
+********************* */

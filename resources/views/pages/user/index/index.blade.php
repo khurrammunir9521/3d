@@ -910,7 +910,7 @@
                                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
                             </p>
                             <div class="mujtmah-box-btn-wrapper wrapper al-center">
-                                <a href="#" class="m-btn mujtmah-box-btn btn-white">
+                                <a href="#register" class="m-btn mujtmah-box-btn btn-white" data-bs-toggle="modal" data-bs-target="#registerModal">
                                     <img src="{{ asset('user/assets/images/arrow-8.png') }}" class="mujtmah-box-btn__img"> سجل الان
                                 </a>
                                 <a href="#" class="m-btn mujtmah-box-btn">
