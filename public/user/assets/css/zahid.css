@@ -103,3 +103,10 @@
 .red-btn{
     background-color: #D83554 !important;
 }
+.designer-text{
+    margin: auto;
+    width: 33rem;
+}
+.designer-bdy{
+    overflow-x: hidden ;
+}

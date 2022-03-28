@@ -178,4 +178,42 @@
     color:  #D83554 !important;
 }
 
+
+.product-add-link{
+    width: 100%;
+}
 /* ////////////////////////////////////  designer-sec-1  css end here  //////////////////////////////////// */
+
+
+/* ////////////////////////////////////  product add view  css start here  //////////////////////////////////// */
+
+.product-add-upload{
+    width: 128px;
+    height: 128px;
+    background-color: #9FA5B2;
+    display: block;
+    position: relative;
+}
+.product-add-upload p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.product-add-upload .camera-icon{
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    bottom: -20px;
+    left: -20px;
+    background-color: #1F5098;
+    text-align: center;
+    line-height: 2.4;
+}
+.product-add-upload .camera-icon{
+color: #fff;
+}
+
+
+/* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */

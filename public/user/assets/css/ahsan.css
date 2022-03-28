@@ -131,7 +131,7 @@ mujtmah-almusmamen section start
     height: 11px;
     background-color: #D83554;
     margin-bottom: 3px;
-    margin-right: -10px;
+    transform: translate(10px);
 }
 
 .sub-heading-box__heading {
