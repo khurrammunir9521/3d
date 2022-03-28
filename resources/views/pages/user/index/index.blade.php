@@ -2877,7 +2877,7 @@
            <div class="design-card-inner">
             
            <a href="javascript:void(0);" type="button" class="" data-bs-toggle="modal" data-bs-target="#productdesignModal">  
-                <div class="design-card-body product-1.png">
+                <div class="design-card-body product-1">
                     <div class="design-card-left-top">
                         <p>تقنية الطباعة</p>
                     </div>
@@ -2901,7 +2901,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
         
-           <div class="design-card-body product-2.png">
+           <div class="design-card-body product-2">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2923,7 +2923,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
           
-           <div class="design-card-body product-3.png">
+           <div class="design-card-body product-3">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2948,7 +2948,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
            
-           <div class="design-card-body product-4.png">
+           <div class="design-card-body product-4">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -2972,7 +2972,7 @@
          
            <a href="javascript:void(0);" type="button" class="" data-bs-toggle="modal" data-bs-target="#productdesignModal">
 
-                <div class="design-card-body product-5.png">
+                <div class="design-card-body product-5">
 
                     <div class="design-card-left-top">
                         <p>تقنية الطباعة</p>
@@ -2996,7 +2996,7 @@
        <div class="col-md-4">
            <div class="design-card-inner">
          
-           <div class="design-card-body product-6.png">
+           <div class="design-card-body product-1">
                <div class="design-card-left-top">
                    <p>تقنية الطباعة</p>
                </div>
@@ -3103,7 +3103,7 @@
                         <div class="col-md-12">
                           
                             <div class="modal-body">
-
+                            <div class="container">
                                 <div class="modal-header border-0">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     <div>
@@ -3111,17 +3111,25 @@
                                         <h1 class="modal-title right"><span class="btm-line d-flex">المنتجات<span class="inner-line"></span></span></h1>
                                     </div>
                                 
-                                    <div class="profile">
-                                        <button class="btn btn-sky profile-btn invert">
-                                            المصمم
+                                    <div class="add-btn">
+                                        <button type="button" class="btn-add">
+                                        <i class="fa-solid fa-plus"></i>
                                         </button>
-                                        <a href="#profile">
-                                            <img src="http://127.0.0.1:8000/user/assets/icons/avatar.svg" alt="avatar">
-                                        </a>
+                                     
+                                        <span>
+                                            المصمم  
+                                        </span>
                                     </div>
+                                </div>
                                 </div>
 
                     <!-- product design body  start here-->
+
+                    <section class="designer-sec designer-sec-1 pt-0" id="">
+
+<div class="container">
+<div class="row">
+   <div class="col-md-12">
                     <div class="design-card-main">
                     
                     <div class="row padd-30">
@@ -3129,7 +3137,10 @@
                         <div class="col-md-4">
                             <div class="design-card-inner">
                             
-                            <div class="design-card-body product-2.png">
+                            <div class="design-card-body product-1">
+                                <div class="design-card-right-top">
+                                    <p class="txt-green">مفعل</p>
+                                </div>
                                 <div class="design-card-left-top">
                                     <p>تقنية الطباعة</p>
                                 </div>
@@ -3151,7 +3162,10 @@
                         <div class="col-md-4">
                             <div class="design-card-inner">
                             
-                            <div class="design-card-body product-3.png">
+                            <div class="design-card-body product-2">
+                                <div class="design-card-right-top">
+                                    <p class="txt-green">مفعل</p>
+                                </div>
                                 <div class="design-card-left-top">
                                     <p>تقنية الطباعة</p>
                                 </div>
@@ -3173,7 +3187,10 @@
                         <div class="col-md-4">
                             <div class="design-card-inner">
                             
-                            <div class="design-card-body product-3.png">
+                            <div class="design-card-body product-3">
+                                <div class="design-card-right-top">
+                                    <p class="txt-green">مفعل</p>
+                                </div>
                                 <div class="design-card-left-top">
                                     <p>تقنية الطباعة</p>
                                 </div>
@@ -3198,7 +3215,10 @@
                     <div class="col-md-4">
                             <div class="design-card-inner">
                             
-                            <div class="design-card-body product-4.png">
+                            <div class="design-card-body product-4">
+                            <div class="design-card-right-top">
+                                    <p class="txt-red">مفعل</p>
+                                </div>
                                 <div class="design-card-left-top">
                                     <p>تقنية الطباعة</p>
                                 </div>
@@ -3220,7 +3240,10 @@
                         <div class="col-md-4">
                             <div class="design-card-inner">
                             
-                            <div class="design-card-body product-4.png">
+                            <div class="design-card-body product-5">
+                            <div class="design-card-right-top">
+                                    <p class="txt-green">مفعل</p>
+                                </div>
                                 <div class="design-card-left-top">
                                     <p>تقنية الطباعة</p>
                                 </div>
@@ -3242,7 +3265,10 @@
                         <div class="col-md-4">
                             <div class="design-card-inner">
                             
-                            <div class="design-card-body product-6.png">
+                            <div class="design-card-body product-1">
+                            <div class="design-card-right-top">
+                                    <p class="txt-red">مفعل</p>
+                                </div>
                                 <div class="design-card-left-top">
                                     <p>تقنية الطباعة</p>
                                 </div>
@@ -3264,6 +3290,10 @@
                     </div>
 
                     </div>
+                    </div>
+                    </div>
+                    </div>
+                    </section> 
     <!-- product design body  end here-->
 
                             </div>
@@ -3275,6 +3305,12 @@
     </div>
 
 <!-- ///////////////////////////////////////////////////////// product design productdesignModal end here /////////////////////////////////////////////// -->
+
+
+<!-- ///////////////////////////////////////////////////////// product design productaddModal start here /////////////////////////////////////////////// -->
+                        
+
+<!-- ///////////////////////////////////////////////////////// product design productaddModal end here /////////////////////////////////////////////// -->
 
 
     <!-- About US -->

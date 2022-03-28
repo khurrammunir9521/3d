@@ -88,11 +88,94 @@
 /* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
 
 /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
-#designinnerModal .modal.page .modal-header {
+
+.product-1{
+    background: url(../images/design-9.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.product-2{
+    background: url(../images/design-2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.product-3{
+    background: url(../images/design-3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.product-4{
+    background: url(../images/design-4.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.product-5{
+    background: url(../images/design-5.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#designinnerModal .modal-header {
     padding: 0px;
     padding-right: 4rem;
 }
+#designinnerModal .modal-header .btn-close {
+    box-shadow: none;
+}
+
 #designinnerModal .design-card-inner a{
     width: 100%;
 }
+.add-btn span{
+    color: #1EA9D4;
+}
+.btn-add {
+    margin: 0;
+    border: 1px solid #1EA9D4;
+    background-color: #1EA9D4;
+    color: #ffffff;
+    border-radius: 50px;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+}
+
+#productdesignModal .modal-header{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#productdesignModal  .btn-close{
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    transform: translate(45px);
+}
+#productdesignModal .designer-sec::before{
+    background: none !important;
+}
+.design-card-right-top{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.design-card-right-top p{
+    font-size: 10px;
+    font-weight: bold;
+    color:  #1EA9D4;
+}
+#productdesignModal .designer-sec-1{
+    padding-bottom: 80px !important;
+}
+.txt-green{
+    color:  #1ED46B !important;
+}
+.txt-blue{
+    color:  #1EA9D4 !important;
+}
+.txt-red{
+    color:  #D83554 !important;
+}
+
 /* ////////////////////////////////////  designer-sec-1  css end here  //////////////////////////////////// */
