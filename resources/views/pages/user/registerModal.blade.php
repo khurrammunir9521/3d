@@ -33,32 +33,31 @@
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade active show" id="userloginModal2" role="tabpanel">
-                                            <form class="row gy-4 gx-5" method="post" style="padding-top: 20px;">
+                                            <form class="row gy-4 gx-5" action="{{route('register')}}" method="post" style="padding-top: 20px;">
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <img id="blah" src="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/edit-avatar.svg" class="mx-auto d-block imageupload" width="100" alt="avatar" style="clip-path: circle() !important ;height: 100% !important;">
-                
-                                                                                                <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
+                                                        <input id="imgInp" type="file" class="chose" name="profile" accept="image/*" style="display: none;">
                                                     </div>
                                                 </div>
-                                                <div class="row justify-content-center">
+                                                <div class="row justify-content-center mb-4">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">الاسم</label>
                                                         <input type="text" name="name" class="form-control " placeholder=".. الاسم هنا" value="user">
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
                                                         <label class="form-label dot">رقم الجوال</label>
-                                                        <input type="text" name="field" class="form-control " placeholder="التخصص هنا .." value="dewh">
+                                                        <input type="text" name="field" class="form-control " placeholder="الجهة هنا .." value="dewh">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                                                         <label class="form-label dot">الايميل</label>
-                                                        <input type="email" name="email" class="form-control email" placeholder="الاسم هنا .." value="">
+                                                        <input type="email" name="email" class="form-control email" placeholder="الايميل هنا .." value="">
                                                     </div>
                                                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4">
                                                         <label class="form-label dot">كلمة المرور</label>
-                                                        <input type="password" name="password" class="form-control" placeholder="التخصص هنا .." value="">
+                                                        <input type="password" name="password" class="form-control pass" placeholder="كلمة المرور هنا .." value="">
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
