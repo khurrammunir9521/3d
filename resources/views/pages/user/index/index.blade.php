@@ -3578,10 +3578,13 @@
                                                 <!-- <label for="almuntjat-form__img" class="almuntjat-form__img-label">
                                                     <p class="almuntjat-form__img-label-text">إضافة</p>
                                                 </label> -->
+                                                <div class="col-md-2">
                                                     <div class="product-add-upload">
                                                         <p class="">إضافة</p>
                                                         <span class="camera-icon"><i class="fa fa-camera"></i></span>
                                                     </div>
+                                                </div>
+
                                                 <!-- <input type="file" name="almuntjat-form__img" id="almuntjat-form__img" class="almuntjat-form__img-input"> -->
                                             </div>
                                             <!-- img input end -->
@@ -3645,9 +3648,9 @@
                                                 </div>
                                             </div>
                                             <div class="almuntjat-form-error">
-                                                <img src="assets/images/warning.png" alt="" class="almuntjat-form-error__img"> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                            <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
                                             </div>
-                                            <button type="submit" class="almuntjat-form__btn m-btn">
+                                            <button type="button" class="almuntjat-form__btn m-btn" data-bs-toggle="modal" data-bs-target="#productaddformModal">
                                                 إضافة
                                             </button>
                                             <p class="almuntjat-form__text">
@@ -3661,9 +3664,176 @@
                     </div>
                 </div>
             </div>
-            </div>
+    </div>
 
 <!-- ///////////////////////////////////////////////////////// product design productaddModal end here /////////////////////////////////////////////// -->
+
+
+<!-- ///////////////////////////////////////////////////////// product design productaddformModal start here /////////////////////////////////////////////// -->
+<div class="wrapper al-center">
+        <div class="modal fade page register" id="productaddformModal" tabindex="-1" aria-labelledby="productaddformLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="modal-body">
+                                        <div class="modal-header border-0">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <div>
+                                                <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                                <h1 class="modal-title right">المنتجات </h1>
+                                            </div>
+                                            <button class="ahs-profile-plus-btn ">
+                                                <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
+                                                إضافة منتج
+                                            </button>
+                                        </div>
+                                        <div class="almuntjat-form-error error-red-bg">
+                                            <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                        </div>
+                                        <form action="" class="almuntjat-form">
+                                            <div class="almuntjat-form__input-wrapper">
+                                                <div class="sub-heading-box">
+                                                    <div class="red-dot"></div>
+                                                    <p class="sub-heading-box__heading b2 sub-heading-box__heading--b">إختيار نوع الخدمة</p>
+                                                </div>
+                                                <!-- <label for="almuntjat-form__img" class="almuntjat-form__img-label">
+                                                    <p class="almuntjat-form__img-label-text">إضافة</p>
+                                                </label> -->
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <div class="product-add-upload uplod-img-active">
+                                                        <img src="{{ asset('user/assets/images/design-8.png') }}" class="img-fluid" alt="">
+                                                            <p class="">إضافة</p>
+                                                            <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="product-add-upload">
+                                                        <img src="{{ asset('user/assets/images/cleancard.png') }}" class="img-fluid" alt="">
+                                                            <p class="">إضافة</p>
+                                                            <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="product-add-upload">
+                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
+                                                            <p class="">إضافة</p>
+                                                            <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="product-add-upload">
+                                                        <img src="{{ asset('user/assets/images/cleancard2.png') }}" class="img-fluid" alt="">
+                                                            <p class="">إضافة</p>
+                                                            <span class="camera-icon upload-cross-red"><i class="fa-solid fa-xmark"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="product-add-upload">
+                                                            <!-- <img src="{{ asset('user/assets/images/cleancard3.png') }}" class="img-fluid" alt=""> -->
+                                                            <p class="">إضافة</p>
+                                                            <span class="camera-icon"><i class="fa fa-camera"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 
+                                                <!-- <input type="file" name="almuntjat-form__img" id="almuntjat-form__img" class="almuntjat-form__img-input"> -->
+
+                                            </div>
+                                            <!-- img input end -->
+                                            <div class="almuntjat-form__input-wrapper">
+                                                <div class="sub-heading-box">
+                                                    <div class="red-dot"></div>
+                                                    <p class="sub-heading-box__heading sub-heading-box__heading--b">العنوان</p>
+                                                </div>
+                                                <input type="text" class="almuntjat-form__input" placeholder="الاسم هنا ..">
+                                            </div>
+                                            <!-- alunwan end -->
+                                            <div class="almuntjat-form__input-wrapper">
+                                                <div class="sub-heading-box">
+                                                    <div class="red-dot"></div>
+                                                    <p class="sub-heading-box__heading sub-heading-box__heading--b">الوصف</p>
+                                                </div>
+                                                <label for="almuntjat-form__wasaf" class="almuntjat-form__wasaf-label"></label>
+                                                <textarea placeholder="الوصف هنا .." name="almuntjat-form__wasaf" id="almuntjat-form__wasaf" class="almuntjat-form__wasaf-input">
+                                                </textarea>
+                                            </div>
+                                            <div class="form-inner-wrapper wrapper jst-btw">
+                                                <div class="almuntjat-form__box ">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">تقنية الطباعة</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="كلمة المرور هنا .." class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+                                                <div class="almuntjat-form__box">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">البرامج المستخدم</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="اختيار التقنية" class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+                                                <div class="almuntjat-form__box">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">الألوان</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+                                                <div class="almuntjat-form__box">
+                                                    <div class="sub-heading-box">
+                                                        <div class="red-dot"></div>
+                                                        <p class="sub-heading-box__heading sub-heading-box__heading--b">المقاسات</p>
+                                                    </div>
+                                                    <div class="input-holder">
+                                                        <input type="text" placeholder="اختاير البرامج المستخدمة" class="almuntjat-form__input">
+                                                        <img src="assets/images/arrow-5.png" alt="" class="input-holder__img">
+                                                    </div>
+                                                </div>
+
+                                                <div class="almuntjat-form__box switch">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">تفعيل المنتج</label>
+                                                    </div>
+                                                    <div class="sub-heading-box">
+                                                        <p>تفعيل أو تعطيل ظهور المنتج لا يتطلب موافقة من الإدارة</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="almuntjat-form-error">
+                                            <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض
+                                            </div>
+                                            <button type="button" class="almuntjat-form__btn m-btn" data-bs-toggle="modal" data-bs-target="#productaddform1Modal">
+                                            حفظ 
+                                            </button>
+                                            <p class="almuntjat-form__text">
+                                            تعديل بيانات المنتج
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+<!-- ///////////////////////////////////////////////////////// product design productaddformModal end here /////////////////////////////////////////////// -->
 
 
     <!-- About US -->
