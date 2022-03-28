@@ -453,6 +453,10 @@ almuntjat section start
     margin: auto;
 }
 
+.ahs-img-uploder-cam__holder2 {
+    width: 100px;
+}
+
 .ahs-img-uploder-cam {
     position: absolute;
     width: 34px;
@@ -476,8 +480,7 @@ almuntjat section start
 
 .container-x {
     margin-top: 40px;
-    max-width: 910px;
-    margin-bottom: 30px;
+    margin-bottom: -20px;
 }
 
 .terms-wrapper {
@@ -496,6 +499,9 @@ almuntjat section start
     text-decoration: underline;
 }
 
+.container-x2 {
+    max-width: 910px !important;
+}
 
 .new-account-box {
     margin-top: 170px;
