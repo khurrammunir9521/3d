@@ -1722,6 +1722,8 @@
                                             <button class="btn btn-form mx-3 with-arrow carousel-next-icon-show" type="submit">تفاصيل الطلب</button>
                                             <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order">
                                  تقديم طلب </button>
+                                            <button class="btn-form designer-btn clean-btn" data-bs-toggle="modal" data-bs-target="#designer-order-upload">
+                                 تقديم طلب </button>
                                            <p>تم رفع الطلب بنجاح</p>
                                         </div>
                                     </div>
@@ -1986,6 +1988,266 @@
 
 
 <!-- zahid-designer order  end-->
+<!-- zahid-designer order upload  start-->
+<div class="modal page result" id="designer-order-upload">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="modal-header border-0">
+                                <a href="{{route('home')}}" type="button" class="btn-close" aria-label="Close"></a>
+
+                                <div style="margin-top: 1%;">
+                                    <span class="outline dot">اهلاً وسهلاً بكم</span>
+                                    <h1 class="modal-title right"><span class="btm-line d-flex">طلباتي<span class="inner-line"></span></span></h1>
+
+                                </div>
+                                <div class="profile">
+                                <button class="btn btn-sky profile-btn invert">
+                             المصمم
+                            </button>
+                                    @if(@auth()->user()->profile == null)
+                                    <a href="#profile">
+                                        <img src="{{asset('user/assets/icons/avatar.svg')}}" alt="avatar">
+                                    </a>
+                                    @else
+                                    <a href="#profile">
+                                        <img src="{{ asset('storage/' . auth()->user()->profile) }}" style="height:40px; width:40px; border-radius: 50%">
+                                    </a>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="modal-body designer-bdy">
+                                <div class="payment d-none" id="payment">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            <img src="{{asset('user/assets/images/mada-logo.svg')}}" alt="">
+                                            <p>مدى</p>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        </label>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            <img src="{{asset('user/assets/images/masterCard.svg')}}" alt="">
+                                            <p>فيزا وماستر كارد</p>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            <img src="{{asset('user/assets/images/apple-pay.svg')}}" alt="">
+                                            <p>آبل باي</p>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="reject-reason d-none" id="reject-reason">
+                                    <div class="row mt-1 justify-content-center">
+                                        <div class="col-md-8">
+                                            <label class="form-label dot">سبب الرفض</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  الوصف هنا"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-top">
+                                            <span>رقم الطلب :</span>
+                                            <span class="id">{{@$public->id}}</span>
+                                            <div class="dateTime">{{@$public->created_at}}</div>
+                                            <!-- <div class="dateTime small">11/01/2022 - 03:00PM</div> -->
+                                        </div>
+                                        <div class="">
+                                            <div class="row final two justify-content-center text-center">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small">{{@$public->created_at}}</div>
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    <div>
+                                                        <p>رفع الطلب</p>
+                                                    </div>
+                                                </div>
+                                                <img src="{{asset('user/assets/icons/redline.svg')}}" class="single" alt="">
+                                                <div class="col-auto">
+                                                    <div class="dateTime small text-white">{{@$public->created_at}}</div>
+                                                    @if(@$public->status == 2)
+                                                    <img src="{{asset('user/assets/icons/green-circle.svg')}}" alt="green-circle">
+                                                    @else
+                                                    <img src="{{asset('user/assets/icons/red-circle.svg')}}" alt="green-circle">
+                                                    @endif
+                                                    <div>
+                                                        <p>الدفع</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1 class="title text-center no-border conditional-blur">معلومات الطلب</h1>
+                                        <div class="row">
+            <div class="col-md-12 ">
+                <div class="profile tag-profile designer-order">
+                <a href="#profile">
+                    <!-- <img src="{{ asset('user/assets/icon/avatar.svg')}}" alt="avatar"> -->
+                <img src="{{ asset('/user/assets/icons/avatar.svg')}}" alt="avatar"> </a>
+                <div class="star-profile-txt">
+                    <span>مصمم</span>
+                    <h4> أسم المصمم</h4>
+                    <div class="star-reating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+               
+                </div>
+            </div>
+            </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-12">
+                                                <div class="row p-xs-0 p-3 justify-content-between conditional-blur">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-4">
+                        <label class="form-label dot">اختيار اللون</label>
+                        <div class="color-circle-main">
+                            
+                        
+                        <div  class="color-circle">
+                           
+                        </div>
+                        <div  class="color-circle orange">
+                           
+                        </div>
+                        <div  class="color-circle yellow">
+                           
+                        </div>
+                        <div  class="color-circle">
+                           
+                        </div>
+                         </div>
+                       
+                            </div>
+
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                        <label class="form-label">الكمية</label>
+                                                        <input type="text" class="form-control" placeholder=".. رقم الهاتف هنا" readonly value="{{@$public->phone_num}}">
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                        <label class="form-label">المقاسات</label>
+                                                        <input type="text" class="form-control" placeholder=".. الايميل هنا" readonly value="{{@$public->email}}">
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                        <label class="form-label">شكل الطباعة</label>
+                                                        <input type="text" class="form-control" placeholder=".. التخصص هنا" readonly value="{{@$public->specialization}}">
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                        <label class="form-label">تقنية الطباعة</label>
+                                                        <input type="text" class="form-control" placeholder=".. الجنس هنا" readonly value="{{@$public->gender}}">
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                    <label class="form-label"> </label>
+
+                                                    <button class="btn btn-sky invert">
+                                                    زيارة المنتج <img src="{{ asset('user/assets/icons/arrow-right.svg') }}" alt="arrow-right">
+                            </button>
+                                                </div>
+                                                    <!-- <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                        <label class="form-label">صور المجسم</label>
+                                                        <div class="upload-btn-wrapper">
+                                                            <button class="btn btn-upload"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></button>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+<div class="col-md-12">
+    <div class="designer-text">
+        
+    
+    <label class="form-label dot">الملاحظات</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="   الملاحظات .."></textarea>
+    </div>
+</div>  
+</div>
+                                        <div class="row">
+
+                                            <h1 class="title text-center mt-5 no-border conditional-blur">تقديم عرض سعر</h1>
+                                            <div class="col-md-12">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12">
+                                                        <div class="row mb-2 justify-content-between conditional-blur">
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تكلفة تنفيذ الخدمة</label>
+                                                                <input type="text" class="form-control" placeholder="كتابة القيمة هنا .." readonly value="{{@$public->print_type}}">
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ البداية</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .." readonly value="{{@$public->print_color}}">
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                                                                <label class="form-label">تاريخ التسليم</label>
+                                                                <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
+                                                            </div>
+                                                            <div class="progress">
+  <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+                                                        </div>
+                                                      
+                                                        <!-- <div class="row conditional-blur">
+                                                            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
+                                                                <label class="form-label">رفع ملف المجسم</label>
+                                                                <div class="upload-btn-wrapper">
+                                                                    <a class="btn btn-upload" href="{{ asset('storage/' . @$public->print_img) }}" download=" {{ @$public->print_img }}"><img src="{{asset('user/assets/icons/uploaded-img.svg')}}" alt="upload-img"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                            <label class="form-label dot">عموم الحاله الصحية</label>
+                                                            </div>
+                                                      
+                                                            <div class="col-md-6">
+                                                           
+                                                   <textarea class="form-control designer-text-area" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$ss->discription}}</textarea>
+                                              
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                            <div class="upload-btn-wrapper designer-upload">
+                                                                <button class="btn btn-upload-designer health"><img src="{{asset('user/assets/icons/upload-img.svg')}}" alt="upload-img"></button>
+                                                                <input type="file" id="health-file" required name="myfile" />
+                                                            </div>
+
+                                                            </div>
+                                                            <p class="mt-3" style="    text-align: center;
+">متبقي على تسليم الطلب 24 يوم 35 دقيقة 13 ثانية</p>
+                                                        </div>
+                                                        <h1 class="title text-center mt-5 no-border conditional-blur">
+
+                                                            <div class="">
+                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10">ارسال</a>
+                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow btn-uplod mt-10">الفاتورة</a>
+                                                                <a href="{{route('payment')}}" class="btn btn-form mx-3 with-arrow mt-10 red-btn">رفض</a>
+                                                               
+                                                                <p class="mt-3">الرجاء التأكد من ارسال كافة الملفات لتجنب تقديم بلاغ عليك</p>
+                                                            </div>
+                                                        </h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- zahid-designer order  upload end-->
 
 
     <!-- ///////////////////////////////////// design modal start here ////////////////////////////////-->

@@ -193,12 +193,14 @@
     background-color: #9FA5B2;
     display: block;
     position: relative;
+    border-radius: 10px;
 }
 .product-add-upload p{
+    color: #fff;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 .product-add-upload .camera-icon{
     position: absolute;
@@ -209,10 +211,11 @@
     left: -20px;
     background-color: #1F5098;
     text-align: center;
-    line-height: 2.4;
+    cursor: pointer;
 }
-.product-add-upload .camera-icon{
-color: #fff;
+.product-add-upload .camera-icon i{
+    line-height: 2;
+    color: #fff;
 }
 
 
