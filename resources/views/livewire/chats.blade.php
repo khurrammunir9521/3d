@@ -14,16 +14,17 @@
                         @foreach($allmessages as $mgs)
                                 <div class="single-message @if($mgs->user_id == auth()->id()) sent @else received @endif">
                                     <p class="font-weight-bolder my-0">{{$mgs->user->name}}</p>
-                                    @php
+                                    <?php
                                         parse_str($mgs->message,$extracted);
-                                        if($extracted['link']==null)
+                                        if($extracted['chatImg']==null)
                                         {
-                                            echo $extracted['link'].$extracted['msg'];
-                                        }else{
-                                            echo '<a href="'.$extracted['link'].'">'.$extracted['link'].'</a><br/>'.$extracted['msg'];
-                                        }
+                                            echo $extracted['chatImg'].$extracted['msg'];
+                                        }else{?>
+                                            <img src="{{ asset('chat/'.$extracted['chatImg']) }}" width="150"/>
+                                            
+                                      <?php  }
                                         
-                                    @endphp
+                                    ?>
                                  
                                     <br><small class="text-muted w-100">Sent <em>{{$mgs->created_at}}</em></small>
                                 </div>
@@ -37,14 +38,18 @@
                         <form wire:submit.prevent="SendMessage">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input wire:model="message" style="pointer-events: unset" class="form-control input shadow-none w-100 d-inline-block" id="message" placeholder="Type a message" required>
+                                    <input wire:model="message" style="pointer-events: unset" class="form-control input shadow-none w-100 d-inline-block" id="message" placeholder="Type a message" >
                                 </div>
-
+                             
                                 <div class="col-md-4">
                                     <button type="submit" class="btn btn-primary d-inline-block w-100"><i class="far fa-paper-plane"></i> Send</button>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <input type="file" wire:model="photo">
+                            </div>
                         </form>
+
                     </div>
                 
                 </div>

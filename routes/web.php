@@ -1,29 +1,31 @@
 <?php
 
+use App\Models\Invoice;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\TechController;
+use App\Http\Controllers\TitleController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AboutUsController;
-use App\Http\Controllers\MedicalController;
-use App\Http\Controllers\ContactControllers;
-use App\Http\Controllers\SideImageController;
-use App\Http\Controllers\ImageSlideController;
-use App\Http\Controllers\SocialMediaController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\MedicalController;
+use App\Http\Controllers\ContactControllers;
 use App\Http\Controllers\MapimageController;
-use App\Http\Controllers\PerposalController;
-use App\Http\Controllers\PublicServiceController;
-use App\Http\Controllers\TitleController;
-use App\Http\Controllers\YoutubeurlController;
-use App\Models\Invoice;
 use App\Http\Controllers\MessagesController;
-use App\Http\Controllers\ChatController;
+use App\Http\Controllers\PerposalController;
+use App\Http\Controllers\SideImageController;
+use App\Http\Controllers\ImageSlideController;
+use App\Http\Controllers\YoutubeurlController;
+use App\Http\Controllers\SocialMediaController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PublicServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -143,8 +145,15 @@ Route::group(['middleware' => 'auth', 'varify','cors'], function () {
 // Route::get('/chat',[MessagesController::class,'userChat'])->name('user.chat');
 // Route::post('/send/chat',[MessagesController::class,'sendMessage'])->name('send.chat');
 
+
+
 });
 
+Route::get('/image/{filename}', function ($filename)
+{
+    dd($filename);
+  
+})->name('chat.image');
 
 
 Route::get('mark/read',function(){

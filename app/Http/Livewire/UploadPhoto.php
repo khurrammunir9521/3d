@@ -1,19 +1,17 @@
 <?php
-
 namespace App\Http\Livewire;
+
 use App\Models\Chat;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-
-class Chats extends Component
+ 
+class UploadPhoto extends Component
 {
     use WithFileUploads;
-	public $message;
-	public $allmessages;
-	public $sender;
-    public $user_id;
+ 
     public $photo;
+ 
     public function render()
     {
     	$users=User::all();
@@ -38,34 +36,24 @@ class Chats extends Component
     {
     	$this->message='';
     }
-
-    public function SendMessage()
+    public function save()
     {
-        // $this->validate([
-        //     'photo' => 'image|max:1024', // 1MB Max
-        // ]);
+        $this->validate([
+            'photo' => 'image|max:1024', // 1MB Max
+        ]);
  
-    	$data=new Chat;
-    	$msg = 'chatImg=&msg='.$this->message;
+        $this->photo->store('photos');
+
+        $data=new Chat;
+    	$msg = 'link=&msg='.$this->message;
         $data->message=$msg;
 
     	$data->user_id=auth()->id();
     	$data->reciever_id=$this->sender->id;
-        
-        
-    	if($this->photo!=null){
-            $name = 'ChatImg-'.time(). time().'.'.$this->photo->getClientOriginalExtension();
-            
-            $this->photo->storeAs('chat',$name);
-            $photoMsg = 'chatImg='.$name.'&msg=';
-            $data->message = $photoMsg;
-            $data->photo = $name;
-        }
-      
-        $data->save();
-    	$this->resetForm();
+    	$data->save();
+        $this->resetForm();
 
-
+        
     }
     public function getUser($userId=1)
     {
@@ -83,9 +71,5 @@ class Chats extends Component
        
      
     }
-    public function savePhoto()
-    {
-       
-    }
-
 }
+?>
