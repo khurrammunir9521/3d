@@ -1875,16 +1875,16 @@
                         <div class="color-circle-main">
                             
                         
-                        <div  class="color-circle">
+                        <div  class="color-circle blue-border">
                            
                         </div>
-                        <div  class="color-circle orange">
+                        <div  class="color-circle  gray-bg">
                            
                         </div>
-                        <div  class="color-circle yellow">
+                        <div  class="color-circle  gray-bg">
                            
                         </div>
-                        <div  class="color-circle">
+                        <div  class="color-circle gray-bg">
                            
                         </div>
                          </div>
@@ -2110,16 +2110,16 @@
                         <div class="color-circle-main">
                             
                         
-                        <div  class="color-circle">
+                        <div  class="color-circle blue-border">
                            
                         </div>
-                        <div  class="color-circle orange">
+                        <div  class="color-circle  gray-bg">
                            
                         </div>
-                        <div  class="color-circle yellow">
+                        <div  class="color-circle  gray-bg">
                            
                         </div>
-                        <div  class="color-circle">
+                        <div  class="color-circle gray-bg">
                            
                         </div>
                          </div>
@@ -2188,11 +2188,14 @@
                                                                 <label class="form-label">تاريخ التسليم</label>
                                                                 <input type="text" class="form-control" placeholder="تحديد التاريخ هنا .. " readonly value="{{@$public->print_resolution}}">
                                                             </div>
-                                                            <div class="progress">
-  <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+                                                           <div class="col-md-12 pro-bar ">
+                                                            <progress id="file" value="32" max="100"> 32% </progress>
 
+                                                               
+                                                           </div>
                                                         </div>
+                                                      
+
                                                       
                                                         <!-- <div class="row conditional-blur">
                                                             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mt-4">
