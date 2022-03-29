@@ -1,29 +1,31 @@
 <?php
 
+use App\Models\Invoice;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\TechController;
+use App\Http\Controllers\TitleController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AboutUsController;
-use App\Http\Controllers\MedicalController;
-use App\Http\Controllers\ContactControllers;
-use App\Http\Controllers\SideImageController;
-use App\Http\Controllers\ImageSlideController;
-use App\Http\Controllers\SocialMediaController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\MedicalController;
+use App\Http\Controllers\ContactControllers;
 use App\Http\Controllers\MapimageController;
-use App\Http\Controllers\PerposalController;
-use App\Http\Controllers\PublicServiceController;
-use App\Http\Controllers\TitleController;
-use App\Http\Controllers\YoutubeurlController;
-use App\Models\Invoice;
 use App\Http\Controllers\MessagesController;
-use App\Http\Controllers\ChatController;
+use App\Http\Controllers\PerposalController;
+use App\Http\Controllers\SideImageController;
+use App\Http\Controllers\ImageSlideController;
+use App\Http\Controllers\YoutubeurlController;
+use App\Http\Controllers\SocialMediaController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PublicServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -88,10 +90,12 @@ Route::get('/', [RegisterController::class, 'homepage'])->name('/');
 // });
 Auth::routes();
 
-Route::group(['middleware' => 'auth', 'varify'], function () {
+Route::group(['middleware' => 'auth', 'varify','cors'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
     Route::get('/vieworder/{id}', [App\Http\Controllers\HomeController::class, 'vieworder'])->name('vieworder');
     Route::get('/vieworderpublic/{id}', [App\Http\Controllers\HomeController::class, 'vieworderpublic'])->name('vieworderpublic');
+  
     //Resource Route
 
     Route::resource('about', AboutUsController::class);
@@ -141,9 +145,13 @@ Route::group(['middleware' => 'auth', 'varify'], function () {
 // Route::get('/chat',[MessagesController::class,'userChat'])->name('user.chat');
 // Route::post('/send/chat',[MessagesController::class,'sendMessage'])->name('send.chat');
 
+
+
 });
 
-
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+});
 
 Route::get('mark/read',function(){
   auth()->user()->unreadNotifications->markAsRead();

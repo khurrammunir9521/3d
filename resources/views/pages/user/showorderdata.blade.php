@@ -8,6 +8,7 @@
     @else
     <title>أجهزة ثلاثية الأبعاد</title>
     @endif
+    @livewireStyles
     <link rel="icon" href="{{ asset('assets/images/logo/logo-favicon.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('user/assets/icons/logo.svg') }}" type="image/x-icon" />
     <meta property="og:image" itemprop="image" content="https://zen-boyd.161-97-115-110.plesk.page/3dorgans/public/user/assets/icons/logo.png">
@@ -28,6 +29,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- StyleSheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chat.css') }}">
     <!-- Responsive Sheet -->
     <link rel="stylesheet" href="{{ asset('user/assets/css/responsive.css') }}">
     <style type="text/css">
@@ -257,6 +259,7 @@
                                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="  ..الوصف هنا" readonly>{{@$order->discription}}</textarea>
                                                     </div>
                                                 </div>
+                                                
                                             </div>
                                         </div>
                                         <h1 class="title text-center mt-5 mb-5 no-border">نوع الخدمة والاجراء الطبي</h1>
@@ -288,7 +291,12 @@
                                             </div>
                                         </div> -->
                                         </div>
+                                     
+                                        
                                     </div>
+                                </div>
+                                <div class="row">
+                                    @livewire('chats',['user_id' => $order->user_id])
                                 </div>
                             </div>
                             <!-- <div class="modal-footer mt-10">
@@ -330,7 +338,7 @@
     <script src="{{ asset('user/assets/js/slick.min.js') }}"></script>
     <!-- Scripts -->
     <script src="{{ asset('user/assets/js/scripts.js') }}"></script>
-
+    @livewireScripts
 
 </body>
 

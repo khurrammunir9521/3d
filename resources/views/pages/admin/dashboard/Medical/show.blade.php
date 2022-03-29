@@ -36,33 +36,33 @@
                                                             value="{{@$order->id}}"
                                                         hidden>
                                                         <!-- @if(@$order->status == 1)
-                                <input type="checkbox" id="vehicle1" name="checkbox1" value="1">
-                                <label class="form-label" for="vehicle1"> اجتماع الخطة العلاجية</label>
-                                @endif
-                                @if(@$order->status == 2)
-                                <input type="checkbox" id="vehicle2" name="checkbox2" value="2">
-                                <label class="form-label" for="vehicle2"> اجتماع النموذج الأول</label>
-                                @endif
-                                @if(@$order->status == 3)
-                                <input type="checkbox" id="vehicle3" name="checkbox3" value="3">
-                                <label class="form-label" for="vehicle3"> اجتماع النموذج النهائي</label>
-                                @endif
-                                @if(@$order->status == 4)
-                                <input type="checkbox" id="vehicle3" name="checkbox4" value="4">
-                                <label class="form-label" for="vehicle3"> الدفع</label>
-                                @endif
-                                @if(@$order->status == 5)
-                                <input type="checkbox" id="vehicle3" name="checkbox5" value="5">
-                                <label class="form-label" for="vehicle3"> الطباعة ثلاثية الأبعاد</label>
-                                @endif
-                                @if(@$order->status == 6)
-                                <input type="checkbox" id="vehicle3" name="checkbox6" value="6">
-                                <label class="form-label" for="vehicle3"> اختبار الجودة</label>
-                                @endif
-                                @if(@$order->status == 7)
-                                <input type="checkbox" id="vehicle3" name="checkbox7" value="7">
-                                <label class="form-label" for="vehicle3"> التوصيل واتمام الطلب</label>
-                                @endif  -->
+                                                        <input type="checkbox" id="vehicle1" name="checkbox1" value="1">
+                                                        <label class="form-label" for="vehicle1"> اجتماع الخطة العلاجية</label>
+                                                        @endif
+                                                        @if(@$order->status == 2)
+                                                        <input type="checkbox" id="vehicle2" name="checkbox2" value="2">
+                                                        <label class="form-label" for="vehicle2"> اجتماع النموذج الأول</label>
+                                                        @endif
+                                                        @if(@$order->status == 3)
+                                                        <input type="checkbox" id="vehicle3" name="checkbox3" value="3">
+                                                        <label class="form-label" for="vehicle3"> اجتماع النموذج النهائي</label>
+                                                        @endif
+                                                        @if(@$order->status == 4)
+                                                        <input type="checkbox" id="vehicle3" name="checkbox4" value="4">
+                                                        <label class="form-label" for="vehicle3"> الدفع</label>
+                                                        @endif
+                                                        @if(@$order->status == 5)
+                                                        <input type="checkbox" id="vehicle3" name="checkbox5" value="5">
+                                                        <label class="form-label" for="vehicle3"> الطباعة ثلاثية الأبعاد</label>
+                                                        @endif
+                                                        @if(@$order->status == 6)
+                                                        <input type="checkbox" id="vehicle3" name="checkbox6" value="6">
+                                                        <label class="form-label" for="vehicle3"> اختبار الجودة</label>
+                                                        @endif
+                                                        @if(@$order->status == 7)
+                                                        <input type="checkbox" id="vehicle3" name="checkbox7" value="7">
+                                                        <label class="form-label" for="vehicle3"> التوصيل واتمام الطلب</label>
+                                                        @endif  -->
                                                         <select name="status"
                                                             id=""
                                                             class="form-control">
@@ -332,10 +332,14 @@
                                                     </div>
 
                                                 </div>
+                                                
                                             </div>
+                                            
                                         </div>
+                                        
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                         <!-- Modal -->
@@ -382,34 +386,105 @@
                                 </div>
                             </div>
                         </div>
-                        @endsection
+                       
 
-                        @push('scripts')
-                        <script>
-     $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-    $(".btn-submit").click(function(e){
-        e.preventDefault();
-        var question = $('textarea#question').val();
-        var email = $("input[name=email]").val();
-        $.ajax({
-           type:'POST',
-           url:"{{ route('ask.question') }}",
-           data:{ question:question, email:email},
-           success:function(data){
-             console.log("successful send");
-           }
-        });
-  
-    });
-</script>
-                        @endpush
+                       
                     </div>
                 </div>
+                <div class="card medical-card">
+                    <div class="card-body p-0">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="modal-body">
+                                  
+                                            <div class="row">
+                                                @livewire('chats',['user_id' => $order->user_id])
+                                            </div>
+                                            
+                                        
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        {{-- <div class="modal fade" id="exampleModal" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">إرسال الاستعلام</h5>
+                                        <button type="button" class="btn-close send-query-cross"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+
+                                            <div class="col-12">
+                                                <label class="form-label">بريد الالكتروني</label>
+                                                <input type="text"
+                                                    class="form-control"
+                                                    name="email"
+                                                    value="{{$user->email}}"
+                                                readonly>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">سؤال</label>
+                                                <textarea class="form-control"
+                                                    id="question"
+                                                    name="question"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn
+                                            btn-secondary"
+                                            data-bs-dismiss="modal">يغلق</button>
+                                        <button type="submit" class="btn
+                                            btn-primary btn-submit"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Send">إرسال</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                       
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     </div>
 </div>
+@endsection
+@push('scripts')
+<script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $(".btn-submit").click(function(e){
+            e.preventDefault();
+            var question = $('textarea#question').val();
+            var email = $("input[name=email]").val();
+            $.ajax({
+            type:'POST',
+            url:"{{ route('ask.question') }}",
+            data:{ question:question, email:email},
+            success:function(data){
+                console.log("successful send");
+            }
+            });
+    
+        });
+    </script>
+@endpush
