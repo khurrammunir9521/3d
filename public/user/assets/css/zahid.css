@@ -1,10 +1,16 @@
 .cleanshot{
     background-image: url(../images/cleanshot.png);
-    /* min-height: 100vh; */
     background-repeat: no-repeat;
     background-position: top;
     /* padding: 200px 0; */
     background-size: cover;
+}
+.cleanshot-row{
+    min-height: 507px;
+    padding-bottom: 64px;
+}
+.cleanshot-close-btn{
+    padding-top: 50px;
 }
 .adobe-icon {
     /* padding-bottom: 0px; */
@@ -12,9 +18,9 @@
     /* padding-left: 130px; */
     /* margin: auto; */
     margin-left: 22px;
-    margin-bottom: 93px;
+    /* margin-bottom: 93px; */
     float: left;
-    padding-top: 423px;
+    /* padding-top: 423px; */
 }
 .adobe-icon img{
     margin-right : 5px;
@@ -27,7 +33,8 @@
     /* left: 0; */
     /* right: 90px; */
     /* align-items: center; */
-    margin-top: 414px;
+
+    /* margin-top: 414px; */
 }
 .small-card img{
     margin-left: 30px;
