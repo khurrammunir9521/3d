@@ -20,7 +20,7 @@
                                         {
                                             echo $extracted['chatImg'].$extracted['msg'];
                                         }else{?>
-                                            <img src="{{ asset('chat/'.$extracted['chatImg']) }}" width="150"/>
+                                            <img src="{{ url('storage/app/chat/'.$extracted['chatImg']) }}" width="150"/>
                                             
                                       <?php  }
                                         
