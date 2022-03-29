@@ -1431,12 +1431,15 @@
 <!-- zahid page modal start here -->
 
  
-<section class=" cleanshot">
+<section class="cleanshot">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="col-md-12 cleanshot-close-btn">
+                 <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+            </div>
+            <div class="row cleanshot-row align-items-end">
+             
                 <div class="col-md-8">
                     <div class="small-card">
                          <img class="designer-8" src="{{ asset('user/assets/images/design-8.png') }}" alt="">
@@ -1466,7 +1469,7 @@
                 <div class="star-profile-txt">
                     <span>مصمم</span>
                     <h4> أسم المصمم</h4>
-                    <div class="star-reating rating">
+                    <div class="star-reating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -3948,10 +3951,10 @@
                                                 <span class="outline dot">اهلاً وسهلاً بكم</span>
                                                 <h1 class="modal-title right">المنتجات </h1>
                                             </div>
-                                            <button class="ahs-profile-plus-btn ">
-                                                <i class="fa fa-plus-circle fa-lg ahs-profile-plus"></i>
-                                                إضافة منتج
+                                            <button class="ahs-profile-plus-btn productadd-top-btn">
+                                            إضافة منتج
                                             </button>
+                                           
                                         </div>
                                         <div class="almuntjat-form-error error-red-bg">
                                             <i class="fa-solid fa-triangle-exclamation"></i> بعد إضافة المنتج سيذهب الى الإدارة للمراجعة للقبول أو الرفض

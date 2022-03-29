@@ -88,7 +88,12 @@
 /* //////////////////////////////////// responsive end here ////////////////////////////////////////////////*/
 
 /* ////////////////////////////////////  designer section start here  //////////////////////////////////// */
-
+#designinnerModal .designer-sec{
+    padding-top: 150px;
+}
+#designinnerModal .designer-sec::before{
+    top: 130px;
+}
 .product-1{
     background: url(../images/design-9.png) no-repeat;
     background-size: cover;
@@ -272,13 +277,28 @@
     font-size: 14px;
     justify-content: left;
 }
+.switch .form-check-input:focus{
+box-shadow: none;
+}
 .switch p{
     color: #9FA5B2;
     font-family: 'JannaLT-bold';
     margin-bottom: 14px;
     font-weight: 300;
 }
+
 .error-red-bg{
     background-color:  #D83554 !important;
+}
+
+.productadd-top-btn{
+    background-color: #E0E0DE;
+    color: #fff;
+    height: 40px;
+    width: 133px;
+    text-align: center;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
 }
 /* ////////////////////////////////////  product add view  css end here  //////////////////////////////////// */
